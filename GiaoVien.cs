@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Quan_Li_Luan_Van
 {
-    public partial class Form1 : Form
+    public partial class GiaoVien : Form
     {
-        public Form1()
+        public GiaoVien()
         {
             InitializeComponent();
         }
