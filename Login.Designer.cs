@@ -37,6 +37,8 @@
             this.button2 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -44,9 +46,10 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(34, 77);
+            this.pictureBox1.Location = new System.Drawing.Point(30, 62);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(286, 301);
+            this.pictureBox1.Size = new System.Drawing.Size(254, 241);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -54,47 +57,55 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.radioButton2);
+            this.groupBox2.Controls.Add(this.radioButton1);
+            this.groupBox2.Controls.Add(this.button2);
             this.groupBox2.Controls.Add(this.dangnhap_bt);
             this.groupBox2.Controls.Add(this.matkhau_tb);
             this.groupBox2.Controls.Add(this.taikhoan_tb);
-            this.groupBox2.Controls.Add(this.button2);
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.label1);
-            this.groupBox2.Location = new System.Drawing.Point(365, 115);
+            this.groupBox2.Location = new System.Drawing.Point(321, 46);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(388, 263);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox2.Size = new System.Drawing.Size(345, 257);
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thông tin đăng nhập";
             // 
             // dangnhap_bt
             // 
-            this.dangnhap_bt.Location = new System.Drawing.Point(93, 158);
+            this.dangnhap_bt.Location = new System.Drawing.Point(22, 221);
+            this.dangnhap_bt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dangnhap_bt.Name = "dangnhap_bt";
-            this.dangnhap_bt.Size = new System.Drawing.Size(115, 40);
+            this.dangnhap_bt.Size = new System.Drawing.Size(102, 32);
             this.dangnhap_bt.TabIndex = 5;
             this.dangnhap_bt.Text = "Đăng nhập";
             this.dangnhap_bt.UseVisualStyleBackColor = true;
             // 
             // matkhau_tb
             // 
-            this.matkhau_tb.Location = new System.Drawing.Point(93, 104);
+            this.matkhau_tb.Location = new System.Drawing.Point(83, 83);
+            this.matkhau_tb.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.matkhau_tb.Name = "matkhau_tb";
-            this.matkhau_tb.Size = new System.Drawing.Size(273, 26);
+            this.matkhau_tb.Size = new System.Drawing.Size(243, 22);
             this.matkhau_tb.TabIndex = 4;
             // 
             // taikhoan_tb
             // 
-            this.taikhoan_tb.Location = new System.Drawing.Point(93, 52);
+            this.taikhoan_tb.Location = new System.Drawing.Point(83, 42);
+            this.taikhoan_tb.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.taikhoan_tb.Name = "taikhoan_tb";
-            this.taikhoan_tb.Size = new System.Drawing.Size(273, 26);
+            this.taikhoan_tb.Size = new System.Drawing.Size(243, 22);
             this.taikhoan_tb.TabIndex = 2;
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(251, 158);
+            this.button2.Location = new System.Drawing.Point(207, 221);
+            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(115, 40);
+            this.button2.Size = new System.Drawing.Size(102, 32);
             this.button2.TabIndex = 3;
             this.button2.Text = "Thoát";
             this.button2.UseVisualStyleBackColor = true;
@@ -102,30 +113,53 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(9, 107);
+            this.label2.Location = new System.Drawing.Point(8, 86);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(75, 20);
+            this.label2.Size = new System.Drawing.Size(61, 16);
             this.label2.TabIndex = 1;
             this.label2.Text = "Mật khẩu";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(9, 55);
+            this.label1.Location = new System.Drawing.Point(8, 44);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(78, 20);
+            this.label1.Size = new System.Drawing.Size(67, 16);
             this.label1.TabIndex = 0;
             this.label1.Text = "Tài khoản";
             // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Location = new System.Drawing.Point(22, 159);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(80, 20);
+            this.radioButton1.TabIndex = 6;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "Học sinh";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            // 
+            // radioButton2
+            // 
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Location = new System.Drawing.Point(207, 159);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(85, 20);
+            this.radioButton2.TabIndex = 7;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.Text = "Giáo viên";
+            this.radioButton2.UseVisualStyleBackColor = true;
+            // 
             // Login
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.groupBox2);
+            this.ClientSize = new System.Drawing.Size(711, 360);
             this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.groupBox2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Login";
-            this.Text = "Dang Nhap";
+            this.Text = "Đăng nhập";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
@@ -143,5 +177,7 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton radioButton2;
     }
 }
