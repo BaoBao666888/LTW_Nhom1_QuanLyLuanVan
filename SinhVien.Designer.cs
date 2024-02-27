@@ -169,7 +169,7 @@
             // 
             // SinhVien
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.cboDangki);
@@ -188,7 +188,7 @@
             this.Controls.Add(this.TxtHovaten);
             this.Controls.Add(this.lblHovaTen);
             this.Name = "SinhVien";
-            this.Text = "Sinh viên";
+            this.Text = "Đăng Ký Đề Tài";
             this.ResumeLayout(false);
             this.PerformLayout();
 
