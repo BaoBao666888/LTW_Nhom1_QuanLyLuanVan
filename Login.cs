@@ -44,7 +44,7 @@ namespace Quan_Li_Luan_Van
                 FDS.Show();
 
                 GiaoVien gv = new GiaoVien();
-                gv.Show();
+                
                 this.Hide();
             }
             else
