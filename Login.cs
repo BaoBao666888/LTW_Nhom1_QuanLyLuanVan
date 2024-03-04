@@ -40,6 +40,9 @@ namespace Quan_Li_Luan_Van
         {
             if (rdoGiangVien.Checked == true && txtTaiKhoan.Text == "admin" && txtMatKhau.Text == "123")
             {
+                FDashBoard FDS = new FDashBoard();
+                FDS.Show();
+
                 GiaoVien gv = new GiaoVien();
                 gv.Show();
                 this.Hide();

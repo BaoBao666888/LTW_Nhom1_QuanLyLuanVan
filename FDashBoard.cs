@@ -16,5 +16,10 @@ namespace Quan_Li_Luan_Van
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
