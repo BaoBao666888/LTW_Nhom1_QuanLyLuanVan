@@ -30,16 +30,15 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FDashBoard));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.guna2Button5 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button4 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.btnMessage = new Guna.UI2.WinForms.Guna2Button();
+            this.btnThongKe = new Guna.UI2.WinForms.Guna2Button();
+            this.btnFeedback = new Guna.UI2.WinForms.Guna2Button();
+            this.btnSinhVien = new Guna.UI2.WinForms.Guna2Button();
+            this.btnLuanVan = new Guna.UI2.WinForms.Guna2Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.guna2Button7 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button0 = new Guna.UI2.WinForms.Guna2Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -48,128 +47,139 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.MidnightBlue;
-            this.panel1.Controls.Add(this.guna2Button0);
-            this.panel1.Controls.Add(this.guna2Button7);
-            this.panel1.Controls.Add(this.guna2Button5);
-            this.panel1.Controls.Add(this.guna2Button4);
-            this.panel1.Controls.Add(this.guna2Button3);
-            this.panel1.Controls.Add(this.guna2Button2);
-            this.panel1.Controls.Add(this.guna2Button1);
+            this.panel1.Controls.Add(this.btnMessage);
+            this.panel1.Controls.Add(this.btnThongKe);
+            this.panel1.Controls.Add(this.btnFeedback);
+            this.panel1.Controls.Add(this.btnSinhVien);
+            this.panel1.Controls.Add(this.btnLuanVan);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(280, 853);
+            this.panel1.Size = new System.Drawing.Size(299, 810);
             this.panel1.TabIndex = 0;
             // 
-            // guna2Button5
+            // btnMessage
             // 
-            this.guna2Button5.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button5.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button5.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button5.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2Button5.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2Button5.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button5.ForeColor = System.Drawing.Color.White;
-            this.guna2Button5.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button5.Image")));
-            this.guna2Button5.Location = new System.Drawing.Point(0, 597);
-            this.guna2Button5.Name = "guna2Button5";
-            this.guna2Button5.Size = new System.Drawing.Size(280, 94);
-            this.guna2Button5.TabIndex = 7;
-            this.guna2Button5.Text = "Message";
-            this.guna2Button5.Click += new System.EventHandler(this.guna2Button5_Click);
+            this.btnMessage.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnMessage.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnMessage.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnMessage.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnMessage.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnMessage.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.btnMessage.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMessage.ForeColor = System.Drawing.Color.White;
+            this.btnMessage.Image = ((System.Drawing.Image)(resources.GetObject("btnMessage.Image")));
+            this.btnMessage.Location = new System.Drawing.Point(0, 699);
+            this.btnMessage.Name = "btnMessage";
+            this.btnMessage.Size = new System.Drawing.Size(299, 110);
+            this.btnMessage.TabIndex = 7;
+            this.btnMessage.Text = "Message";
+            this.btnMessage.Click += new System.EventHandler(this.guna2Button5_Click);
             // 
-            // guna2Button4
+            // btnThongKe
             // 
-            this.guna2Button4.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button4.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button4.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button4.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2Button4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2Button4.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button4.ForeColor = System.Drawing.Color.White;
-            this.guna2Button4.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button4.Image")));
-            this.guna2Button4.Location = new System.Drawing.Point(0, 503);
-            this.guna2Button4.Name = "guna2Button4";
-            this.guna2Button4.Size = new System.Drawing.Size(280, 94);
-            this.guna2Button4.TabIndex = 6;
-            this.guna2Button4.Text = "Đánh giá ";
-            this.guna2Button4.Click += new System.EventHandler(this.guna2Button4_Click);
+            this.btnThongKe.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnThongKe.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnThongKe.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnThongKe.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnThongKe.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnThongKe.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.btnThongKe.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThongKe.ForeColor = System.Drawing.Color.White;
+            this.btnThongKe.Image = ((System.Drawing.Image)(resources.GetObject("btnThongKe.Image")));
+            this.btnThongKe.Location = new System.Drawing.Point(0, 589);
+            this.btnThongKe.Name = "btnThongKe";
+            this.btnThongKe.Size = new System.Drawing.Size(299, 110);
+            this.btnThongKe.TabIndex = 5;
+            this.btnThongKe.Text = "Thông kê";
+            this.btnThongKe.Click += new System.EventHandler(this.guna2Button3_Click);
             // 
-            // guna2Button3
+            // btnFeedback
             // 
-            this.guna2Button3.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button3.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2Button3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2Button3.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button3.ForeColor = System.Drawing.Color.White;
-            this.guna2Button3.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button3.Image")));
-            this.guna2Button3.Location = new System.Drawing.Point(0, 409);
-            this.guna2Button3.Name = "guna2Button3";
-            this.guna2Button3.Size = new System.Drawing.Size(280, 94);
-            this.guna2Button3.TabIndex = 5;
-            this.guna2Button3.Text = "Nhóm";
-            this.guna2Button3.Click += new System.EventHandler(this.guna2Button3_Click);
+            this.btnFeedback.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnFeedback.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnFeedback.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnFeedback.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnFeedback.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnFeedback.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.btnFeedback.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFeedback.ForeColor = System.Drawing.Color.White;
+            this.btnFeedback.Image = ((System.Drawing.Image)(resources.GetObject("btnFeedback.Image")));
+            this.btnFeedback.Location = new System.Drawing.Point(0, 479);
+            this.btnFeedback.Name = "btnFeedback";
+            this.btnFeedback.Size = new System.Drawing.Size(299, 110);
+            this.btnFeedback.TabIndex = 6;
+            this.btnFeedback.Text = "Đánh giá ";
+            this.btnFeedback.Click += new System.EventHandler(this.guna2Button4_Click);
             // 
-            // guna2Button2
+            // btnSinhVien
             // 
-            this.guna2Button2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2Button2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2Button2.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button2.ForeColor = System.Drawing.Color.White;
-            this.guna2Button2.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button2.Image")));
-            this.guna2Button2.Location = new System.Drawing.Point(0, 315);
-            this.guna2Button2.Name = "guna2Button2";
-            this.guna2Button2.Size = new System.Drawing.Size(280, 94);
-            this.guna2Button2.TabIndex = 4;
-            this.guna2Button2.Text = "Sinh Viên";
-            this.guna2Button2.Click += new System.EventHandler(this.guna2Button2_Click);
+            this.btnSinhVien.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnSinhVien.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnSinhVien.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSinhVien.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnSinhVien.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnSinhVien.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.btnSinhVien.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSinhVien.ForeColor = System.Drawing.Color.White;
+            this.btnSinhVien.Image = ((System.Drawing.Image)(resources.GetObject("btnSinhVien.Image")));
+            this.btnSinhVien.Location = new System.Drawing.Point(0, 369);
+            this.btnSinhVien.Name = "btnSinhVien";
+            this.btnSinhVien.Size = new System.Drawing.Size(299, 110);
+            this.btnSinhVien.TabIndex = 4;
+            this.btnSinhVien.Text = "Sinh Viên";
+            this.btnSinhVien.Click += new System.EventHandler(this.guna2Button2_Click);
             // 
-            // guna2Button1
+            // btnLuanVan
             // 
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2Button1.Font = new System.Drawing.Font("Nirmala UI", 12F);
-            this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button1.Image")));
-            this.guna2Button1.Location = new System.Drawing.Point(0, 221);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(280, 94);
-            this.guna2Button1.TabIndex = 3;
-            this.guna2Button1.Text = "Luận văn";
-            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
+            this.btnLuanVan.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnLuanVan.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnLuanVan.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnLuanVan.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnLuanVan.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnLuanVan.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.btnLuanVan.Font = new System.Drawing.Font("Nirmala UI", 12F);
+            this.btnLuanVan.ForeColor = System.Drawing.Color.White;
+            this.btnLuanVan.Image = ((System.Drawing.Image)(resources.GetObject("btnLuanVan.Image")));
+            this.btnLuanVan.Location = new System.Drawing.Point(0, 259);
+            this.btnLuanVan.Name = "btnLuanVan";
+            this.btnLuanVan.Size = new System.Drawing.Size(299, 110);
+            this.btnLuanVan.TabIndex = 3;
+            this.btnLuanVan.Text = "Luận văn";
+            this.btnLuanVan.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(280, 221);
+            this.panel2.Size = new System.Drawing.Size(299, 259);
             this.panel2.TabIndex = 2;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(36, 231);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(237, 25);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Contact: user@gmail.com";
             // 
             // label1
             // 
+            this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label1.Location = new System.Drawing.Point(53, 150);
+            this.label1.Location = new System.Drawing.Point(87, 179);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(177, 57);
+            this.label1.Size = new System.Drawing.Size(137, 31);
             this.label1.TabIndex = 1;
             this.label1.Text = "Username";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -177,55 +187,18 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(68, 3);
+            this.pictureBox1.Location = new System.Drawing.Point(78, 12);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(146, 144);
+            this.pictureBox1.Size = new System.Drawing.Size(146, 138);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
-            // 
-            // guna2Button7
-            // 
-            this.guna2Button7.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.guna2Button7.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button7.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button7.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button7.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button7.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2Button7.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2Button7.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button7.ForeColor = System.Drawing.Color.White;
-            this.guna2Button7.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button7.Image")));
-            this.guna2Button7.Location = new System.Drawing.Point(0, 691);
-            this.guna2Button7.Name = "guna2Button7";
-            this.guna2Button7.Size = new System.Drawing.Size(280, 94);
-            this.guna2Button7.TabIndex = 9;
-            this.guna2Button7.Text = "Tài liệu tham khảo";
-            this.guna2Button7.Click += new System.EventHandler(this.guna2Button7_Click);
-            // 
-            // guna2Button0
-            // 
-            this.guna2Button0.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button0.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button0.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button0.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button0.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2Button0.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2Button0.Font = new System.Drawing.Font("Nirmala UI", 12F);
-            this.guna2Button0.ForeColor = System.Drawing.Color.White;
-            this.guna2Button0.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button0.Image")));
-            this.guna2Button0.Location = new System.Drawing.Point(0, 785);
-            this.guna2Button0.Name = "guna2Button0";
-            this.guna2Button0.Size = new System.Drawing.Size(280, 94);
-            this.guna2Button0.TabIndex = 10;
-            this.guna2Button0.Text = "Thông tin";
-            this.guna2Button0.Click += new System.EventHandler(this.guna2Button0_Click);
             // 
             // FDashBoard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1685, 853);
+            this.ClientSize = new System.Drawing.Size(1479, 810);
             this.Controls.Add(this.panel1);
             this.Name = "FDashBoard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -233,6 +206,7 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Minimized;
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
@@ -244,12 +218,11 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel2;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
-        private Guna.UI2.WinForms.Guna2Button guna2Button5;
-        private Guna.UI2.WinForms.Guna2Button guna2Button4;
-        private Guna.UI2.WinForms.Guna2Button guna2Button3;
-        private Guna.UI2.WinForms.Guna2Button guna2Button2;
-        private Guna.UI2.WinForms.Guna2Button guna2Button7;
-        private Guna.UI2.WinForms.Guna2Button guna2Button0;
+        private Guna.UI2.WinForms.Guna2Button btnLuanVan;
+        private Guna.UI2.WinForms.Guna2Button btnMessage;
+        private Guna.UI2.WinForms.Guna2Button btnFeedback;
+        private Guna.UI2.WinForms.Guna2Button btnThongKe;
+        private Guna.UI2.WinForms.Guna2Button btnSinhVien;
+        private System.Windows.Forms.Label label2;
     }
 }

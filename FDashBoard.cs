@@ -17,22 +17,12 @@ namespace Quan_Li_Luan_Van
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void guna2Button7_Click(object sender, EventArgs e)
         {
 
         }
 
         private void guna2Button5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void guna2Button0_Click(object sender, EventArgs e)
         {
 
         }
