@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
 
 namespace Quan_Li_Luan_Van
 {
@@ -17,34 +18,24 @@ namespace Quan_Li_Luan_Van
             InitializeComponent();
         }
 
-        private void guna2Button7_Click(object sender, EventArgs e)
+        private void btn_LuanVan_Click(object sender, EventArgs e)
         {
-
+            pnl_childForm.Controls.Clear();
+            FLuanVan fLuanVan = new FLuanVan();
+            fLuanVan.TopLevel = false;
+            pnl_childForm.Controls.Add(fLuanVan);
+            fLuanVan.Dock = DockStyle.Fill;
+            fLuanVan.Show();
         }
 
-        private void guna2Button5_Click(object sender, EventArgs e)
+        private void btnSinhVien_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void guna2Button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void guna2Button4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void guna2Button2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void guna2Button3_Click(object sender, EventArgs e)
-        {
-
+            pnl_childForm.Controls.Clear();
+            FThongTinSV fSinhVien = new FThongTinSV();
+            fSinhVien.TopLevel = false;
+            pnl_childForm.Controls.Add(fSinhVien);
+            fSinhVien.Dock = DockStyle.Fill;
+            fSinhVien.Show();
         }
     }
 }

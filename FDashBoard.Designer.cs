@@ -34,11 +34,12 @@
             this.btnThongKe = new Guna.UI2.WinForms.Guna2Button();
             this.btnFeedback = new Guna.UI2.WinForms.Guna2Button();
             this.btnSinhVien = new Guna.UI2.WinForms.Guna2Button();
-            this.btnLuanVan = new Guna.UI2.WinForms.Guna2Button();
+            this.btn_LuanVan = new Guna.UI2.WinForms.Guna2Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pnl_childForm = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -51,12 +52,12 @@
             this.panel1.Controls.Add(this.btnThongKe);
             this.panel1.Controls.Add(this.btnFeedback);
             this.panel1.Controls.Add(this.btnSinhVien);
-            this.panel1.Controls.Add(this.btnLuanVan);
+            this.panel1.Controls.Add(this.btn_LuanVan);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(299, 810);
+            this.panel1.Size = new System.Drawing.Size(300, 810);
             this.panel1.TabIndex = 0;
             // 
             // btnMessage
@@ -72,10 +73,9 @@
             this.btnMessage.Image = ((System.Drawing.Image)(resources.GetObject("btnMessage.Image")));
             this.btnMessage.Location = new System.Drawing.Point(0, 699);
             this.btnMessage.Name = "btnMessage";
-            this.btnMessage.Size = new System.Drawing.Size(299, 110);
+            this.btnMessage.Size = new System.Drawing.Size(300, 110);
             this.btnMessage.TabIndex = 7;
             this.btnMessage.Text = "Message";
-            this.btnMessage.Click += new System.EventHandler(this.guna2Button5_Click);
             // 
             // btnThongKe
             // 
@@ -90,10 +90,9 @@
             this.btnThongKe.Image = ((System.Drawing.Image)(resources.GetObject("btnThongKe.Image")));
             this.btnThongKe.Location = new System.Drawing.Point(0, 589);
             this.btnThongKe.Name = "btnThongKe";
-            this.btnThongKe.Size = new System.Drawing.Size(299, 110);
+            this.btnThongKe.Size = new System.Drawing.Size(300, 110);
             this.btnThongKe.TabIndex = 5;
             this.btnThongKe.Text = "Thông kê";
-            this.btnThongKe.Click += new System.EventHandler(this.guna2Button3_Click);
             // 
             // btnFeedback
             // 
@@ -108,10 +107,9 @@
             this.btnFeedback.Image = ((System.Drawing.Image)(resources.GetObject("btnFeedback.Image")));
             this.btnFeedback.Location = new System.Drawing.Point(0, 479);
             this.btnFeedback.Name = "btnFeedback";
-            this.btnFeedback.Size = new System.Drawing.Size(299, 110);
+            this.btnFeedback.Size = new System.Drawing.Size(300, 110);
             this.btnFeedback.TabIndex = 6;
             this.btnFeedback.Text = "Đánh giá ";
-            this.btnFeedback.Click += new System.EventHandler(this.guna2Button4_Click);
             // 
             // btnSinhVien
             // 
@@ -126,28 +124,28 @@
             this.btnSinhVien.Image = ((System.Drawing.Image)(resources.GetObject("btnSinhVien.Image")));
             this.btnSinhVien.Location = new System.Drawing.Point(0, 369);
             this.btnSinhVien.Name = "btnSinhVien";
-            this.btnSinhVien.Size = new System.Drawing.Size(299, 110);
+            this.btnSinhVien.Size = new System.Drawing.Size(300, 110);
             this.btnSinhVien.TabIndex = 4;
             this.btnSinhVien.Text = "Sinh Viên";
-            this.btnSinhVien.Click += new System.EventHandler(this.guna2Button2_Click);
+            this.btnSinhVien.Click += new System.EventHandler(this.btnSinhVien_Click);
             // 
-            // btnLuanVan
+            // btn_LuanVan
             // 
-            this.btnLuanVan.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnLuanVan.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnLuanVan.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnLuanVan.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnLuanVan.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnLuanVan.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.btnLuanVan.Font = new System.Drawing.Font("Nirmala UI", 12F);
-            this.btnLuanVan.ForeColor = System.Drawing.Color.White;
-            this.btnLuanVan.Image = ((System.Drawing.Image)(resources.GetObject("btnLuanVan.Image")));
-            this.btnLuanVan.Location = new System.Drawing.Point(0, 259);
-            this.btnLuanVan.Name = "btnLuanVan";
-            this.btnLuanVan.Size = new System.Drawing.Size(299, 110);
-            this.btnLuanVan.TabIndex = 3;
-            this.btnLuanVan.Text = "Luận văn";
-            this.btnLuanVan.Click += new System.EventHandler(this.guna2Button1_Click);
+            this.btn_LuanVan.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_LuanVan.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_LuanVan.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_LuanVan.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_LuanVan.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_LuanVan.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.btn_LuanVan.Font = new System.Drawing.Font("Nirmala UI", 12F);
+            this.btn_LuanVan.ForeColor = System.Drawing.Color.White;
+            this.btn_LuanVan.Image = ((System.Drawing.Image)(resources.GetObject("btn_LuanVan.Image")));
+            this.btn_LuanVan.Location = new System.Drawing.Point(0, 259);
+            this.btn_LuanVan.Name = "btn_LuanVan";
+            this.btn_LuanVan.Size = new System.Drawing.Size(300, 110);
+            this.btn_LuanVan.TabIndex = 3;
+            this.btn_LuanVan.Text = "Luận văn";
+            this.btn_LuanVan.Click += new System.EventHandler(this.btn_LuanVan_Click);
             // 
             // panel2
             // 
@@ -157,7 +155,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(299, 259);
+            this.panel2.Size = new System.Drawing.Size(300, 259);
             this.panel2.TabIndex = 2;
             // 
             // label2
@@ -194,11 +192,20 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // pnl_childForm
+            // 
+            this.pnl_childForm.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnl_childForm.Location = new System.Drawing.Point(300, 0);
+            this.pnl_childForm.Name = "pnl_childForm";
+            this.pnl_childForm.Size = new System.Drawing.Size(1200, 810);
+            this.pnl_childForm.TabIndex = 1;
+            // 
             // FDashBoard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1479, 810);
+            this.ClientSize = new System.Drawing.Size(1500, 810);
+            this.Controls.Add(this.pnl_childForm);
             this.Controls.Add(this.panel1);
             this.Name = "FDashBoard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -218,11 +225,12 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel2;
-        private Guna.UI2.WinForms.Guna2Button btnLuanVan;
+        private Guna.UI2.WinForms.Guna2Button btn_LuanVan;
         private Guna.UI2.WinForms.Guna2Button btnMessage;
         private Guna.UI2.WinForms.Guna2Button btnFeedback;
         private Guna.UI2.WinForms.Guna2Button btnThongKe;
         private Guna.UI2.WinForms.Guna2Button btnSinhVien;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Panel pnl_childForm;
     }
 }
