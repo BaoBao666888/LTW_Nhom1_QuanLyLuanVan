@@ -37,12 +37,13 @@
             this.btn_LuanVan = new Guna.UI2.WinForms.Guna2Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lblUsername = new System.Windows.Forms.Label();
+            this.imgThongTin = new System.Windows.Forms.PictureBox();
             this.pnl_childForm = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgThongTin)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -149,9 +150,10 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.label1);
-            this.panel2.Controls.Add(this.pictureBox1);
+            this.panel2.Controls.Add(this.label2);
+            this.panel2.Controls.Add(this.lblUsername);
+            this.panel2.Controls.Add(this.imgThongTin);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
@@ -163,34 +165,34 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(36, 231);
+            this.label2.Location = new System.Drawing.Point(3, 231);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(237, 25);
+            this.label2.Size = new System.Drawing.Size(86, 25);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Contact: user@gmail.com";
+            this.label2.Text = "Contact:";
             // 
-            // label1
+            // lblUsername
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label1.Location = new System.Drawing.Point(87, 179);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(137, 31);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Username";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblUsername.AutoSize = true;
+            this.lblUsername.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsername.ForeColor = System.Drawing.Color.White;
+            this.lblUsername.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblUsername.Location = new System.Drawing.Point(87, 179);
+            this.lblUsername.Name = "lblUsername";
+            this.lblUsername.Size = new System.Drawing.Size(137, 31);
+            this.lblUsername.TabIndex = 1;
+            this.lblUsername.Text = "Username";
+            this.lblUsername.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // pictureBox1
+            // imgThongTin
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(78, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(146, 138);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.imgThongTin.Image = ((System.Drawing.Image)(resources.GetObject("imgThongTin.Image")));
+            this.imgThongTin.Location = new System.Drawing.Point(78, 12);
+            this.imgThongTin.Name = "imgThongTin";
+            this.imgThongTin.Size = new System.Drawing.Size(146, 138);
+            this.imgThongTin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.imgThongTin.TabIndex = 0;
+            this.imgThongTin.TabStop = false;
             // 
             // pnl_childForm
             // 
@@ -199,6 +201,17 @@
             this.pnl_childForm.Name = "pnl_childForm";
             this.pnl_childForm.Size = new System.Drawing.Size(1200, 810);
             this.pnl_childForm.TabIndex = 1;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(87, 231);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(207, 25);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "username@gmail.com";
             // 
             // FDashBoard
             // 
@@ -214,7 +227,7 @@
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgThongTin)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -222,8 +235,8 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label lblUsername;
+        private System.Windows.Forms.PictureBox imgThongTin;
         private System.Windows.Forms.Panel panel2;
         private Guna.UI2.WinForms.Guna2Button btn_LuanVan;
         private Guna.UI2.WinForms.Guna2Button btnMessage;
@@ -232,5 +245,6 @@
         private Guna.UI2.WinForms.Guna2Button btnSinhVien;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel pnl_childForm;
+        private System.Windows.Forms.Label label1;
     }
 }

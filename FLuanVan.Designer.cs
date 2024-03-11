@@ -29,116 +29,116 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.guna2Button4 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
-            this.richTextBox5 = new System.Windows.Forms.RichTextBox();
-            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
+            this.btnDelete = new Guna.UI2.WinForms.Guna2Button();
+            this.btnUpdate = new Guna.UI2.WinForms.Guna2Button();
+            this.btnAdd = new Guna.UI2.WinForms.Guna2Button();
+            this.txtSearch = new System.Windows.Forms.RichTextBox();
+            this.cblStatus = new System.Windows.Forms.CheckedListBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.richTextBox4 = new System.Windows.Forms.RichTextBox();
-            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.txtDescribe = new System.Windows.Forms.RichTextBox();
+            this.txtTen = new System.Windows.Forms.RichTextBox();
+            this.txtId = new System.Windows.Forms.RichTextBox();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.gvLuanVan = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvLuanVan)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.panel1.Controls.Add(this.guna2Button4);
-            this.panel1.Controls.Add(this.guna2Button3);
-            this.panel1.Controls.Add(this.guna2Button2);
-            this.panel1.Controls.Add(this.richTextBox5);
-            this.panel1.Controls.Add(this.checkedListBox1);
+            this.panel1.Controls.Add(this.btnDelete);
+            this.panel1.Controls.Add(this.btnUpdate);
+            this.panel1.Controls.Add(this.btnAdd);
+            this.panel1.Controls.Add(this.txtSearch);
+            this.panel1.Controls.Add(this.cblStatus);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.richTextBox4);
-            this.panel1.Controls.Add(this.richTextBox2);
-            this.panel1.Controls.Add(this.richTextBox1);
+            this.panel1.Controls.Add(this.txtDescribe);
+            this.panel1.Controls.Add(this.txtTen);
+            this.panel1.Controls.Add(this.txtId);
             this.panel1.Controls.Add(this.guna2Button1);
             this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1163, 355);
+            this.panel1.Size = new System.Drawing.Size(1163, 314);
             this.panel1.TabIndex = 8;
             // 
-            // guna2Button4
+            // btnDelete
             // 
-            this.guna2Button4.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button4.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button4.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button4.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button4.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2Button4.ForeColor = System.Drawing.Color.White;
-            this.guna2Button4.Location = new System.Drawing.Point(865, 169);
-            this.guna2Button4.Name = "guna2Button4";
-            this.guna2Button4.Size = new System.Drawing.Size(128, 48);
-            this.guna2Button4.TabIndex = 33;
-            this.guna2Button4.Text = "Xóa";
+            this.btnDelete.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnDelete.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnDelete.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnDelete.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnDelete.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnDelete.ForeColor = System.Drawing.Color.White;
+            this.btnDelete.Location = new System.Drawing.Point(865, 169);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(128, 48);
+            this.btnDelete.TabIndex = 33;
+            this.btnDelete.Text = "Delete";
             // 
-            // guna2Button3
+            // btnUpdate
             // 
-            this.guna2Button3.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button3.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button3.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2Button3.ForeColor = System.Drawing.Color.White;
-            this.guna2Button3.Location = new System.Drawing.Point(865, 95);
-            this.guna2Button3.Name = "guna2Button3";
-            this.guna2Button3.Size = new System.Drawing.Size(128, 48);
-            this.guna2Button3.TabIndex = 32;
-            this.guna2Button3.Text = "Sửa";
+            this.btnUpdate.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnUpdate.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnUpdate.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnUpdate.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnUpdate.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnUpdate.ForeColor = System.Drawing.Color.White;
+            this.btnUpdate.Location = new System.Drawing.Point(865, 95);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(128, 48);
+            this.btnUpdate.TabIndex = 32;
+            this.btnUpdate.Text = "Update";
             // 
-            // guna2Button2
+            // btnAdd
             // 
-            this.guna2Button2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button2.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2Button2.ForeColor = System.Drawing.Color.White;
-            this.guna2Button2.Location = new System.Drawing.Point(865, 19);
-            this.guna2Button2.Name = "guna2Button2";
-            this.guna2Button2.Size = new System.Drawing.Size(128, 48);
-            this.guna2Button2.TabIndex = 31;
-            this.guna2Button2.Text = "Lưu";
+            this.btnAdd.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnAdd.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnAdd.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnAdd.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnAdd.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnAdd.ForeColor = System.Drawing.Color.White;
+            this.btnAdd.Location = new System.Drawing.Point(865, 19);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(128, 48);
+            this.btnAdd.TabIndex = 31;
+            this.btnAdd.Text = "Add";
             // 
-            // richTextBox5
+            // txtSearch
             // 
-            this.richTextBox5.Location = new System.Drawing.Point(69, 300);
-            this.richTextBox5.Name = "richTextBox5";
-            this.richTextBox5.Size = new System.Drawing.Size(571, 45);
-            this.richTextBox5.TabIndex = 30;
-            this.richTextBox5.Text = "";
+            this.txtSearch.Location = new System.Drawing.Point(65, 262);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(571, 45);
+            this.txtSearch.TabIndex = 30;
+            this.txtSearch.Text = "";
             // 
-            // checkedListBox1
+            // cblStatus
             // 
-            this.checkedListBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.checkedListBox1.FormattingEnabled = true;
-            this.checkedListBox1.Items.AddRange(new object[] {
+            this.cblStatus.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.cblStatus.FormattingEnabled = true;
+            this.cblStatus.Items.AddRange(new object[] {
             "đã đăng kí",
             "chưa đăng kí"});
-            this.checkedListBox1.Location = new System.Drawing.Point(214, 120);
-            this.checkedListBox1.MultiColumn = true;
-            this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(442, 23);
-            this.checkedListBox1.TabIndex = 29;
+            this.cblStatus.Location = new System.Drawing.Point(214, 95);
+            this.cblStatus.MultiColumn = true;
+            this.cblStatus.Name = "cblStatus";
+            this.cblStatus.Size = new System.Drawing.Size(442, 23);
+            this.cblStatus.TabIndex = 29;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(47, 169);
+            this.label5.Location = new System.Drawing.Point(47, 132);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(67, 25);
             this.label5.TabIndex = 28;
@@ -148,7 +148,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(47, 118);
+            this.label4.Location = new System.Drawing.Point(47, 93);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(100, 25);
             this.label4.TabIndex = 27;
@@ -158,7 +158,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(47, 62);
+            this.label3.Location = new System.Drawing.Point(47, 53);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(132, 25);
             this.label3.TabIndex = 26;
@@ -174,29 +174,29 @@
             this.label2.TabIndex = 25;
             this.label2.Text = "Mã luận văn:";
             // 
-            // richTextBox4
+            // txtDescribe
             // 
-            this.richTextBox4.Location = new System.Drawing.Point(214, 169);
-            this.richTextBox4.Name = "richTextBox4";
-            this.richTextBox4.Size = new System.Drawing.Size(552, 123);
-            this.richTextBox4.TabIndex = 24;
-            this.richTextBox4.Text = "";
+            this.txtDescribe.Location = new System.Drawing.Point(214, 133);
+            this.txtDescribe.Name = "txtDescribe";
+            this.txtDescribe.Size = new System.Drawing.Size(552, 123);
+            this.txtDescribe.TabIndex = 24;
+            this.txtDescribe.Text = "";
             // 
-            // richTextBox2
+            // txtTen
             // 
-            this.richTextBox2.Location = new System.Drawing.Point(214, 62);
-            this.richTextBox2.Name = "richTextBox2";
-            this.richTextBox2.Size = new System.Drawing.Size(552, 35);
-            this.richTextBox2.TabIndex = 23;
-            this.richTextBox2.Text = "";
+            this.txtTen.Location = new System.Drawing.Point(214, 53);
+            this.txtTen.Name = "txtTen";
+            this.txtTen.Size = new System.Drawing.Size(552, 35);
+            this.txtTen.TabIndex = 23;
+            this.txtTen.Text = "";
             // 
-            // richTextBox1
+            // txtId
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(214, 12);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(552, 35);
-            this.richTextBox1.TabIndex = 22;
-            this.richTextBox1.Text = "";
+            this.txtId.Location = new System.Drawing.Point(214, 12);
+            this.txtId.Name = "txtId";
+            this.txtId.Size = new System.Drawing.Size(552, 35);
+            this.txtId.TabIndex = 22;
+            this.txtId.Text = "";
             // 
             // guna2Button1
             // 
@@ -206,7 +206,7 @@
             this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Location = new System.Drawing.Point(719, 300);
+            this.guna2Button1.Location = new System.Drawing.Point(720, 262);
             this.guna2Button1.Name = "guna2Button1";
             this.guna2Button1.Size = new System.Drawing.Size(180, 45);
             this.guna2Button1.TabIndex = 21;
@@ -216,10 +216,10 @@
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.panel2.Controls.Add(this.label1);
-            this.panel2.Controls.Add(this.dataGridView1);
-            this.panel2.Location = new System.Drawing.Point(13, 383);
+            this.panel2.Controls.Add(this.gvLuanVan);
+            this.panel2.Location = new System.Drawing.Point(13, 332);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1162, 415);
+            this.panel2.Size = new System.Drawing.Size(1162, 466);
             this.panel2.TabIndex = 9;
             // 
             // label1
@@ -229,19 +229,19 @@
             this.label1.ForeColor = System.Drawing.SystemColors.Highlight;
             this.label1.Location = new System.Drawing.Point(16, 13);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(131, 32);
+            this.label1.Size = new System.Drawing.Size(149, 32);
             this.label1.TabIndex = 8;
-            this.label1.Text = "Luận văn";
+            this.label1.Text = "Danh sách";
             // 
-            // dataGridView1
+            // gvLuanVan
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(22, 72);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 62;
-            this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(1106, 333);
-            this.dataGridView1.TabIndex = 0;
+            this.gvLuanVan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gvLuanVan.Location = new System.Drawing.Point(22, 59);
+            this.gvLuanVan.Name = "gvLuanVan";
+            this.gvLuanVan.RowHeadersWidth = 62;
+            this.gvLuanVan.RowTemplate.Height = 28;
+            this.gvLuanVan.Size = new System.Drawing.Size(1106, 391);
+            this.gvLuanVan.TabIndex = 0;
             // 
             // FLuanVan
             // 
@@ -258,28 +258,28 @@
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvLuanVan)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
         private System.Windows.Forms.Panel panel1;
-        private Guna.UI2.WinForms.Guna2Button guna2Button4;
-        private Guna.UI2.WinForms.Guna2Button guna2Button3;
-        private Guna.UI2.WinForms.Guna2Button guna2Button2;
-        private System.Windows.Forms.RichTextBox richTextBox5;
-        private System.Windows.Forms.CheckedListBox checkedListBox1;
+        private Guna.UI2.WinForms.Guna2Button btnDelete;
+        private Guna.UI2.WinForms.Guna2Button btnUpdate;
+        private Guna.UI2.WinForms.Guna2Button btnAdd;
+        private System.Windows.Forms.RichTextBox txtSearch;
+        private System.Windows.Forms.CheckedListBox cblStatus;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.RichTextBox richTextBox4;
-        private System.Windows.Forms.RichTextBox richTextBox2;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.RichTextBox txtDescribe;
+        private System.Windows.Forms.RichTextBox txtTen;
+        private System.Windows.Forms.RichTextBox txtId;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView gvLuanVan;
         private System.Windows.Forms.Label label1;
     }
 }

@@ -32,32 +32,32 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dtNgSinh = new System.Windows.Forms.DateTimePicker();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.richTextBox6 = new System.Windows.Forms.RichTextBox();
-            this.richTextBox5 = new System.Windows.Forms.RichTextBox();
-            this.richTextBox4 = new System.Windows.Forms.RichTextBox();
-            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.txtLuanVan = new System.Windows.Forms.RichTextBox();
+            this.txtKhoa = new System.Windows.Forms.RichTextBox();
+            this.txtLop = new System.Windows.Forms.RichTextBox();
+            this.txtTenSV = new System.Windows.Forms.RichTextBox();
+            this.txtIdSV = new System.Windows.Forms.RichTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.gvThongTinSV = new System.Windows.Forms.DataGridView();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
+            this.btnAdd = new System.Windows.Forms.Button();
+            this.btnUpdate = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.btnClear = new System.Windows.Forms.Button();
+            this.btnLuanVan = new System.Windows.Forms.Button();
+            this.btnKiemtraTiendo = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvThongTinSV)).BeginInit();
             this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -76,7 +76,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.panel2.Controls.Add(this.dataGridView1);
+            this.panel2.Controls.Add(this.gvThongTinSV);
             this.panel2.Controls.Add(this.label9);
             this.panel2.Location = new System.Drawing.Point(400, 12);
             this.panel2.Name = "panel2";
@@ -94,31 +94,31 @@
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.button6);
-            this.panel3.Controls.Add(this.button5);
-            this.panel3.Controls.Add(this.dateTimePicker1);
+            this.panel3.Controls.Add(this.btnKiemtraTiendo);
+            this.panel3.Controls.Add(this.btnLuanVan);
+            this.panel3.Controls.Add(this.dtNgSinh);
             this.panel3.Controls.Add(this.label6);
             this.panel3.Controls.Add(this.label5);
             this.panel3.Controls.Add(this.label4);
             this.panel3.Controls.Add(this.label3);
             this.panel3.Controls.Add(this.label2);
-            this.panel3.Controls.Add(this.richTextBox6);
-            this.panel3.Controls.Add(this.richTextBox5);
-            this.panel3.Controls.Add(this.richTextBox4);
-            this.panel3.Controls.Add(this.richTextBox2);
-            this.panel3.Controls.Add(this.richTextBox1);
+            this.panel3.Controls.Add(this.txtLuanVan);
+            this.panel3.Controls.Add(this.txtKhoa);
+            this.panel3.Controls.Add(this.txtLop);
+            this.panel3.Controls.Add(this.txtTenSV);
+            this.panel3.Controls.Add(this.txtIdSV);
             this.panel3.Controls.Add(this.label1);
             this.panel3.Location = new System.Drawing.Point(0, 84);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(353, 360);
             this.panel3.TabIndex = 14;
             // 
-            // dateTimePicker1
+            // dtNgSinh
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(111, 113);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(234, 26);
-            this.dateTimePicker1.TabIndex = 26;
+            this.dtNgSinh.Location = new System.Drawing.Point(111, 113);
+            this.dtNgSinh.Name = "dtNgSinh";
+            this.dtNgSinh.Size = new System.Drawing.Size(234, 26);
+            this.dtNgSinh.TabIndex = 26;
             // 
             // label6
             // 
@@ -170,45 +170,45 @@
             this.label2.TabIndex = 21;
             this.label2.Text = "Tên SV";
             // 
-            // richTextBox6
+            // txtLuanVan
             // 
-            this.richTextBox6.Location = new System.Drawing.Point(111, 225);
-            this.richTextBox6.Name = "richTextBox6";
-            this.richTextBox6.Size = new System.Drawing.Size(234, 34);
-            this.richTextBox6.TabIndex = 20;
-            this.richTextBox6.Text = "";
+            this.txtLuanVan.Location = new System.Drawing.Point(111, 225);
+            this.txtLuanVan.Name = "txtLuanVan";
+            this.txtLuanVan.Size = new System.Drawing.Size(234, 34);
+            this.txtLuanVan.TabIndex = 20;
+            this.txtLuanVan.Text = "";
             // 
-            // richTextBox5
+            // txtKhoa
             // 
-            this.richTextBox5.Location = new System.Drawing.Point(111, 185);
-            this.richTextBox5.Name = "richTextBox5";
-            this.richTextBox5.Size = new System.Drawing.Size(234, 34);
-            this.richTextBox5.TabIndex = 19;
-            this.richTextBox5.Text = "";
+            this.txtKhoa.Location = new System.Drawing.Point(111, 185);
+            this.txtKhoa.Name = "txtKhoa";
+            this.txtKhoa.Size = new System.Drawing.Size(234, 34);
+            this.txtKhoa.TabIndex = 19;
+            this.txtKhoa.Text = "";
             // 
-            // richTextBox4
+            // txtLop
             // 
-            this.richTextBox4.Location = new System.Drawing.Point(111, 145);
-            this.richTextBox4.Name = "richTextBox4";
-            this.richTextBox4.Size = new System.Drawing.Size(234, 34);
-            this.richTextBox4.TabIndex = 18;
-            this.richTextBox4.Text = "";
+            this.txtLop.Location = new System.Drawing.Point(111, 145);
+            this.txtLop.Name = "txtLop";
+            this.txtLop.Size = new System.Drawing.Size(234, 34);
+            this.txtLop.TabIndex = 18;
+            this.txtLop.Text = "";
             // 
-            // richTextBox2
+            // txtTenSV
             // 
-            this.richTextBox2.Location = new System.Drawing.Point(111, 65);
-            this.richTextBox2.Name = "richTextBox2";
-            this.richTextBox2.Size = new System.Drawing.Size(234, 34);
-            this.richTextBox2.TabIndex = 17;
-            this.richTextBox2.Text = "";
+            this.txtTenSV.Location = new System.Drawing.Point(111, 65);
+            this.txtTenSV.Name = "txtTenSV";
+            this.txtTenSV.Size = new System.Drawing.Size(234, 34);
+            this.txtTenSV.TabIndex = 17;
+            this.txtTenSV.Text = "";
             // 
-            // richTextBox1
+            // txtIdSV
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(111, 25);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(234, 34);
-            this.richTextBox1.TabIndex = 16;
-            this.richTextBox1.Text = "";
+            this.txtIdSV.Location = new System.Drawing.Point(111, 25);
+            this.txtIdSV.Name = "txtIdSV";
+            this.txtIdSV.Size = new System.Drawing.Size(234, 34);
+            this.txtIdSV.TabIndex = 16;
+            this.txtIdSV.Text = "";
             // 
             // label1
             // 
@@ -242,82 +242,82 @@
             this.label9.TabIndex = 16;
             this.label9.Text = "Sinh viên";
             // 
-            // dataGridView1
+            // gvThongTinSV
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(30, 84);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 62;
-            this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(709, 662);
-            this.dataGridView1.TabIndex = 17;
+            this.gvThongTinSV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gvThongTinSV.Location = new System.Drawing.Point(30, 84);
+            this.gvThongTinSV.Name = "gvThongTinSV";
+            this.gvThongTinSV.RowHeadersWidth = 62;
+            this.gvThongTinSV.RowTemplate.Height = 28;
+            this.gvThongTinSV.Size = new System.Drawing.Size(709, 662);
+            this.gvThongTinSV.TabIndex = 17;
             // 
             // panel4
             // 
-            this.panel4.Controls.Add(this.button4);
-            this.panel4.Controls.Add(this.button3);
-            this.panel4.Controls.Add(this.button2);
-            this.panel4.Controls.Add(this.button1);
+            this.panel4.Controls.Add(this.btnClear);
+            this.panel4.Controls.Add(this.btnDelete);
+            this.panel4.Controls.Add(this.btnUpdate);
+            this.panel4.Controls.Add(this.btnAdd);
             this.panel4.Location = new System.Drawing.Point(8, 547);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(333, 167);
             this.panel4.TabIndex = 16;
             // 
-            // button1
+            // btnAdd
             // 
-            this.button1.Location = new System.Drawing.Point(29, 28);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(100, 46);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Add";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnAdd.Location = new System.Drawing.Point(29, 28);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(100, 46);
+            this.btnAdd.TabIndex = 0;
+            this.btnAdd.Text = "Add";
+            this.btnAdd.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btnUpdate
             // 
-            this.button2.Location = new System.Drawing.Point(197, 28);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(100, 46);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Update";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnUpdate.Location = new System.Drawing.Point(197, 28);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(100, 46);
+            this.btnUpdate.TabIndex = 1;
+            this.btnUpdate.Text = "Update";
+            this.btnUpdate.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // btnDelete
             // 
-            this.button3.Location = new System.Drawing.Point(29, 97);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(100, 46);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Delete";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnDelete.Location = new System.Drawing.Point(29, 97);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(100, 46);
+            this.btnDelete.TabIndex = 2;
+            this.btnDelete.Text = "Delete";
+            this.btnDelete.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // btnClear
             // 
-            this.button4.Location = new System.Drawing.Point(197, 97);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(100, 46);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "Clear";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnClear.Location = new System.Drawing.Point(197, 97);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(100, 46);
+            this.btnClear.TabIndex = 3;
+            this.btnClear.Text = "Clear";
+            this.btnClear.UseVisualStyleBackColor = true;
             // 
-            // button5
+            // btnLuanVan
             // 
-            this.button5.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.button5.Location = new System.Drawing.Point(178, 276);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(167, 31);
-            this.button5.TabIndex = 27;
-            this.button5.Text = "Chi tiết đề tài";
-            this.button5.UseVisualStyleBackColor = false;
+            this.btnLuanVan.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.btnLuanVan.Location = new System.Drawing.Point(178, 276);
+            this.btnLuanVan.Name = "btnLuanVan";
+            this.btnLuanVan.Size = new System.Drawing.Size(167, 31);
+            this.btnLuanVan.TabIndex = 27;
+            this.btnLuanVan.Text = "Chi tiết đề tài";
+            this.btnLuanVan.UseVisualStyleBackColor = false;
             // 
-            // button6
+            // btnKiemtraTiendo
             // 
-            this.button6.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.button6.Location = new System.Drawing.Point(178, 313);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(167, 31);
-            this.button6.TabIndex = 28;
-            this.button6.Text = "Kiểm tra tiến độ";
-            this.button6.UseVisualStyleBackColor = false;
+            this.btnKiemtraTiendo.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.btnKiemtraTiendo.Location = new System.Drawing.Point(178, 313);
+            this.btnKiemtraTiendo.Name = "btnKiemtraTiendo";
+            this.btnKiemtraTiendo.Size = new System.Drawing.Size(167, 31);
+            this.btnKiemtraTiendo.TabIndex = 28;
+            this.btnKiemtraTiendo.Text = "Kiểm tra tiến độ";
+            this.btnKiemtraTiendo.UseVisualStyleBackColor = false;
             // 
             // FThongTinSV
             // 
@@ -335,7 +335,7 @@
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvThongTinSV)).EndInit();
             this.panel4.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -347,27 +347,27 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.Button btnUpdate;
+        private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtNgSinh;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.RichTextBox richTextBox6;
-        private System.Windows.Forms.RichTextBox richTextBox5;
-        private System.Windows.Forms.RichTextBox richTextBox4;
-        private System.Windows.Forms.RichTextBox richTextBox2;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.RichTextBox txtLuanVan;
+        private System.Windows.Forms.RichTextBox txtKhoa;
+        private System.Windows.Forms.RichTextBox txtLop;
+        private System.Windows.Forms.RichTextBox txtTenSV;
+        private System.Windows.Forms.RichTextBox txtIdSV;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView gvThongTinSV;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button btnClear;
+        private System.Windows.Forms.Button btnKiemtraTiendo;
+        private System.Windows.Forms.Button btnLuanVan;
     }
 }
