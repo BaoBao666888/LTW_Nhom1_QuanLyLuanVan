@@ -54,6 +54,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CheckTienDo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CheckTienDo.Designer.cs">
+      <DependentUpon>CheckTienDo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DSLuanVanSV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DSLuanVanSV.Designer.cs">
+      <DependentUpon>DSLuanVanSV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FDashBoadSV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FDashBoadSV.Designer.cs">
+      <DependentUpon>FDashBoadSV.cs</DependentUpon>
+    </Compile>
     <Compile Include="FDashBoard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -103,6 +121,15 @@
     <Compile Include="Tiến độ.Designer.cs">
       <DependentUpon>Tiến độ.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="CheckTienDo.resx">
+      <DependentUpon>CheckTienDo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DSLuanVanSV.resx">
+      <DependentUpon>DSLuanVanSV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FDashBoadSV.resx">
+      <DependentUpon>FDashBoadSV.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FDashBoard.resx">
       <DependentUpon>FDashBoard.cs</DependentUpon>
     </EmbeddedResource>

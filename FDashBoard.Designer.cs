@@ -111,6 +111,7 @@
             this.btnFeedback.Size = new System.Drawing.Size(300, 110);
             this.btnFeedback.TabIndex = 6;
             this.btnFeedback.Text = "Đánh giá ";
+            this.btnFeedback.Click += new System.EventHandler(this.btnFeedback_Click);
             // 
             // btnSinhVien
             // 

@@ -70,7 +70,7 @@
             this.panel1.Controls.Add(this.label7);
             this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(353, 774);
+            this.panel1.Size = new System.Drawing.Size(368, 774);
             this.panel1.TabIndex = 0;
             // 
             // panel4
@@ -92,6 +92,41 @@
             this.btnClear.TabIndex = 3;
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = true;
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.Location = new System.Drawing.Point(29, 97);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(100, 46);
+            this.btnDelete.TabIndex = 2;
+            this.btnDelete.Text = "Delete";
+            this.btnDelete.UseVisualStyleBackColor = true;
+            // 
+            // btnUpdate
+            // 
+            this.btnUpdate.Location = new System.Drawing.Point(197, 28);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(100, 46);
+            this.btnUpdate.TabIndex = 1;
+            this.btnUpdate.Text = "Update";
+            this.btnUpdate.UseVisualStyleBackColor = true;
+            // 
+            this.panel2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.panel2.Controls.Add(this.gvThongTinSV);
+            this.panel2.Controls.Add(this.label9);
+            this.panel2.Location = new System.Drawing.Point(400, 12);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(766, 774);
+            this.panel2.TabIndex = 1;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(3, 327);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(0, 25);
+            this.label7.TabIndex = 13;
             // 
             // btnDelete
             // 
@@ -151,26 +186,6 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(353, 360);
             this.panel3.TabIndex = 14;
-            // 
-            // btnKiemtraTiendo
-            // 
-            this.btnKiemtraTiendo.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.btnKiemtraTiendo.Location = new System.Drawing.Point(178, 313);
-            this.btnKiemtraTiendo.Name = "btnKiemtraTiendo";
-            this.btnKiemtraTiendo.Size = new System.Drawing.Size(167, 31);
-            this.btnKiemtraTiendo.TabIndex = 28;
-            this.btnKiemtraTiendo.Text = "Kiểm tra tiến độ";
-            this.btnKiemtraTiendo.UseVisualStyleBackColor = false;
-            // 
-            // btnLuanVan
-            // 
-            this.btnLuanVan.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.btnLuanVan.Location = new System.Drawing.Point(178, 276);
-            this.btnLuanVan.Name = "btnLuanVan";
-            this.btnLuanVan.Size = new System.Drawing.Size(167, 31);
-            this.btnLuanVan.TabIndex = 27;
-            this.btnLuanVan.Text = "Chi tiết đề tài";
-            this.btnLuanVan.UseVisualStyleBackColor = false;
             // 
             // dtNgSinh
             // 
@@ -308,16 +323,72 @@
             this.gvThongTinSV.Size = new System.Drawing.Size(709, 662);
             this.gvThongTinSV.TabIndex = 17;
             // 
-            // label9
+            // panel4
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label9.Location = new System.Drawing.Point(23, 20);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(156, 37);
-            this.label9.TabIndex = 16;
-            this.label9.Text = "Sinh viên";
+            this.panel4.Controls.Add(this.btnClear);
+            this.panel4.Controls.Add(this.btnDelete);
+            this.panel4.Controls.Add(this.btnUpdate);
+            this.panel4.Controls.Add(this.btnAdd);
+            this.panel4.Location = new System.Drawing.Point(8, 547);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(333, 167);
+            this.panel4.TabIndex = 16;
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.Location = new System.Drawing.Point(29, 28);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(100, 46);
+            this.btnAdd.TabIndex = 0;
+            this.btnAdd.Text = "Add";
+            this.btnAdd.UseVisualStyleBackColor = true;
+            // 
+            // btnUpdate
+            // 
+            this.btnUpdate.Location = new System.Drawing.Point(197, 28);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(100, 46);
+            this.btnUpdate.TabIndex = 1;
+            this.btnUpdate.Text = "Update";
+            this.btnUpdate.UseVisualStyleBackColor = true;
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.Location = new System.Drawing.Point(29, 97);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(100, 46);
+            this.btnDelete.TabIndex = 2;
+            this.btnDelete.Text = "Delete";
+            this.btnDelete.UseVisualStyleBackColor = true;
+            // 
+            // btnClear
+            // 
+            this.btnClear.Location = new System.Drawing.Point(197, 97);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(100, 46);
+            this.btnClear.TabIndex = 3;
+            this.btnClear.Text = "Clear";
+            this.btnClear.UseVisualStyleBackColor = true;
+            // 
+            // btnLuanVan
+            // 
+            this.btnLuanVan.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.btnLuanVan.Location = new System.Drawing.Point(178, 276);
+            this.btnLuanVan.Name = "btnLuanVan";
+            this.btnLuanVan.Size = new System.Drawing.Size(167, 31);
+            this.btnLuanVan.TabIndex = 27;
+            this.btnLuanVan.Text = "Chi tiết đề tài";
+            this.btnLuanVan.UseVisualStyleBackColor = false;
+            // 
+            // btnKiemtraTiendo
+            // 
+            this.btnKiemtraTiendo.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.btnKiemtraTiendo.Location = new System.Drawing.Point(178, 313);
+            this.btnKiemtraTiendo.Name = "btnKiemtraTiendo";
+            this.btnKiemtraTiendo.Size = new System.Drawing.Size(167, 31);
+            this.btnKiemtraTiendo.TabIndex = 28;
+            this.btnKiemtraTiendo.Text = "Kiểm tra tiến độ";
+            this.btnKiemtraTiendo.UseVisualStyleBackColor = false;
             // 
             // FThongTinSV
             // 

@@ -41,6 +41,8 @@ namespace Quan_Li_Luan_Van
             throw new NotImplementedException();
         }
 
+
+
         private void btn_LuanVan_Click(object sender, EventArgs e)
         {
             pnl_childForm.Controls.Clear();
@@ -62,6 +64,11 @@ namespace Quan_Li_Luan_Van
         }
 
         private void FDashBoard_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnFeedback_Click(object sender, EventArgs e)
         {
 
         }
