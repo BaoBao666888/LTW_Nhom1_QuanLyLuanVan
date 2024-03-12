@@ -18,6 +18,8 @@ namespace Quan_Li_Luan_Van
             InitializeComponent();
         }
 
+
+
         private void btn_LuanVan_Click(object sender, EventArgs e)
         {
             pnl_childForm.Controls.Clear();
@@ -36,6 +38,11 @@ namespace Quan_Li_Luan_Van
             pnl_childForm.Controls.Add(fSinhVien);
             fSinhVien.Dock = DockStyle.Fill;
             fSinhVien.Show();
+        }
+
+        private void btnFeedback_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

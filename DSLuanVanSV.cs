@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Quan_Li_Luan_Van
 {
-    public partial class FTienDo : Form
+    public partial class DSLuanVanSV : Form
     {
-        public FTienDo()
+        public DSLuanVanSV()
         {
             InitializeComponent();
         }

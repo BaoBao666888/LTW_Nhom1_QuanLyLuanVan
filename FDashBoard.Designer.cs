@@ -36,11 +36,11 @@
             this.btnSinhVien = new Guna.UI2.WinForms.Guna2Button();
             this.btn_LuanVan = new Guna.UI2.WinForms.Guna2Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.lblUsername = new System.Windows.Forms.Label();
             this.imgThongTin = new System.Windows.Forms.PictureBox();
             this.pnl_childForm = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgThongTin)).BeginInit();
@@ -111,6 +111,7 @@
             this.btnFeedback.Size = new System.Drawing.Size(300, 110);
             this.btnFeedback.TabIndex = 6;
             this.btnFeedback.Text = "Đánh giá ";
+            this.btnFeedback.Click += new System.EventHandler(this.btnFeedback_Click);
             // 
             // btnSinhVien
             // 
@@ -160,6 +161,17 @@
             this.panel2.Size = new System.Drawing.Size(300, 259);
             this.panel2.TabIndex = 2;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(87, 231);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(207, 25);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "username@gmail.com";
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -201,17 +213,6 @@
             this.pnl_childForm.Name = "pnl_childForm";
             this.pnl_childForm.Size = new System.Drawing.Size(1200, 810);
             this.pnl_childForm.TabIndex = 1;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(87, 231);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(207, 25);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "username@gmail.com";
             // 
             // FDashBoard
             // 

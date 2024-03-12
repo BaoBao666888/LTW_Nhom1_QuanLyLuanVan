@@ -16,5 +16,11 @@ namespace Quan_Li_Luan_Van
         {
             InitializeComponent();
         }
+
+        private void btnKiemtraTiendo_Click(object sender, EventArgs e)
+        {
+            frmCheckTienDo frmCheckTienDo = new frmCheckTienDo();
+            frmCheckTienDo.Show();
+        }
     }
 }

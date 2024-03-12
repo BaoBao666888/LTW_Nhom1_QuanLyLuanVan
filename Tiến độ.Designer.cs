@@ -1,6 +1,6 @@
 ﻿namespace Quan_Li_Luan_Van
 {
-    partial class Tiến_độ
+    partial class FTienDo
     {
         /// <summary>
         /// Required designer variable.
@@ -139,7 +139,7 @@
             this.rTxtMota.TabIndex = 12;
             this.rTxtMota.Text = "";
             // 
-            // Tiến_độ
+            // FTienDo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -156,7 +156,8 @@
             this.Controls.Add(this.lblTiendo);
             this.Controls.Add(this.progressBar1);
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Name = "Tiến_độ";
+            this.Name = "FTienDo";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Tiến_độ";
             this.ResumeLayout(false);
             this.PerformLayout();
