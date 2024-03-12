@@ -15,21 +15,21 @@ namespace Quan_Li_Luan_Van
         public Login()
         {
             InitializeComponent();
-            this.FormClosing += Login_FormClosing;
+            //this.FormClosing += Login_FormClosing;
         }
 
-        private void Login_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            if (MessageBox.Show("Bạn có chắc là muốn thoát không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-            {
-                Application.Exit();
-            }
-            else
-            {
-                e.Cancel = true;
-            }
+        //private void Login_FormClosing(object sender, FormClosingEventArgs e)
+        //{
+        //    if (MessageBox.Show("Bạn có chắc là muốn thoát không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+        //    {
+        //        Application.Exit();
+        //    }
+        //    else
+        //    {
+        //        e.Cancel = true;
+        //    }
 
-        }
+        //}
 
         private void Login_Load(object sender, EventArgs e)
         {

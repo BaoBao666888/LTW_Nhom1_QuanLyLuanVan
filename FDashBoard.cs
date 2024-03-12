@@ -16,6 +16,29 @@ namespace Quan_Li_Luan_Van
         public FDashBoard()
         {
             InitializeComponent();
+            this.FormClosing += FDashBoard_FormClosing;
+        }
+
+        private void FDashBoard_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void FDashBoard_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (MessageBox.Show("Bạn có chắc là muốn thoát không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                this.FormClosed += FDashBoard_FormClosed;
+            }
+            else
+            {
+                e.Cancel = true;
+            }
+        }
+
+        private void FDashBoard_FormClosed1(object sender, FormClosedEventArgs e)
+        {
+            throw new NotImplementedException();
         }
 
         private void btn_LuanVan_Click(object sender, EventArgs e)
@@ -36,6 +59,11 @@ namespace Quan_Li_Luan_Van
             pnl_childForm.Controls.Add(fSinhVien);
             fSinhVien.Dock = DockStyle.Fill;
             fSinhVien.Show();
+        }
+
+        private void FDashBoard_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

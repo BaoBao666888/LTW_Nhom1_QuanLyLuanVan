@@ -29,9 +29,15 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label7 = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.btnClear = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.btnUpdate = new System.Windows.Forms.Button();
+            this.btnAdd = new System.Windows.Forms.Button();
+            this.label8 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.btnKiemtraTiendo = new System.Windows.Forms.Button();
+            this.btnLuanVan = new System.Windows.Forms.Button();
             this.dtNgSinh = new System.Windows.Forms.DateTimePicker();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -44,21 +50,15 @@
             this.txtTenSV = new System.Windows.Forms.RichTextBox();
             this.txtIdSV = new System.Windows.Forms.RichTextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.gvThongTinSV = new System.Windows.Forms.DataGridView();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.btnAdd = new System.Windows.Forms.Button();
-            this.btnUpdate = new System.Windows.Forms.Button();
-            this.btnDelete = new System.Windows.Forms.Button();
-            this.btnClear = new System.Windows.Forms.Button();
-            this.btnLuanVan = new System.Windows.Forms.Button();
-            this.btnKiemtraTiendo = new System.Windows.Forms.Button();
+            this.label9 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gvThongTinSV)).BeginInit();
             this.panel4.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gvThongTinSV)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -73,24 +73,63 @@
             this.panel1.Size = new System.Drawing.Size(353, 774);
             this.panel1.TabIndex = 0;
             // 
-            // panel2
+            // panel4
             // 
-            this.panel2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.panel2.Controls.Add(this.gvThongTinSV);
-            this.panel2.Controls.Add(this.label9);
-            this.panel2.Location = new System.Drawing.Point(400, 12);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(766, 774);
-            this.panel2.TabIndex = 1;
+            this.panel4.Controls.Add(this.btnClear);
+            this.panel4.Controls.Add(this.btnDelete);
+            this.panel4.Controls.Add(this.btnUpdate);
+            this.panel4.Controls.Add(this.btnAdd);
+            this.panel4.Location = new System.Drawing.Point(8, 547);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(333, 167);
+            this.panel4.TabIndex = 16;
             // 
-            // label7
+            // btnClear
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(3, 327);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(0, 25);
-            this.label7.TabIndex = 13;
+            this.btnClear.Location = new System.Drawing.Point(197, 97);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(100, 46);
+            this.btnClear.TabIndex = 3;
+            this.btnClear.Text = "Clear";
+            this.btnClear.UseVisualStyleBackColor = true;
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.Location = new System.Drawing.Point(29, 97);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(100, 46);
+            this.btnDelete.TabIndex = 2;
+            this.btnDelete.Text = "Delete";
+            this.btnDelete.UseVisualStyleBackColor = true;
+            // 
+            // btnUpdate
+            // 
+            this.btnUpdate.Location = new System.Drawing.Point(197, 28);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(100, 46);
+            this.btnUpdate.TabIndex = 1;
+            this.btnUpdate.Text = "Update";
+            this.btnUpdate.UseVisualStyleBackColor = true;
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.Location = new System.Drawing.Point(29, 28);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(100, 46);
+            this.btnAdd.TabIndex = 0;
+            this.btnAdd.Text = "Add";
+            this.btnAdd.UseVisualStyleBackColor = true;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.label8.Location = new System.Drawing.Point(86, 20);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(161, 37);
+            this.label8.TabIndex = 15;
+            this.label8.Text = "Thông tin";
             // 
             // panel3
             // 
@@ -112,6 +151,26 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(353, 360);
             this.panel3.TabIndex = 14;
+            // 
+            // btnKiemtraTiendo
+            // 
+            this.btnKiemtraTiendo.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.btnKiemtraTiendo.Location = new System.Drawing.Point(178, 313);
+            this.btnKiemtraTiendo.Name = "btnKiemtraTiendo";
+            this.btnKiemtraTiendo.Size = new System.Drawing.Size(167, 31);
+            this.btnKiemtraTiendo.TabIndex = 28;
+            this.btnKiemtraTiendo.Text = "Kiểm tra tiến độ";
+            this.btnKiemtraTiendo.UseVisualStyleBackColor = false;
+            // 
+            // btnLuanVan
+            // 
+            this.btnLuanVan.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.btnLuanVan.Location = new System.Drawing.Point(178, 276);
+            this.btnLuanVan.Name = "btnLuanVan";
+            this.btnLuanVan.Size = new System.Drawing.Size(167, 31);
+            this.btnLuanVan.TabIndex = 27;
+            this.btnLuanVan.Text = "Chi tiết đề tài";
+            this.btnLuanVan.UseVisualStyleBackColor = false;
             // 
             // dtNgSinh
             // 
@@ -220,16 +279,34 @@
             this.label1.TabIndex = 15;
             this.label1.Text = "Mã SV";
             // 
-            // label8
+            // label7
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label8.Location = new System.Drawing.Point(86, 20);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(161, 37);
-            this.label8.TabIndex = 15;
-            this.label8.Text = "Thông tin";
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(3, 327);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(0, 25);
+            this.label7.TabIndex = 13;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.panel2.Controls.Add(this.gvThongTinSV);
+            this.panel2.Controls.Add(this.label9);
+            this.panel2.Location = new System.Drawing.Point(400, 12);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(766, 774);
+            this.panel2.TabIndex = 1;
+            // 
+            // gvThongTinSV
+            // 
+            this.gvThongTinSV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gvThongTinSV.Location = new System.Drawing.Point(30, 84);
+            this.gvThongTinSV.Name = "gvThongTinSV";
+            this.gvThongTinSV.RowHeadersWidth = 62;
+            this.gvThongTinSV.RowTemplate.Height = 28;
+            this.gvThongTinSV.Size = new System.Drawing.Size(709, 662);
+            this.gvThongTinSV.TabIndex = 17;
             // 
             // label9
             // 
@@ -242,88 +319,11 @@
             this.label9.TabIndex = 16;
             this.label9.Text = "Sinh viên";
             // 
-            // gvThongTinSV
-            // 
-            this.gvThongTinSV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gvThongTinSV.Location = new System.Drawing.Point(30, 84);
-            this.gvThongTinSV.Name = "gvThongTinSV";
-            this.gvThongTinSV.RowHeadersWidth = 62;
-            this.gvThongTinSV.RowTemplate.Height = 28;
-            this.gvThongTinSV.Size = new System.Drawing.Size(709, 662);
-            this.gvThongTinSV.TabIndex = 17;
-            // 
-            // panel4
-            // 
-            this.panel4.Controls.Add(this.btnClear);
-            this.panel4.Controls.Add(this.btnDelete);
-            this.panel4.Controls.Add(this.btnUpdate);
-            this.panel4.Controls.Add(this.btnAdd);
-            this.panel4.Location = new System.Drawing.Point(8, 547);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(333, 167);
-            this.panel4.TabIndex = 16;
-            // 
-            // btnAdd
-            // 
-            this.btnAdd.Location = new System.Drawing.Point(29, 28);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(100, 46);
-            this.btnAdd.TabIndex = 0;
-            this.btnAdd.Text = "Add";
-            this.btnAdd.UseVisualStyleBackColor = true;
-            // 
-            // btnUpdate
-            // 
-            this.btnUpdate.Location = new System.Drawing.Point(197, 28);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(100, 46);
-            this.btnUpdate.TabIndex = 1;
-            this.btnUpdate.Text = "Update";
-            this.btnUpdate.UseVisualStyleBackColor = true;
-            // 
-            // btnDelete
-            // 
-            this.btnDelete.Location = new System.Drawing.Point(29, 97);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(100, 46);
-            this.btnDelete.TabIndex = 2;
-            this.btnDelete.Text = "Delete";
-            this.btnDelete.UseVisualStyleBackColor = true;
-            // 
-            // btnClear
-            // 
-            this.btnClear.Location = new System.Drawing.Point(197, 97);
-            this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(100, 46);
-            this.btnClear.TabIndex = 3;
-            this.btnClear.Text = "Clear";
-            this.btnClear.UseVisualStyleBackColor = true;
-            // 
-            // btnLuanVan
-            // 
-            this.btnLuanVan.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.btnLuanVan.Location = new System.Drawing.Point(178, 276);
-            this.btnLuanVan.Name = "btnLuanVan";
-            this.btnLuanVan.Size = new System.Drawing.Size(167, 31);
-            this.btnLuanVan.TabIndex = 27;
-            this.btnLuanVan.Text = "Chi tiết đề tài";
-            this.btnLuanVan.UseVisualStyleBackColor = false;
-            // 
-            // btnKiemtraTiendo
-            // 
-            this.btnKiemtraTiendo.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.btnKiemtraTiendo.Location = new System.Drawing.Point(178, 313);
-            this.btnKiemtraTiendo.Name = "btnKiemtraTiendo";
-            this.btnKiemtraTiendo.Size = new System.Drawing.Size(167, 31);
-            this.btnKiemtraTiendo.TabIndex = 28;
-            this.btnKiemtraTiendo.Text = "Kiểm tra tiến độ";
-            this.btnKiemtraTiendo.UseVisualStyleBackColor = false;
-            // 
             // FThongTinSV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1178, 798);
+            this.ClientSize = new System.Drawing.Size(1200, 810);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -331,12 +331,12 @@
             this.Text = "FThongTinSV";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
+            this.panel4.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gvThongTinSV)).EndInit();
-            this.panel4.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
