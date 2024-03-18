@@ -28,54 +28,53 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.guna2CustomCheckBox2 = new Guna.UI2.WinForms.Guna2CustomCheckBox();
+            this.lbl_id = new System.Windows.Forms.Label();
+            this.lbl_ten = new System.Windows.Forms.Label();
+            this.cb_status = new Guna.UI2.WinForms.Guna2CustomCheckBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.txt_mota = new System.Windows.Forms.RichTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // label1
+            // lbl_id
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(131, 46);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(58, 22);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "label1";
+            this.lbl_id.AutoSize = true;
+            this.lbl_id.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_id.Location = new System.Drawing.Point(131, 46);
+            this.lbl_id.Name = "lbl_id";
+            this.lbl_id.Size = new System.Drawing.Size(58, 22);
+            this.lbl_id.TabIndex = 1;
+            this.lbl_id.Text = "label1";
             // 
-            // label2
+            // lbl_ten
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(252, 46);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(58, 22);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "label2";
+            this.lbl_ten.AutoSize = true;
+            this.lbl_ten.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_ten.Location = new System.Drawing.Point(252, 46);
+            this.lbl_ten.Name = "lbl_ten";
+            this.lbl_ten.Size = new System.Drawing.Size(58, 22);
+            this.lbl_ten.TabIndex = 2;
+            this.lbl_ten.Text = "label2";
             // 
-            // guna2CustomCheckBox2
+            // cb_status
             // 
-            this.guna2CustomCheckBox2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2CustomCheckBox2.BorderStyle = System.Drawing.Drawing2D.DashStyle.DashDotDot;
-            this.guna2CustomCheckBox2.Checked = true;
-            this.guna2CustomCheckBox2.CheckedState.BorderColor = System.Drawing.Color.Red;
-            this.guna2CustomCheckBox2.CheckedState.BorderRadius = 2;
-            this.guna2CustomCheckBox2.CheckedState.BorderThickness = 0;
-            this.guna2CustomCheckBox2.CheckedState.FillColor = System.Drawing.Color.Azure;
-            this.guna2CustomCheckBox2.CheckMarkColor = System.Drawing.Color.LawnGreen;
-            this.guna2CustomCheckBox2.Location = new System.Drawing.Point(390, 38);
-            this.guna2CustomCheckBox2.Name = "guna2CustomCheckBox2";
-            this.guna2CustomCheckBox2.Size = new System.Drawing.Size(35, 30);
-            this.guna2CustomCheckBox2.TabIndex = 5;
-            this.guna2CustomCheckBox2.Text = "guna2CustomCheckBox2";
-            this.guna2CustomCheckBox2.UncheckedState.BorderColor = System.Drawing.Color.RosyBrown;
-            this.guna2CustomCheckBox2.UncheckedState.BorderRadius = 2;
-            this.guna2CustomCheckBox2.UncheckedState.BorderThickness = 0;
-            this.guna2CustomCheckBox2.UncheckedState.FillColor = System.Drawing.Color.Silver;
-            this.guna2CustomCheckBox2.Click += new System.EventHandler(this.guna2CustomCheckBox2_Click);
+            this.cb_status.BackColor = System.Drawing.Color.Transparent;
+            this.cb_status.BorderStyle = System.Drawing.Drawing2D.DashStyle.DashDotDot;
+            this.cb_status.Checked = true;
+            this.cb_status.CheckedState.BorderColor = System.Drawing.Color.Red;
+            this.cb_status.CheckedState.BorderRadius = 2;
+            this.cb_status.CheckedState.BorderThickness = 0;
+            this.cb_status.CheckedState.FillColor = System.Drawing.Color.Azure;
+            this.cb_status.CheckMarkColor = System.Drawing.Color.LawnGreen;
+            this.cb_status.Location = new System.Drawing.Point(390, 38);
+            this.cb_status.Name = "cb_status";
+            this.cb_status.Size = new System.Drawing.Size(35, 30);
+            this.cb_status.TabIndex = 5;
+            this.cb_status.Text = "guna2CustomCheckBox2";
+            this.cb_status.UncheckedState.BorderColor = System.Drawing.Color.RosyBrown;
+            this.cb_status.UncheckedState.BorderRadius = 2;
+            this.cb_status.UncheckedState.BorderThickness = 0;
+            this.cb_status.UncheckedState.FillColor = System.Drawing.Color.Silver;
             // 
             // pictureBox1
             // 
@@ -87,25 +86,26 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // richTextBox1
+            // txt_mota
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(512, 3);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(288, 96);
-            this.richTextBox1.TabIndex = 6;
-            this.richTextBox1.Text = "";
+            this.txt_mota.Location = new System.Drawing.Point(512, 3);
+            this.txt_mota.Name = "txt_mota";
+            this.txt_mota.Size = new System.Drawing.Size(288, 96);
+            this.txt_mota.TabIndex = 6;
+            this.txt_mota.Text = "";
             // 
             // UCLuanVan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.richTextBox1);
-            this.Controls.Add(this.guna2CustomCheckBox2);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.txt_mota);
+            this.Controls.Add(this.cb_status);
+            this.Controls.Add(this.lbl_ten);
+            this.Controls.Add(this.lbl_id);
             this.Controls.Add(this.pictureBox1);
             this.Name = "UCLuanVan";
             this.Size = new System.Drawing.Size(834, 111);
+            this.Load += new System.EventHandler(this.UCLuanVan_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -115,9 +115,9 @@
         #endregion
 
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private Guna.UI2.WinForms.Guna2CustomCheckBox guna2CustomCheckBox2;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.Label lbl_id;
+        private System.Windows.Forms.Label lbl_ten;
+        private Guna.UI2.WinForms.Guna2CustomCheckBox cb_status;
+        private System.Windows.Forms.RichTextBox txt_mota;
     }
 }

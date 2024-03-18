@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.flp_list = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
@@ -38,13 +38,13 @@
             this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
             this.SuspendLayout();
             // 
-            // flowLayoutPanel1
+            // flp_list
             // 
-            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 283);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(928, 517);
-            this.flowLayoutPanel1.TabIndex = 0;
+            this.flp_list.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.flp_list.Location = new System.Drawing.Point(0, 283);
+            this.flp_list.Name = "flp_list";
+            this.flp_list.Size = new System.Drawing.Size(928, 517);
+            this.flp_list.TabIndex = 0;
             // 
             // panel1
             // 
@@ -155,7 +155,7 @@
             this.Controls.Add(this.guna2Button1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.flowLayoutPanel1);
+            this.Controls.Add(this.flp_list);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FLuanVan";
             this.Text = "FLuanVan";
@@ -167,7 +167,7 @@
 
         #endregion
 
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.FlowLayoutPanel flp_list;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
