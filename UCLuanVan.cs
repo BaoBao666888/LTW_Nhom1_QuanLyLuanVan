@@ -12,10 +12,6 @@ namespace Quan_Li_Luan_Van
 {
     public partial class UCLuanVan : UserControl
     {
-        public UCLuanVan()
-        {
-            InitializeComponent();
-        }
 
         private string id;
         private string name;
@@ -31,5 +27,14 @@ namespace Quan_Li_Luan_Van
             set { lbl_ten.Text = value; name = value; }
         }
 
+        public UCLuanVan()
+        {
+            InitializeComponent();
+        }
+
+        private void UCLuanVan_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

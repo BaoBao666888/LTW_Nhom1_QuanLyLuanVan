@@ -31,17 +31,18 @@
             this.flp_list = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
             this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // flp_list
             // 
+            this.flp_list.AutoScroll = true;
             this.flp_list.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.flp_list.Location = new System.Drawing.Point(0, 283);
             this.flp_list.Name = "flp_list";
@@ -69,6 +70,17 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(928, 199);
             this.panel2.TabIndex = 3;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.SeaGreen;
+            this.label1.Location = new System.Drawing.Point(308, 40);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(293, 40);
+            this.label1.TabIndex = 13;
+            this.label1.Text = "Quản lí luận văn";
             // 
             // guna2Button3
             // 
@@ -146,17 +158,6 @@
             this.guna2Button1.Size = new System.Drawing.Size(73, 45);
             this.guna2Button1.TabIndex = 8;
             this.guna2Button1.Text = "guna2Button1";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.SeaGreen;
-            this.label1.Location = new System.Drawing.Point(308, 40);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(293, 40);
-            this.label1.TabIndex = 13;
-            this.label1.Text = "Quản lí luận văn";
             // 
             // FLuanVan
             // 
