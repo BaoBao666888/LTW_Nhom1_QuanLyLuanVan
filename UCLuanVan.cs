@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace Quan_Li_Luan_Van
 {
-    public partial class Form1 : Form
+    public partial class UCLuanVan : UserControl
     {
-        public Form1()
+        public UCLuanVan()
         {
             InitializeComponent();
+        }
+
+        private void guna2CustomCheckBox2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

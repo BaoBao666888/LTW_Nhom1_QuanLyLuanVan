@@ -8,13 +8,23 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Quan_Li_Luan_Van.UC
+namespace Quan_Li_Luan_Van
 {
-    public partial class UC_thesis : UserControl
+    public partial class FLuanVan : Form
     {
-        public UC_thesis()
+        public FLuanVan()
         {
             InitializeComponent();
+        }
+
+        private void FLuanVan_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkedListBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

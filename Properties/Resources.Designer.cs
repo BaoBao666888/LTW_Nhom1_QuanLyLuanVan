@@ -133,6 +133,16 @@ namespace Quan_Li_Luan_Van.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap thesis_color {
+            get {
+                object obj = ResourceManager.GetObject("thesis_color", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ute_logo {
             get {
                 object obj = ResourceManager.GetObject("ute_logo", resourceCulture);
