@@ -43,15 +43,15 @@
             // flp_list
             // 
             this.flp_list.AutoScroll = true;
-            this.flp_list.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.flp_list.Location = new System.Drawing.Point(0, 283);
+            this.flp_list.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flp_list.Location = new System.Drawing.Point(0, 0);
             this.flp_list.Name = "flp_list";
-            this.flp_list.Size = new System.Drawing.Size(928, 517);
+            this.flp_list.Size = new System.Drawing.Size(928, 800);
             this.flp_list.TabIndex = 0;
             // 
             // panel1
             // 
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 199);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(928, 84);
@@ -65,7 +65,7 @@
             this.panel2.Controls.Add(this.checkedListBox1);
             this.panel2.Controls.Add(this.guna2TextBox1);
             this.panel2.Controls.Add(this.guna2Button1);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(928, 199);
@@ -84,6 +84,7 @@
             // 
             // guna2Button3
             // 
+            this.guna2Button3.Animated = true;
             this.guna2Button3.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.guna2Button3.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.guna2Button3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -147,6 +148,7 @@
             // 
             // guna2Button1
             // 
+            this.guna2Button1.Animated = true;
             this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -164,8 +166,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(928, 800);
-            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.flp_list);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FLuanVan";
