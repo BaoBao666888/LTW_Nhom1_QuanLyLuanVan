@@ -105,7 +105,6 @@
             this.Controls.Add(this.pictureBox1);
             this.Name = "UCLuanVan";
             this.Size = new System.Drawing.Size(834, 111);
-            this.Load += new System.EventHandler(this.UCLuanVan_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

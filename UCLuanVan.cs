@@ -17,21 +17,19 @@ namespace Quan_Li_Luan_Van
             InitializeComponent();
         }
 
+        private string id;
+        private string name;
         public string ID
         {
             get { return lbl_id.Text; }
-            set { lbl_id.Text = value; ID = value; }
+            set { lbl_id.Text = value; id = value; }
         }
 
         public string Ten
         {
-            get { return lbl_id.Text; }
-            set { lbl_id.Text = value; Ten = value; }
+            get { return lbl_ten.Text; }
+            set { lbl_ten.Text = value; name = value; }
         }
 
-        private void UCLuanVan_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }

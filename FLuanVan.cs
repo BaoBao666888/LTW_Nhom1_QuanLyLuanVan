@@ -16,6 +16,11 @@ namespace Quan_Li_Luan_Van
         {
             InitializeComponent();
         }
+
+        private void FLuanVan_Load(object sender, EventArgs e)
+        {
+            this.PopulateItems();
+        }
         private void PopulateItems()
         {
             UCLuanVan[] listUCLuanVan = new UCLuanVan[20];
@@ -27,12 +32,6 @@ namespace Quan_Li_Luan_Van
                 flp_list.Controls.Add(listUCLuanVan[i]);
             }
         }
-
-        private void FLuanVan_Load(object sender, EventArgs e)
-        {
-            this.PopulateItems();
-        }
-
 
         private void checkedListBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
