@@ -104,6 +104,7 @@
             // 
             this.checkedListBox1.BackColor = System.Drawing.SystemColors.Control;
             this.checkedListBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.checkedListBox1.CheckOnClick = true;
             this.checkedListBox1.FormattingEnabled = true;
             this.checkedListBox1.Items.AddRange(new object[] {
             "đã đăng kí",
