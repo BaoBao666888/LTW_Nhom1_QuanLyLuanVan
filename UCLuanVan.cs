@@ -36,5 +36,10 @@ namespace Quan_Li_Luan_Van
         {
 
         }
+
+        public void AnNut()
+        {
+            btn_xoa.Visible = false;
+        }
     }
 }

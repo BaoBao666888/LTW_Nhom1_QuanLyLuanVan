@@ -26,5 +26,10 @@ namespace Quan_Li_Luan_Van
             fLuanVan.Dock = DockStyle.Fill;
             fLuanVan.Show();
         }
+
+        private void DashBoadGV_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
