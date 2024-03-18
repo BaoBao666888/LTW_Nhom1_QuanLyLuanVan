@@ -58,11 +58,23 @@
     <Compile Include="DashBoadGV.Designer.cs">
       <DependentUpon>DashBoadGV.cs</DependentUpon>
     </Compile>
+    <Compile Include="DashBoardSV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DashBoardSV.Designer.cs">
+      <DependentUpon>DashBoardSV.cs</DependentUpon>
+    </Compile>
     <Compile Include="FLuanVan.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FLuanVan.Designer.cs">
       <DependentUpon>FLuanVan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FSinhVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSinhVien.Designer.cs">
+      <DependentUpon>FSinhVien.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -81,8 +93,14 @@
     <EmbeddedResource Include="DashBoadGV.resx">
       <DependentUpon>DashBoadGV.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DashBoardSV.resx">
+      <DependentUpon>DashBoardSV.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FLuanVan.resx">
       <DependentUpon>FLuanVan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FSinhVien.resx">
+      <DependentUpon>FSinhVien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
