@@ -106,6 +106,7 @@
             this.img_logOut.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.img_logOut.TabIndex = 10;
             this.img_logOut.TabStop = false;
+            this.img_logOut.Click += new System.EventHandler(this.img_logOut_Click);
             // 
             // label3
             // 

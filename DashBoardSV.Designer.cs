@@ -47,6 +47,7 @@
             this.ucDashBoard1.Name = "ucDashBoard1";
             this.ucDashBoard1.Size = new System.Drawing.Size(300, 850);
             this.ucDashBoard1.TabIndex = 0;
+            this.ucDashBoard1.Load += new System.EventHandler(this.ucDashBoard1_Load);
             // 
             // panel1
             // 

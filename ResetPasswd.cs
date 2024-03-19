@@ -10,21 +10,11 @@ using System.Windows.Forms;
 
 namespace Quan_Li_Luan_Van
 {
-    public partial class UCDashBoard : UserControl
+    public partial class ResetPasswd : Form
     {
-        public UCDashBoard()
+        public ResetPasswd()
         {
             InitializeComponent();
-        }
-
-        private void UCDashBoard_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        public void img_logOut_Click(object sender, EventArgs e)
-        {
-            
         }
     }
 }

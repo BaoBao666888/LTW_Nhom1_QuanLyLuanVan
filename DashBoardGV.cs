@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Quan_Li_Luan_Van
 {
-    public partial class DashBoadGV : Form
+    public partial class DashBoardGV : Form
     {
-        public DashBoadGV()
+        public DashBoardGV()
         {
             InitializeComponent();
         }

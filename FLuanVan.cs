@@ -37,10 +37,15 @@ namespace Quan_Li_Luan_Van
                 listUCLuanVan[i].Dock = DockStyle.Top;
             }
         }
-
-        private void txt_timKiem_click(object sender, MouseEventArgs e)
+        private void txt_timKiem_Click(object sender, EventArgs e)
         {
             txt_timKiem.Clear();
+        }
+
+        private void txt_timKiem_Leave(object sender, EventArgs e)
+        {
+            if (txt_timKiem.Text == "")
+                txt_timKiem.Text = "Tìm kiếm";
         }
     }
 }

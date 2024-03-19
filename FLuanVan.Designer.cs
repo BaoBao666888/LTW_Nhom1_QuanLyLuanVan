@@ -85,17 +85,20 @@
             // 
             this.btn_them.AnimatedGIF = true;
             this.btn_them.CustomImages.HoveredImage = global::Quan_Li_Luan_Van.Properties.Resources.plus;
-            this.btn_them.CustomImages.ImageSize = new System.Drawing.Size(30, 30);
+            this.btn_them.CustomImages.Image = global::Quan_Li_Luan_Van.Properties.Resources.plus;
+            this.btn_them.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btn_them.CustomImages.ImageOffset = new System.Drawing.Point(0, -7);
+            this.btn_them.CustomImages.ImageSize = new System.Drawing.Size(40, 40);
             this.btn_them.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btn_them.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btn_them.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btn_them.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_them.FillColor = System.Drawing.Color.DarkGray;
+            this.btn_them.FillColor = System.Drawing.SystemColors.Control;
             this.btn_them.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btn_them.ForeColor = System.Drawing.Color.White;
-            this.btn_them.Location = new System.Drawing.Point(820, 48);
+            this.btn_them.Location = new System.Drawing.Point(820, 43);
             this.btn_them.Name = "btn_them";
-            this.btn_them.Size = new System.Drawing.Size(64, 53);
+            this.btn_them.Size = new System.Drawing.Size(64, 58);
             this.btn_them.TabIndex = 38;
             // 
             // guna2Button1
@@ -146,6 +149,8 @@
             this.txt_timKiem.Size = new System.Drawing.Size(318, 32);
             this.txt_timKiem.TabIndex = 35;
             this.txt_timKiem.TextOffset = new System.Drawing.Point(-5, 0);
+            this.txt_timKiem.Click += new System.EventHandler(this.txt_timKiem_Click);
+            this.txt_timKiem.Leave += new System.EventHandler(this.txt_timKiem_Leave);
             // 
             // label3
             // 

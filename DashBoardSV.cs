@@ -27,5 +27,9 @@ namespace Quan_Li_Luan_Van
             fLuanVan.AnNutChucNang();
             fLuanVan.Show();
         }
+
+        private void ucDashBoard1_Load(object sender, EventArgs e)
+        {
+        }
     }
 }

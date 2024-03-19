@@ -1,6 +1,6 @@
 ﻿namespace Quan_Li_Luan_Van
 {
-    partial class DashBoadGV
+    partial class DashBoardGV
     {
         /// <summary>
         /// Required designer variable.
