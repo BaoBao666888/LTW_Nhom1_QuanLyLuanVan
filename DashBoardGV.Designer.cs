@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pnl_childForm = new System.Windows.Forms.Panel();
             this.guna2Button5 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button4 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.pnl_childForm = new System.Windows.Forms.Panel();
             this.ucDashBoard1 = new Quan_Li_Luan_Van.UCDashBoard();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -51,14 +51,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(300, 553);
             this.panel1.TabIndex = 1;
-            // 
-            // pnl_childForm
-            // 
-            this.pnl_childForm.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnl_childForm.Location = new System.Drawing.Point(300, 0);
-            this.pnl_childForm.Name = "pnl_childForm";
-            this.pnl_childForm.Size = new System.Drawing.Size(1028, 850);
-            this.pnl_childForm.TabIndex = 3;
             // 
             // guna2Button5
             // 
@@ -161,6 +153,14 @@
             this.guna2Button1.Text = "Luận văn";
             this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
+            // pnl_childForm
+            // 
+            this.pnl_childForm.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnl_childForm.Location = new System.Drawing.Point(300, 0);
+            this.pnl_childForm.Name = "pnl_childForm";
+            this.pnl_childForm.Size = new System.Drawing.Size(1028, 850);
+            this.pnl_childForm.TabIndex = 3;
+            // 
             // ucDashBoard1
             // 
             this.ucDashBoard1.BackColor = System.Drawing.Color.DarkGray;
@@ -171,7 +171,7 @@
             this.ucDashBoard1.Size = new System.Drawing.Size(300, 850);
             this.ucDashBoard1.TabIndex = 0;
             // 
-            // DashBoadGV
+            // DashBoardGV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -179,7 +179,7 @@
             this.Controls.Add(this.pnl_childForm);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.ucDashBoard1);
-            this.Name = "DashBoadGV";
+            this.Name = "DashBoardGV";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DashBoadGV";
             this.WindowState = System.Windows.Forms.FormWindowState.Minimized;

@@ -4,8 +4,10 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web.UI.WebControls;
 using System.Windows.Forms;
 
 namespace Quan_Li_Luan_Van
@@ -15,6 +17,14 @@ namespace Quan_Li_Luan_Van
         public DashBoardGV()
         {
             InitializeComponent();
+            ucDashBoard1.btnLogOut.Click += btnLogOut_Click;
+        }
+
+        private void btnLogOut_Click(object sender, EventArgs e)
+        {
+            Login fLogin = new Login();
+            fLogin.Show();
+            this.Close();
         }
 
         private void guna2Button1_Click(object sender, EventArgs e)
@@ -31,5 +41,6 @@ namespace Quan_Li_Luan_Van
         {
 
         }
+
     }
 }

@@ -31,9 +31,9 @@
             this.pnl_logo = new System.Windows.Forms.Panel();
             this.img_logo = new System.Windows.Forms.PictureBox();
             this.pnl_infor = new System.Windows.Forms.Panel();
+            this.btn_logOut = new Guna.UI2.WinForms.Guna2Button();
             this.lbl_ten = new System.Windows.Forms.Label();
             this.lbl_chucVu = new System.Windows.Forms.Label();
-            this.img_logOut = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -41,7 +41,6 @@
             this.pnl_logo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.img_logo)).BeginInit();
             this.pnl_infor.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.img_logOut)).BeginInit();
             this.SuspendLayout();
             // 
             // pnl_logo
@@ -65,9 +64,9 @@
             // 
             // pnl_infor
             // 
+            this.pnl_infor.Controls.Add(this.btn_logOut);
             this.pnl_infor.Controls.Add(this.lbl_ten);
             this.pnl_infor.Controls.Add(this.lbl_chucVu);
-            this.pnl_infor.Controls.Add(this.img_logOut);
             this.pnl_infor.Controls.Add(this.label3);
             this.pnl_infor.Controls.Add(this.label2);
             this.pnl_infor.Controls.Add(this.label1);
@@ -76,6 +75,22 @@
             this.pnl_infor.Name = "pnl_infor";
             this.pnl_infor.Size = new System.Drawing.Size(300, 93);
             this.pnl_infor.TabIndex = 1;
+            // 
+            // btn_logOut
+            // 
+            this.btn_logOut.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_logOut.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_logOut.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_logOut.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_logOut.FillColor = System.Drawing.Color.DarkGray;
+            this.btn_logOut.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btn_logOut.ForeColor = System.Drawing.Color.White;
+            this.btn_logOut.Image = global::Quan_Li_Luan_Van.Properties.Resources.power;
+            this.btn_logOut.Location = new System.Drawing.Point(240, 45);
+            this.btn_logOut.Name = "btn_logOut";
+            this.btn_logOut.Size = new System.Drawing.Size(42, 30);
+            this.btn_logOut.TabIndex = 0;
+            this.btn_logOut.Click += new System.EventHandler(this.btn_logOut_Click);
             // 
             // lbl_ten
             // 
@@ -96,17 +111,6 @@
             this.lbl_chucVu.Size = new System.Drawing.Size(35, 22);
             this.lbl_chucVu.TabIndex = 11;
             this.lbl_chucVu.Text = "HS";
-            // 
-            // img_logOut
-            // 
-            this.img_logOut.Image = global::Quan_Li_Luan_Van.Properties.Resources.power;
-            this.img_logOut.Location = new System.Drawing.Point(239, 42);
-            this.img_logOut.Name = "img_logOut";
-            this.img_logOut.Size = new System.Drawing.Size(39, 37);
-            this.img_logOut.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.img_logOut.TabIndex = 10;
-            this.img_logOut.TabStop = false;
-            this.img_logOut.Click += new System.EventHandler(this.img_logOut_Click);
             // 
             // label3
             // 
@@ -156,7 +160,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.img_logo)).EndInit();
             this.pnl_infor.ResumeLayout(false);
             this.pnl_infor.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.img_logOut)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -168,10 +171,10 @@
         private System.Windows.Forms.Panel pnl_infor;
         private System.Windows.Forms.Label lbl_ten;
         private System.Windows.Forms.Label lbl_chucVu;
-        private System.Windows.Forms.PictureBox img_logOut;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2Panel pnl_buttons;
+        private Guna.UI2.WinForms.Guna2Button btn_logOut;
     }
 }
