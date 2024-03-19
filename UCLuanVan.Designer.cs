@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.txt_mota = new System.Windows.Forms.RichTextBox();
             this.cb_status = new Guna.UI2.WinForms.Guna2CustomCheckBox();
             this.lbl_ten = new System.Windows.Forms.Label();
             this.lbl_id = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btn_xoa = new Guna.UI2.WinForms.Guna2Button();
+            this.txt_mota = new System.Windows.Forms.RichTextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -53,14 +53,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(919, 109);
             this.panel1.TabIndex = 0;
-            // 
-            // txt_mota
-            // 
-            this.txt_mota.Location = new System.Drawing.Point(598, 12);
-            this.txt_mota.Name = "txt_mota";
-            this.txt_mota.Size = new System.Drawing.Size(304, 96);
-            this.txt_mota.TabIndex = 11;
-            this.txt_mota.Text = "";
             // 
             // cb_status
             // 
@@ -138,6 +130,16 @@
             this.btn_xoa.Size = new System.Drawing.Size(56, 40);
             this.btn_xoa.TabIndex = 0;
             // 
+            // txt_mota
+            // 
+            this.txt_mota.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_mota.Location = new System.Drawing.Point(598, 12);
+            this.txt_mota.Name = "txt_mota";
+            this.txt_mota.ReadOnly = true;
+            this.txt_mota.Size = new System.Drawing.Size(305, 80);
+            this.txt_mota.TabIndex = 11;
+            this.txt_mota.Text = "";
+            // 
             // UCLuanVan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -159,12 +161,12 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.RichTextBox txt_mota;
         private Guna.UI2.WinForms.Guna2CustomCheckBox cb_status;
         private System.Windows.Forms.Label lbl_ten;
         private System.Windows.Forms.Label lbl_id;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel2;
         private Guna.UI2.WinForms.Guna2Button btn_xoa;
+        private System.Windows.Forms.RichTextBox txt_mota;
     }
 }

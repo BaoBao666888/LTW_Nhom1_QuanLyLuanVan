@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Guna.UI2.WinForms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,24 +13,33 @@ namespace Quan_Li_Luan_Van
 {
     public partial class UCLuanVan : UserControl
     {
-
-        private string id;
-        private string name;
-        public string ID
-        {
-            get { return lbl_id.Text; }
-            set { lbl_id.Text = value; id = value; }
-        }
-
-        public string Ten
-        {
-            get { return lbl_ten.Text; }
-            set { lbl_ten.Text = value; name = value; }
-        }
-
         public UCLuanVan()
         {
             InitializeComponent();
+        }
+
+        public Label lblId
+        {
+            get { return lbl_id; }
+            set { lbl_id = value; }
+        }
+
+        public Label lblDeTai
+        {
+            get { return lbl_ten; }
+            set { lbl_ten = value; }
+        }
+
+        public Guna2CustomCheckBox cbTrangThai
+        {
+            get { return cb_status; }
+            set { cb_status = value; }
+        }
+
+        public RichTextBox txtMoTa
+        {
+            get { return txt_mota; }
+            set { txt_mota = value; }
         }
 
         private void UCLuanVan_Load(object sender, EventArgs e)

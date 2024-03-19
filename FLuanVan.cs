@@ -12,6 +12,8 @@ namespace Quan_Li_Luan_Van
 {
     public partial class FLuanVan : Form
     {
+        LuanVanDAO lvDAO = new LuanVanDAO();
+        UCLuanVan ucLuanVan = new UCLuanVan();
         public FLuanVan()
         {
             InitializeComponent();
@@ -19,23 +21,11 @@ namespace Quan_Li_Luan_Van
 
         private void FLuanVan_Load(object sender, EventArgs e)
         {
-            this.PopulateItems();
+            this.LoadData();
         }
         public void AnNutChucNang()
         {
             btn_them.Visible = false;
-        }
-        private void PopulateItems()
-        {
-            UCLuanVan[] listUCLuanVan = new UCLuanVan[20];
-            for (int i = 0; i < listUCLuanVan.Length; i++)
-            {
-                listUCLuanVan[i] = new UCLuanVan();
-                listUCLuanVan[i].ID = "nhập Đề Tài";
-                listUCLuanVan[i].Ten = "nhập Mô tả";
-                flp_list.Controls.Add(listUCLuanVan[i]);
-                listUCLuanVan[i].Dock = DockStyle.Top;
-            }
         }
         private void txt_timKiem_Click(object sender, EventArgs e)
         {
@@ -51,6 +41,23 @@ namespace Quan_Li_Luan_Van
         private void flp_list_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void LoadData()
+        {
+            DataTable dt = new DataTable();
+            dt = lvDAO.Load();
+            UCLuanVan[] listUCLuanVan = new UCLuanVan[dt.Rows.Count];
+            for (int i = 0; i < dt.Rows.Count; i++)
+            {
+                listUCLuanVan[i].lblId.Text = dt.Rows[i]["Id"].ToString();
+                listUCLuanVan[i].lblDeTai.Text = dt.Rows[i]["DeTai"].ToString();
+                if (dt.Rows[i]["DeTai"].ToString() == "Y")
+                    listUCLuanVan[i].cbTrangThai.Checked = true;
+                else
+                    listUCLuanVan[i].cbTrangThai.Checked = false;
+                listUCLuanVan[i].txtMoTa.Text = dt.Rows[i]["MoTa"].ToString();
+            }
         }
     }
 }

@@ -12,13 +12,15 @@ namespace Quan_Li_Luan_Van
         private string deTai;
         private char trangThai;
         private string moTa;
+        private DateTime deadline;
 
-        public LuanVan(string id, string deTai, char trangThai, string moTa)
+        public LuanVan(string id, string deTai, char trangThai, string moTa, DateTime deadline)
         {
             this.id = id;
             this.deTai = deTai;
             this.trangThai = trangThai;
             this.moTa = moTa;
+            this.deadline = deadline;
         }
 
         public string Id
@@ -42,6 +44,12 @@ namespace Quan_Li_Luan_Van
         {
             get { return moTa; }
             set { moTa = value; }
+        }
+
+        public DateTime Deadline
+        {
+            get { return deadline; }
+            set { deadline = value; }
         }
 
     }
