@@ -31,19 +31,19 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.lblThongTinSV = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txt_diachi = new System.Windows.Forms.TextBox();
+            this.txt_lop = new System.Windows.Forms.TextBox();
+            this.txt_gioiTinh = new System.Windows.Forms.TextBox();
+            this.txt_hoTen = new System.Windows.Forms.TextBox();
+            this.txt_id = new System.Windows.Forms.TextBox();
+            this.txt_matKhau = new System.Windows.Forms.TextBox();
             this.txt_tenDangNhap = new System.Windows.Forms.TextBox();
-            this.txt_luanVan = new System.Windows.Forms.Label();
-            this.txt_lop = new System.Windows.Forms.Label();
-            this.txt_gioiTinh = new System.Windows.Forms.Label();
-            this.txt_hoTen = new System.Windows.Forms.Label();
-            this.txt_id = new System.Windows.Forms.Label();
-            this.txt_matKhau = new System.Windows.Forms.Label();
+            this.lbl_diaChi = new System.Windows.Forms.Label();
+            this.lbl_lop = new System.Windows.Forms.Label();
+            this.lbl_gioiTinh = new System.Windows.Forms.Label();
+            this.lbl_hoTen = new System.Windows.Forms.Label();
+            this.lbl_id = new System.Windows.Forms.Label();
+            this.lbl_matKhau = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
@@ -93,19 +93,19 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.textBox7);
-            this.panel2.Controls.Add(this.textBox6);
-            this.panel2.Controls.Add(this.textBox5);
-            this.panel2.Controls.Add(this.textBox4);
-            this.panel2.Controls.Add(this.textBox3);
-            this.panel2.Controls.Add(this.textBox2);
-            this.panel2.Controls.Add(this.txt_tenDangNhap);
-            this.panel2.Controls.Add(this.txt_luanVan);
+            this.panel2.Controls.Add(this.txt_diachi);
             this.panel2.Controls.Add(this.txt_lop);
             this.panel2.Controls.Add(this.txt_gioiTinh);
             this.panel2.Controls.Add(this.txt_hoTen);
             this.panel2.Controls.Add(this.txt_id);
             this.panel2.Controls.Add(this.txt_matKhau);
+            this.panel2.Controls.Add(this.txt_tenDangNhap);
+            this.panel2.Controls.Add(this.lbl_diaChi);
+            this.panel2.Controls.Add(this.lbl_lop);
+            this.panel2.Controls.Add(this.lbl_gioiTinh);
+            this.panel2.Controls.Add(this.lbl_hoTen);
+            this.panel2.Controls.Add(this.lbl_id);
+            this.panel2.Controls.Add(this.lbl_matKhau);
             this.panel2.Controls.Add(this.label14);
             this.panel2.Controls.Add(this.label13);
             this.panel2.Controls.Add(this.label12);
@@ -120,59 +120,59 @@
             this.panel2.Size = new System.Drawing.Size(404, 653);
             this.panel2.TabIndex = 11;
             // 
-            // textBox7
+            // txt_diachi
             // 
-            this.textBox7.BackColor = System.Drawing.SystemColors.Control;
-            this.textBox7.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox7.Location = new System.Drawing.Point(8, 578);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(381, 19);
-            this.textBox7.TabIndex = 25;
+            this.txt_diachi.BackColor = System.Drawing.SystemColors.Control;
+            this.txt_diachi.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_diachi.Location = new System.Drawing.Point(8, 578);
+            this.txt_diachi.Name = "txt_diachi";
+            this.txt_diachi.Size = new System.Drawing.Size(381, 19);
+            this.txt_diachi.TabIndex = 25;
             // 
-            // textBox6
+            // txt_lop
             // 
-            this.textBox6.BackColor = System.Drawing.SystemColors.Control;
-            this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox6.Location = new System.Drawing.Point(8, 488);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(381, 19);
-            this.textBox6.TabIndex = 24;
+            this.txt_lop.BackColor = System.Drawing.SystemColors.Control;
+            this.txt_lop.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_lop.Location = new System.Drawing.Point(8, 488);
+            this.txt_lop.Name = "txt_lop";
+            this.txt_lop.Size = new System.Drawing.Size(381, 19);
+            this.txt_lop.TabIndex = 24;
             // 
-            // textBox5
+            // txt_gioiTinh
             // 
-            this.textBox5.BackColor = System.Drawing.SystemColors.Control;
-            this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox5.Location = new System.Drawing.Point(8, 399);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(381, 19);
-            this.textBox5.TabIndex = 23;
+            this.txt_gioiTinh.BackColor = System.Drawing.SystemColors.Control;
+            this.txt_gioiTinh.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_gioiTinh.Location = new System.Drawing.Point(8, 399);
+            this.txt_gioiTinh.Name = "txt_gioiTinh";
+            this.txt_gioiTinh.Size = new System.Drawing.Size(381, 19);
+            this.txt_gioiTinh.TabIndex = 23;
             // 
-            // textBox4
+            // txt_hoTen
             // 
-            this.textBox4.BackColor = System.Drawing.SystemColors.Control;
-            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox4.Location = new System.Drawing.Point(10, 312);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(381, 19);
-            this.textBox4.TabIndex = 22;
+            this.txt_hoTen.BackColor = System.Drawing.SystemColors.Control;
+            this.txt_hoTen.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_hoTen.Location = new System.Drawing.Point(10, 312);
+            this.txt_hoTen.Name = "txt_hoTen";
+            this.txt_hoTen.Size = new System.Drawing.Size(381, 19);
+            this.txt_hoTen.TabIndex = 22;
             // 
-            // textBox3
+            // txt_id
             // 
-            this.textBox3.BackColor = System.Drawing.SystemColors.Control;
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox3.Location = new System.Drawing.Point(8, 223);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(381, 19);
-            this.textBox3.TabIndex = 21;
+            this.txt_id.BackColor = System.Drawing.SystemColors.Control;
+            this.txt_id.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_id.Location = new System.Drawing.Point(8, 223);
+            this.txt_id.Name = "txt_id";
+            this.txt_id.Size = new System.Drawing.Size(381, 19);
+            this.txt_id.TabIndex = 21;
             // 
-            // textBox2
+            // txt_matKhau
             // 
-            this.textBox2.BackColor = System.Drawing.SystemColors.Control;
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Location = new System.Drawing.Point(8, 145);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(381, 19);
-            this.textBox2.TabIndex = 20;
+            this.txt_matKhau.BackColor = System.Drawing.SystemColors.Control;
+            this.txt_matKhau.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_matKhau.Location = new System.Drawing.Point(8, 145);
+            this.txt_matKhau.Name = "txt_matKhau";
+            this.txt_matKhau.Size = new System.Drawing.Size(381, 19);
+            this.txt_matKhau.TabIndex = 20;
             // 
             // txt_tenDangNhap
             // 
@@ -183,65 +183,65 @@
             this.txt_tenDangNhap.Size = new System.Drawing.Size(381, 19);
             this.txt_tenDangNhap.TabIndex = 19;
             // 
-            // txt_luanVan
+            // lbl_diaChi
             // 
-            this.txt_luanVan.AutoSize = true;
-            this.txt_luanVan.ForeColor = System.Drawing.Color.Silver;
-            this.txt_luanVan.Location = new System.Drawing.Point(3, 548);
-            this.txt_luanVan.Name = "txt_luanVan";
-            this.txt_luanVan.Size = new System.Drawing.Size(74, 20);
-            this.txt_luanVan.TabIndex = 18;
-            this.txt_luanVan.Text = "Luận văn";
+            this.lbl_diaChi.AutoSize = true;
+            this.lbl_diaChi.ForeColor = System.Drawing.Color.Silver;
+            this.lbl_diaChi.Location = new System.Drawing.Point(3, 548);
+            this.lbl_diaChi.Name = "lbl_diaChi";
+            this.lbl_diaChi.Size = new System.Drawing.Size(57, 20);
+            this.lbl_diaChi.TabIndex = 18;
+            this.lbl_diaChi.Text = "Địa chỉ";
             // 
-            // txt_lop
+            // lbl_lop
             // 
-            this.txt_lop.AutoSize = true;
-            this.txt_lop.ForeColor = System.Drawing.Color.Silver;
-            this.txt_lop.Location = new System.Drawing.Point(6, 458);
-            this.txt_lop.Name = "txt_lop";
-            this.txt_lop.Size = new System.Drawing.Size(36, 20);
-            this.txt_lop.TabIndex = 17;
-            this.txt_lop.Text = "Lớp";
+            this.lbl_lop.AutoSize = true;
+            this.lbl_lop.ForeColor = System.Drawing.Color.Silver;
+            this.lbl_lop.Location = new System.Drawing.Point(6, 458);
+            this.lbl_lop.Name = "lbl_lop";
+            this.lbl_lop.Size = new System.Drawing.Size(36, 20);
+            this.lbl_lop.TabIndex = 17;
+            this.lbl_lop.Text = "Lớp";
             // 
-            // txt_gioiTinh
+            // lbl_gioiTinh
             // 
-            this.txt_gioiTinh.AutoSize = true;
-            this.txt_gioiTinh.ForeColor = System.Drawing.Color.Silver;
-            this.txt_gioiTinh.Location = new System.Drawing.Point(4, 369);
-            this.txt_gioiTinh.Name = "txt_gioiTinh";
-            this.txt_gioiTinh.Size = new System.Drawing.Size(67, 20);
-            this.txt_gioiTinh.TabIndex = 16;
-            this.txt_gioiTinh.Text = "Giới tính";
+            this.lbl_gioiTinh.AutoSize = true;
+            this.lbl_gioiTinh.ForeColor = System.Drawing.Color.Silver;
+            this.lbl_gioiTinh.Location = new System.Drawing.Point(4, 369);
+            this.lbl_gioiTinh.Name = "lbl_gioiTinh";
+            this.lbl_gioiTinh.Size = new System.Drawing.Size(67, 20);
+            this.lbl_gioiTinh.TabIndex = 16;
+            this.lbl_gioiTinh.Text = "Giới tính";
             // 
-            // txt_hoTen
+            // lbl_hoTen
             // 
-            this.txt_hoTen.AutoSize = true;
-            this.txt_hoTen.ForeColor = System.Drawing.Color.Silver;
-            this.txt_hoTen.Location = new System.Drawing.Point(6, 282);
-            this.txt_hoTen.Name = "txt_hoTen";
-            this.txt_hoTen.Size = new System.Drawing.Size(57, 20);
-            this.txt_hoTen.TabIndex = 15;
-            this.txt_hoTen.Text = "Họ tên";
+            this.lbl_hoTen.AutoSize = true;
+            this.lbl_hoTen.ForeColor = System.Drawing.Color.Silver;
+            this.lbl_hoTen.Location = new System.Drawing.Point(6, 282);
+            this.lbl_hoTen.Name = "lbl_hoTen";
+            this.lbl_hoTen.Size = new System.Drawing.Size(57, 20);
+            this.lbl_hoTen.TabIndex = 15;
+            this.lbl_hoTen.Text = "Họ tên";
             // 
-            // txt_id
+            // lbl_id
             // 
-            this.txt_id.AutoSize = true;
-            this.txt_id.ForeColor = System.Drawing.Color.Silver;
-            this.txt_id.Location = new System.Drawing.Point(6, 192);
-            this.txt_id.Name = "txt_id";
-            this.txt_id.Size = new System.Drawing.Size(23, 20);
-            this.txt_id.TabIndex = 14;
-            this.txt_id.Text = "Id";
+            this.lbl_id.AutoSize = true;
+            this.lbl_id.ForeColor = System.Drawing.Color.Silver;
+            this.lbl_id.Location = new System.Drawing.Point(6, 192);
+            this.lbl_id.Name = "lbl_id";
+            this.lbl_id.Size = new System.Drawing.Size(23, 20);
+            this.lbl_id.TabIndex = 14;
+            this.lbl_id.Text = "Id";
             // 
-            // txt_matKhau
+            // lbl_matKhau
             // 
-            this.txt_matKhau.AutoSize = true;
-            this.txt_matKhau.ForeColor = System.Drawing.Color.Silver;
-            this.txt_matKhau.Location = new System.Drawing.Point(2, 115);
-            this.txt_matKhau.Name = "txt_matKhau";
-            this.txt_matKhau.Size = new System.Drawing.Size(75, 20);
-            this.txt_matKhau.TabIndex = 13;
-            this.txt_matKhau.Text = "Mật khẩu";
+            this.lbl_matKhau.AutoSize = true;
+            this.lbl_matKhau.ForeColor = System.Drawing.Color.Silver;
+            this.lbl_matKhau.Location = new System.Drawing.Point(2, 115);
+            this.lbl_matKhau.Name = "lbl_matKhau";
+            this.lbl_matKhau.Size = new System.Drawing.Size(75, 20);
+            this.lbl_matKhau.TabIndex = 13;
+            this.lbl_matKhau.Text = "Mật khẩu";
             // 
             // label14
             // 
@@ -497,19 +497,19 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label txt_gioiTinh;
-        private System.Windows.Forms.Label txt_hoTen;
-        private System.Windows.Forms.Label txt_id;
-        private System.Windows.Forms.Label txt_matKhau;
+        private System.Windows.Forms.Label lbl_gioiTinh;
+        private System.Windows.Forms.Label lbl_hoTen;
+        private System.Windows.Forms.Label lbl_id;
+        private System.Windows.Forms.Label lbl_matKhau;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txt_diachi;
+        private System.Windows.Forms.TextBox txt_lop;
+        private System.Windows.Forms.TextBox txt_gioiTinh;
+        private System.Windows.Forms.TextBox txt_hoTen;
+        private System.Windows.Forms.TextBox txt_id;
+        private System.Windows.Forms.TextBox txt_matKhau;
         private System.Windows.Forms.TextBox txt_tenDangNhap;
-        private System.Windows.Forms.Label txt_luanVan;
-        private System.Windows.Forms.Label txt_lop;
+        private System.Windows.Forms.Label lbl_diaChi;
+        private System.Windows.Forms.Label lbl_lop;
     }
 }
