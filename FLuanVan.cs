@@ -47,5 +47,10 @@ namespace Quan_Li_Luan_Van
             if (txt_timKiem.Text == "")
                 txt_timKiem.Text = "Tìm kiếm";
         }
+
+        private void flp_list_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

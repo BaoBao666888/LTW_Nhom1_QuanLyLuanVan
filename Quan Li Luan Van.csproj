@@ -102,6 +102,12 @@
     <Compile Include="UCLuanVan.Designer.cs">
       <DependentUpon>UCLuanVan.cs</DependentUpon>
     </Compile>
+    <Compile Include="UCTHongTinSV.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCTHongTinSV.Designer.cs">
+      <DependentUpon>UCTHongTinSV.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="DashBoardGV.resx">
       <DependentUpon>DashBoardGV.cs</DependentUpon>
     </EmbeddedResource>
@@ -135,6 +141,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UCLuanVan.resx">
       <DependentUpon>UCLuanVan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCTHongTinSV.resx">
+      <DependentUpon>UCTHongTinSV.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

@@ -16,5 +16,29 @@ namespace Quan_Li_Luan_Van
         {
             InitializeComponent();
         }
+
+        private void PopulateItems()
+        {
+            UCTHongTinSV[] uCTHongTinSVs = new UCTHongTinSV[20];
+            for (int i = 0; i < uCTHongTinSVs.Length; i++)
+            {
+                uCTHongTinSVs[i] = new UCTHongTinSV();
+                uCTHongTinSVs[i].Id = $"{i}";
+                uCTHongTinSVs[i].Ten = "Ho va Ten";
+                uCTHongTinSVs[i].Lop = "CLC";
+                flp_listSV.Controls.Add(uCTHongTinSVs[i]);
+                uCTHongTinSVs[i].Dock = DockStyle.Top;
+            }
+        }
+
+        private void FSinhVien_Load(object sender, EventArgs e)
+        {
+            this.PopulateItems();
+        }
+
+        private void flp_listSV_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

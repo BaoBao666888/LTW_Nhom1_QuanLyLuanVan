@@ -14,17 +14,41 @@ namespace Quan_Li_Luan_Van
 {
     public partial class DashBoardGV : Form
     {
+        private bool dangXuatTrue = true;
         public DashBoardGV()
         {
             InitializeComponent();
             ucDashBoard1.btnLogOut.Click += btnLogOut_Click;
+            this.FormClosing += DashBoardGV_FormClosing;
+        }
+
+        private void DashBoardGV_FormClosing(object sender, FormClosingEventArgs e)
+        {
+                if (dangXuatTrue == true)
+                if (MessageBox.Show("Bạn có chắc là muốn thoát không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    this.FormClosed += DashBoardGV_FormClosed;
+                }
+                else
+                {
+                    e.Cancel = true;
+                }
+        }
+
+        private void DashBoardGV_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
 
         private void btnLogOut_Click(object sender, EventArgs e)
         {
-            Login fLogin = new Login();
-            fLogin.Show();
-            this.Close();
+            if (dangXuatTrue == true)
+            {
+                Login fLogin = new Login();
+                fLogin.Show();
+                dangXuatTrue = false;
+                this.Close();
+            }
         }
 
         private void guna2Button1_Click(object sender, EventArgs e)
@@ -42,5 +66,14 @@ namespace Quan_Li_Luan_Van
 
         }
 
+        private void guna2Button2_Click(object sender, EventArgs e)
+        {
+            pnl_childForm.Controls.Clear();
+            FSinhVien fSinhVien = new FSinhVien();
+            fSinhVien.TopLevel = false;
+            pnl_childForm.Controls.Add(fSinhVien);
+            fSinhVien.Dock = DockStyle.Fill;
+            fSinhVien.Show();
+        }
     }
 }
