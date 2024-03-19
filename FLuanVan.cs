@@ -14,7 +14,7 @@ namespace Quan_Li_Luan_Van
     public partial class FLuanVan : Form
     {
         LuanVanDAO lvDAO = new LuanVanDAO();
-        UCLuanVan ucLuanVan = new UCLuanVan();
+        
         public FLuanVan()
         {
             InitializeComponent();
@@ -25,7 +25,6 @@ namespace Quan_Li_Luan_Van
             this.LoadData();
         }
 
-        
         public void AnNutChucNang()
         {
             btn_them.Visible = false;
@@ -50,20 +49,21 @@ namespace Quan_Li_Luan_Van
         {
             DataTable dt = new DataTable();
             dt = lvDAO.Load();
-            List<UCLuanVan> listUCLuanVan = new List<UCLuanVan>();
 
             for (int i = 0; i < dt.Rows.Count; i++)
             {
-
-                ucLuanVan.Id = dt.Rows[i]["Id"].ToString();
-                ucLuanVan.DeTai = dt.Rows[i]["DeTai"].ToString();
+                UCLuanVan ucLuanVan = new UCLuanVan();
+                ucLuanVan.lblId.Text = dt.Rows[i]["Id"].ToString();
+                ucLuanVan.lblDeTai.Text = dt.Rows[i]["DeTai"].ToString();
                 if (dt.Rows[i]["DeTai"].ToString() == "Y")
                     ucLuanVan.cbTrangThai.Checked = true;
                 else
                     ucLuanVan.cbTrangThai.Checked = false;
-                ucLuanVan.MoTa = dt.Rows[i]["MoTa"].ToString();
-                listUCLuanVan.Add(ucLuanVan);
+                ucLuanVan.txtMoTa.Text = dt.Rows[i]["MoTa"].ToString();
+                flp_list.Controls.Add(ucLuanVan);
             }
+
+           
         }
     }
 }

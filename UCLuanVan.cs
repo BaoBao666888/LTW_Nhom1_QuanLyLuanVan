@@ -18,16 +18,16 @@ namespace Quan_Li_Luan_Van
             InitializeComponent();
         }
 
-        public string Id
+        public Label lblId
         {
-            get { return lbl_id.Text; }
-            set { lbl_id.Text = value; }
+            get { return lbl_id; }
+            set { lbl_id = value; }
         }
 
-        public string DeTai
+        public Label lblDeTai
         {
-            get { return lbl_ten.Text; }
-            set { lbl_ten.Text = value; }
+            get { return lbl_ten; }
+            set { lbl_ten = value; }
         }
 
         public Guna2CustomCheckBox cbTrangThai
@@ -36,10 +36,10 @@ namespace Quan_Li_Luan_Van
             set { cb_status = value; }
         }
 
-        public string MoTa
+        public RichTextBox txtMoTa
         {
-            get { return txt_mota.Text; }
-            set { txt_mota.Text = value; }
+            get { return txt_mota; }
+            set { txt_mota = value; }
         }
 
         private void UCLuanVan_Load(object sender, EventArgs e)
