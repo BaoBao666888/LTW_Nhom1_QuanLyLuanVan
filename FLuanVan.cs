@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -23,6 +24,8 @@ namespace Quan_Li_Luan_Van
         {
             this.LoadData();
         }
+
+        
         public void AnNutChucNang()
         {
             btn_them.Visible = false;
@@ -47,16 +50,19 @@ namespace Quan_Li_Luan_Van
         {
             DataTable dt = new DataTable();
             dt = lvDAO.Load();
-            UCLuanVan[] listUCLuanVan = new UCLuanVan[dt.Rows.Count];
+            List<UCLuanVan> listUCLuanVan = new List<UCLuanVan>();
+
             for (int i = 0; i < dt.Rows.Count; i++)
             {
-                listUCLuanVan[i].lblId.Text = dt.Rows[i]["Id"].ToString();
-                listUCLuanVan[i].lblDeTai.Text = dt.Rows[i]["DeTai"].ToString();
+
+                ucLuanVan.Id = dt.Rows[i]["Id"].ToString();
+                ucLuanVan.DeTai = dt.Rows[i]["DeTai"].ToString();
                 if (dt.Rows[i]["DeTai"].ToString() == "Y")
-                    listUCLuanVan[i].cbTrangThai.Checked = true;
+                    ucLuanVan.cbTrangThai.Checked = true;
                 else
-                    listUCLuanVan[i].cbTrangThai.Checked = false;
-                listUCLuanVan[i].txtMoTa.Text = dt.Rows[i]["MoTa"].ToString();
+                    ucLuanVan.cbTrangThai.Checked = false;
+                ucLuanVan.MoTa = dt.Rows[i]["MoTa"].ToString();
+                listUCLuanVan.Add(ucLuanVan);
             }
         }
     }
