@@ -58,17 +58,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DashBoardGV.cs">
+    <Compile Include="FGiaoVien.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DashBoardGV.Designer.cs">
-      <DependentUpon>DashBoardGV.cs</DependentUpon>
+    <Compile Include="FGiaoVien.Designer.cs">
+      <DependentUpon>FGiaoVien.cs</DependentUpon>
     </Compile>
-    <Compile Include="DashBoardSV.cs">
+    <Compile Include="FSinhVien.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DashBoardSV.Designer.cs">
-      <DependentUpon>DashBoardSV.cs</DependentUpon>
+    <Compile Include="FSinhVien.Designer.cs">
+      <DependentUpon>FSinhVien.cs</DependentUpon>
     </Compile>
     <Compile Include="DbConnection.cs" />
     <Compile Include="FLuanVan.cs">
@@ -77,23 +77,17 @@
     <Compile Include="FLuanVan.Designer.cs">
       <DependentUpon>FLuanVan.cs</DependentUpon>
     </Compile>
-    <Compile Include="FSinhVien.cs">
+    <Compile Include="FSinhVien_du.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FSinhVien.Designer.cs">
-      <DependentUpon>FSinhVien.cs</DependentUpon>
+    <Compile Include="FSinhVien_du.Designer.cs">
+      <DependentUpon>FSinhVien_du.cs</DependentUpon>
     </Compile>
     <Compile Include="FThemluanvan.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FThemluanvan.Designer.cs">
       <DependentUpon>FThemluanvan.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FThemSV.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FThemSV.Designer.cs">
-      <DependentUpon>FThemSV.cs</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -130,17 +124,17 @@
     <Compile Include="UCTHongTinSV.Designer.cs">
       <DependentUpon>UCTHongTinSV.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="DashBoardGV.resx">
-      <DependentUpon>DashBoardGV.cs</DependentUpon>
+    <EmbeddedResource Include="FGiaoVien.resx">
+      <DependentUpon>FGiaoVien.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DashBoardSV.resx">
-      <DependentUpon>DashBoardSV.cs</DependentUpon>
+    <EmbeddedResource Include="FSinhVien.resx">
+      <DependentUpon>FSinhVien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FLuanVan.resx">
       <DependentUpon>FLuanVan.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FSinhVien.resx">
-      <DependentUpon>FSinhVien.cs</DependentUpon>
+    <EmbeddedResource Include="FSinhVien_du.resx">
+      <DependentUpon>FSinhVien_du.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FThemluanvan.resx">
       <DependentUpon>FThemluanvan.cs</DependentUpon>

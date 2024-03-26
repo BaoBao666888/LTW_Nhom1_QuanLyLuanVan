@@ -16,10 +16,10 @@ namespace Quan_Li_Luan_Van
             return dbConnection.Load(sqlStr);
         }
 
-        public void Them(string id, string deTai, char trangThai, string moTa, DateTime deadline)
+        public void Them(string id, string deTai, char trangThai, string moTa)
         {
-            LuanVan luanVan = new LuanVan(id, deTai, trangThai, moTa, deadline);
-            string sqlStr = string.Format("INSERT INTO luanVan(Id, DeTai, TrangThai, MoTa, Deadline) VALUES ('{0}', '{1}', '{2}', '{3}', '{4}')", luanVan.Id, luanVan.DeTai, luanVan.TrangThai, luanVan.MoTa, luanVan.Deadline);
+            LuanVan luanVan = new LuanVan(id, deTai, trangThai, moTa);
+            string sqlStr = string.Format("INSERT INTO luanVan(Id, DeTai, TrangThai, MoTa) VALUES ('{0}', '{1}', '{2}', '{3}')", luanVan.Id, luanVan.DeTai, luanVan.TrangThai, luanVan.MoTa);
             dbConnection.ThucThi(sqlStr);
         }
 

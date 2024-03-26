@@ -17,28 +17,19 @@ namespace Quan_Li_Luan_Van
             InitializeComponent();
         }
 
-        private void PopulateItems()
+        private void guna2Button1_Click(object sender, EventArgs e)
         {
-            UCTHongTinSV[] uCTHongTinSVs = new UCTHongTinSV[20];
-            for (int i = 0; i < uCTHongTinSVs.Length; i++)
-            {
-                uCTHongTinSVs[i] = new UCTHongTinSV();
-                uCTHongTinSVs[i].Id = $"{i}";
-                uCTHongTinSVs[i].Ten = "Ho va Ten";
-                uCTHongTinSVs[i].Lop = "CLC";
-                flp_listSV.Controls.Add(uCTHongTinSVs[i]);
-                uCTHongTinSVs[i].Dock = DockStyle.Top;
-            }
+            pnl_childForm.Controls.Clear();
+            FLuanVan fLuanVan = new FLuanVan();
+            fLuanVan.TopLevel = false;
+            pnl_childForm.Controls.Add(fLuanVan);
+            fLuanVan.Dock = DockStyle.Fill;
+            fLuanVan.AnNutChucNang();
+            fLuanVan.Show();
         }
 
-        private void FSinhVien_Load(object sender, EventArgs e)
+        private void ucDashBoard1_Load(object sender, EventArgs e)
         {
-            this.PopulateItems();
-        }
-
-        private void flp_listSV_Paint(object sender, PaintEventArgs e)
-        {
-
         }
     }
 }

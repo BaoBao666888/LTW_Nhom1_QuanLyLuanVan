@@ -103,6 +103,7 @@
             this.btn_them.Name = "btn_them";
             this.btn_them.Size = new System.Drawing.Size(60, 62);
             this.btn_them.TabIndex = 38;
+            this.btn_them.Click += new System.EventHandler(this.btn_them_Click);
             // 
             // guna2Button1
             // 

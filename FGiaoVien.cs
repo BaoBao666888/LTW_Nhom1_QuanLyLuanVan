@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Guna.UI2.WinForms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,10 +13,10 @@ using System.Windows.Forms;
 
 namespace Quan_Li_Luan_Van
 {
-    public partial class DashBoardGV : Form
+    public partial class FGiaoVien : Form
     {
         private bool dangXuatTrue = true;
-        public DashBoardGV()
+        public FGiaoVien()
         {
             InitializeComponent();
             ucDashBoard1.btnLogOut.Click += btnLogOut_Click;
@@ -51,7 +52,7 @@ namespace Quan_Li_Luan_Van
             }
         }
 
-        private void guna2Button1_Click(object sender, EventArgs e)
+        public void guna2Button1_Click(object sender, EventArgs e)
         {
             pnl_childForm.Controls.Clear();
             FLuanVan fLuanVan = new FLuanVan();
@@ -69,7 +70,7 @@ namespace Quan_Li_Luan_Van
         private void guna2Button2_Click(object sender, EventArgs e)
         {
             pnl_childForm.Controls.Clear();
-            FSinhVien fSinhVien = new FSinhVien();
+            FSinhVien_du fSinhVien = new FSinhVien_du();
             fSinhVien.TopLevel = false;
             pnl_childForm.Controls.Add(fSinhVien);
             fSinhVien.Dock = DockStyle.Fill;

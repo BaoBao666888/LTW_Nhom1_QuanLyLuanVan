@@ -20,7 +20,7 @@ namespace Quan_Li_Luan_Van
             InitializeComponent();
         }
 
-        private void FLuanVan_Load(object sender, EventArgs e)
+        public void FLuanVan_Load(object sender, EventArgs e)
         {
             this.LoadData();
         }
@@ -44,8 +44,12 @@ namespace Quan_Li_Luan_Van
         {
 
         }
-
-        private void LoadData()
+        public FlowLayoutPanel flpList
+        {
+            get { return flp_list; }
+            set { flp_list = value; }
+        }
+        public void LoadData()
         {
             DataTable dt = new DataTable();
             dt = lvDAO.Load();
@@ -64,6 +68,12 @@ namespace Quan_Li_Luan_Van
             }
 
            
+        }
+
+        private void btn_them_Click(object sender, EventArgs e)
+        {
+            FThemluanvan fthemLV = new FThemluanvan();
+            fthemLV.Show();
         }
     }
 }

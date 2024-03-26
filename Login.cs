@@ -54,7 +54,7 @@ namespace Quan_Li_Luan_Van
         {
             if (rdoGiangVien.Checked == true && txtTaiKhoan.Text == "admin" && txtMatKhau.Text == "123")
             {
-                DashBoardGV FDS = new DashBoardGV();
+                FGiaoVien FDS = new FGiaoVien();
                 FDS.Show();
                 
                 this.Hide();
@@ -62,7 +62,7 @@ namespace Quan_Li_Luan_Van
             else
             if (rdoSinhVien.Checked == true && txtTaiKhoan.Text == "user" && txtMatKhau.Text == "321")
             {
-                DashBoardSV fDashBoadSV = new DashBoardSV();
+                FSinhVien fDashBoadSV = new FSinhVien();
                 fDashBoadSV.Show();
                 this.Hide();
             }
