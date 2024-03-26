@@ -66,6 +66,12 @@
     <Compile Include="FChiTiet.Designer.cs">
       <DependentUpon>FChiTiet.cs</DependentUpon>
     </Compile>
+    <Compile Include="FDangKi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FDangKi.Designer.cs">
+      <DependentUpon>FDangKi.cs</DependentUpon>
+    </Compile>
     <Compile Include="FGiaoVien.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -126,6 +132,9 @@
     </Compile>
     <EmbeddedResource Include="FChiTiet.resx">
       <DependentUpon>FChiTiet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FDangKi.resx">
+      <DependentUpon>FDangKi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FGiaoVien.resx">
       <DependentUpon>FGiaoVien.cs</DependentUpon>
@@ -210,6 +219,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="img\plus.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sync.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

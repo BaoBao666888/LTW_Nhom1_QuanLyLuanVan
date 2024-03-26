@@ -33,8 +33,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnDangKi = new Guna.UI2.WinForms.Guna2Button();
-            this.btn_them = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.label1 = new System.Windows.Forms.Label();
             this.txt_timKiem = new Guna.UI2.WinForms.Guna2TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -51,6 +49,9 @@
             this.label4 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.flp_list = new System.Windows.Forms.FlowLayoutPanel();
+            this.btnRefresh = new Guna.UI2.WinForms.Guna2Button();
+            this.btn_them = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -84,6 +85,7 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.btnRefresh);
             this.panel2.Controls.Add(this.btnDangKi);
             this.panel2.Controls.Add(this.btn_them);
             this.panel2.Controls.Add(this.guna2Button1);
@@ -105,51 +107,11 @@
             this.btnDangKi.FillColor = System.Drawing.Color.DarkGray;
             this.btnDangKi.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnDangKi.ForeColor = System.Drawing.Color.White;
-            this.btnDangKi.Location = new System.Drawing.Point(858, 53);
+            this.btnDangKi.Location = new System.Drawing.Point(682, 53);
             this.btnDangKi.Name = "btnDangKi";
             this.btnDangKi.Size = new System.Drawing.Size(128, 45);
             this.btnDangKi.TabIndex = 39;
             this.btnDangKi.Text = "Đăng kí";
-            // 
-            // btn_them
-            // 
-            this.btn_them.BackColor = System.Drawing.Color.Transparent;
-            this.btn_them.CustomImages.HoveredImage = global::Quan_Li_Luan_Van.Properties.Resources.plus;
-            this.btn_them.CustomImages.Image = global::Quan_Li_Luan_Van.Properties.Resources.plus;
-            this.btn_them.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.btn_them.CustomImages.ImageOffset = new System.Drawing.Point(0, -10);
-            this.btn_them.CustomImages.ImageSize = new System.Drawing.Size(40, 40);
-            this.btn_them.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn_them.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btn_them.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_them.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_them.FillColor = System.Drawing.Color.Transparent;
-            this.btn_them.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btn_them.ForeColor = System.Drawing.Color.Transparent;
-            this.btn_them.Image = ((System.Drawing.Image)(resources.GetObject("btn_them.Image")));
-            this.btn_them.Location = new System.Drawing.Point(764, 36);
-            this.btn_them.Name = "btn_them";
-            this.btn_them.Size = new System.Drawing.Size(60, 62);
-            this.btn_them.TabIndex = 38;
-            this.btn_them.Click += new System.EventHandler(this.btn_them_Click);
-            // 
-            // guna2Button1
-            // 
-            this.guna2Button1.Animated = true;
-            this.guna2Button1.AutoRoundedCorners = true;
-            this.guna2Button1.BorderRadius = 15;
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.FillColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Image = global::Quan_Li_Luan_Van.Properties.Resources.research;
-            this.guna2Button1.Location = new System.Drawing.Point(330, 72);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(45, 32);
-            this.guna2Button1.TabIndex = 37;
             // 
             // label1
             // 
@@ -324,12 +286,67 @@
             // flp_list
             // 
             this.flp_list.AutoScroll = true;
-            this.flp_list.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flp_list.Location = new System.Drawing.Point(0, 258);
             this.flp_list.Name = "flp_list";
             this.flp_list.Size = new System.Drawing.Size(1028, 592);
             this.flp_list.TabIndex = 7;
             this.flp_list.Paint += new System.Windows.Forms.PaintEventHandler(this.flp_list_Paint);
+            // 
+            // btnRefresh
+            // 
+            this.btnRefresh.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnRefresh.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnRefresh.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnRefresh.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnRefresh.FillColor = System.Drawing.SystemColors.Control;
+            this.btnRefresh.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnRefresh.ForeColor = System.Drawing.Color.White;
+            this.btnRefresh.Image = global::Quan_Li_Luan_Van.Properties.Resources.sync;
+            this.btnRefresh.Location = new System.Drawing.Point(943, 53);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(56, 45);
+            this.btnRefresh.TabIndex = 40;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
+            // 
+            // btn_them
+            // 
+            this.btn_them.BackColor = System.Drawing.Color.Transparent;
+            this.btn_them.CustomImages.HoveredImage = global::Quan_Li_Luan_Van.Properties.Resources.plus;
+            this.btn_them.CustomImages.Image = global::Quan_Li_Luan_Van.Properties.Resources.plus;
+            this.btn_them.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btn_them.CustomImages.ImageOffset = new System.Drawing.Point(0, -10);
+            this.btn_them.CustomImages.ImageSize = new System.Drawing.Size(40, 40);
+            this.btn_them.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_them.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_them.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_them.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_them.FillColor = System.Drawing.Color.Transparent;
+            this.btn_them.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btn_them.ForeColor = System.Drawing.Color.Transparent;
+            this.btn_them.Image = ((System.Drawing.Image)(resources.GetObject("btn_them.Image")));
+            this.btn_them.Location = new System.Drawing.Point(856, 42);
+            this.btn_them.Name = "btn_them";
+            this.btn_them.Size = new System.Drawing.Size(60, 62);
+            this.btn_them.TabIndex = 38;
+            this.btn_them.Click += new System.EventHandler(this.btn_them_Click);
+            // 
+            // guna2Button1
+            // 
+            this.guna2Button1.Animated = true;
+            this.guna2Button1.AutoRoundedCorners = true;
+            this.guna2Button1.BorderRadius = 15;
+            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button1.FillColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2Button1.ForeColor = System.Drawing.Color.White;
+            this.guna2Button1.Image = global::Quan_Li_Luan_Van.Properties.Resources.research;
+            this.guna2Button1.Location = new System.Drawing.Point(330, 72);
+            this.guna2Button1.Name = "guna2Button1";
+            this.guna2Button1.Size = new System.Drawing.Size(45, 32);
+            this.guna2Button1.TabIndex = 37;
             // 
             // FLuanVan
             // 
@@ -386,5 +403,6 @@
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Label label8;
         private Guna.UI2.WinForms.Guna2Button btnDangKi;
+        private Guna.UI2.WinForms.Guna2Button btnRefresh;
     }
 }

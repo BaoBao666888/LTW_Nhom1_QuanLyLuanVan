@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Quan_Li_Luan_Van
 {
-    internal class DAO
+    public class DAO
     {
         DbConnection dbConnection = new DbConnection();
         public DataTable Load(string sqlStr)

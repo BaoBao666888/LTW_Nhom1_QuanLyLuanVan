@@ -28,17 +28,20 @@ namespace Quan_Li_Luan_Van
 
         public void FLuanVan_Load(object sender, EventArgs e)
         {
+            this.GenerateDynamicUC();   
+        }
+
+        public void GenerateDynamicUC()
+        {
+            flp_list.Controls.Clear();
+            string sqlStr = string.Format("Select *from LuanVan");
+            DataTable dt = new DataTable();
+            dt = lvDAO.Load(sqlStr);
+            for (int i = 0; i < dt.Rows.Count; i++)
             {
-                DataTable dt = new DataTable();
-                dt = lvDAO.Load();
-
-                for (int i = 0; i < dt.Rows.Count; i++)
-                {
-                    LuanVan luanVan = new LuanVan(dt.Rows[i]["MaDeTai"].ToString(), dt.Rows[i]["TenDeTai"].ToString(), dt.Rows[i]["TheLoai"].ToString(), dt.Rows[i]["MoTa"].ToString(), dt.Rows[i]["CongNghe"].ToString(), dt.Rows[i]["YeuCau"].ToString(), int.Parse(dt.Rows[i]["SoLuongSV"].ToString()), int.Parse(dt.Rows[i]["SoLuongMaxSV"].ToString()), dt.Rows[i]["TenGV"].ToString());
-                    UCLuanVan ucLuanVan = new UCLuanVan(luanVan);
-                    flpList.Controls.Add(ucLuanVan);
-                }
-
+                LuanVan luanVan = new LuanVan(dt.Rows[i]["MaDeTai"].ToString(), dt.Rows[i]["TenDeTai"].ToString(), dt.Rows[i]["TheLoai"].ToString(), dt.Rows[i]["MoTa"].ToString(), dt.Rows[i]["CongNghe"].ToString(), dt.Rows[i]["YeuCau"].ToString(), int.Parse(dt.Rows[i]["SoLuongSV"].ToString()), int.Parse(dt.Rows[i]["SoLuongMaxSV"].ToString()), dt.Rows[i]["TenGV"].ToString());
+                UCLuanVan ucLuanVan = new UCLuanVan(luanVan);
+                flpList.Controls.Add(ucLuanVan);
             }
         }
 
@@ -75,6 +78,11 @@ namespace Quan_Li_Luan_Van
         {
             FThemluanvan fthemLV = new FThemluanvan(giaoVien);
             fthemLV.Show();
+        }
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            this.GenerateDynamicUC();
         }
     }
 }
