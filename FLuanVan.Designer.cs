@@ -32,33 +32,33 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnDangKi = new Guna.UI2.WinForms.Guna2Button();
+            this.btn_them = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.label1 = new System.Windows.Forms.Label();
             this.txt_timKiem = new Guna.UI2.WinForms.Guna2TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.flp_list = new System.Windows.Forms.FlowLayoutPanel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.panel7 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.panel9 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
-            this.btn_them = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
-            this.btnDangKi = new Guna.UI2.WinForms.Guna2Button();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.flp_list = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
-            this.panel5.SuspendLayout();
-            this.panel6.SuspendLayout();
-            this.panel7.SuspendLayout();
             this.panel8.SuspendLayout();
             this.panel9.SuspendLayout();
+            this.panel7.SuspendLayout();
+            this.panel6.SuspendLayout();
+            this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -95,6 +95,61 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1028, 104);
             this.panel2.TabIndex = 5;
+            // 
+            // btnDangKi
+            // 
+            this.btnDangKi.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnDangKi.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnDangKi.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnDangKi.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnDangKi.FillColor = System.Drawing.Color.DarkGray;
+            this.btnDangKi.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnDangKi.ForeColor = System.Drawing.Color.White;
+            this.btnDangKi.Location = new System.Drawing.Point(858, 53);
+            this.btnDangKi.Name = "btnDangKi";
+            this.btnDangKi.Size = new System.Drawing.Size(128, 45);
+            this.btnDangKi.TabIndex = 39;
+            this.btnDangKi.Text = "Đăng kí";
+            // 
+            // btn_them
+            // 
+            this.btn_them.BackColor = System.Drawing.Color.Transparent;
+            this.btn_them.CustomImages.HoveredImage = global::Quan_Li_Luan_Van.Properties.Resources.plus;
+            this.btn_them.CustomImages.Image = global::Quan_Li_Luan_Van.Properties.Resources.plus;
+            this.btn_them.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btn_them.CustomImages.ImageOffset = new System.Drawing.Point(0, -10);
+            this.btn_them.CustomImages.ImageSize = new System.Drawing.Size(40, 40);
+            this.btn_them.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_them.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_them.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_them.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_them.FillColor = System.Drawing.Color.Transparent;
+            this.btn_them.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btn_them.ForeColor = System.Drawing.Color.Transparent;
+            this.btn_them.Image = ((System.Drawing.Image)(resources.GetObject("btn_them.Image")));
+            this.btn_them.Location = new System.Drawing.Point(764, 36);
+            this.btn_them.Name = "btn_them";
+            this.btn_them.Size = new System.Drawing.Size(60, 62);
+            this.btn_them.TabIndex = 38;
+            this.btn_them.Click += new System.EventHandler(this.btn_them_Click);
+            // 
+            // guna2Button1
+            // 
+            this.guna2Button1.Animated = true;
+            this.guna2Button1.AutoRoundedCorners = true;
+            this.guna2Button1.BorderRadius = 15;
+            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button1.FillColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2Button1.ForeColor = System.Drawing.Color.White;
+            this.guna2Button1.Image = global::Quan_Li_Luan_Van.Properties.Resources.research;
+            this.guna2Button1.Location = new System.Drawing.Point(330, 72);
+            this.guna2Button1.Name = "guna2Button1";
+            this.guna2Button1.Size = new System.Drawing.Size(45, 32);
+            this.guna2Button1.TabIndex = 37;
             // 
             // label1
             // 
@@ -153,51 +208,6 @@
             this.panel3.Size = new System.Drawing.Size(1028, 48);
             this.panel3.TabIndex = 6;
             // 
-            // flp_list
-            // 
-            this.flp_list.AutoScroll = true;
-            this.flp_list.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flp_list.Location = new System.Drawing.Point(0, 258);
-            this.flp_list.Name = "flp_list";
-            this.flp_list.Size = new System.Drawing.Size(1028, 592);
-            this.flp_list.TabIndex = 7;
-            this.flp_list.Paint += new System.Windows.Forms.PaintEventHandler(this.flp_list_Paint);
-            // 
-            // panel4
-            // 
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel4.Location = new System.Drawing.Point(0, 0);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(214, 48);
-            this.panel4.TabIndex = 0;
-            // 
-            // panel5
-            // 
-            this.panel5.Controls.Add(this.label4);
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel5.Location = new System.Drawing.Point(214, 0);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(161, 48);
-            this.panel5.TabIndex = 1;
-            // 
-            // panel6
-            // 
-            this.panel6.Controls.Add(this.label5);
-            this.panel6.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel6.Location = new System.Drawing.Point(375, 0);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(201, 48);
-            this.panel6.TabIndex = 2;
-            // 
-            // panel7
-            // 
-            this.panel7.Controls.Add(this.label6);
-            this.panel7.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel7.Location = new System.Drawing.Point(576, 0);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(137, 48);
-            this.panel7.TabIndex = 3;
-            // 
             // panel8
             // 
             this.panel8.Controls.Add(this.label7);
@@ -206,42 +216,6 @@
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(175, 48);
             this.panel8.TabIndex = 4;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(0, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(86, 25);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "Mã đề tài";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(0, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(87, 25);
-            this.label5.TabIndex = 1;
-            this.label5.Text = "Tên đề tài";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label6.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(0, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(73, 25);
-            this.label6.TabIndex = 1;
-            this.label6.Text = "Thể loại";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label7
             // 
@@ -276,60 +250,86 @@
             this.label8.Text = "Số lượng";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // btn_them
+            // panel7
             // 
-            this.btn_them.BackColor = System.Drawing.Color.Transparent;
-            this.btn_them.CustomImages.HoveredImage = global::Quan_Li_Luan_Van.Properties.Resources.plus;
-            this.btn_them.CustomImages.Image = global::Quan_Li_Luan_Van.Properties.Resources.plus;
-            this.btn_them.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.btn_them.CustomImages.ImageOffset = new System.Drawing.Point(0, -10);
-            this.btn_them.CustomImages.ImageSize = new System.Drawing.Size(40, 40);
-            this.btn_them.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn_them.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btn_them.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_them.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_them.FillColor = System.Drawing.Color.Transparent;
-            this.btn_them.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btn_them.ForeColor = System.Drawing.Color.Transparent;
-            this.btn_them.Image = ((System.Drawing.Image)(resources.GetObject("btn_them.Image")));
-            this.btn_them.Location = new System.Drawing.Point(764, 36);
-            this.btn_them.Name = "btn_them";
-            this.btn_them.Size = new System.Drawing.Size(60, 62);
-            this.btn_them.TabIndex = 38;
-            this.btn_them.Click += new System.EventHandler(this.btn_them_Click);
+            this.panel7.Controls.Add(this.label6);
+            this.panel7.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel7.Location = new System.Drawing.Point(576, 0);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(137, 48);
+            this.panel7.TabIndex = 3;
             // 
-            // guna2Button1
+            // label6
             // 
-            this.guna2Button1.Animated = true;
-            this.guna2Button1.AutoRoundedCorners = true;
-            this.guna2Button1.BorderRadius = 15;
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.FillColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Image = global::Quan_Li_Luan_Van.Properties.Resources.research;
-            this.guna2Button1.Location = new System.Drawing.Point(330, 72);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(45, 32);
-            this.guna2Button1.TabIndex = 37;
+            this.label6.AutoSize = true;
+            this.label6.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(0, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(73, 25);
+            this.label6.TabIndex = 1;
+            this.label6.Text = "Thể loại";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // btnDangKi
+            // panel6
             // 
-            this.btnDangKi.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnDangKi.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnDangKi.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnDangKi.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnDangKi.FillColor = System.Drawing.Color.DarkGray;
-            this.btnDangKi.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnDangKi.ForeColor = System.Drawing.Color.White;
-            this.btnDangKi.Location = new System.Drawing.Point(858, 53);
-            this.btnDangKi.Name = "btnDangKi";
-            this.btnDangKi.Size = new System.Drawing.Size(128, 45);
-            this.btnDangKi.TabIndex = 39;
-            this.btnDangKi.Text = "Đăng kí";
+            this.panel6.Controls.Add(this.label5);
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel6.Location = new System.Drawing.Point(375, 0);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(201, 48);
+            this.panel6.TabIndex = 2;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(0, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(87, 25);
+            this.label5.TabIndex = 1;
+            this.label5.Text = "Tên đề tài";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.label4);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel5.Location = new System.Drawing.Point(214, 0);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(161, 48);
+            this.panel5.TabIndex = 1;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(0, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(86, 25);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "Mã đề tài";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // panel4
+            // 
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel4.Location = new System.Drawing.Point(0, 0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(214, 48);
+            this.panel4.TabIndex = 0;
+            // 
+            // flp_list
+            // 
+            this.flp_list.AutoScroll = true;
+            this.flp_list.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flp_list.Location = new System.Drawing.Point(0, 258);
+            this.flp_list.Name = "flp_list";
+            this.flp_list.Size = new System.Drawing.Size(1028, 592);
+            this.flp_list.TabIndex = 7;
+            this.flp_list.Paint += new System.Windows.Forms.PaintEventHandler(this.flp_list_Paint);
             // 
             // FLuanVan
             // 
@@ -349,16 +349,16 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
-            this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
-            this.panel7.ResumeLayout(false);
-            this.panel7.PerformLayout();
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
             this.panel9.ResumeLayout(false);
             this.panel9.PerformLayout();
+            this.panel7.ResumeLayout(false);
+            this.panel7.PerformLayout();
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
             this.ResumeLayout(false);
 
         }

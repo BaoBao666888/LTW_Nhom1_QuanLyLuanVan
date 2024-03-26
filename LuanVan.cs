@@ -17,8 +17,9 @@ namespace Quan_Li_Luan_Van
         private string yeuCau;
         private int soLuongSV;
         private int soLuongMax;
+        private string tenGV;
     
-        public LuanVan(string maDeTai, string tenDeTai, string theLoai, string moTa, string congNghe, string yeuCau, int soLuongSV, int soLuongMax)
+        public LuanVan(string maDeTai, string tenDeTai, string theLoai, string moTa, string congNghe, string yeuCau, int soLuongSV, int soLuongMax, string tenGV)
         {
             this.maDeTai = maDeTai;
             this.tenDeTai = tenDeTai;
@@ -28,6 +29,7 @@ namespace Quan_Li_Luan_Van
             this.yeuCau = yeuCau;
             this.soLuongSV = soLuongSV;
             this.soLuongMax = soLuongMax;
+            this.tenGV = tenGV;
         }
 
         public string MadeTai { get { return maDeTai; } }
@@ -38,6 +40,9 @@ namespace Quan_Li_Luan_Van
         public string YeuCau { get {  return yeuCau; } }
         public int SoLuongSV { get {  return soLuongSV; } }
         public int SoLuongMax { get {  return soLuongMax; } }
+
+        public string TenGV {  get { return tenGV; } }
+
 
     }
 }

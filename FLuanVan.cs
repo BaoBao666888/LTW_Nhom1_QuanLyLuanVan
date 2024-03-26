@@ -28,7 +28,7 @@ namespace Quan_Li_Luan_Van
 
                 for (int i = 0; i < dt.Rows.Count; i++)
                 {
-                    LuanVan luanVan = new LuanVan(dt.Rows[i]["MaDeTai"].ToString(), dt.Rows[i]["TenDeTai"].ToString(), dt.Rows[i]["TheLoai"].ToString(), dt.Rows[i]["MoTa"].ToString(), dt.Rows[i]["CongNghe"].ToString(), dt.Rows[i]["YeuCau"].ToString(), int.Parse(dt.Rows[i]["SoLuongSV"].ToString()), int.Parse(dt.Rows[i]["SoLuongMaxSV"].ToString()));
+                    LuanVan luanVan = new LuanVan(dt.Rows[i]["MaDeTai"].ToString(), dt.Rows[i]["TenDeTai"].ToString(), dt.Rows[i]["TheLoai"].ToString(), dt.Rows[i]["MoTa"].ToString(), dt.Rows[i]["CongNghe"].ToString(), dt.Rows[i]["YeuCau"].ToString(), int.Parse(dt.Rows[i]["SoLuongSV"].ToString()), int.Parse(dt.Rows[i]["SoLuongMaxSV"].ToString()), dt.Rows[i]["TenGV"].ToString());
                     UCLuanVan ucLuanVan = new UCLuanVan(luanVan);
                     flpList.Controls.Add(ucLuanVan);
                 }

@@ -43,6 +43,8 @@
             this.txtSoLuongMaxSV = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtYeuCau = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtMoTa = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lblTenGV = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblTenluanvan
@@ -267,12 +269,32 @@
             this.txtMoTa.Size = new System.Drawing.Size(547, 107);
             this.txtMoTa.TabIndex = 31;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(45, 13);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(79, 20);
+            this.label1.TabIndex = 32;
+            this.label1.Text = "Giáo Viên";
+            // 
+            // lblTenGV
+            // 
+            this.lblTenGV.AutoSize = true;
+            this.lblTenGV.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTenGV.Location = new System.Drawing.Point(131, 13);
+            this.lblTenGV.Name = "lblTenGV";
+            this.lblTenGV.Size = new System.Drawing.Size(0, 25);
+            this.lblTenGV.TabIndex = 33;
+            // 
             // FThemluanvan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(831, 659);
+            this.Controls.Add(this.lblTenGV);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.txtMoTa);
             this.Controls.Add(this.txtYeuCau);
             this.Controls.Add(this.txtSoLuongMaxSV);
@@ -314,5 +336,7 @@
         private Guna.UI2.WinForms.Guna2TextBox txtSoLuongMaxSV;
         private Guna.UI2.WinForms.Guna2TextBox txtYeuCau;
         private Guna.UI2.WinForms.Guna2TextBox txtMoTa;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblTenGV;
     }
 }
