@@ -1,4 +1,4 @@
-﻿using System;
+﻿    using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,7 +11,7 @@ namespace Quan_Li_Luan_Van
 {
     public class DbConnection
     {
-        SqlConnection conn = new SqlConnection(Properties.Settings.Default.conStr);
+        SqlConnection conn = new SqlConnection(Properties.Settings.Default.conn);
 
         public DataTable Load(string sqlStr)
         {

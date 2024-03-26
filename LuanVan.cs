@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -8,48 +9,35 @@ namespace Quan_Li_Luan_Van
 {
     public class LuanVan
     {
-        private string id;
-        private string deTai;
-        private char trangThai;
+        private string maDeTai;
+        private string tenDeTai;
+        private string theLoai;
         private string moTa;
-        private DateTime deadline;
-
-        public LuanVan(string id, string deTai, char trangThai, string moTa)
+        private string congNghe;
+        private string yeuCau;
+        private int soLuongSV;
+        private int soLuongMax;
+    
+        public LuanVan(string maDeTai, string tenDeTai, string theLoai, string moTa, string congNghe, string yeuCau, int soLuongSV, int soLuongMax)
         {
-            this.id = id;
-            this.deTai = deTai;
-            this.trangThai = trangThai;
+            this.maDeTai = maDeTai;
+            this.tenDeTai = tenDeTai;
+            this.theLoai = theLoai;
             this.moTa = moTa;
+            this.congNghe = congNghe;
+            this.yeuCau = yeuCau;
+            this.soLuongSV = soLuongSV;
+            this.soLuongMax = soLuongMax;
         }
 
-        public string Id
-        {
-            get { return id; }
-            set { id = value; }
-        }
-
-        public string DeTai
-        {
-            get { return deTai; }
-            set { deTai = value; }
-        }
-        public char TrangThai
-        {
-            get { return trangThai; }
-            set { trangThai = value; }
-        }
-        
-        public string MoTa
-        {
-            get { return moTa; }
-            set { moTa = value; }
-        }
-
-        public DateTime Deadline
-        {
-            get { return deadline; }
-            set { deadline = value; }
-        }
+        public string MadeTai { get { return maDeTai; } }
+        public string TenDeTai { get { return tenDeTai; } }
+        public string TheLoai { get { return theLoai; } }
+        public string MoTa { get {  return moTa; } }
+        public string CongNghe { get {  return congNghe; } }
+        public string YeuCau { get {  return yeuCau; } }
+        public int SoLuongSV { get {  return soLuongSV; } }
+        public int SoLuongMax { get {  return soLuongMax; } }
 
     }
 }

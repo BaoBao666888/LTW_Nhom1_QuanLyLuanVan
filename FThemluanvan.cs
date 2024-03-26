@@ -17,19 +17,15 @@ namespace Quan_Li_Luan_Van
             InitializeComponent();
         }
 
-        private void txtMaluanvan_TextChanged(object sender, EventArgs e)
+        private void FThemluanvan_Load(object sender, EventArgs e)
         {
 
         }
 
-        private void btnluu_Click(object sender, EventArgs e)
+        private void btnThem_Click(object sender, EventArgs e)
         {
             LuanVanDAO lvDAO = new LuanVanDAO();
-
-
-         
-
-            
+            lvDAO.Them(txtMaLuanVan.Text, txtTenLuanVan.Text, cbTheLoai.Text, txtMoTa.Text, txtCongNghe.Text, txtYeuCau.Text, 0, int.Parse(txtSoLuongMaxSV.Text));
         }
     }
 }

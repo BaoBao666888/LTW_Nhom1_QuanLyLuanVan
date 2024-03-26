@@ -24,7 +24,7 @@ namespace Quan_Li_Luan_Van
             fLuanVan.TopLevel = false;
             pnl_childForm.Controls.Add(fLuanVan);
             fLuanVan.Dock = DockStyle.Fill;
-            fLuanVan.AnNutChucNang();
+            fLuanVan.AnNutThem();
             fLuanVan.Show();
         }
 

@@ -31,17 +31,17 @@
             this.pnlHinhAnh = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnlMaDeTai = new System.Windows.Forms.Panel();
+            this.lblMaDeTai = new System.Windows.Forms.Label();
             this.pnlTenDeTai = new System.Windows.Forms.Panel();
+            this.lblTenDeTai = new System.Windows.Forms.Label();
             this.pnlTheLoai = new System.Windows.Forms.Panel();
-            this.pnlSoLuongSV = new System.Windows.Forms.Panel();
-            this.pnlChiTiet = new System.Windows.Forms.Panel();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.lblTheLoai = new System.Windows.Forms.Label();
             this.guna2TextBox4 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.pnlSoLuongSV = new System.Windows.Forms.Panel();
+            this.lblSoLuong = new System.Windows.Forms.Label();
+            this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.pnlChiTiet = new System.Windows.Forms.Panel();
+            this.btnChiTiet = new Guna.UI2.WinForms.Guna2Button();
             this.pnlHinhAnh.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnlMaDeTai.SuspendLayout();
@@ -74,27 +74,47 @@
             // pnlMaDeTai
             // 
             this.pnlMaDeTai.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlMaDeTai.Controls.Add(this.label1);
+            this.pnlMaDeTai.Controls.Add(this.lblMaDeTai);
             this.pnlMaDeTai.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlMaDeTai.Location = new System.Drawing.Point(154, 0);
             this.pnlMaDeTai.Name = "pnlMaDeTai";
             this.pnlMaDeTai.Size = new System.Drawing.Size(163, 109);
             this.pnlMaDeTai.TabIndex = 1;
             // 
+            // lblMaDeTai
+            // 
+            this.lblMaDeTai.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblMaDeTai.Location = new System.Drawing.Point(0, 0);
+            this.lblMaDeTai.Name = "lblMaDeTai";
+            this.lblMaDeTai.Size = new System.Drawing.Size(161, 107);
+            this.lblMaDeTai.TabIndex = 0;
+            this.lblMaDeTai.Text = "Mã đề tài";
+            this.lblMaDeTai.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // pnlTenDeTai
             // 
             this.pnlTenDeTai.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlTenDeTai.Controls.Add(this.label2);
+            this.pnlTenDeTai.Controls.Add(this.lblTenDeTai);
             this.pnlTenDeTai.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlTenDeTai.Location = new System.Drawing.Point(317, 0);
             this.pnlTenDeTai.Name = "pnlTenDeTai";
             this.pnlTenDeTai.Size = new System.Drawing.Size(185, 109);
             this.pnlTenDeTai.TabIndex = 2;
             // 
+            // lblTenDeTai
+            // 
+            this.lblTenDeTai.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblTenDeTai.Location = new System.Drawing.Point(0, 0);
+            this.lblTenDeTai.Name = "lblTenDeTai";
+            this.lblTenDeTai.Size = new System.Drawing.Size(183, 107);
+            this.lblTenDeTai.TabIndex = 1;
+            this.lblTenDeTai.Text = "Tên đề tài";
+            this.lblTenDeTai.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // pnlTheLoai
             // 
             this.pnlTheLoai.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlTheLoai.Controls.Add(this.label3);
+            this.pnlTheLoai.Controls.Add(this.lblTheLoai);
             this.pnlTheLoai.Controls.Add(this.guna2TextBox4);
             this.pnlTheLoai.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlTheLoai.Location = new System.Drawing.Point(502, 0);
@@ -102,65 +122,15 @@
             this.pnlTheLoai.Size = new System.Drawing.Size(171, 109);
             this.pnlTheLoai.TabIndex = 3;
             // 
-            // pnlSoLuongSV
+            // lblTheLoai
             // 
-            this.pnlSoLuongSV.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlSoLuongSV.Controls.Add(this.label4);
-            this.pnlSoLuongSV.Controls.Add(this.guna2TextBox1);
-            this.pnlSoLuongSV.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pnlSoLuongSV.Location = new System.Drawing.Point(673, 0);
-            this.pnlSoLuongSV.Name = "pnlSoLuongSV";
-            this.pnlSoLuongSV.Size = new System.Drawing.Size(124, 109);
-            this.pnlSoLuongSV.TabIndex = 4;
-            // 
-            // pnlChiTiet
-            // 
-            this.pnlChiTiet.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlChiTiet.Controls.Add(this.guna2Button1);
-            this.pnlChiTiet.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlChiTiet.Location = new System.Drawing.Point(797, 0);
-            this.pnlChiTiet.Name = "pnlChiTiet";
-            this.pnlChiTiet.Size = new System.Drawing.Size(209, 109);
-            this.pnlChiTiet.TabIndex = 5;
-            // 
-            // guna2Button1
-            // 
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.FillColor = System.Drawing.Color.Gold;
-            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Location = new System.Drawing.Point(45, 31);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(116, 45);
-            this.guna2Button1.TabIndex = 0;
-            this.guna2Button1.Text = "chi tiết";
-            // 
-            // guna2TextBox1
-            // 
-            this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox1.DefaultText = "4";
-            this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2TextBox1.ForeColor = System.Drawing.Color.Black;
-            this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.Location = new System.Drawing.Point(0, 0);
-            this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.guna2TextBox1.Multiline = true;
-            this.guna2TextBox1.Name = "guna2TextBox1";
-            this.guna2TextBox1.PasswordChar = '\0';
-            this.guna2TextBox1.PlaceholderText = "";
-            this.guna2TextBox1.SelectedText = "";
-            this.guna2TextBox1.Size = new System.Drawing.Size(122, 107);
-            this.guna2TextBox1.TabIndex = 0;
-            this.guna2TextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.lblTheLoai.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblTheLoai.Location = new System.Drawing.Point(0, 0);
+            this.lblTheLoai.Name = "lblTheLoai";
+            this.lblTheLoai.Size = new System.Drawing.Size(169, 107);
+            this.lblTheLoai.TabIndex = 2;
+            this.lblTheLoai.Text = "Thể loại";
+            this.lblTheLoai.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // guna2TextBox4
             // 
@@ -186,45 +156,76 @@
             this.guna2TextBox4.TabIndex = 1;
             this.guna2TextBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // label1
+            // pnlSoLuongSV
             // 
-            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label1.Location = new System.Drawing.Point(0, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(161, 107);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Mã đề tài";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.pnlSoLuongSV.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlSoLuongSV.Controls.Add(this.lblSoLuong);
+            this.pnlSoLuongSV.Controls.Add(this.guna2TextBox1);
+            this.pnlSoLuongSV.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnlSoLuongSV.Location = new System.Drawing.Point(673, 0);
+            this.pnlSoLuongSV.Name = "pnlSoLuongSV";
+            this.pnlSoLuongSV.Size = new System.Drawing.Size(124, 109);
+            this.pnlSoLuongSV.TabIndex = 4;
             // 
-            // label2
+            // lblSoLuong
             // 
-            this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label2.Location = new System.Drawing.Point(0, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(183, 107);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Tên đề tài";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblSoLuong.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblSoLuong.Location = new System.Drawing.Point(0, 0);
+            this.lblSoLuong.Name = "lblSoLuong";
+            this.lblSoLuong.Size = new System.Drawing.Size(122, 107);
+            this.lblSoLuong.TabIndex = 1;
+            this.lblSoLuong.Text = "số lượng";
+            this.lblSoLuong.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label3
+            // guna2TextBox1
             // 
-            this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label3.Location = new System.Drawing.Point(0, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(169, 107);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Thể loại";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.guna2TextBox1.DefaultText = "4";
+            this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2TextBox1.ForeColor = System.Drawing.Color.Black;
+            this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBox1.Location = new System.Drawing.Point(0, 0);
+            this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.guna2TextBox1.Multiline = true;
+            this.guna2TextBox1.Name = "guna2TextBox1";
+            this.guna2TextBox1.PasswordChar = '\0';
+            this.guna2TextBox1.PlaceholderText = "";
+            this.guna2TextBox1.SelectedText = "";
+            this.guna2TextBox1.Size = new System.Drawing.Size(122, 107);
+            this.guna2TextBox1.TabIndex = 0;
+            this.guna2TextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // label4
+            // pnlChiTiet
             // 
-            this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label4.Location = new System.Drawing.Point(0, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(122, 107);
-            this.label4.TabIndex = 1;
-            this.label4.Text = "số lượng";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.pnlChiTiet.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlChiTiet.Controls.Add(this.btnChiTiet);
+            this.pnlChiTiet.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlChiTiet.Location = new System.Drawing.Point(797, 0);
+            this.pnlChiTiet.Name = "pnlChiTiet";
+            this.pnlChiTiet.Size = new System.Drawing.Size(209, 109);
+            this.pnlChiTiet.TabIndex = 5;
+            // 
+            // btnChiTiet
+            // 
+            this.btnChiTiet.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnChiTiet.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnChiTiet.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnChiTiet.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnChiTiet.FillColor = System.Drawing.Color.Gold;
+            this.btnChiTiet.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnChiTiet.ForeColor = System.Drawing.Color.White;
+            this.btnChiTiet.Location = new System.Drawing.Point(45, 31);
+            this.btnChiTiet.Name = "btnChiTiet";
+            this.btnChiTiet.Size = new System.Drawing.Size(116, 45);
+            this.btnChiTiet.TabIndex = 0;
+            this.btnChiTiet.Text = "chi tiết";
+            this.btnChiTiet.Click += new System.EventHandler(this.btnChiTiet_Click);
             // 
             // UCLuanVan
             // 
@@ -237,6 +238,7 @@
             this.Controls.Add(this.pnlTenDeTai);
             this.Controls.Add(this.pnlMaDeTai);
             this.Controls.Add(this.pnlHinhAnh);
+            this.Margin = new System.Windows.Forms.Padding(3, 0, 3, 0);
             this.Name = "UCLuanVan";
             this.Size = new System.Drawing.Size(1006, 109);
             this.Load += new System.EventHandler(this.UCLuanVan_Load);
@@ -260,12 +262,12 @@
         private System.Windows.Forms.Panel pnlTheLoai;
         private System.Windows.Forms.Panel pnlSoLuongSV;
         private System.Windows.Forms.Panel pnlChiTiet;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2Button btnChiTiet;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox4;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblMaDeTai;
+        private System.Windows.Forms.Label lblTenDeTai;
+        private System.Windows.Forms.Label lblTheLoai;
+        private System.Windows.Forms.Label lblSoLuong;
     }
 }

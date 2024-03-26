@@ -25,11 +25,11 @@ namespace Quan_Li_Luan_Van.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOPPHAMCHIE;Initial Catalog=QLLuanVan;Integrated Security=True")]
-        public string conStr {
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOPPHAMCHIE;Initial Catalog=QLLuanVan;Integrated Security=True;En" +
+            "crypt=False")]
+        public string conn {
             get {
-                return ((string)(this["conStr"]));
+                return ((string)(this["conn"]));
             }
         }
     }
