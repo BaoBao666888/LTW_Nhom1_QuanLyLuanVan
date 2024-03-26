@@ -78,12 +78,6 @@
     <Compile Include="FLuanVan.Designer.cs">
       <DependentUpon>FLuanVan.cs</DependentUpon>
     </Compile>
-    <Compile Include="FSinhVien_du.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FSinhVien_du.Designer.cs">
-      <DependentUpon>FSinhVien_du.cs</DependentUpon>
-    </Compile>
     <Compile Include="FThemluanvan.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -106,7 +100,6 @@
     <Compile Include="ResetPasswd.Designer.cs">
       <DependentUpon>ResetPasswd.cs</DependentUpon>
     </Compile>
-    <Compile Include="SinhVien.cs" />
     <Compile Include="UCDashBoard.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -119,12 +112,6 @@
     <Compile Include="UCLuanVan.Designer.cs">
       <DependentUpon>UCLuanVan.cs</DependentUpon>
     </Compile>
-    <Compile Include="UCTHongTinSV.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UCTHongTinSV.Designer.cs">
-      <DependentUpon>UCTHongTinSV.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="FGiaoVien.resx">
       <DependentUpon>FGiaoVien.cs</DependentUpon>
     </EmbeddedResource>
@@ -133,9 +120,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FLuanVan.resx">
       <DependentUpon>FLuanVan.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FSinhVien_du.resx">
-      <DependentUpon>FSinhVien_du.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FThemluanvan.resx">
       <DependentUpon>FThemluanvan.cs</DependentUpon>
@@ -161,9 +145,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UCLuanVan.resx">
       <DependentUpon>UCLuanVan.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UCTHongTinSV.resx">
-      <DependentUpon>UCTHongTinSV.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

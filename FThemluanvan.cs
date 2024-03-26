@@ -26,7 +26,7 @@ namespace Quan_Li_Luan_Van
         {
             LuanVanDAO lvDAO = new LuanVanDAO();
 
-            lvDAO.Them(txtMaluanvan.Text, txtTenluanvan.Text, 'N', rtxtMota.Text);
+
          
 
             

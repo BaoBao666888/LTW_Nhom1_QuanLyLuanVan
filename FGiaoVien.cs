@@ -69,12 +69,7 @@ namespace Quan_Li_Luan_Van
 
         private void guna2Button2_Click(object sender, EventArgs e)
         {
-            pnl_childForm.Controls.Clear();
-            FSinhVien_du fSinhVien = new FSinhVien_du();
-            fSinhVien.TopLevel = false;
-            pnl_childForm.Controls.Add(fSinhVien);
-            fSinhVien.Dock = DockStyle.Fill;
-            fSinhVien.Show();
+            return;
         }
     }
 }

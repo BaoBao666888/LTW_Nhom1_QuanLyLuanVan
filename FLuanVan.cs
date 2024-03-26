@@ -51,23 +51,7 @@ namespace Quan_Li_Luan_Van
         }
         public void LoadData()
         {
-            DataTable dt = new DataTable();
-            dt = lvDAO.Load();
-
-            for (int i = 0; i < dt.Rows.Count; i++)
-            {
-                UCLuanVan ucLuanVan = new UCLuanVan();
-                ucLuanVan.lblId.Text = dt.Rows[i]["Id"].ToString();
-                ucLuanVan.lblDeTai.Text = dt.Rows[i]["DeTai"].ToString();
-                if (dt.Rows[i]["DeTai"].ToString() == "Y")
-                    ucLuanVan.cbTrangThai.Checked = true;
-                else
-                    ucLuanVan.cbTrangThai.Checked = false;
-                ucLuanVan.txtMoTa.Text = dt.Rows[i]["MoTa"].ToString();
-                flp_list.Controls.Add(ucLuanVan);
-            }
-
-           
+            return;
         }
 
         private void btn_them_Click(object sender, EventArgs e)
