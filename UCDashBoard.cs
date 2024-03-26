@@ -14,6 +14,7 @@ namespace Quan_Li_Luan_Van
     public partial class UCDashBoard : UserControl
     {
         public bool logOut = true;
+
         public Guna2Button btnLogOut
         {
             get { return btn_logOut; }
@@ -22,6 +23,18 @@ namespace Quan_Li_Luan_Van
         public UCDashBoard()
         {
             InitializeComponent();
+        }
+
+        public string lblTen
+        {
+            get { return lbl_ten.Text; }
+            set { lbl_ten.Text = value; }
+        }
+
+        public string lblChucVu
+        {
+            get { return lbl_chucVu.Text; }
+            set { lbl_chucVu.Text = value; }
         }
 
         private void UCDashBoard_Load(object sender, EventArgs e)

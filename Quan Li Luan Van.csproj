@@ -59,6 +59,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAO.cs" />
     <Compile Include="FChiTiet.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -90,6 +91,8 @@
     <Compile Include="FThemluanvan.Designer.cs">
       <DependentUpon>FThemluanvan.cs</DependentUpon>
     </Compile>
+    <Compile Include="GiaoVien.cs" />
+    <Compile Include="GiaoVienDAO.cs" />
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -106,6 +109,9 @@
     <Compile Include="ResetPasswd.Designer.cs">
       <DependentUpon>ResetPasswd.cs</DependentUpon>
     </Compile>
+    <Compile Include="Person.cs" />
+    <Compile Include="SinhVien.cs" />
+    <Compile Include="SinhVienDAO.cs" />
     <Compile Include="UCDashBoard.cs">
       <SubType>UserControl</SubType>
     </Compile>

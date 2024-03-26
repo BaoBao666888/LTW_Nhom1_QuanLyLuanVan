@@ -16,7 +16,7 @@ namespace Quan_Li_Luan_Van
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FGiaoVien());
+            Application.Run(new Login());
         }
     }
 }

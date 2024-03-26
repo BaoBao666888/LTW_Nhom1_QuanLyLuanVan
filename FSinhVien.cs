@@ -12,6 +12,7 @@ namespace Quan_Li_Luan_Van
 {
     public partial class FSinhVien : Form
     {
+        GiaoVien giaoVien;
         public FSinhVien()
         {
             InitializeComponent();

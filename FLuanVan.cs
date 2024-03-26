@@ -14,10 +14,16 @@ namespace Quan_Li_Luan_Van
     public partial class FLuanVan : Form
     {
         LuanVanDAO lvDAO = new LuanVanDAO();
-        
+        GiaoVien giaoVien;
+
         public FLuanVan()
         {
             InitializeComponent();
+        }
+        public FLuanVan(GiaoVien giaoVien)
+        {
+            InitializeComponent();
+            this.giaoVien = giaoVien;
         }
 
         public void FLuanVan_Load(object sender, EventArgs e)
@@ -67,7 +73,7 @@ namespace Quan_Li_Luan_Van
 
         private void btn_them_Click(object sender, EventArgs e)
         {
-            FThemluanvan fthemLV = new FThemluanvan();
+            FThemluanvan fthemLV = new FThemluanvan(giaoVien);
             fthemLV.Show();
         }
     }

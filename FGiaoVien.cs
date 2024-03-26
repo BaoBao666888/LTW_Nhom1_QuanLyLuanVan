@@ -15,12 +15,16 @@ namespace Quan_Li_Luan_Van
 {
     public partial class FGiaoVien : Form
     {
+        GiaoVien giaoVien;
         private bool dangXuatTrue = true;
-        public FGiaoVien()
+        public FGiaoVien(GiaoVien giaoVien)
         {
             InitializeComponent();
             ucDashBoard1.btnLogOut.Click += btnLogOut_Click;
             this.FormClosing += DashBoardGV_FormClosing;
+            this.giaoVien = giaoVien;
+            ucDashBoard1.lblTen = giaoVien.HoTen;
+            ucDashBoard1.lblChucVu = "GV";
         }
 
         private void DashBoardGV_FormClosing(object sender, FormClosingEventArgs e)
@@ -55,7 +59,7 @@ namespace Quan_Li_Luan_Van
         public void guna2Button1_Click(object sender, EventArgs e)
         {
             pnl_childForm.Controls.Clear();
-            FLuanVan fLuanVan = new FLuanVan();
+            FLuanVan fLuanVan = new FLuanVan(giaoVien);
             fLuanVan.TopLevel = false;
             pnl_childForm.Controls.Add(fLuanVan);
             fLuanVan.Dock = DockStyle.Fill;
