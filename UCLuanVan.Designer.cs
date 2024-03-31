@@ -58,7 +58,7 @@
             this.pnlHinhAnh.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlHinhAnh.Location = new System.Drawing.Point(0, 0);
             this.pnlHinhAnh.Name = "pnlHinhAnh";
-            this.pnlHinhAnh.Size = new System.Drawing.Size(154, 109);
+            this.pnlHinhAnh.Size = new System.Drawing.Size(154, 111);
             this.pnlHinhAnh.TabIndex = 0;
             // 
             // pictureBox1
@@ -78,7 +78,7 @@
             this.pnlMaDeTai.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlMaDeTai.Location = new System.Drawing.Point(154, 0);
             this.pnlMaDeTai.Name = "pnlMaDeTai";
-            this.pnlMaDeTai.Size = new System.Drawing.Size(163, 109);
+            this.pnlMaDeTai.Size = new System.Drawing.Size(163, 111);
             this.pnlMaDeTai.TabIndex = 1;
             // 
             // lblMaDeTai
@@ -86,7 +86,7 @@
             this.lblMaDeTai.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblMaDeTai.Location = new System.Drawing.Point(0, 0);
             this.lblMaDeTai.Name = "lblMaDeTai";
-            this.lblMaDeTai.Size = new System.Drawing.Size(161, 107);
+            this.lblMaDeTai.Size = new System.Drawing.Size(161, 109);
             this.lblMaDeTai.TabIndex = 0;
             this.lblMaDeTai.Text = "Mã đề tài";
             this.lblMaDeTai.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -98,7 +98,7 @@
             this.pnlTenDeTai.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlTenDeTai.Location = new System.Drawing.Point(317, 0);
             this.pnlTenDeTai.Name = "pnlTenDeTai";
-            this.pnlTenDeTai.Size = new System.Drawing.Size(185, 109);
+            this.pnlTenDeTai.Size = new System.Drawing.Size(185, 111);
             this.pnlTenDeTai.TabIndex = 2;
             // 
             // lblTenDeTai
@@ -106,7 +106,7 @@
             this.lblTenDeTai.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblTenDeTai.Location = new System.Drawing.Point(0, 0);
             this.lblTenDeTai.Name = "lblTenDeTai";
-            this.lblTenDeTai.Size = new System.Drawing.Size(183, 107);
+            this.lblTenDeTai.Size = new System.Drawing.Size(183, 109);
             this.lblTenDeTai.TabIndex = 1;
             this.lblTenDeTai.Text = "Tên đề tài";
             this.lblTenDeTai.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -119,7 +119,7 @@
             this.pnlTheLoai.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlTheLoai.Location = new System.Drawing.Point(502, 0);
             this.pnlTheLoai.Name = "pnlTheLoai";
-            this.pnlTheLoai.Size = new System.Drawing.Size(171, 109);
+            this.pnlTheLoai.Size = new System.Drawing.Size(171, 111);
             this.pnlTheLoai.TabIndex = 3;
             // 
             // lblTheLoai
@@ -127,7 +127,7 @@
             this.lblTheLoai.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblTheLoai.Location = new System.Drawing.Point(0, 0);
             this.lblTheLoai.Name = "lblTheLoai";
-            this.lblTheLoai.Size = new System.Drawing.Size(169, 107);
+            this.lblTheLoai.Size = new System.Drawing.Size(169, 109);
             this.lblTheLoai.TabIndex = 2;
             this.lblTheLoai.Text = "Thể loại";
             this.lblTheLoai.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -152,7 +152,7 @@
             this.guna2TextBox4.PasswordChar = '\0';
             this.guna2TextBox4.PlaceholderText = "";
             this.guna2TextBox4.SelectedText = "";
-            this.guna2TextBox4.Size = new System.Drawing.Size(169, 107);
+            this.guna2TextBox4.Size = new System.Drawing.Size(169, 109);
             this.guna2TextBox4.TabIndex = 1;
             this.guna2TextBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -164,7 +164,7 @@
             this.pnlSoLuongSV.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlSoLuongSV.Location = new System.Drawing.Point(673, 0);
             this.pnlSoLuongSV.Name = "pnlSoLuongSV";
-            this.pnlSoLuongSV.Size = new System.Drawing.Size(124, 109);
+            this.pnlSoLuongSV.Size = new System.Drawing.Size(124, 111);
             this.pnlSoLuongSV.TabIndex = 4;
             // 
             // lblSoLuong
@@ -172,7 +172,7 @@
             this.lblSoLuong.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblSoLuong.Location = new System.Drawing.Point(0, 0);
             this.lblSoLuong.Name = "lblSoLuong";
-            this.lblSoLuong.Size = new System.Drawing.Size(122, 107);
+            this.lblSoLuong.Size = new System.Drawing.Size(122, 109);
             this.lblSoLuong.TabIndex = 1;
             this.lblSoLuong.Text = "số lượng";
             this.lblSoLuong.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -197,7 +197,7 @@
             this.guna2TextBox1.PasswordChar = '\0';
             this.guna2TextBox1.PlaceholderText = "";
             this.guna2TextBox1.SelectedText = "";
-            this.guna2TextBox1.Size = new System.Drawing.Size(122, 107);
+            this.guna2TextBox1.Size = new System.Drawing.Size(122, 109);
             this.guna2TextBox1.TabIndex = 0;
             this.guna2TextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -208,7 +208,7 @@
             this.pnlChiTiet.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlChiTiet.Location = new System.Drawing.Point(797, 0);
             this.pnlChiTiet.Name = "pnlChiTiet";
-            this.pnlChiTiet.Size = new System.Drawing.Size(209, 109);
+            this.pnlChiTiet.Size = new System.Drawing.Size(211, 111);
             this.pnlChiTiet.TabIndex = 5;
             // 
             // btnChiTiet
@@ -231,16 +231,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Controls.Add(this.pnlChiTiet);
             this.Controls.Add(this.pnlSoLuongSV);
             this.Controls.Add(this.pnlTheLoai);
             this.Controls.Add(this.pnlTenDeTai);
             this.Controls.Add(this.pnlMaDeTai);
             this.Controls.Add(this.pnlHinhAnh);
-            this.Margin = new System.Windows.Forms.Padding(3, 0, 3, 0);
             this.Name = "UCLuanVan";
-            this.Size = new System.Drawing.Size(1006, 109);
+            this.Size = new System.Drawing.Size(1008, 111);
             this.Load += new System.EventHandler(this.UCLuanVan_Load);
             this.pnlHinhAnh.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

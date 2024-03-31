@@ -44,6 +44,8 @@
             this.txtSoLuongSV = new Guna.UI2.WinForms.Guna2TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtTheLoai = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lblTenGV = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // txtMoTa
@@ -58,7 +60,7 @@
             this.txtMoTa.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtMoTa.ForeColor = System.Drawing.Color.Black;
             this.txtMoTa.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtMoTa.Location = new System.Drawing.Point(217, 380);
+            this.txtMoTa.Location = new System.Drawing.Point(216, 420);
             this.txtMoTa.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtMoTa.Multiline = true;
             this.txtMoTa.Name = "txtMoTa";
@@ -81,7 +83,7 @@
             this.txtYeuCau.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtYeuCau.ForeColor = System.Drawing.Color.Black;
             this.txtYeuCau.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtYeuCau.Location = new System.Drawing.Point(217, 500);
+            this.txtYeuCau.Location = new System.Drawing.Point(216, 540);
             this.txtYeuCau.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtYeuCau.Multiline = true;
             this.txtYeuCau.Name = "txtYeuCau";
@@ -104,7 +106,7 @@
             this.txtSoLuongMaxSV.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtSoLuongMaxSV.ForeColor = System.Drawing.Color.Black;
             this.txtSoLuongMaxSV.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSoLuongMaxSV.Location = new System.Drawing.Point(217, 312);
+            this.txtSoLuongMaxSV.Location = new System.Drawing.Point(216, 352);
             this.txtSoLuongMaxSV.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtSoLuongMaxSV.Name = "txtSoLuongMaxSV";
             this.txtSoLuongMaxSV.PasswordChar = '\0';
@@ -126,7 +128,7 @@
             this.txtMaLuanVan.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtMaLuanVan.ForeColor = System.Drawing.Color.Black;
             this.txtMaLuanVan.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtMaLuanVan.Location = new System.Drawing.Point(217, 48);
+            this.txtMaLuanVan.Location = new System.Drawing.Point(216, 88);
             this.txtMaLuanVan.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtMaLuanVan.Name = "txtMaLuanVan";
             this.txtMaLuanVan.PasswordChar = '\0';
@@ -148,7 +150,7 @@
             this.txtTenLuanVan.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtTenLuanVan.ForeColor = System.Drawing.Color.Black;
             this.txtTenLuanVan.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTenLuanVan.Location = new System.Drawing.Point(217, 96);
+            this.txtTenLuanVan.Location = new System.Drawing.Point(216, 136);
             this.txtTenLuanVan.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtTenLuanVan.Name = "txtTenLuanVan";
             this.txtTenLuanVan.PasswordChar = '\0';
@@ -170,7 +172,7 @@
             this.txtCongNghe.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtCongNghe.ForeColor = System.Drawing.Color.Black;
             this.txtCongNghe.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtCongNghe.Location = new System.Drawing.Point(217, 201);
+            this.txtCongNghe.Location = new System.Drawing.Point(216, 241);
             this.txtCongNghe.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtCongNghe.Name = "txtCongNghe";
             this.txtCongNghe.PasswordChar = '\0';
@@ -183,7 +185,7 @@
             // lblYeuCau
             // 
             this.lblYeuCau.AutoSize = true;
-            this.lblYeuCau.Location = new System.Drawing.Point(45, 500);
+            this.lblYeuCau.Location = new System.Drawing.Point(44, 540);
             this.lblYeuCau.Name = "lblYeuCau";
             this.lblYeuCau.Size = new System.Drawing.Size(68, 20);
             this.lblYeuCau.TabIndex = 38;
@@ -192,7 +194,7 @@
             // lblSoSVToida
             // 
             this.lblSoSVToida.AutoSize = true;
-            this.lblSoSVToida.Location = new System.Drawing.Point(45, 312);
+            this.lblSoSVToida.Location = new System.Drawing.Point(44, 352);
             this.lblSoSVToida.Name = "lblSoSVToida";
             this.lblSoSVToida.Size = new System.Drawing.Size(141, 20);
             this.lblSoSVToida.TabIndex = 37;
@@ -201,7 +203,7 @@
             // lblCongNghe
             // 
             this.lblCongNghe.AutoSize = true;
-            this.lblCongNghe.Location = new System.Drawing.Point(45, 201);
+            this.lblCongNghe.Location = new System.Drawing.Point(44, 241);
             this.lblCongNghe.Name = "lblCongNghe";
             this.lblCongNghe.Size = new System.Drawing.Size(87, 20);
             this.lblCongNghe.TabIndex = 36;
@@ -210,7 +212,7 @@
             // lblTheloai
             // 
             this.lblTheloai.AutoSize = true;
-            this.lblTheloai.Location = new System.Drawing.Point(45, 151);
+            this.lblTheloai.Location = new System.Drawing.Point(44, 191);
             this.lblTheloai.Name = "lblTheloai";
             this.lblTheloai.Size = new System.Drawing.Size(64, 20);
             this.lblTheloai.TabIndex = 35;
@@ -219,7 +221,7 @@
             // lblMota
             // 
             this.lblMota.AutoSize = true;
-            this.lblMota.Location = new System.Drawing.Point(45, 380);
+            this.lblMota.Location = new System.Drawing.Point(44, 420);
             this.lblMota.Name = "lblMota";
             this.lblMota.Size = new System.Drawing.Size(49, 20);
             this.lblMota.TabIndex = 34;
@@ -228,7 +230,7 @@
             // lblMaluanvan
             // 
             this.lblMaluanvan.AutoSize = true;
-            this.lblMaluanvan.Location = new System.Drawing.Point(45, 48);
+            this.lblMaluanvan.Location = new System.Drawing.Point(44, 88);
             this.lblMaluanvan.Name = "lblMaluanvan";
             this.lblMaluanvan.Size = new System.Drawing.Size(94, 20);
             this.lblMaluanvan.TabIndex = 33;
@@ -237,7 +239,7 @@
             // lblTenluanvan
             // 
             this.lblTenluanvan.AutoSize = true;
-            this.lblTenluanvan.Location = new System.Drawing.Point(45, 96);
+            this.lblTenluanvan.Location = new System.Drawing.Point(44, 136);
             this.lblTenluanvan.Name = "lblTenluanvan";
             this.lblTenluanvan.Size = new System.Drawing.Size(99, 20);
             this.lblTenluanvan.TabIndex = 32;
@@ -255,7 +257,7 @@
             this.txtSoLuongSV.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtSoLuongSV.ForeColor = System.Drawing.Color.Black;
             this.txtSoLuongSV.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSoLuongSV.Location = new System.Drawing.Point(217, 259);
+            this.txtSoLuongSV.Location = new System.Drawing.Point(216, 299);
             this.txtSoLuongSV.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtSoLuongSV.Name = "txtSoLuongSV";
             this.txtSoLuongSV.PasswordChar = '\0';
@@ -268,7 +270,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(45, 259);
+            this.label1.Location = new System.Drawing.Point(44, 299);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(153, 20);
             this.label1.TabIndex = 47;
@@ -286,7 +288,7 @@
             this.txtTheLoai.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtTheLoai.ForeColor = System.Drawing.Color.Black;
             this.txtTheLoai.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTheLoai.Location = new System.Drawing.Point(217, 151);
+            this.txtTheLoai.Location = new System.Drawing.Point(216, 191);
             this.txtTheLoai.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtTheLoai.Name = "txtTheLoai";
             this.txtTheLoai.PasswordChar = '\0';
@@ -296,11 +298,31 @@
             this.txtTheLoai.Size = new System.Drawing.Size(547, 29);
             this.txtTheLoai.TabIndex = 49;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(44, 35);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(102, 20);
+            this.label2.TabIndex = 50;
+            this.label2.Text = "Tên giáo viên";
+            // 
+            // lblTenGV
+            // 
+            this.lblTenGV.AutoSize = true;
+            this.lblTenGV.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTenGV.Location = new System.Drawing.Point(212, 35);
+            this.lblTenGV.Name = "lblTenGV";
+            this.lblTenGV.Size = new System.Drawing.Size(0, 25);
+            this.lblTenGV.TabIndex = 51;
+            // 
             // FChiTiet
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(831, 692);
+            this.Controls.Add(this.lblTenGV);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.txtTheLoai);
             this.Controls.Add(this.txtSoLuongSV);
             this.Controls.Add(this.label1);
@@ -343,5 +365,7 @@
         private Guna.UI2.WinForms.Guna2TextBox txtSoLuongSV;
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2TextBox txtTheLoai;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblTenGV;
     }
 }

@@ -24,6 +24,7 @@ namespace Quan_Li_Luan_Van
             txtYeuCau.Text = luanVan.YeuCau;
             txtSoLuongSV.Text = luanVan.SoLuongSV.ToString();
             txtSoLuongMaxSV.Text = luanVan.SoLuongMax.ToString();
+            lblTenGV.Text = luanVan.TenGV;
         }
 
         private void FChiTiet_Load(object sender, EventArgs e)

@@ -138,7 +138,7 @@
             this.guna2Button2.Name = "guna2Button2";
             this.guna2Button2.Size = new System.Drawing.Size(300, 92);
             this.guna2Button2.TabIndex = 1;
-            this.guna2Button2.Text = "Sinh viên";
+            this.guna2Button2.Text = "Đăng kí";
             this.guna2Button2.Click += new System.EventHandler(this.guna2Button2_Click);
             // 
             // guna2Button1
@@ -167,12 +167,14 @@
             this.ucDashBoard1.BackColor = System.Drawing.Color.DarkGray;
             this.ucDashBoard1.Dock = System.Windows.Forms.DockStyle.Left;
             this.ucDashBoard1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.ucDashBoard1.lblChucVu = "HS";
+            this.ucDashBoard1.lblTen = "PhamCongChien";
             this.ucDashBoard1.Location = new System.Drawing.Point(0, 0);
             this.ucDashBoard1.Name = "ucDashBoard1";
             this.ucDashBoard1.Size = new System.Drawing.Size(300, 850);
             this.ucDashBoard1.TabIndex = 0;
             // 
-            // DashBoardGV
+            // FGiaoVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -180,7 +182,7 @@
             this.Controls.Add(this.pnl_childForm);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.ucDashBoard1);
-            this.Name = "DashBoardGV";
+            this.Name = "FGiaoVien";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DashBoadGV";
             this.WindowState = System.Windows.Forms.FormWindowState.Minimized;

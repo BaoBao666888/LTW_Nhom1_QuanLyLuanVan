@@ -16,6 +16,8 @@ namespace Quan_Li_Luan_Van
         LuanVanDAO lvDAO = new LuanVanDAO();
         GiaoVien giaoVien;
 
+        SinhVien sinhVien;
+
         public FLuanVan()
         {
             InitializeComponent();
@@ -26,15 +28,20 @@ namespace Quan_Li_Luan_Van
             this.giaoVien = giaoVien;
         }
 
-        public void FLuanVan_Load(object sender, EventArgs e)
+        public FLuanVan(SinhVien sinhVien)
         {
-            this.GenerateDynamicUC();   
+            InitializeComponent();
+            this.sinhVien = sinhVien;
         }
 
-        public void GenerateDynamicUC()
+        public void FLuanVan_Load(object sender, EventArgs e)
+        {
+            this.GenerateDynamicUC();
+        }
+
+        public void LoadData(string sqlStr)
         {
             flp_list.Controls.Clear();
-            string sqlStr = string.Format("Select *from LuanVan");
             DataTable dt = new DataTable();
             dt = lvDAO.Load(sqlStr);
             for (int i = 0; i < dt.Rows.Count; i++)
@@ -42,7 +49,48 @@ namespace Quan_Li_Luan_Van
                 LuanVan luanVan = new LuanVan(dt.Rows[i]["MaDeTai"].ToString(), dt.Rows[i]["TenDeTai"].ToString(), dt.Rows[i]["TheLoai"].ToString(), dt.Rows[i]["MoTa"].ToString(), dt.Rows[i]["CongNghe"].ToString(), dt.Rows[i]["YeuCau"].ToString(), int.Parse(dt.Rows[i]["SoLuongSV"].ToString()), int.Parse(dt.Rows[i]["SoLuongMaxSV"].ToString()), dt.Rows[i]["TenGV"].ToString());
                 UCLuanVan ucLuanVan = new UCLuanVan(luanVan);
                 flpList.Controls.Add(ucLuanVan);
+                ucLuanVan.Click += show;
             }
+        }
+
+        private void show(object sender, EventArgs e)
+        {
+            FDangKi fDangKi = new FDangKi();
+            fDangKi.Show();
+        }
+
+        public void GenerateDynamicUC()
+        {
+            string sqlStr = string.Format("Select *from LuanVan");
+            this.LoadData(sqlStr);
+        }
+
+        void loadDataFind()
+        {
+            string sqlStr = string.Format("Select *from LuanVan");
+            DataTable dt = new DataTable();
+            dt = lvDAO.Load(sqlStr);
+            if (cbLuaChon.Text == "TheLoai")
+            {
+                cb_data.Items.Clear();
+                for (int i = 0; i < dt.Rows.Count; i++)
+                {
+                    if (cb_data.Items.Contains(dt.Rows[i]["TheLoai"].ToString()))
+                        continue;
+                    cb_data.Items.Add(dt.Rows[i]["TheLoai"].ToString());
+                }
+            }
+            else 
+                if( cbLuaChon.Text == "GiaoVien")
+                {
+                cb_data.Items.Clear();
+                    for (int i = 0; i < dt.Rows.Count; i++)
+                    {
+                        if (cb_data.Items.Contains(dt.Rows[i]["TenGV"].ToString()))
+                            continue;
+                        cb_data.Items.Add(dt.Rows[i]["TenGV"].ToString());
+                    }
+                }
         }
 
         public void AnNutDangKi()
@@ -53,16 +101,6 @@ namespace Quan_Li_Luan_Van
         public void AnNutThem()
         {
             btn_them.Visible = false;
-        }
-        private void txt_timKiem_Click(object sender, EventArgs e)
-        {
-            txt_timKiem.Clear();
-        }
-
-        private void txt_timKiem_Leave(object sender, EventArgs e)
-        {
-            if (txt_timKiem.Text == "")
-                txt_timKiem.Text = "Tìm kiếm";
         }
 
         private void flp_list_Paint(object sender, PaintEventArgs e)
@@ -83,6 +121,25 @@ namespace Quan_Li_Luan_Van
         private void btnRefresh_Click(object sender, EventArgs e)
         {
             this.GenerateDynamicUC();
+            this.loadDataFind();
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            if (cbLuaChon.Text == "GiaoVien")
+            {
+                flp_list.Controls.Clear();
+                string sqlStr = string.Format($"Select *from LuanVan where TenGV like '%{cb_data.Text.Trim()}%'");
+                this.LoadData(sqlStr);
+            }
+            else
+                if (cbLuaChon.Text == "TheLoai")
+            {
+                flp_list.Controls.Clear();
+                string sqlStr = string.Format($"Select *from LuanVan where TheLoai like '%{cb_data.Text.Trim()}%'");
+                this.LoadData(sqlStr);
+            }
+
         }
     }
 }
