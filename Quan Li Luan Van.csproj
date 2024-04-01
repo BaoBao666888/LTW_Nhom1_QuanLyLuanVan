@@ -95,40 +95,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="img\power.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="img\ute_logo.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="img\logo-cntt2021.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="img\thesis.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="img\student.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="img\progress.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="img\rate.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="img\message.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="img\thesis_color.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\research.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="img\delete.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="img\plus.gif" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\sync.png" />
