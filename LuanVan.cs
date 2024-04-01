@@ -15,11 +15,12 @@ namespace Quan_Li_Luan_Van
         private string moTa;
         private string congNghe;
         private string yeuCau;
+        private string chucNang;
         private int soLuongSV;
         private int soLuongMax;
-        private string tenGV;
+        private string mSGV;
     
-        public LuanVan(string maDeTai, string tenDeTai, string theLoai, string moTa, string congNghe, string yeuCau, int soLuongSV, int soLuongMax, string tenGV)
+        public LuanVan(string maDeTai, string tenDeTai, string theLoai, string moTa, string congNghe, string yeuCau, string chucNang, int soLuongSV, int soLuongMax, string MSGV)
         {
             this.maDeTai = maDeTai;
             this.tenDeTai = tenDeTai;
@@ -27,22 +28,21 @@ namespace Quan_Li_Luan_Van
             this.moTa = moTa;
             this.congNghe = congNghe;
             this.yeuCau = yeuCau;
+            this.chucNang = chucNang;
             this.soLuongSV = soLuongSV;
             this.soLuongMax = soLuongMax;
-            this.tenGV = tenGV;
+            this.mSGV = MSGV;
         }
 
-        public string MadeTai { get { return maDeTai; } }
-        public string TenDeTai { get { return tenDeTai; } }
-        public string TheLoai { get { return theLoai; } }
-        public string MoTa { get {  return moTa; } }
-        public string CongNghe { get {  return congNghe; } }
-        public string YeuCau { get {  return yeuCau; } }
-        public int SoLuongSV { get {  return soLuongSV; } }
-        public int SoLuongMax { get {  return soLuongMax; } }
-
-        public string TenGV {  get { return tenGV; } }
-
-
+        public string MadeTai { get => this.maDeTai; set => this.maDeTai = value; }
+        public string TenDeTai { get => this.TenDeTai; set => this.TenDeTai = value; }
+        public string TheLoai { get => this.theLoai; set => this.theLoai = value; }
+        public string MoTa { get => this.moTa; set => this.moTa = value; }
+        public string CongNghe { get => this.congNghe; set => this.congNghe = value; }
+        public string YeuCau { get => this.yeuCau; set => this.yeuCau = value; }
+        public string ChucNang { get => this.chucNang; set => this.chucNang = value; }
+        public int SoLuongSV { get => this.soLuongSV; set => this.soLuongSV = value; }
+        public int SoLuongMax { get => this.soLuongMax; set => this.soLuongMax = value; }
+        public string MSGV { get => this.mSGV; set => this.mSGV = value; }
     }
 }

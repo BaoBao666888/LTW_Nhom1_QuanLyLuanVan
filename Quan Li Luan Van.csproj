@@ -60,97 +60,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DAO.cs" />
-    <Compile Include="FChiTiet.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FChiTiet.Designer.cs">
-      <DependentUpon>FChiTiet.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FDangKi.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FDangKi.Designer.cs">
-      <DependentUpon>FDangKi.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FGiaoVien.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FGiaoVien.Designer.cs">
-      <DependentUpon>FGiaoVien.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FSinhVien.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FSinhVien.Designer.cs">
-      <DependentUpon>FSinhVien.cs</DependentUpon>
-    </Compile>
     <Compile Include="DbConnection.cs" />
-    <Compile Include="FLuanVan.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FLuanVan.Designer.cs">
-      <DependentUpon>FLuanVan.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FThemluanvan.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FThemluanvan.Designer.cs">
-      <DependentUpon>FThemluanvan.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GiaoVien.cs" />
+    <Compile Include="GiangVien.cs" />
     <Compile Include="GiaoVienDAO.cs" />
-    <Compile Include="Login.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Login.Designer.cs">
-      <DependentUpon>Login.cs</DependentUpon>
-    </Compile>
     <Compile Include="LuanVan.cs" />
     <Compile Include="LuanVanDAO.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ResetPasswd.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ResetPasswd.Designer.cs">
-      <DependentUpon>ResetPasswd.cs</DependentUpon>
-    </Compile>
     <Compile Include="Person.cs" />
     <Compile Include="SinhVien.cs" />
     <Compile Include="SinhVienDAO.cs" />
-    <Compile Include="UCDashBoard.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UCDashBoard.Designer.cs">
-      <DependentUpon>UCDashBoard.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UCLuanVan.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UCLuanVan.Designer.cs">
-      <DependentUpon>UCLuanVan.cs</DependentUpon>
-    </Compile>
-    <EmbeddedResource Include="FChiTiet.resx">
-      <DependentUpon>FChiTiet.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FDangKi.resx">
-      <DependentUpon>FDangKi.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FGiaoVien.resx">
-      <DependentUpon>FGiaoVien.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FSinhVien.resx">
-      <DependentUpon>FSinhVien.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FLuanVan.resx">
-      <DependentUpon>FLuanVan.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FThemluanvan.resx">
-      <DependentUpon>FThemluanvan.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Login.resx">
-      <DependentUpon>Login.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -161,15 +80,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="ResetPasswd.resx">
-      <DependentUpon>ResetPasswd.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UCDashBoard.resx">
-      <DependentUpon>UCDashBoard.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UCLuanVan.resx">
-      <DependentUpon>UCLuanVan.cs</DependentUpon>
-    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

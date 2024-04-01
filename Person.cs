@@ -8,40 +8,24 @@ namespace Quan_Li_Luan_Van
 {
     public class Person
     {
-        private string id;
-        private string tenDangNhap;
-        private string matKhau;
         private string hoTen;
-        public Person(string id, string tenDangNhap, string matKhau, string hoTen)
+        private string email;
+        private string soDienThoai;
+        private string maTK;
+
+        public Person(string hoTen, string email, string soDienThoai, string maTK)
         {
-            this.id = id;
-            this.tenDangNhap = tenDangNhap;
-            this.matKhau = matKhau;
             this.hoTen = hoTen;
+            this.email = email;
+            this.soDienThoai = soDienThoai;
+            this.maTK = maTK;
         }
 
-        public string Id
-        {
-            get { return id; }
-            set { id = value; }
-        }
+        public string HoTen { get => this.hoTen; set => this.hoTen = value; }
+        public string Email { get => this.email; set => this.email = value; }
+        public string SoDienThoai { get => this.soDienThoai; set => this.soDienThoai = value; }
 
-        public string TenDangNhap
-        {
-            get { return tenDangNhap; }
-            set { tenDangNhap = value; }
-        }
-
-        public string MatKhau
-        {
-            get { return matKhau; }
-            set { matKhau = value; }
-        }
-
-        public string HoTen
-        {
-            get { return hoTen; }
-            set { hoTen = value; }
-        }
+        public string MaTK { get => this.maTK; set => this.maTK = value; }
     }
+
 }
