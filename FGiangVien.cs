@@ -12,24 +12,44 @@ namespace Quan_Li_Luan_Van
 {
     public partial class FGiangVien : Form
     {
-        public FGiangVien()
+        DAO gvDAO = new DAO();
+
+        DataTable dt = new DataTable();
+        private string maTK;
+        public FGiangVien(string maTK)
         {
             InitializeComponent();
+            this.maTK = maTK;
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void btnLuanVan_Click(object sender, EventArgs e)
         {
             pnl_childForm.Controls.Clear();
-            FLuanVan fLuanVan = new FLuanVan();
+            FLuanVan fLuanVan = new FLuanVan(dt);
             fLuanVan.TopLevel = false;
             pnl_childForm.Controls.Add(fLuanVan);
             fLuanVan.Dock = DockStyle.Fill;
             fLuanVan.Show();
+        }
+
+        private void FGiangVien_Load(object sender, EventArgs e)
+        {
+            this.GetData();
+        }
+
+        private void GetData()
+        {
+
+            string sqlStr = string.Format($"select TaiKhoan.MaTK, TaiKhoan.VaiTro, GiangVien.HoTen, GiangVien.MSGV from TaiKhoan inner join GiangVien on GiangVien.MaTK = TaiKhoan.MaTK where TaiKhoan.MaTK = '{this.maTK}'");
+            dt = gvDAO.Load(sqlStr);
+            this.lbl_ten.Text = dt.Rows[0]["HoTen"].ToString();
+            this.lbl_chucVu.Text = "Giảng Viên";
+        }
+
+        private void pnl_infor_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

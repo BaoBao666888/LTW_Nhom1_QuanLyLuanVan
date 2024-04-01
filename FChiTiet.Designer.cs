@@ -61,7 +61,7 @@
             // 
             this.lblTenDeTai.AutoSize = true;
             this.lblTenDeTai.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTenDeTai.ForeColor = System.Drawing.Color.LightSalmon;
+            this.lblTenDeTai.ForeColor = System.Drawing.Color.OrangeRed;
             this.lblTenDeTai.Location = new System.Drawing.Point(169, 9);
             this.lblTenDeTai.Name = "lblTenDeTai";
             this.lblTenDeTai.Size = new System.Drawing.Size(96, 38);

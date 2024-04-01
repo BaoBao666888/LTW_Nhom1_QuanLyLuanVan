@@ -104,14 +104,26 @@
     <Compile Include="FGiangVien.Designer.cs">
       <DependentUpon>FGiangVien.cs</DependentUpon>
     </Compile>
+    <Compile Include="FLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FLogin.Designer.cs">
+      <DependentUpon>FLogin.cs</DependentUpon>
+    </Compile>
     <Compile Include="FLuanVan.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FLuanVan.Designer.cs">
       <DependentUpon>FLuanVan.cs</DependentUpon>
     </Compile>
+    <Compile Include="FThemLuanVan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FThemLuanVan.Designer.cs">
+      <DependentUpon>FThemLuanVan.cs</DependentUpon>
+    </Compile>
     <Compile Include="GiangVien.cs" />
-    <Compile Include="GiaoVienDAO.cs" />
+    <Compile Include="GiangVienDAO.cs" />
     <Compile Include="LuanVan.cs" />
     <Compile Include="LuanVanDAO.cs" />
     <Compile Include="Program.cs" />
@@ -131,8 +143,14 @@
     <EmbeddedResource Include="FGiangVien.resx">
       <DependentUpon>FGiangVien.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FLogin.resx">
+      <DependentUpon>FLogin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FLuanVan.resx">
       <DependentUpon>FLuanVan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FThemLuanVan.resx">
+      <DependentUpon>FThemLuanVan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
@@ -190,6 +208,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\thesis_color.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plus %281%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

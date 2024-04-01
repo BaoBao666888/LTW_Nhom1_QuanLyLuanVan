@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Guna.UI2.WinForms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,19 +13,23 @@ namespace Quan_Li_Luan_Van
 {
     public partial class UCLuanVan : UserControl
     {
-        public UCLuanVan()
+        public UCLuanVan(string vaiTro)
         {
             InitializeComponent();
+            if(vaiTro == "Gi?ng viên")
+                btnDangKi.Visible = false;
+            else
+                btnXoa.Visible = false;
         }
        
 
-        public Label MaDeTai { get => lblMaDeTai; set => lblMaDeTai = value; }
+        public Guna2HtmlLabel MaDeTai { get => lblMaDeTai; set => lblMaDeTai = value; }
 
-        public Label TenDeTai { get => lblTenDeTai; set => lblTenDeTai = value; }
+        public Guna2HtmlLabel TenDeTai { get => lblTenDeTai; set => lblTenDeTai = value; }
 
-        public Label TheLoai { get => lblTheLoai; set => lblTheLoai = value; }
+        public Guna2HtmlLabel TheLoai { get => lblTheLoai; set => lblTheLoai = value; }
 
-        public Label SoLuongConLai { get => lblSoLuongConLai; set => lblSoLuongConLai = value; }
+        public Guna2HtmlLabel SoLuongConLai { get => lblSoLuongConLai; set => lblSoLuongConLai = value; }
 
         private void mouseLeave()
         {
@@ -54,72 +59,25 @@ namespace Quan_Li_Luan_Van
             FChiTiet fChiTiet = new FChiTiet(this.MaDeTai.Text);
             fChiTiet.Show();
         }
-
-        private void pictureBox1_MouseLeave(object sender, EventArgs e)
+        private void btnDangKi_MouseLeave(object sender, EventArgs e)
         {
             this.mouseLeave();
         }
 
-        private void pictureBox1_MouseEnter(object sender, EventArgs e)
+        private void btnDangKi_MouseEnter(object sender, EventArgs e)
         {
             this.mouseEnter();
         }
 
-        private void lblMaDeTai_MouseLeave(object sender, EventArgs e)
+        private void btnXoa_MouseLeave(object sender, EventArgs e)
         {
             this.mouseLeave();
         }
 
-        private void lblMaDeTai_MouseEnter(object sender, EventArgs e)
+        private void btnXoa_MouseEnter(object sender, EventArgs e)
         {
             this.mouseEnter();
         }
 
-        private void lblTenDeTai_MouseLeave(object sender, EventArgs e)
-        {
-            this.mouseLeave();
-        }
-
-        private void lblTenDeTai_MouseEnter(object sender, EventArgs e)
-        {
-            this.mouseEnter();
-        }
-
-        private void lblTheLoai_MouseLeave(object sender, EventArgs e)
-        {
-            this.mouseLeave();
-        }
-
-        private void lblTheLoai_MouseEnter(object sender, EventArgs e)
-        {
-            this.mouseEnter();
-        }
-
-        private void lblSoLuongConLai_MouseLeave(object sender, EventArgs e)
-        {
-            this.mouseLeave();
-        }
-
-        private void lblSoLuongConLai_MouseEnter(object sender, EventArgs e)
-        {
-            this.mouseEnter();
-        }
-
-
-
-        private void pictureBox2_MouseLeave(object sender, EventArgs e)
-        {
-            this.mouseLeave();
-        }
-
-        private void pictureBox2_MouseEnter(object sender, EventArgs e)
-        {
-            this.mouseEnter();
-        }
-
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

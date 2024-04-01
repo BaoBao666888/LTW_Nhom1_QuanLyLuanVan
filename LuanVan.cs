@@ -35,7 +35,7 @@ namespace Quan_Li_Luan_Van
         }
 
         public string MadeTai { get => this.maDeTai; set => this.maDeTai = value; }
-        public string TenDeTai { get => this.TenDeTai; set => this.TenDeTai = value; }
+        public string TenDeTai { get => this.tenDeTai; set => this.tenDeTai = value; }
         public string TheLoai { get => this.theLoai; set => this.theLoai = value; }
         public string MoTa { get => this.moTa; set => this.moTa = value; }
         public string CongNghe { get => this.congNghe; set => this.congNghe = value; }
