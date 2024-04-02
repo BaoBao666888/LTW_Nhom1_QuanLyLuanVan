@@ -25,8 +25,10 @@ namespace Quan_Li_Luan_Van
         {
             InitializeComponent();
            this.dtThongTin = dtThongTin;
-            if (dtThongTin.Rows[0]["VaiTro"].ToString() == "Gi?ng viên")
-                guna2Button2.Visible = true;
+            if (dtThongTin.Rows[0]["VaiTro"].ToString() == "Sinh viên")
+            {
+                btnThem.Visible = false;
+            }
         }
 
         public void FLuanVan_Load(object sender, EventArgs e)
@@ -40,9 +42,11 @@ namespace Quan_Li_Luan_Van
             string sqlStr = string.Format("Select *from DeTai");
             dt = lvDAO.Load(sqlStr);
 
+            flp_list.Controls.Clear();
+
             for (int i = 0; i < dt.Rows.Count; i++)
             {
-                UCLuanVan ucLuanVan = new UCLuanVan(dtThongTin.Rows[0]["VaiTro"].ToString());
+                UCLuanVan ucLuanVan = new UCLuanVan(dtThongTin);
                 ucLuanVan.MaDeTai.Text = dt.Rows[i]["MaDT"].ToString();
                 ucLuanVan.TenDeTai.Text = dt.Rows[i]["TenDeTai"].ToString();
                 ucLuanVan.TheLoai.Text = dt.Rows[i]["YeuCau"].ToString();
@@ -53,8 +57,15 @@ namespace Quan_Li_Luan_Van
 
         private void guna2Button2_Click(object sender, EventArgs e)
         {
-            FThemLuanVan fThemLuanVan = new FThemLuanVan(dtThongTin.Rows[0]["HoTen"].ToString());
-            fThemLuanVan.Show();
+            FThemLuanVan fThemLuanVan = new FThemLuanVan(dtThongTin.Rows[0]["MSGV"].ToString());
+            
+             DialogResult res = fThemLuanVan.ShowDialog();
+
+            if (res ==DialogResult.Cancel)
+            {
+                this.FLuanVan_Load(sender, e);
+            }
+            
         }
     }
 }

@@ -15,7 +15,7 @@ namespace Quan_Li_Luan_Van
             return dbConnection.Load(sqlStr);
         }
 
-        public void Them(string sqlStr)
+        public void ThucThi(string sqlStr)
         {
             dbConnection.ThucThi(sqlStr);
         }

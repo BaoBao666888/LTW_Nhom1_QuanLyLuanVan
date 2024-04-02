@@ -25,7 +25,7 @@ namespace Quan_Li_Luan_Van
 
             if (rdoGiangVien.Checked == true)
             {
-                string sqlStr = string.Format("select * from TaiKhoan where VaiTro = 'Giảng viên'");
+                string sqlStr = string.Format("select * from TaiKhoan where VaiTro = 'Gi?ng viên'");
                 dt = dao.Load(sqlStr);
 
                 for (int i = 0; i < dt.Rows.Count; i++)
@@ -33,6 +33,22 @@ namespace Quan_Li_Luan_Van
                             && dt.Rows[i]["MatKhau"].ToString().Trim() == txtMatKhau.Text)
                     {
                         FGiangVien fGV = new FGiangVien(dt.Rows[i]["MaTK"].ToString());
+                        fGV.Show();
+                        this.Hide();
+                        return;
+                    }
+            }
+            else 
+                if(rdoSinhVien.Checked == true)
+            {
+                string sqlStr = string.Format("select * from TaiKhoan where VaiTro = 'Sinh viên'");
+                dt = dao.Load(sqlStr);
+
+                for (int i = 0; i < dt.Rows.Count; i++)
+                    if (dt.Rows[i]["TenDangNhap"].ToString().Trim() == txtTaiKhoan.Text
+                            && dt.Rows[i]["MatKhau"].ToString().Trim() == txtMatKhau.Text)
+                    {
+                        FSinhVien fGV = new FSinhVien(dt.Rows[i]["MaTK"].ToString());
                         fGV.Show();
                         this.Hide();
                         return;

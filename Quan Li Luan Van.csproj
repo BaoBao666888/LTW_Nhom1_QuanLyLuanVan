@@ -98,6 +98,12 @@
     <Compile Include="FChiTiet.Designer.cs">
       <DependentUpon>FChiTiet.cs</DependentUpon>
     </Compile>
+    <Compile Include="FDangKiDeTai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FDangKiDeTai.Designer.cs">
+      <DependentUpon>FDangKiDeTai.cs</DependentUpon>
+    </Compile>
     <Compile Include="FGiangVien.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -116,6 +122,12 @@
     <Compile Include="FLuanVan.Designer.cs">
       <DependentUpon>FLuanVan.cs</DependentUpon>
     </Compile>
+    <Compile Include="FSinhVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSinhVien.Designer.cs">
+      <DependentUpon>FSinhVien.cs</DependentUpon>
+    </Compile>
     <Compile Include="FThemLuanVan.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -131,6 +143,12 @@
     <Compile Include="Person.cs" />
     <Compile Include="SinhVien.cs" />
     <Compile Include="SinhVienDAO.cs" />
+    <Compile Include="UCDangKiDeTai.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCDangKiDeTai.Designer.cs">
+      <DependentUpon>UCDangKiDeTai.cs</DependentUpon>
+    </Compile>
     <Compile Include="UCLuanVan.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -140,6 +158,9 @@
     <EmbeddedResource Include="FChiTiet.resx">
       <DependentUpon>FChiTiet.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FDangKiDeTai.resx">
+      <DependentUpon>FDangKiDeTai.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FGiangVien.resx">
       <DependentUpon>FGiangVien.cs</DependentUpon>
     </EmbeddedResource>
@@ -148,6 +169,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FLuanVan.resx">
       <DependentUpon>FLuanVan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FSinhVien.resx">
+      <DependentUpon>FSinhVien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FThemLuanVan.resx">
       <DependentUpon>FThemLuanVan.cs</DependentUpon>
@@ -162,6 +186,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="UCDangKiDeTai.resx">
+      <DependentUpon>UCDangKiDeTai.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UCLuanVan.resx">
       <DependentUpon>UCLuanVan.cs</DependentUpon>
     </EmbeddedResource>

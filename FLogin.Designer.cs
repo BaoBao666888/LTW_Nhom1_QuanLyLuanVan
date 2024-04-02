@@ -68,6 +68,8 @@
             // 
             // gbDangNhap
             // 
+            this.gbDangNhap.Controls.Add(this.lblMatKhau);
+            this.gbDangNhap.Controls.Add(this.lblTaiKhoan);
             this.gbDangNhap.Controls.Add(this.linklblQuenMatKhau);
             this.gbDangNhap.Controls.Add(this.rdoGiangVien);
             this.gbDangNhap.Controls.Add(this.btnThoat);
@@ -75,8 +77,6 @@
             this.gbDangNhap.Controls.Add(this.btnDangNhap);
             this.gbDangNhap.Controls.Add(this.txtMatKhau);
             this.gbDangNhap.Controls.Add(this.txtTaiKhoan);
-            this.gbDangNhap.Controls.Add(this.lblMatKhau);
-            this.gbDangNhap.Controls.Add(this.lblTaiKhoan);
             this.gbDangNhap.Location = new System.Drawing.Point(358, 65);
             this.gbDangNhap.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.gbDangNhap.Name = "gbDangNhap";

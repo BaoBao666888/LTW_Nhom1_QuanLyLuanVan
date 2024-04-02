@@ -24,8 +24,18 @@ namespace Quan_Li_Luan_Van
         private void btnConfirm_Click(object sender, EventArgs e)
         {
             lvDAO.Them(txtMaDeTai.Text, txtTenDeTai.Text, cbTheLoai.Text, txtMoTa.Text, txtCongNghe.Text, txtYeuCau.Text, txtChucNang.Text, 0, int.Parse(cbSoLuong.Text), this.mSGV);
-            FLuanVan fLuanVan = (FLuanVan)Application.OpenForms["FLuanVan"];
-            fLuanVan.FLuanVan_Load(sender, e);
+        }
+
+        private void btnReset_Click(object sender, EventArgs e)
+        {
+            txtChucNang.Clear();
+            txtCongNghe.Clear();
+            txtMaDeTai.Clear();
+            txtMoTa.Clear();
+            txtTenDeTai.Clear();
+            txtYeuCau.Clear();
+            cbSoLuong.Text = "";
+            cbTheLoai.Text = "";
         }
     }
 }

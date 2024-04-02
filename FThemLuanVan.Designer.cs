@@ -255,6 +255,7 @@
             this.btnReset.Size = new System.Drawing.Size(129, 45);
             this.btnReset.TabIndex = 51;
             this.btnReset.Text = "Reset";
+            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
             // cbSoLuong
             // 

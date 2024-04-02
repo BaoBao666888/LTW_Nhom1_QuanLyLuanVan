@@ -13,13 +13,19 @@ namespace Quan_Li_Luan_Van
 {
     public partial class UCLuanVan : UserControl
     {
-        public UCLuanVan(string vaiTro)
+        DAO dao = new DAO();
+        LuanVanDAO lvDAO = new LuanVanDAO();
+        private string mSSV;
+        public UCLuanVan(DataTable dt)
         {
             InitializeComponent();
-            if(vaiTro == "Gi?ng viên")
+            if (dt.Rows[0]["VaiTro"].ToString() == "Gi?ng viên")
                 btnDangKi.Visible = false;
             else
+            {
+                this.mSSV = dt.Rows[0]["MSSV"].ToString();
                 btnXoa.Visible = false;
+            }
         }
        
 
@@ -33,13 +39,11 @@ namespace Quan_Li_Luan_Van
 
         private void mouseLeave()
         {
-            this.BackColor = Color.WhiteSmoke;
             this.BorderStyle = BorderStyle.None;
         }
 
         private void mouseEnter()
         {
-            this.BackColor = Color.LightGray;
             this.BorderStyle = BorderStyle.FixedSingle;
         }
 
@@ -57,7 +61,7 @@ namespace Quan_Li_Luan_Van
         private void UCLuanVan_DoubleClick(object sender, EventArgs e)
         {
             FChiTiet fChiTiet = new FChiTiet(this.MaDeTai.Text);
-            fChiTiet.Show();
+            fChiTiet.ShowDialog();
         }
         private void btnDangKi_MouseLeave(object sender, EventArgs e)
         {
@@ -79,5 +83,26 @@ namespace Quan_Li_Luan_Van
             this.mouseEnter();
         }
 
+        private void btnXoa_Click_1(object sender, EventArgs e)
+        {
+            DialogResult res = MessageBox.Show("Bạn có chắc chắn muốn xóa luận văn này?", "WARNING!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (res == DialogResult.Yes)
+            {
+                lvDAO.Xoa(this.lblMaDeTai.Text);
+                this.Visible = false;
+            }
+        }
+
+        private void btnDangKi_Click(object sender, EventArgs e)
+        {
+            var dateTime = DateTime.Now;
+            var dateTimeString = dateTime.ToString("yyyy-MM-dd HH:mm:ss");
+            DialogResult res = MessageBox.Show("Bạn có chắc chắn muốn đăng kí đề tài này?", "Question?", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (res == DialogResult.Yes)
+            {
+                string sqlStr = string.Format($"INSERT INTO DangKiDeTai (MSSV, MaDT, ThoiGianYeuCau, TrangThai) VALUES ('{this.mSSV}', '{this.MaDeTai.Text}', '{dateTimeString}', N'Chờ duyệt')");
+                dao.ThucThi(sqlStr);
+            }    
+        }
     }
 }

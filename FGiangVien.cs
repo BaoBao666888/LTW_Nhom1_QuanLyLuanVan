@@ -51,5 +51,16 @@ namespace Quan_Li_Luan_Van
         {
 
         }
+
+        private void btnDangKi_Click(object sender, EventArgs e)
+        {
+            pnl_childForm.Controls.Clear();
+            FDangKiDeTai fDangKi = new FDangKiDeTai();
+            fDangKi.TopLevel = false;
+            pnl_childForm.Controls.Add(fDangKi);
+            fDangKi.Dock = DockStyle.Fill;
+            fDangKi.Show();
+
+        }
     }
 }

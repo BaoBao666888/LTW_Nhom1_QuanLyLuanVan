@@ -140,7 +140,7 @@
             // 
             // txtCongNghe
             // 
-            this.txtCongNghe.BackColor = System.Drawing.Color.Gainsboro;
+            this.txtCongNghe.BackColor = System.Drawing.Color.FloralWhite;
             this.txtCongNghe.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtCongNghe.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCongNghe.Location = new System.Drawing.Point(42, 241);
@@ -152,7 +152,7 @@
             // 
             // txtMoTa
             // 
-            this.txtMoTa.BackColor = System.Drawing.Color.Gainsboro;
+            this.txtMoTa.BackColor = System.Drawing.Color.FloralWhite;
             this.txtMoTa.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtMoTa.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMoTa.Location = new System.Drawing.Point(530, 241);
@@ -164,7 +164,7 @@
             // 
             // txtYeuCau
             // 
-            this.txtYeuCau.BackColor = System.Drawing.Color.Gainsboro;
+            this.txtYeuCau.BackColor = System.Drawing.Color.FloralWhite;
             this.txtYeuCau.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtYeuCau.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtYeuCau.Location = new System.Drawing.Point(42, 398);
@@ -176,7 +176,7 @@
             // 
             // txtChucNang
             // 
-            this.txtChucNang.BackColor = System.Drawing.Color.Gainsboro;
+            this.txtChucNang.BackColor = System.Drawing.Color.FloralWhite;
             this.txtChucNang.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtChucNang.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtChucNang.Location = new System.Drawing.Point(530, 398);
@@ -188,7 +188,7 @@
             // 
             // txtTheLoai
             // 
-            this.txtTheLoai.BackColor = System.Drawing.Color.Gainsboro;
+            this.txtTheLoai.BackColor = System.Drawing.Color.FloralWhite;
             this.txtTheLoai.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTheLoai.Location = new System.Drawing.Point(118, 86);
             this.txtTheLoai.Name = "txtTheLoai";
@@ -198,7 +198,7 @@
             // 
             // txtTenGV
             // 
-            this.txtTenGV.BackColor = System.Drawing.Color.Gainsboro;
+            this.txtTenGV.BackColor = System.Drawing.Color.FloralWhite;
             this.txtTenGV.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTenGV.Location = new System.Drawing.Point(118, 155);
             this.txtTenGV.Name = "txtTenGV";
@@ -208,7 +208,7 @@
             // 
             // txtSoLuongSVToiDa
             // 
-            this.txtSoLuongSVToiDa.BackColor = System.Drawing.Color.Gainsboro;
+            this.txtSoLuongSVToiDa.BackColor = System.Drawing.Color.FloralWhite;
             this.txtSoLuongSVToiDa.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSoLuongSVToiDa.Location = new System.Drawing.Point(748, 86);
             this.txtSoLuongSVToiDa.Name = "txtSoLuongSVToiDa";
@@ -218,7 +218,7 @@
             // 
             // txtSoLuongSV
             // 
-            this.txtSoLuongSV.BackColor = System.Drawing.Color.Gainsboro;
+            this.txtSoLuongSV.BackColor = System.Drawing.Color.FloralWhite;
             this.txtSoLuongSV.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSoLuongSV.Location = new System.Drawing.Point(748, 155);
             this.txtSoLuongSV.Name = "txtSoLuongSV";
@@ -230,7 +230,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(966, 580);
             this.Controls.Add(this.txtSoLuongSV);
             this.Controls.Add(this.txtSoLuongSVToiDa);
