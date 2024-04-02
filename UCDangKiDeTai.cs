@@ -29,11 +29,33 @@ namespace Quan_Li_Luan_Van
         public UCDangKiDeTai()
         {
             InitializeComponent();
+
         }
 
         private void UCDangKiDeTai_Load(object sender, EventArgs e)
         {
             
+        }
+
+        private void UCDangKiDeTai_DoubleClick(object sender, EventArgs e)
+        {
+            FChiTiet fchiTiet = new FChiTiet(MaDeTai.Text);
+            fchiTiet.ShowDialog();
+        }
+
+        private void btnDuyet_Click(object sender, EventArgs e)
+        {
+            string sqlStr = string.Format($"update DangKiDeTai set TrangThai = N'Đã duyệt' where MaDT = '{MaDeTai.Text}'");
+            DialogResult res = MessageBox.Show("Bạn có chắc chắn muốn duyệt luận văn này?", "WARNING!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (res == DialogResult.Yes)
+            {
+                dao.Load(sqlStr);
+                string sqlStrUpdate = string.Format($"Update DeTai set SoLuongSV = SoLuongSV + 1 where MaDT = '{MaDeTai.Text}'");
+                dao.ThucThi(sqlStr);
+                this.Visible = false;
+            }
+            
+           
         }
     }
 }

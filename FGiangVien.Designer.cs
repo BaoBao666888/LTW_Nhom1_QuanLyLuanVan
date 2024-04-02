@@ -224,6 +224,7 @@
             this.btnLogOut.Name = "btnLogOut";
             this.btnLogOut.Size = new System.Drawing.Size(42, 36);
             this.btnLogOut.TabIndex = 13;
+            this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
             // 
             // lbl_ten
             // 
@@ -294,7 +295,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "FGiangVien";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FGiangVien";
+            this.Text = "Giảng viên";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FGiangVien_Load);
             this.panel1.ResumeLayout(false);

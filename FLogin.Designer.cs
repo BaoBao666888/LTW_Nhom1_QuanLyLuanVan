@@ -32,14 +32,14 @@
             this.btnDangNhap = new System.Windows.Forms.Button();
             this.ptbDangNhap = new System.Windows.Forms.PictureBox();
             this.gbDangNhap = new System.Windows.Forms.GroupBox();
+            this.lblMatKhau = new System.Windows.Forms.Label();
+            this.lblTaiKhoan = new System.Windows.Forms.Label();
             this.linklblQuenMatKhau = new System.Windows.Forms.LinkLabel();
             this.rdoGiangVien = new System.Windows.Forms.RadioButton();
             this.btnThoat = new System.Windows.Forms.Button();
             this.rdoSinhVien = new System.Windows.Forms.RadioButton();
             this.txtMatKhau = new System.Windows.Forms.TextBox();
             this.txtTaiKhoan = new System.Windows.Forms.TextBox();
-            this.lblMatKhau = new System.Windows.Forms.Label();
-            this.lblTaiKhoan = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.ptbDangNhap)).BeginInit();
             this.gbDangNhap.SuspendLayout();
             this.SuspendLayout();
@@ -85,6 +85,24 @@
             this.gbDangNhap.TabIndex = 4;
             this.gbDangNhap.TabStop = false;
             this.gbDangNhap.Text = "Thông tin đăng nhập";
+            // 
+            // lblMatKhau
+            // 
+            this.lblMatKhau.AutoSize = true;
+            this.lblMatKhau.Location = new System.Drawing.Point(11, 160);
+            this.lblMatKhau.Name = "lblMatKhau";
+            this.lblMatKhau.Size = new System.Drawing.Size(75, 20);
+            this.lblMatKhau.TabIndex = 1;
+            this.lblMatKhau.Text = "Mật khẩu";
+            // 
+            // lblTaiKhoan
+            // 
+            this.lblTaiKhoan.AutoSize = true;
+            this.lblTaiKhoan.Location = new System.Drawing.Point(11, 107);
+            this.lblTaiKhoan.Name = "lblTaiKhoan";
+            this.lblTaiKhoan.Size = new System.Drawing.Size(78, 20);
+            this.lblTaiKhoan.TabIndex = 0;
+            this.lblTaiKhoan.Text = "Tài khoản";
             // 
             // linklblQuenMatKhau
             // 
@@ -148,26 +166,9 @@
             this.txtTaiKhoan.Size = new System.Drawing.Size(273, 26);
             this.txtTaiKhoan.TabIndex = 2;
             // 
-            // lblMatKhau
-            // 
-            this.lblMatKhau.AutoSize = true;
-            this.lblMatKhau.Location = new System.Drawing.Point(11, 160);
-            this.lblMatKhau.Name = "lblMatKhau";
-            this.lblMatKhau.Size = new System.Drawing.Size(75, 20);
-            this.lblMatKhau.TabIndex = 1;
-            this.lblMatKhau.Text = "Mật khẩu";
-            // 
-            // lblTaiKhoan
-            // 
-            this.lblTaiKhoan.AutoSize = true;
-            this.lblTaiKhoan.Location = new System.Drawing.Point(11, 107);
-            this.lblTaiKhoan.Name = "lblTaiKhoan";
-            this.lblTaiKhoan.Size = new System.Drawing.Size(78, 20);
-            this.lblTaiKhoan.TabIndex = 0;
-            this.lblTaiKhoan.Text = "Tài khoản";
-            // 
             // FLogin
             // 
+            this.AcceptButton = this.btnDangNhap;
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);

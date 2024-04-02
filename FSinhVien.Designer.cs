@@ -235,6 +235,7 @@
             this.btnLogOut.Name = "btnLogOut";
             this.btnLogOut.Size = new System.Drawing.Size(42, 36);
             this.btnLogOut.TabIndex = 13;
+            this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
             // 
             // label1
             // 

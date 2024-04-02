@@ -19,13 +19,7 @@ namespace Quan_Li_Luan_Van
         public UCLuanVan(DataTable dt)
         {
             InitializeComponent();
-            if (dt.Rows[0]["VaiTro"].ToString() == "Gi?ng viên")
-                btnDangKi.Visible = false;
-            else
-            {
-                this.mSSV = dt.Rows[0]["MSSV"].ToString();
-                btnXoa.Visible = false;
-            }
+            this.KiemTra(dt);
         }
        
 
@@ -36,6 +30,17 @@ namespace Quan_Li_Luan_Van
         public Guna2HtmlLabel TheLoai { get => lblTheLoai; set => lblTheLoai = value; }
 
         public Guna2HtmlLabel SoLuongConLai { get => lblSoLuongConLai; set => lblSoLuongConLai = value; }
+
+        private void KiemTra(DataTable dt)
+        {
+            if (dt.Rows[0]["VaiTro"].ToString() == "Gi?ng viên")
+                btnDangKi.Visible = false;
+            else
+            {
+                this.mSSV = dt.Rows[0]["MSSV"].ToString();
+                btnXoa.Visible = false;
+            }
+        }    
 
         private void mouseLeave()
         {
@@ -95,14 +100,25 @@ namespace Quan_Li_Luan_Van
 
         private void btnDangKi_Click(object sender, EventArgs e)
         {
-            var dateTime = DateTime.Now;
-            var dateTimeString = dateTime.ToString("yyyy-MM-dd HH:mm:ss");
-            DialogResult res = MessageBox.Show("Bạn có chắc chắn muốn đăng kí đề tài này?", "Question?", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (res == DialogResult.Yes)
+            if ((int.Parse(SoLuongConLai.Text)) <= 0)
             {
-                string sqlStr = string.Format($"INSERT INTO DangKiDeTai (MSSV, MaDT, ThoiGianYeuCau, TrangThai) VALUES ('{this.mSSV}', '{this.MaDeTai.Text}', '{dateTimeString}', N'Chờ duyệt')");
-                dao.ThucThi(sqlStr);
-            }    
+                MessageBox.Show("Đề tài đã đủ lượng đăng kí", "WARNING!", MessageBoxButtons.OKCancel);
+            }
+            else
+            {
+                var dateTime = DateTime.Now;
+                var dateTimeString = dateTime.ToString("yyyy-MM-dd HH:mm:ss");
+                DialogResult res = MessageBox.Show("Bạn có chắc chắn muốn đăng kí đề tài này?", "Question?", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (res == DialogResult.Yes)
+                {
+                    string sqlStr = string.Format($"INSERT INTO DangKiDeTai (MSSV, MaDT, ThoiGianYeuCau, TrangThai) VALUES ('{this.mSSV}', '{this.MaDeTai.Text}', '{dateTimeString}', N'Chờ duyệt')");
+                    dao.ThucThi(sqlStr);
+                }
+            }
+        }
+
+        private void UCLuanVan_Load(object sender, EventArgs e)
+        {
         }
     }
 }

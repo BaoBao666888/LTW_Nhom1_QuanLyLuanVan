@@ -69,7 +69,7 @@
             this.lblMaDeTai.BackColor = System.Drawing.Color.Transparent;
             this.lblMaDeTai.Enabled = false;
             this.lblMaDeTai.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMaDeTai.Location = new System.Drawing.Point(471, 42);
+            this.lblMaDeTai.Location = new System.Drawing.Point(440, 42);
             this.lblMaDeTai.MaximumSize = new System.Drawing.Size(180, 0);
             this.lblMaDeTai.MinimumSize = new System.Drawing.Size(180, 0);
             this.lblMaDeTai.Name = "lblMaDeTai";
@@ -120,6 +120,7 @@
             this.btnDuyet.Size = new System.Drawing.Size(142, 45);
             this.btnDuyet.TabIndex = 20;
             this.btnDuyet.Text = "Duyệt";
+            this.btnDuyet.Click += new System.EventHandler(this.btnDuyet_Click);
             // 
             // UCDangKiDeTai
             // 
@@ -134,6 +135,7 @@
             this.Name = "UCDangKiDeTai";
             this.Size = new System.Drawing.Size(1365, 140);
             this.Load += new System.EventHandler(this.UCDangKiDeTai_Load);
+            this.DoubleClick += new System.EventHandler(this.UCDangKiDeTai_DoubleClick);
             this.ResumeLayout(false);
             this.PerformLayout();
 

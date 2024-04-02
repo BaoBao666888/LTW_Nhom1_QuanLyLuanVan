@@ -28,13 +28,16 @@ namespace Quan_Li_Luan_Van
 
             for (int i = 0; i < dt.Rows.Count; i++)
             {
-                UCDangKiDeTai ucdangki = new UCDangKiDeTai();
-                ucdangki.MSSV.Text = dt.Rows[i]["MSSV"].ToString();
-                ucdangki.TenSV.Text = dt.Rows[i]["HoTen"].ToString();
-                ucdangki.MaDeTai.Text = dt.Rows[i]["MaDT"].ToString();
-                ucdangki.ThoiGianYeuCau.Text = dt.Rows[i]["ThoiGianYeuCau"].ToString();
-                ucdangki.TrangThai.Text = dt.Rows[i]["TrangThai"].ToString();
-                flp_list.Controls.Add(ucdangki);
+                if (dt.Rows[i]["TrangThai"].ToString() == "Chờ duyệt")
+                {
+                    UCDangKiDeTai ucdangki = new UCDangKiDeTai();
+                    ucdangki.MSSV.Text = dt.Rows[i]["MSSV"].ToString();
+                    ucdangki.TenSV.Text = dt.Rows[i]["HoTen"].ToString();
+                    ucdangki.MaDeTai.Text = dt.Rows[i]["MaDT"].ToString();
+                    ucdangki.ThoiGianYeuCau.Text = dt.Rows[i]["ThoiGianYeuCau"].ToString();
+                    ucdangki.TrangThai.Text = dt.Rows[i]["TrangThai"].ToString();
+                    flp_list.Controls.Add(ucdangki);
+                }
             }
         }
 

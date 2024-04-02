@@ -6,12 +6,14 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web.UI.WebControls;
 using System.Windows.Forms;
 
 namespace Quan_Li_Luan_Van
 {
     public partial class FGiangVien : Form
     {
+        private bool dangXuatTrue = true;
         DAO gvDAO = new DAO();
 
         DataTable dt = new DataTable();
@@ -20,8 +22,26 @@ namespace Quan_Li_Luan_Van
         {
             InitializeComponent();
             this.maTK = maTK;
+            this.FormClosing += FGiangVien_FormClosing;
         }
 
+        private void FGiangVien_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (dangXuatTrue == true)
+                if (MessageBox.Show("Bạn có chắc là muốn thoát không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    this.FormClosed += FGiangVien_FormClosed;
+                }
+                else
+                {
+                    e.Cancel = true;
+                }
+        }
+
+        private void FGiangVien_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
 
         private void btnLuanVan_Click(object sender, EventArgs e)
         {
@@ -61,6 +81,17 @@ namespace Quan_Li_Luan_Van
             fDangKi.Dock = DockStyle.Fill;
             fDangKi.Show();
 
+        }
+
+        private void btnLogOut_Click(object sender, EventArgs e)
+        {
+            if (dangXuatTrue == true)
+            {
+                FLogin fLogin = new FLogin();
+                fLogin.Show();
+                dangXuatTrue = false;
+                this.Close();
+            }
         }
     }
 }

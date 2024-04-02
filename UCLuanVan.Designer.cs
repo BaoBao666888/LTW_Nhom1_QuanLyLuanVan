@@ -151,6 +151,7 @@
             this.Name = "UCLuanVan";
             this.Padding = new System.Windows.Forms.Padding(3);
             this.Size = new System.Drawing.Size(1333, 130);
+            this.Load += new System.EventHandler(this.UCLuanVan_Load);
             this.DoubleClick += new System.EventHandler(this.UCLuanVan_DoubleClick);
             this.MouseEnter += new System.EventHandler(this.UCLuanVan_MouseEnter);
             this.MouseLeave += new System.EventHandler(this.UCLuanVan_MouseLeave);

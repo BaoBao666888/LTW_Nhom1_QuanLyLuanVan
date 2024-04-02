@@ -16,6 +16,12 @@ namespace Quan_Li_Luan_Van
         public FLogin()
         {
             InitializeComponent();
+            this.FormClosed += FLogin_FormClosed;
+        }
+
+        private void FLogin_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
 
         private void btnDangNhap_Click(object sender, EventArgs e)
