@@ -39,8 +39,8 @@ namespace Quan_Li_Luan_Van
                             && dt.Rows[i]["MatKhau"].ToString().Trim() == txtMatKhau.Text)
                     {
                         FGiangVien fGV = new FGiangVien(dt.Rows[i]["MaTK"].ToString());
-                        fGV.Show();
                         this.Hide();
+                        fGV.Show();
                         return;
                     }
             }
@@ -55,8 +55,8 @@ namespace Quan_Li_Luan_Van
                             && dt.Rows[i]["MatKhau"].ToString().Trim() == txtMatKhau.Text)
                     {
                         FSinhVien fGV = new FSinhVien(dt.Rows[i]["MaTK"].ToString());
-                        fGV.Show();
                         this.Hide();
+                        fGV.Show();
                         return;
                     }
             }

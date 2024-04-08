@@ -294,7 +294,7 @@
             this.Name = "FSinhVien";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FSinhVien";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.WindowState = System.Windows.Forms.FormWindowState.Minimized;
             this.Load += new System.EventHandler(this.FSinhVien_Load);
             this.panel2.ResumeLayout(false);
             this.pnl_infor.ResumeLayout(false);

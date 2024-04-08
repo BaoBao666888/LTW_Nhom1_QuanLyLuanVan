@@ -296,7 +296,7 @@
             this.Name = "FGiangVien";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Giảng viên";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.WindowState = System.Windows.Forms.FormWindowState.Minimized;
             this.Load += new System.EventHandler(this.FGiangVien_Load);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);

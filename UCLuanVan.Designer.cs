@@ -41,7 +41,7 @@
             // btnDangKi
             // 
             this.btnDangKi.BackColor = System.Drawing.Color.DarkSalmon;
-            this.btnDangKi.Location = new System.Drawing.Point(1147, 50);
+            this.btnDangKi.Location = new System.Drawing.Point(1119, 35);
             this.btnDangKi.Name = "btnDangKi";
             this.btnDangKi.Size = new System.Drawing.Size(102, 41);
             this.btnDangKi.TabIndex = 11;
@@ -56,7 +56,7 @@
             this.lblTheLoai.BackColor = System.Drawing.Color.Transparent;
             this.lblTheLoai.Enabled = false;
             this.lblTheLoai.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTheLoai.Location = new System.Drawing.Point(718, 19);
+            this.lblTheLoai.Location = new System.Drawing.Point(670, 16);
             this.lblTheLoai.MaximumSize = new System.Drawing.Size(180, 0);
             this.lblTheLoai.MinimumSize = new System.Drawing.Size(180, 0);
             this.lblTheLoai.Name = "lblTheLoai";
@@ -70,7 +70,7 @@
             this.lblTenDeTai.BackColor = System.Drawing.Color.Transparent;
             this.lblTenDeTai.Enabled = false;
             this.lblTenDeTai.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTenDeTai.Location = new System.Drawing.Point(466, 19);
+            this.lblTenDeTai.Location = new System.Drawing.Point(418, 16);
             this.lblTenDeTai.MaximumSize = new System.Drawing.Size(180, 0);
             this.lblTenDeTai.MinimumSize = new System.Drawing.Size(180, 0);
             this.lblTenDeTai.Name = "lblTenDeTai";
@@ -84,7 +84,7 @@
             this.lblMaDeTai.BackColor = System.Drawing.Color.Transparent;
             this.lblMaDeTai.Enabled = false;
             this.lblMaDeTai.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMaDeTai.Location = new System.Drawing.Point(212, 19);
+            this.lblMaDeTai.Location = new System.Drawing.Point(189, 16);
             this.lblMaDeTai.MaximumSize = new System.Drawing.Size(180, 0);
             this.lblMaDeTai.MinimumSize = new System.Drawing.Size(180, 0);
             this.lblMaDeTai.Name = "lblMaDeTai";
@@ -98,7 +98,7 @@
             this.lblSoLuongConLai.BackColor = System.Drawing.Color.Transparent;
             this.lblSoLuongConLai.Enabled = false;
             this.lblSoLuongConLai.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSoLuongConLai.Location = new System.Drawing.Point(922, 19);
+            this.lblSoLuongConLai.Location = new System.Drawing.Point(920, 16);
             this.lblSoLuongConLai.MaximumSize = new System.Drawing.Size(120, 0);
             this.lblSoLuongConLai.MinimumSize = new System.Drawing.Size(120, 0);
             this.lblSoLuongConLai.Name = "lblSoLuongConLai";
@@ -116,7 +116,7 @@
             this.btnXoa.FillColor = System.Drawing.Color.OrangeRed;
             this.btnXoa.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnXoa.ForeColor = System.Drawing.Color.White;
-            this.btnXoa.Location = new System.Drawing.Point(1147, 29);
+            this.btnXoa.Location = new System.Drawing.Point(1119, 16);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(102, 45);
             this.btnXoa.TabIndex = 16;
@@ -127,7 +127,7 @@
             // 
             this.pictureBox1.Enabled = false;
             this.pictureBox1.Image = global::Quan_Li_Luan_Van.Properties.Resources.thesis_color;
-            this.pictureBox1.Location = new System.Drawing.Point(27, 16);
+            this.pictureBox1.Location = new System.Drawing.Point(3, 5);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(114, 92);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -136,10 +136,12 @@
             // 
             // UCLuanVan
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoSize = true;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(144F, 144F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
+            this.BackColor = System.Drawing.SystemColors.Control;
+            this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Controls.Add(this.btnXoa);
             this.Controls.Add(this.lblSoLuongConLai);
             this.Controls.Add(this.lblMaDeTai);
@@ -147,10 +149,9 @@
             this.Controls.Add(this.lblTheLoai);
             this.Controls.Add(this.btnDangKi);
             this.Controls.Add(this.pictureBox1);
-            this.Margin = new System.Windows.Forms.Padding(0);
+            this.Margin = new System.Windows.Forms.Padding(0, 0, 0, 12);
             this.Name = "UCLuanVan";
-            this.Padding = new System.Windows.Forms.Padding(3);
-            this.Size = new System.Drawing.Size(1333, 130);
+            this.Size = new System.Drawing.Size(1240, 100);
             this.Load += new System.EventHandler(this.UCLuanVan_Load);
             this.DoubleClick += new System.EventHandler(this.UCLuanVan_DoubleClick);
             this.MouseEnter += new System.EventHandler(this.UCLuanVan_MouseEnter);

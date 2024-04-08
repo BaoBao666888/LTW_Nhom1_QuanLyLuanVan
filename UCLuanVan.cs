@@ -44,12 +44,14 @@ namespace Quan_Li_Luan_Van
 
         private void mouseLeave()
         {
-            this.BorderStyle = BorderStyle.None;
+            this.BorderStyle = BorderStyle.FixedSingle;
+            this.BackColor = Color.Transparent;
         }
 
         private void mouseEnter()
         {
-            this.BorderStyle = BorderStyle.FixedSingle;
+            this.BorderStyle = BorderStyle.Fixed3D;
+            this.BackColor = Color.Azure;
         }
 
 
