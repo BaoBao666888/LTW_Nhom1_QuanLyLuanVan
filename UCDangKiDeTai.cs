@@ -24,7 +24,7 @@ namespace Quan_Li_Luan_Van
 
         public Guna2HtmlLabel ThoiGianYeuCau { get => lblThoiGianYeuCau; set => lblThoiGianYeuCau = value; }
 
-        public Guna2Button NutDuyet { get => btnDuyet; set => btnDuyet = value; }
+        public Guna2Button NutDuyet { get => btnTuChoi; set => btnTuChoi = value; }
 
         public UCDangKiDeTai()
         {
@@ -54,8 +54,22 @@ namespace Quan_Li_Luan_Van
                 dao.ThucThi(sqlStr);
                 this.Visible = false;
             }
+        }
+
+        private void btnTuChoi_Click(object sender, EventArgs e)
+        {
+            FInputBox inputBox = new FInputBox();
+            if (inputBox.ShowDialog() == DialogResult.OK)
+            {
+                string sqlStr = string.Format($"update DangKiDeTai set TrangThai = N'Từ chối', LyDoTuChoi = N'{inputBox.inputBox.Text}' where MaDT = '{MaDeTai.Text}'");
+                dao.Load(sqlStr);
+                this.Visible = false;
+            }
+            else
+            {
+                MessageBox.Show("Đã hủy tác vụ");
+            }
             
-           
         }
     }
 }
