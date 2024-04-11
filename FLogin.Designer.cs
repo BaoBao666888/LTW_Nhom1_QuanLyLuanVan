@@ -132,7 +132,7 @@
             this.btnThoat.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(115, 40);
-            this.btnThoat.TabIndex = 3;
+            this.btnThoat.TabIndex = 4;
             this.btnThoat.Text = "Thoát";
             this.btnThoat.UseVisualStyleBackColor = true;
             // 
@@ -155,7 +155,7 @@
             this.txtMatKhau.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtMatKhau.Name = "txtMatKhau";
             this.txtMatKhau.Size = new System.Drawing.Size(273, 26);
-            this.txtMatKhau.TabIndex = 4;
+            this.txtMatKhau.TabIndex = 2;
             this.txtMatKhau.UseSystemPasswordChar = true;
             // 
             // txtTaiKhoan
@@ -164,7 +164,7 @@
             this.txtTaiKhoan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtTaiKhoan.Name = "txtTaiKhoan";
             this.txtTaiKhoan.Size = new System.Drawing.Size(273, 26);
-            this.txtTaiKhoan.TabIndex = 2;
+            this.txtTaiKhoan.TabIndex = 1;
             // 
             // FLogin
             // 

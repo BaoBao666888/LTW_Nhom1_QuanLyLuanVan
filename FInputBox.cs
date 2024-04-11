@@ -28,6 +28,7 @@ namespace Quan_Li_Luan_Van
                 {
                     this.inputBox.Text = null;
                     this.DialogResult = DialogResult.OK;
+                    MessageBox.Show("Thành công");
                     this.Close();
                 }
                 else

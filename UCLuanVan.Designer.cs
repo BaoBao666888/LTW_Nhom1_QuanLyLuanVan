@@ -48,7 +48,7 @@
             this.lblTheLoai.MaximumSize = new System.Drawing.Size(180, 0);
             this.lblTheLoai.MinimumSize = new System.Drawing.Size(180, 0);
             this.lblTheLoai.Name = "lblTheLoai";
-            this.lblTheLoai.Size = new System.Drawing.Size(180, 27);
+            this.lblTheLoai.Size = new System.Drawing.Size(180, 0);
             this.lblTheLoai.TabIndex = 12;
             this.lblTheLoai.Text = "theloai";
             this.lblTheLoai.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
@@ -62,7 +62,7 @@
             this.lblTenDeTai.MaximumSize = new System.Drawing.Size(180, 0);
             this.lblTenDeTai.MinimumSize = new System.Drawing.Size(180, 0);
             this.lblTenDeTai.Name = "lblTenDeTai";
-            this.lblTenDeTai.Size = new System.Drawing.Size(180, 27);
+            this.lblTenDeTai.Size = new System.Drawing.Size(180, 0);
             this.lblTenDeTai.TabIndex = 13;
             this.lblTenDeTai.Text = "tenDT";
             this.lblTenDeTai.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
@@ -76,7 +76,7 @@
             this.lblMaDeTai.MaximumSize = new System.Drawing.Size(180, 0);
             this.lblMaDeTai.MinimumSize = new System.Drawing.Size(180, 0);
             this.lblMaDeTai.Name = "lblMaDeTai";
-            this.lblMaDeTai.Size = new System.Drawing.Size(180, 27);
+            this.lblMaDeTai.Size = new System.Drawing.Size(180, 0);
             this.lblMaDeTai.TabIndex = 14;
             this.lblMaDeTai.Text = "MaDT";
             this.lblMaDeTai.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
@@ -90,7 +90,7 @@
             this.lblSoLuongConLai.MaximumSize = new System.Drawing.Size(120, 0);
             this.lblSoLuongConLai.MinimumSize = new System.Drawing.Size(120, 0);
             this.lblSoLuongConLai.Name = "lblSoLuongConLai";
-            this.lblSoLuongConLai.Size = new System.Drawing.Size(120, 27);
+            this.lblSoLuongConLai.Size = new System.Drawing.Size(120, 0);
             this.lblSoLuongConLai.TabIndex = 15;
             this.lblSoLuongConLai.Text = "a";
             this.lblSoLuongConLai.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;

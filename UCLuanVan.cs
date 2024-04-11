@@ -39,18 +39,19 @@ namespace Quan_Li_Luan_Van
             {
                 this.mSSV = dt.Rows[0]["MSSV"].ToString();
                 btnXoa.Visible = false;
+                btnSua.Visible = false;
             }
         }    
 
         private void mouseLeave()
         {
-            this.BorderStyle = BorderStyle.FixedSingle;
+           // this.BorderStyle = BorderStyle.FixedSingle;
             this.BackColor = Color.Transparent;
         }
 
         private void mouseEnter()
         {
-            this.BorderStyle = BorderStyle.Fixed3D;
+           // this.BorderStyle = BorderStyle.Fixed3D;
             this.BackColor = Color.AntiqueWhite;
         }
 
