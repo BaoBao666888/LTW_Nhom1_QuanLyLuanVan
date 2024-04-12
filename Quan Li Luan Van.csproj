@@ -90,99 +90,105 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DAO.cs" />
-    <Compile Include="DbConnection.cs" />
-    <Compile Include="FChiTiet.cs">
+    <Compile Include="DAO\DangKiDAO.cs" />
+    <Compile Include="DAO\DAO.cs" />
+    <Compile Include="DAO\DbConnection.cs" />
+    <Compile Include="DAO\NhomDAO.cs" />
+    <Compile Include="DAO\ThanhVienDAO.cs" />
+    <Compile Include="DTO\ThanhVien.cs" />
+    <Compile Include="DTO\DangKi.cs" />
+    <Compile Include="DTO\Nhom.cs" />
+    <Compile Include="GUI\FChiTiet.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FChiTiet.Designer.cs">
+    <Compile Include="GUI\FChiTiet.Designer.cs">
       <DependentUpon>FChiTiet.cs</DependentUpon>
     </Compile>
-    <Compile Include="FDangKiDeTai.cs">
+    <Compile Include="GUI\FDangKiDeTai.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FDangKiDeTai.Designer.cs">
+    <Compile Include="GUI\FDangKiDeTai.Designer.cs">
       <DependentUpon>FDangKiDeTai.cs</DependentUpon>
     </Compile>
-    <Compile Include="FGiangVien.cs">
+    <Compile Include="GUI\FGiangVien.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FGiangVien.Designer.cs">
+    <Compile Include="GUI\FGiangVien.Designer.cs">
       <DependentUpon>FGiangVien.cs</DependentUpon>
     </Compile>
-    <Compile Include="FInputBox.cs">
+    <Compile Include="GUI\FInputBox.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FInputBox.Designer.cs">
+    <Compile Include="GUI\FInputBox.Designer.cs">
       <DependentUpon>FInputBox.cs</DependentUpon>
     </Compile>
-    <Compile Include="FLogin.cs">
+    <Compile Include="GUI\FLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FLogin.Designer.cs">
+    <Compile Include="GUI\FLogin.Designer.cs">
       <DependentUpon>FLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="FLuanVan.cs">
+    <Compile Include="GUI\FLuanVan.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FLuanVan.Designer.cs">
+    <Compile Include="GUI\FLuanVan.Designer.cs">
       <DependentUpon>FLuanVan.cs</DependentUpon>
     </Compile>
-    <Compile Include="FSinhVien.cs">
+    <Compile Include="GUI\FSinhVien.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FSinhVien.Designer.cs">
+    <Compile Include="GUI\FSinhVien.Designer.cs">
       <DependentUpon>FSinhVien.cs</DependentUpon>
     </Compile>
-    <Compile Include="FThemLuanVan.cs">
+    <Compile Include="GUI\FThemLuanVan.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FThemLuanVan.Designer.cs">
+    <Compile Include="GUI\FThemLuanVan.Designer.cs">
       <DependentUpon>FThemLuanVan.cs</DependentUpon>
     </Compile>
-    <Compile Include="GiangVien.cs" />
-    <Compile Include="GiangVienDAO.cs" />
-    <Compile Include="LuanVan.cs" />
-    <Compile Include="LuanVanDAO.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="DTO\GiangVien.cs" />
+    <Compile Include="DAO\GiangVienDAO.cs" />
+    <Compile Include="DTO\LuanVan.cs" />
+    <Compile Include="DAO\LuanVanDAO.cs" />
+    <Compile Include="GUI\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Person.cs" />
-    <Compile Include="SinhVien.cs" />
-    <Compile Include="SinhVienDAO.cs" />
-    <Compile Include="UCDangKiDeTai.cs">
+    <Compile Include="DTO\Person.cs" />
+    <Compile Include="DTO\SinhVien.cs" />
+    <Compile Include="DAO\SinhVienDAO.cs" />
+    <Compile Include="GUI\UCDangKiDeTai.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UCDangKiDeTai.Designer.cs">
+    <Compile Include="GUI\UCDangKiDeTai.Designer.cs">
       <DependentUpon>UCDangKiDeTai.cs</DependentUpon>
     </Compile>
-    <Compile Include="UCLuanVan.cs">
+    <Compile Include="GUI\UCLuanVan.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UCLuanVan.Designer.cs">
+    <Compile Include="GUI\UCLuanVan.Designer.cs">
       <DependentUpon>UCLuanVan.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="FChiTiet.resx">
+    <EmbeddedResource Include="GUI\FChiTiet.resx">
       <DependentUpon>FChiTiet.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FDangKiDeTai.resx">
+    <EmbeddedResource Include="GUI\FDangKiDeTai.resx">
       <DependentUpon>FDangKiDeTai.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FGiangVien.resx">
+    <EmbeddedResource Include="GUI\FGiangVien.resx">
       <DependentUpon>FGiangVien.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FInputBox.resx">
+    <EmbeddedResource Include="GUI\FInputBox.resx">
       <DependentUpon>FInputBox.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FLogin.resx">
+    <EmbeddedResource Include="GUI\FLogin.resx">
       <DependentUpon>FLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FLuanVan.resx">
+    <EmbeddedResource Include="GUI\FLuanVan.resx">
       <DependentUpon>FLuanVan.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FSinhVien.resx">
+    <EmbeddedResource Include="GUI\FSinhVien.resx">
       <DependentUpon>FSinhVien.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FThemLuanVan.resx">
+    <EmbeddedResource Include="GUI\FThemLuanVan.resx">
       <DependentUpon>FThemLuanVan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -195,10 +201,10 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="UCDangKiDeTai.resx">
+    <EmbeddedResource Include="GUI\UCDangKiDeTai.resx">
       <DependentUpon>UCDangKiDeTai.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UCLuanVan.resx">
+    <EmbeddedResource Include="GUI\UCLuanVan.resx">
       <DependentUpon>UCLuanVan.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
@@ -257,5 +263,6 @@
   <ItemGroup>
     <None Include="Resources\pen.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
