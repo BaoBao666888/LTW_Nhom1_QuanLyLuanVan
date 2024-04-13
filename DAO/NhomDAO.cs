@@ -10,6 +10,11 @@ namespace Quan_Li_Luan_Van.DAO
 {
     public class NhomDAO
     {
+        public static void getData()
+        {
+            string sqlStr = string.Format("select * from Nhom");
+            DbConnection.Load(sqlStr);
+        }
         public static void Them(Nhom nhom)
         {
             string sqlStr = string.Format("insert into Nhom(TenNhom) values ('N{0}')", nhom.TenNhom);

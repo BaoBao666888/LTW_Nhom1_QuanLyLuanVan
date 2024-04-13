@@ -26,6 +26,7 @@ namespace Quan_Li_Luan_Van.GUI
             this.sv = sv;
             this.gv = gv;
             this.lv = lv;
+            this.KiemTra();
         }
        
 
@@ -48,6 +49,7 @@ namespace Quan_Li_Luan_Van.GUI
             {
                 btnDangKi.Visible = true;
             }
+ 
         }    
 
         private void mouseLeave()
@@ -110,6 +112,8 @@ namespace Quan_Li_Luan_Van.GUI
 
         private void btnDangKi_Click(object sender, EventArgs e)
         {
+            FDangKiDeTai fDangKiDeTai = new FDangKiDeTai(sv, lv);
+            fDangKiDeTai.ShowDialog();
             //if (NhomThucHien.Text.Trim() != "")
             //{
             //    MessageBox.Show("Đề tài đã đăng kí", "WARNING!", MessageBoxButtons.OKCancel);

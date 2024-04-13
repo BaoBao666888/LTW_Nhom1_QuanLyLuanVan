@@ -28,26 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.btnGui = new Guna.UI2.WinForms.Guna2Button();
             this.btnHuy = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.txtTruongNhom = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnThemTV = new Guna.UI2.WinForms.Guna2Button();
             this.btnXoaTV = new Guna.UI2.WinForms.Guna2Button();
             this.flpThanhVien = new System.Windows.Forms.FlowLayoutPanel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.lblDeTai = new System.Windows.Forms.Label();
             this.SuspendLayout();
-            // 
-            // guna2HtmlLabel1
-            // 
-            this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel1.Font = new System.Drawing.Font("Segoe UI", 16F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(189, 12);
-            this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(444, 47);
-            this.guna2HtmlLabel1.TabIndex = 0;
-            this.guna2HtmlLabel1.Text = "Danh Sách Thành Viên Nhóm";
             // 
             // btnGui
             // 
@@ -60,12 +51,13 @@
             this.btnGui.FillColor = System.Drawing.Color.RoyalBlue;
             this.btnGui.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.btnGui.ForeColor = System.Drawing.Color.White;
-            this.btnGui.Location = new System.Drawing.Point(571, 480);
+            this.btnGui.Location = new System.Drawing.Point(572, 475);
             this.btnGui.Margin = new System.Windows.Forms.Padding(0);
             this.btnGui.Name = "btnGui";
             this.btnGui.Size = new System.Drawing.Size(156, 45);
             this.btnGui.TabIndex = 0;
             this.btnGui.Text = "Gửi yêu cầu";
+            this.btnGui.Click += new System.EventHandler(this.btnGui_Click);
             // 
             // btnHuy
             // 
@@ -80,22 +72,12 @@
             this.btnHuy.FillColor = System.Drawing.Color.Transparent;
             this.btnHuy.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.btnHuy.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.btnHuy.Location = new System.Drawing.Point(475, 480);
+            this.btnHuy.Location = new System.Drawing.Point(484, 475);
             this.btnHuy.Margin = new System.Windows.Forms.Padding(0);
             this.btnHuy.Name = "btnHuy";
             this.btnHuy.Size = new System.Drawing.Size(74, 45);
             this.btnHuy.TabIndex = 1;
             this.btnHuy.Text = "Hủy";
-            // 
-            // guna2HtmlLabel3
-            // 
-            this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel3.Location = new System.Drawing.Point(28, 131);
-            this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
-            this.guna2HtmlLabel3.Size = new System.Drawing.Size(122, 27);
-            this.guna2HtmlLabel3.TabIndex = 10;
-            this.guna2HtmlLabel3.Text = "Trưởng nhóm :";
             // 
             // txtTruongNhom
             // 
@@ -108,7 +90,7 @@
             this.txtTruongNhom.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtTruongNhom.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtTruongNhom.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTruongNhom.Location = new System.Drawing.Point(189, 116);
+            this.txtTruongNhom.Location = new System.Drawing.Point(192, 124);
             this.txtTruongNhom.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtTruongNhom.Name = "txtTruongNhom";
             this.txtTruongNhom.PasswordChar = '\0';
@@ -132,7 +114,7 @@
             this.btnThemTV.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.btnThemTV.ForeColor = System.Drawing.Color.RoyalBlue;
             this.btnThemTV.Image = global::Quan_Li_Luan_Van.Properties.Resources.plus;
-            this.btnThemTV.Location = new System.Drawing.Point(704, 184);
+            this.btnThemTV.Location = new System.Drawing.Point(704, 174);
             this.btnThemTV.Name = "btnThemTV";
             this.btnThemTV.Size = new System.Drawing.Size(44, 40);
             this.btnThemTV.TabIndex = 15;
@@ -152,7 +134,7 @@
             this.btnXoaTV.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.btnXoaTV.ForeColor = System.Drawing.Color.RoyalBlue;
             this.btnXoaTV.Image = global::Quan_Li_Luan_Van.Properties.Resources.minus_sign;
-            this.btnXoaTV.Location = new System.Drawing.Point(704, 230);
+            this.btnXoaTV.Location = new System.Drawing.Point(704, 220);
             this.btnXoaTV.Name = "btnXoaTV";
             this.btnXoaTV.Size = new System.Drawing.Size(44, 40);
             this.btnXoaTV.TabIndex = 16;
@@ -162,25 +144,70 @@
             // 
             this.flpThanhVien.AutoScroll = true;
             this.flpThanhVien.BackColor = System.Drawing.Color.Transparent;
-            this.flpThanhVien.Location = new System.Drawing.Point(12, 184);
+            this.flpThanhVien.Location = new System.Drawing.Point(12, 174);
             this.flpThanhVien.Name = "flpThanhVien";
             this.flpThanhVien.Size = new System.Drawing.Size(672, 284);
             this.flpThanhVien.TabIndex = 17;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.label1.Location = new System.Drawing.Point(260, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(246, 38);
+            this.label1.TabIndex = 18;
+            this.label1.Text = "Danh Sách Nhóm";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(34, 124);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(132, 22);
+            this.label2.TabIndex = 19;
+            this.label2.Text = "Trưởng nhóm : ";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(114, 57);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(98, 32);
+            this.label3.TabIndex = 20;
+            this.label3.Text = "Đề Tài : ";
+            // 
+            // lblDeTai
+            // 
+            this.lblDeTai.AutoSize = true;
+            this.lblDeTai.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDeTai.ForeColor = System.Drawing.Color.DeepPink;
+            this.lblDeTai.Location = new System.Drawing.Point(195, 57);
+            this.lblDeTai.Name = "lblDeTai";
+            this.lblDeTai.Size = new System.Drawing.Size(86, 32);
+            this.lblDeTai.TabIndex = 21;
+            this.lblDeTai.Text = "Đề Tài ";
             // 
             // FDangKiDeTai
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(760, 534);
+            this.ClientSize = new System.Drawing.Size(759, 529);
+            this.Controls.Add(this.lblDeTai);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.flpThanhVien);
             this.Controls.Add(this.btnXoaTV);
             this.Controls.Add(this.btnThemTV);
             this.Controls.Add(this.txtTruongNhom);
-            this.Controls.Add(this.guna2HtmlLabel3);
             this.Controls.Add(this.btnGui);
             this.Controls.Add(this.btnHuy);
-            this.Controls.Add(this.guna2HtmlLabel1);
             this.Name = "FDangKiDeTai";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "FDangKi";
             this.Load += new System.EventHandler(this.FDangKiDeTai_Load);
             this.ResumeLayout(false);
@@ -189,14 +216,15 @@
         }
 
         #endregion
-
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
         private Guna.UI2.WinForms.Guna2Button btnHuy;
         private Guna.UI2.WinForms.Guna2Button btnGui;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
         private Guna.UI2.WinForms.Guna2TextBox txtTruongNhom;
         private Guna.UI2.WinForms.Guna2Button btnThemTV;
         private Guna.UI2.WinForms.Guna2Button btnXoaTV;
         private System.Windows.Forms.FlowLayoutPanel flpThanhVien;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblDeTai;
     }
 }

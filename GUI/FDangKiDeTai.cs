@@ -1,4 +1,6 @@
 ﻿using Guna.UI2.WinForms;
+using Quan_Li_Luan_Van.DAO;
+using Quan_Li_Luan_Van.DTO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,18 +19,38 @@ namespace Quan_Li_Luan_Van.GUI
         List<Guna2TextBox> listTextbox;
         List<Guna2HtmlLabel> listError;
         List<Panel> listPanel;
-        public FDangKiDeTai()
+
+        SinhVien sv;
+        LuanVan lv;
+        public FDangKiDeTai(SinhVien sv, LuanVan lv)
         {
             InitializeComponent();
             listLabel = new List<Guna2HtmlLabel>();
             listTextbox = new List<Guna2TextBox>();
             listError = new List<Guna2HtmlLabel>();
             listPanel = new List<Panel>();
+
+            this.sv = sv;
+            this.lv = lv;
+            txtTruongNhom.Text = sv.HoTen;
+            lblDeTai.Text = lv.TenDeTai;
         }
+
 
         private void FDangKiDeTai_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void ThanhVienNhom()
+        {
+            DataTable dt = ThanhVienDAO.GetDataByMSSV(sv.MSSV);
+            List<ThanhVien> listThanhVien = new List<ThanhVien>();
+            foreach (DataRow i in dt.Rows)
+            {
+                ThanhVien thanhVien = new ThanhVien(i["MSSV"].ToString(), int.Parse(i["MaNhom"].ToString()), i["VaiTro"].ToString());
+                listThanhVien.Add(thanhVien);
+            }
         }
 
         private void TaoPanelThongTin()
@@ -85,6 +107,11 @@ namespace Quan_Li_Luan_Van.GUI
             listTextbox.RemoveAt(listTextbox.Count - 1);
             listError.RemoveAt(listError.Count - 1);
             listPanel.RemoveAt(listPanel.Count - 1);
+        }
+
+        private void btnGui_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

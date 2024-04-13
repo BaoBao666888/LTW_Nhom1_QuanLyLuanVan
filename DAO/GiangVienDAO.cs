@@ -23,5 +23,13 @@ namespace Quan_Li_Luan_Van.DAO
             GiangVien gv = new GiangVien(dt.Rows[0]["MSGV"].ToString(), dt.Rows[0]["HoTen"].ToString(), dt.Rows[0]["Email"].ToString(), dt.Rows[0]["SDT"].ToString(), dt.Rows[0]["MaTK"].ToString());
             return gv;
         }
+
+        public static GiangVien GetDataByMSGV(string mSGV)
+        {
+            string sqlStr = string.Format($"select * from GiangVien where MaTK = '{mSGV}'");
+            DataTable dt = DbConnection.Load(sqlStr);
+            GiangVien gv = new GiangVien(dt.Rows[0]["MSGV"].ToString(), dt.Rows[0]["HoTen"].ToString(), dt.Rows[0]["Email"].ToString(), dt.Rows[0]["SDT"].ToString(), dt.Rows[0]["MaTK"].ToString());
+            return gv;
+        }
     }
 }

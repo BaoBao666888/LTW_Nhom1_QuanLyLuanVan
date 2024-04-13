@@ -28,13 +28,14 @@ namespace Quan_Li_Luan_Van.GUI
 
         private void LoadData()
         {
+            GiangVien gv = GiangVienDAO.GetDataByMSGV(lv.MSGV);
             lblTenDeTai.Text = lv.TenDeTai;
             txtTheLoai.Text = lv.TheLoai;
             txtMoTa.Text = lv.MoTa;
             txtCongNghe.Text = lv.CongNghe;
             txtYeuCau.Text = lv.YeuCau;
             txtChucNang.Text = lv.ChucNang;
-            txtTenGV.Text = lv.MSGV;
+            txtTenGV.Text = gv.HoTen;
         }
     }
 }

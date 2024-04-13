@@ -17,11 +17,11 @@ namespace Quan_Li_Luan_Van.DTO
 
         public SinhVien() { }
 
-        public SinhVien(string mSSV, string lop, string hoTen, string email, string sdt, string maTK)
+        public SinhVien(string mSSV, string hoTen, string lop, string email, string sdt, string maTK)
         {
             this.mSSV = mSSV;
-            this.lop = lop;
             this.hoTen = hoTen;
+            this.lop = lop;
             this.email = email;
             this.sdt = sdt;
             this.maTK = maTK;

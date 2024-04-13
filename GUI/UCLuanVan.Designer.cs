@@ -92,7 +92,7 @@
             this.lblNhomThucHien.Name = "lblNhomThucHien";
             this.lblNhomThucHien.Size = new System.Drawing.Size(120, 27);
             this.lblNhomThucHien.TabIndex = 15;
-            this.lblNhomThucHien.Text = "a";
+            this.lblNhomThucHien.Text = "chưa có nhóm";
             this.lblNhomThucHien.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnDangKi
