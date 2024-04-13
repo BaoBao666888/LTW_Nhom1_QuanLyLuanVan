@@ -15,21 +15,30 @@ namespace Quan_Li_Luan_Van.GUI
 {
     public partial class FLuanVan : Form
     {
-
-        DataTable dtThongTin;
+        TaiKhoan tk;
+        SinhVien sv;
+        GiangVien gv;
         public FLuanVan()
         {
             InitializeComponent();
         }
 
-        public FLuanVan(DataTable dtThongTin)
+        public FLuanVan(TaiKhoan tk, SinhVien sv)
         {
             InitializeComponent();
-           this.dtThongTin = dtThongTin;
-            if (dtThongTin.Rows[0]["VaiTro"].ToString() == "Sinh viên")
+            this.tk = tk;
+            this.sv = sv;
+            if (tk.VaiTro == "Sinh viên")
             {
                 btnThem.Visible = false;
             }
+        }
+
+        public FLuanVan(TaiKhoan tk, GiangVien gv)
+        {
+            InitializeComponent();
+            this.tk = tk;
+            this.gv = gv;
         }
 
         public void FLuanVan_Load(object sender, EventArgs e)
@@ -39,25 +48,24 @@ namespace Quan_Li_Luan_Van.GUI
 
         public void LoadData()
         {
-            DataTable dt = new DataTable();
-            string sqlStr = string.Format("select * from DeTai");
-            dt = LuanVanDAO.Load(sqlStr);
+            DataTable dt = LuanVanDAO.GetData();
 
             flp_list.Controls.Clear();
 
             for (int i = 0; i < dt.Rows.Count; i++)
             {
-                UCLuanVan ucLuanVan = new UCLuanVan(dtThongTin);
-                ucLuanVan.MaDeTai.Text = dt.Rows[i]["MaDT"].ToString();
-                ucLuanVan.TenDeTai.Text = dt.Rows[i]["TenDeTai"].ToString();
-                ucLuanVan.TheLoai.Text = dt.Rows[i]["YeuCau"].ToString();
+                LuanVan lv = new LuanVan(dt.Rows[i]["MaDT"].ToString(), dt.Rows[i]["TenDeTai"].ToString(), dt.Rows[i]["TheLoai"].ToString(), dt.Rows[i]["MoTa"].ToString(), dt.Rows[i]["CongNghe"].ToString(), dt.Rows[i]["YeuCau"].ToString(), dt.Rows[i]["ChucNang"].ToString(), dt.Rows[i]["MSGV"].ToString());
+                UCLuanVan ucLuanVan = new UCLuanVan(tk, sv, gv, lv);
+                ucLuanVan.MaDeTai.Text = lv.MadeTai;
+                ucLuanVan.TenDeTai.Text = lv.TenDeTai;
+                ucLuanVan.TheLoai.Text = lv.TheLoai;
                 flp_list.Controls.Add(ucLuanVan);
             }
         }
 
         private void guna2Button2_Click(object sender, EventArgs e)
         {
-            FThemLuanVan fThemLuanVan = new FThemLuanVan(dtThongTin.Rows[0]["MSGV"].ToString());
+            FThemLuanVan fThemLuanVan = new FThemLuanVan(gv);
             
              DialogResult res = fThemLuanVan.ShowDialog();
 

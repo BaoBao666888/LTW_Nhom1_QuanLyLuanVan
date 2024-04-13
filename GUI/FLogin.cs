@@ -32,14 +32,14 @@ namespace Quan_Li_Luan_Van.GUI
 
             if (rdoGiangVien.Checked == true)
             {
-                string sqlStr = string.Format("select * from TaiKhoan where VaiTro = N'Giảng viên'");
-                dt = DAOclass.Load(sqlStr);
+                dt = TaiKhoanDAO.GetDataGV();
 
                 for (int i = 0; i < dt.Rows.Count; i++)
                     if (dt.Rows[i]["TenDangNhap"].ToString().Trim() == txtTaiKhoan.Text
                             && dt.Rows[i]["MatKhau"].ToString().Trim() == txtMatKhau.Text)
                     {
-                        FGiangVien fGV = new FGiangVien(dt.Rows[i]["MaTK"].ToString());
+                        TaiKhoan taiKhoan = new TaiKhoan(dt.Rows[i]["MaTK"].ToString().Trim(), dt.Rows[i]["TenDangNhap"].ToString().Trim(), dt.Rows[i]["MatKhau"].ToString().Trim(), dt.Rows[i]["VaiTro"].ToString().Trim(), dt.Rows[i]["TrangThai"].ToString().Trim());
+                        FGiangVien fGV = new FGiangVien(taiKhoan);
                         this.Hide();
                         fGV.Show();
                         return;
@@ -48,14 +48,14 @@ namespace Quan_Li_Luan_Van.GUI
             else 
                 if(rdoSinhVien.Checked == true)
             {
-                string sqlStr = string.Format("select * from TaiKhoan where VaiTro = N'Sinh viên'");
-                dt = DAOclass.Load(sqlStr);
+                dt = TaiKhoanDAO.GetDataSV();
 
                 for (int i = 0; i < dt.Rows.Count; i++)
                     if (dt.Rows[i]["TenDangNhap"].ToString().Trim() == txtTaiKhoan.Text
                             && dt.Rows[i]["MatKhau"].ToString().Trim() == txtMatKhau.Text)
                     {
-                        FSinhVien fGV = new FSinhVien(dt.Rows[i]["MaTK"].ToString());
+                        TaiKhoan taiKhoan = new TaiKhoan(dt.Rows[i]["MaTK"].ToString().Trim(), dt.Rows[i]["TenDangNhap"].ToString().Trim(), dt.Rows[i]["MatKhau"].ToString().Trim(), dt.Rows[i]["VaiTro"].ToString().Trim(), dt.Rows[i]["TrangThai"].ToString().Trim());
+                        FSinhVien fGV = new FSinhVien(taiKhoan);
                         this.Hide();
                         fGV.Show();
                         return;

@@ -94,7 +94,9 @@
     <Compile Include="DAO\DAO.cs" />
     <Compile Include="DAO\DbConnection.cs" />
     <Compile Include="DAO\NhomDAO.cs" />
+    <Compile Include="DAO\TaiKhoanDAO.cs" />
     <Compile Include="DAO\ThanhVienDAO.cs" />
+    <Compile Include="DTO\TaiKhoan.cs" />
     <Compile Include="DTO\ThanhVien.cs" />
     <Compile Include="DTO\DangKi.cs" />
     <Compile Include="DTO\Nhom.cs" />
@@ -109,6 +111,12 @@
     </Compile>
     <Compile Include="GUI\FDangKiDeTai.Designer.cs">
       <DependentUpon>FDangKiDeTai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FDSDangKiDeTai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FDSDangKiDeTai.Designer.cs">
+      <DependentUpon>FDSDangKiDeTai.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\FGiangVien.cs">
       <SubType>Form</SubType>
@@ -152,7 +160,6 @@
     <Compile Include="DAO\LuanVanDAO.cs" />
     <Compile Include="GUI\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="DTO\Person.cs" />
     <Compile Include="DTO\SinhVien.cs" />
     <Compile Include="DAO\SinhVienDAO.cs" />
     <Compile Include="GUI\UCDangKiDeTai.cs">
@@ -172,6 +179,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\FDangKiDeTai.resx">
       <DependentUpon>FDangKiDeTai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FDSDangKiDeTai.resx">
+      <DependentUpon>FDSDangKiDeTai.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\FGiangVien.resx">
       <DependentUpon>FGiangVien.cs</DependentUpon>
@@ -263,6 +273,11 @@
   <ItemGroup>
     <None Include="Resources\pen.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\plus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minus-sign.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

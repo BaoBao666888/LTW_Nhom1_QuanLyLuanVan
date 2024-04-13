@@ -15,11 +15,17 @@ namespace Quan_Li_Luan_Van.GUI
 {
     public partial class UCLuanVan : UserControl
     {
-        private string mSSV;
-        public UCLuanVan(DataTable dt)
+        TaiKhoan tk;
+        SinhVien sv;
+        GiangVien gv;
+        LuanVan lv;
+        public UCLuanVan(TaiKhoan tk, SinhVien sv, GiangVien gv, LuanVan lv)
         {
             InitializeComponent();
-            this.KiemTra(dt);
+            this.tk = tk;
+            this.sv = sv;
+            this.gv = gv;
+            this.lv = lv;
         }
        
 
@@ -31,15 +37,16 @@ namespace Quan_Li_Luan_Van.GUI
 
         public Guna2HtmlLabel NhomThucHien { get => lblNhomThucHien; set => lblNhomThucHien = value; }
 
-        private void KiemTra(DataTable dt)
+        private void KiemTra()
         {
-            if (dt.Rows[0]["VaiTro"].ToString() == "Giảng viên")
-                btnDangKi.Visible = false;
+            if (tk.VaiTro == "Giảng viên")
+            {
+                btnXoa.Visible = true;
+                btnSua.Visible = true;
+            }
             else
             {
-                this.mSSV = dt.Rows[0]["MSSV"].ToString();
-                btnXoa.Visible = false;
-                btnSua.Visible = false;
+                btnDangKi.Visible = true;
             }
         }    
 
@@ -68,7 +75,7 @@ namespace Quan_Li_Luan_Van.GUI
 
         private void UCLuanVan_DoubleClick(object sender, EventArgs e)
         {
-            FChiTiet fChiTiet = new FChiTiet(this.MaDeTai.Text);
+            FChiTiet fChiTiet = new FChiTiet(lv);
             fChiTiet.ShowDialog();
         }
         private void btnDangKi_MouseLeave(object sender, EventArgs e)
@@ -103,21 +110,21 @@ namespace Quan_Li_Luan_Van.GUI
 
         private void btnDangKi_Click(object sender, EventArgs e)
         {
-            if (NhomThucHien.Text.Trim() != "")
-            {
-                MessageBox.Show("Đề tài đã đăng kí", "WARNING!", MessageBoxButtons.OKCancel);
-            }
-            else
-            {
-                var dateTime = DateTime.Now;
-                var dateTimeString = dateTime.ToString("yyyy-MM-dd HH:mm:ss");
-                DialogResult res = MessageBox.Show("Bạn có chắc chắn muốn đăng kí đề tài này?", "Question?", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                if (res == DialogResult.Yes)
-                {
-                    string sqlStr = string.Format($"INSERT INTO DangKiDeTai (MSSV, MaDT, ThoiGianYeuCau, TrangThai) VALUES ('{this.mSSV}', '{this.MaDeTai.Text}', '{dateTimeString}', N'Chờ duyệt')");
-                    DAOclass.ThucThi(sqlStr);
-                }
-            }
+            //if (NhomThucHien.Text.Trim() != "")
+            //{
+            //    MessageBox.Show("Đề tài đã đăng kí", "WARNING!", MessageBoxButtons.OKCancel);
+            //}
+            //else
+            //{
+            //    var dateTime = DateTime.Now;
+            //    var dateTimeString = dateTime.ToString("yyyy-MM-dd HH:mm:ss");
+            //    DialogResult res = MessageBox.Show("Bạn có chắc chắn muốn đăng kí đề tài này?", "Question?", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            //    if (res == DialogResult.Yes)
+            //    {
+            //        string sqlStr = string.Format($"INSERT INTO DangKiDeTai (MSSV, MaDT, ThoiGianYeuCau, TrangThai) VALUES ('{this.mSSV}', '{this.MaDeTai.Text}', '{dateTimeString}', N'Chờ duyệt')");
+            //        DAOclass.ThucThi(sqlStr);
+            //    }
+            //}
         }
 
         private void UCLuanVan_Load(object sender, EventArgs e)

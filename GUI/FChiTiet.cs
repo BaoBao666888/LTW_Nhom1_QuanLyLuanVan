@@ -14,11 +14,11 @@ namespace Quan_Li_Luan_Van.GUI
 {
     public partial class FChiTiet : Form
     {
-        private string maDeTai;
-        public FChiTiet(string maDeTai)
+        private LuanVan lv;
+        public FChiTiet(LuanVan lv)
         {
             InitializeComponent();
-            this.maDeTai = maDeTai;
+            this.lv = lv;
         }
 
         private void FChiTiet_Load(object sender, EventArgs e)
@@ -28,17 +28,13 @@ namespace Quan_Li_Luan_Van.GUI
 
         private void LoadData()
         {
-            DataTable dt = new DataTable();
-            string sqlstr = string.Format($"select * from DeTai inner join GiangVien on DeTai.MSGV = GiangVien.MSGV  where MaDT = '{this.maDeTai}'");
-            dt = LuanVanDAO.Load(sqlstr);
-
-            lblTenDeTai.Text = dt.Rows[0]["TenDeTai"].ToString();
-            txtTheLoai.Text = dt.Rows[0]["TheLoai"].ToString();
-            txtMoTa.Text = dt.Rows[0]["MoTa"].ToString();
-            txtCongNghe.Text = dt.Rows[0]["CongNghe"].ToString();
-            txtYeuCau.Text = dt.Rows[0]["YeuCau"].ToString();
-            txtChucNang.Text = dt.Rows[0]["ChucNang"].ToString();
-            txtTenGV.Text = dt.Rows[0]["HoTen"].ToString();
+            lblTenDeTai.Text = lv.TenDeTai;
+            txtTheLoai.Text = lv.TheLoai;
+            txtMoTa.Text = lv.MoTa;
+            txtCongNghe.Text = lv.CongNghe;
+            txtYeuCau.Text = lv.YeuCau;
+            txtChucNang.Text = lv.ChucNang;
+            txtTenGV.Text = lv.MSGV;
         }
     }
 }

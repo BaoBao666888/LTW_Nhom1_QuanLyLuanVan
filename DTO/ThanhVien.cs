@@ -9,7 +9,6 @@ namespace Quan_Li_Luan_Van.DTO
     public class ThanhVien
     {
         private string mSSV;
-
         private int maNhom;
         private string vaiTro;
 
@@ -22,10 +21,10 @@ namespace Quan_Li_Luan_Van.DTO
             this.vaiTro = vaiTro;
         }
 
-        public string MSSV { get =>  mSSV;  set => mSSV = value; }
+        public string MSSV { get => this.mSSV;  set => this.mSSV = value; }
 
-        public int MaNhom {  get => maNhom; set => maNhom = value; }
+        public int MaNhom {  get => this.maNhom; set => this.maNhom = value; }
 
-        public string VaiTro {  get => vaiTro; set => vaiTro = value; }
+        public string VaiTro {  get => this.vaiTro; set => this.vaiTro = value; }
     }
 }

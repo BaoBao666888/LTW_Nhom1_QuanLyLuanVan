@@ -28,155 +28,175 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.flp_list = new System.Windows.Forms.FlowLayoutPanel();
-            this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
+            this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.btnGui = new Guna.UI2.WinForms.Guna2Button();
+            this.btnHuy = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.txtTruongNhom = new Guna.UI2.WinForms.Guna2TextBox();
+            this.btnThemTV = new Guna.UI2.WinForms.Guna2Button();
+            this.btnXoaTV = new Guna.UI2.WinForms.Guna2Button();
+            this.flpThanhVien = new System.Windows.Forms.FlowLayoutPanel();
             this.SuspendLayout();
             // 
-            // panel1
+            // guna2HtmlLabel1
             // 
-            this.panel1.Controls.Add(this.panel2);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1288, 164);
-            this.panel1.TabIndex = 0;
+            this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel1.Font = new System.Drawing.Font("Segoe UI", 16F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(189, 12);
+            this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(444, 47);
+            this.guna2HtmlLabel1.TabIndex = 0;
+            this.guna2HtmlLabel1.Text = "Danh Sách Thành Viên Nhóm";
             // 
-            // panel2
+            // btnGui
             // 
-            this.panel2.Controls.Add(this.label7);
-            this.panel2.Controls.Add(this.label6);
-            this.panel2.Controls.Add(this.label5);
-            this.panel2.Controls.Add(this.label4);
-            this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.label2);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 120);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1288, 44);
-            this.panel2.TabIndex = 1;
+            this.btnGui.Animated = true;
+            this.btnGui.BorderRadius = 8;
+            this.btnGui.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnGui.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnGui.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnGui.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnGui.FillColor = System.Drawing.Color.RoyalBlue;
+            this.btnGui.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.btnGui.ForeColor = System.Drawing.Color.White;
+            this.btnGui.Location = new System.Drawing.Point(571, 480);
+            this.btnGui.Margin = new System.Windows.Forms.Padding(0);
+            this.btnGui.Name = "btnGui";
+            this.btnGui.Size = new System.Drawing.Size(156, 45);
+            this.btnGui.TabIndex = 0;
+            this.btnGui.Text = "Gửi yêu cầu";
             // 
-            // label7
+            // btnHuy
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(1050, 16);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(86, 25);
-            this.label7.TabIndex = 5;
-            this.label7.Text = "Thao tác";
+            this.btnHuy.Animated = true;
+            this.btnHuy.BorderColor = System.Drawing.Color.RoyalBlue;
+            this.btnHuy.BorderRadius = 8;
+            this.btnHuy.BorderThickness = 2;
+            this.btnHuy.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnHuy.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnHuy.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnHuy.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnHuy.FillColor = System.Drawing.Color.Transparent;
+            this.btnHuy.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.btnHuy.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.btnHuy.Location = new System.Drawing.Point(475, 480);
+            this.btnHuy.Margin = new System.Windows.Forms.Padding(0);
+            this.btnHuy.Name = "btnHuy";
+            this.btnHuy.Size = new System.Drawing.Size(74, 45);
+            this.btnHuy.TabIndex = 1;
+            this.btnHuy.Text = "Hủy";
             // 
-            // label6
+            // guna2HtmlLabel3
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(812, 16);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(99, 25);
-            this.label6.TabIndex = 4;
-            this.label6.Text = "Trạng thái";
+            this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel3.Location = new System.Drawing.Point(28, 131);
+            this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
+            this.guna2HtmlLabel3.Size = new System.Drawing.Size(122, 27);
+            this.guna2HtmlLabel3.TabIndex = 10;
+            this.guna2HtmlLabel3.Text = "Trưởng nhóm :";
             // 
-            // label5
+            // txtTruongNhom
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(586, 16);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(163, 25);
-            this.label5.TabIndex = 3;
-            this.label5.Text = "Thời gian yêu cầu";
+            this.txtTruongNhom.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtTruongNhom.DefaultText = "";
+            this.txtTruongNhom.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtTruongNhom.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtTruongNhom.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtTruongNhom.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtTruongNhom.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtTruongNhom.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtTruongNhom.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtTruongNhom.Location = new System.Drawing.Point(189, 116);
+            this.txtTruongNhom.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtTruongNhom.Name = "txtTruongNhom";
+            this.txtTruongNhom.PasswordChar = '\0';
+            this.txtTruongNhom.PlaceholderText = "";
+            this.txtTruongNhom.ReadOnly = true;
+            this.txtTruongNhom.SelectedText = "";
+            this.txtTruongNhom.Size = new System.Drawing.Size(285, 42);
+            this.txtTruongNhom.TabIndex = 11;
             // 
-            // label4
+            // btnThemTV
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(421, 16);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(92, 25);
-            this.label4.TabIndex = 2;
-            this.label4.Text = "Mã đề tài";
+            this.btnThemTV.Animated = true;
+            this.btnThemTV.BorderColor = System.Drawing.Color.RoyalBlue;
+            this.btnThemTV.BorderRadius = 8;
+            this.btnThemTV.BorderThickness = 2;
+            this.btnThemTV.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnThemTV.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnThemTV.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnThemTV.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnThemTV.FillColor = System.Drawing.Color.Transparent;
+            this.btnThemTV.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.btnThemTV.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.btnThemTV.Image = global::Quan_Li_Luan_Van.Properties.Resources.plus;
+            this.btnThemTV.Location = new System.Drawing.Point(704, 184);
+            this.btnThemTV.Name = "btnThemTV";
+            this.btnThemTV.Size = new System.Drawing.Size(44, 40);
+            this.btnThemTV.TabIndex = 15;
+            this.btnThemTV.Click += new System.EventHandler(this.btnThemTV_Click);
             // 
-            // label3
+            // btnXoaTV
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(241, 16);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(69, 25);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "Tên SV";
+            this.btnXoaTV.Animated = true;
+            this.btnXoaTV.BorderColor = System.Drawing.Color.RoyalBlue;
+            this.btnXoaTV.BorderRadius = 8;
+            this.btnXoaTV.BorderThickness = 2;
+            this.btnXoaTV.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnXoaTV.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnXoaTV.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnXoaTV.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnXoaTV.FillColor = System.Drawing.Color.Transparent;
+            this.btnXoaTV.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.btnXoaTV.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.btnXoaTV.Image = global::Quan_Li_Luan_Van.Properties.Resources.minus_sign;
+            this.btnXoaTV.Location = new System.Drawing.Point(704, 230);
+            this.btnXoaTV.Name = "btnXoaTV";
+            this.btnXoaTV.Size = new System.Drawing.Size(44, 40);
+            this.btnXoaTV.TabIndex = 16;
+            this.btnXoaTV.Click += new System.EventHandler(this.btnXoaTV_Click);
             // 
-            // label2
+            // flpThanhVien
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(62, 16);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(61, 25);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "MSSV";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.label1.Location = new System.Drawing.Point(327, 28);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(574, 54);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "DANH SÁCH ĐĂNG KÍ ĐỀ TÀI";
-            // 
-            // flp_list
-            // 
-            this.flp_list.AutoScroll = true;
-            this.flp_list.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flp_list.Location = new System.Drawing.Point(0, 164);
-            this.flp_list.Name = "flp_list";
-            this.flp_list.Size = new System.Drawing.Size(1288, 630);
-            this.flp_list.TabIndex = 1;
+            this.flpThanhVien.AutoScroll = true;
+            this.flpThanhVien.BackColor = System.Drawing.Color.Transparent;
+            this.flpThanhVien.Location = new System.Drawing.Point(12, 184);
+            this.flpThanhVien.Name = "flpThanhVien";
+            this.flpThanhVien.Size = new System.Drawing.Size(672, 284);
+            this.flpThanhVien.TabIndex = 17;
             // 
             // FDangKiDeTai
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1288, 794);
-            this.Controls.Add(this.flp_list);
-            this.Controls.Add(this.panel1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.ClientSize = new System.Drawing.Size(760, 534);
+            this.Controls.Add(this.flpThanhVien);
+            this.Controls.Add(this.btnXoaTV);
+            this.Controls.Add(this.btnThemTV);
+            this.Controls.Add(this.txtTruongNhom);
+            this.Controls.Add(this.guna2HtmlLabel3);
+            this.Controls.Add(this.btnGui);
+            this.Controls.Add(this.btnHuy);
+            this.Controls.Add(this.guna2HtmlLabel1);
             this.Name = "FDangKiDeTai";
-            this.Text = "FDangKiDeTai";
+            this.Text = "FDangKi";
             this.Load += new System.EventHandler(this.FDangKiDeTai_Load);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.FlowLayoutPanel flp_list;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
+        private Guna.UI2.WinForms.Guna2Button btnHuy;
+        private Guna.UI2.WinForms.Guna2Button btnGui;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
+        private Guna.UI2.WinForms.Guna2TextBox txtTruongNhom;
+        private Guna.UI2.WinForms.Guna2Button btnThemTV;
+        private Guna.UI2.WinForms.Guna2Button btnXoaTV;
+        private System.Windows.Forms.FlowLayoutPanel flpThanhVien;
     }
 }

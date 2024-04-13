@@ -111,6 +111,7 @@
             this.btnDangKi.Size = new System.Drawing.Size(102, 45);
             this.btnDangKi.TabIndex = 18;
             this.btnDangKi.Text = "đăng kí";
+            this.btnDangKi.Visible = false;
             this.btnDangKi.Click += new System.EventHandler(this.btnDangKi_Click);
             this.btnDangKi.MouseEnter += new System.EventHandler(this.btnDangKi_MouseEnter);
             this.btnDangKi.MouseLeave += new System.EventHandler(this.btnDangKi_MouseLeave);
@@ -146,6 +147,7 @@
             this.btnXoa.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.btnXoa.Size = new System.Drawing.Size(53, 51);
             this.btnXoa.TabIndex = 20;
+            this.btnXoa.Visible = false;
             this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click_1);
             // 
             // btnSua
@@ -168,6 +170,7 @@
             this.btnSua.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.btnSua.Size = new System.Drawing.Size(53, 51);
             this.btnSua.TabIndex = 21;
+            this.btnSua.Visible = false;
             // 
             // UCLuanVan
             // 

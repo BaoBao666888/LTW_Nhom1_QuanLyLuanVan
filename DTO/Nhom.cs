@@ -18,8 +18,8 @@ namespace Quan_Li_Luan_Van.DTO
             this.tenNhom = tenNhom;
         }
 
-        public int MaNhom { get =>  maNhom; set => maNhom = value; }
+        public int MaNhom { get => this.maNhom; set => this.maNhom = value; }
 
-        public string TenNhom { get => tenNhom; set => tenNhom = value; }
+        public string TenNhom { get => this.tenNhom; set => this.tenNhom = value; }
     }
 }

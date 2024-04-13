@@ -17,12 +17,12 @@ namespace Quan_Li_Luan_Van.GUI
     {
         private bool dangXuatTrue = true;
 
-        DataTable dt = new DataTable();
-        private string maTK;
-        public FGiangVien(string maTK)
+        private TaiKhoan taiKhoan;
+        private GiangVien giangVien;
+        public FGiangVien(TaiKhoan tk)
         {
             InitializeComponent();
-            this.maTK = maTK;
+            this.taiKhoan = tk;
             this.FormClosing += FGiangVien_FormClosing;
         }
 
@@ -47,7 +47,7 @@ namespace Quan_Li_Luan_Van.GUI
         private void btnLuanVan_Click(object sender, EventArgs e)
         {
             pnl_childForm.Controls.Clear();
-            FLuanVan fLuanVan = new FLuanVan(dt);
+            FLuanVan fLuanVan = new FLuanVan(taiKhoan, giangVien);
             fLuanVan.TopLevel = false;
             pnl_childForm.Controls.Add(fLuanVan);
             fLuanVan.Dock = DockStyle.Fill;
@@ -62,10 +62,9 @@ namespace Quan_Li_Luan_Van.GUI
         private void GetData()
         {
 
-            string sqlStr = string.Format($"select TaiKhoan.MaTK, TaiKhoan.VaiTro, GiangVien.HoTen, GiangVien.MSGV from TaiKhoan inner join GiangVien on GiangVien.MaTK = TaiKhoan.MaTK where TaiKhoan.MaTK = '{this.maTK}'");
-            dt = DAOclass.Load(sqlStr);
-            this.lbl_ten.Text = dt.Rows[0]["HoTen"].ToString();
-            this.lbl_chucVu.Text = "Giảng Viên";
+            this.giangVien = GiangVienDAO.GetDataByMaTK(taiKhoan.MaTK);
+            this.lbl_ten.Text = giangVien.HoTen;
+            this.lbl_chucVu.Text = taiKhoan.VaiTro;
         }
 
         private void pnl_infor_Paint(object sender, PaintEventArgs e)
@@ -76,7 +75,7 @@ namespace Quan_Li_Luan_Van.GUI
         private void btnDangKi_Click(object sender, EventArgs e)
         {
             pnl_childForm.Controls.Clear();
-            FDangKiDeTai fDangKi = new FDangKiDeTai();
+            FDSDangKiDeTai fDangKi = new FDSDangKiDeTai();
             fDangKi.TopLevel = false;
             pnl_childForm.Controls.Add(fDangKi);
             fDangKi.Dock = DockStyle.Fill;

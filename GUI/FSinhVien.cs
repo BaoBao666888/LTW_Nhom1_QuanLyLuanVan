@@ -16,12 +16,12 @@ namespace Quan_Li_Luan_Van.GUI
     {
         private bool dangXuatTrue = true;
 
-        DataTable dt = new DataTable();
-        private string maTK;
-        public FSinhVien(string maTK)
+        private TaiKhoan taiKhoan;
+        private SinhVien sinhVien;
+        public FSinhVien(TaiKhoan taiKhoan)
         {
             InitializeComponent();
-            this.maTK = maTK;
+            this.taiKhoan = taiKhoan;
             this.GetData();
             this.FormClosing += FSinhVien_FormClosing;
         }
@@ -51,7 +51,7 @@ namespace Quan_Li_Luan_Van.GUI
         private void btnLuanVan_Click(object sender, EventArgs e)
         {
             pnl_childForm.Controls.Clear();
-            FLuanVan fLuanVan = new FLuanVan(dt);
+            FLuanVan fLuanVan = new FLuanVan(taiKhoan, sinhVien);
             fLuanVan.TopLevel = false;
             pnl_childForm.Controls.Add(fLuanVan);
             fLuanVan.Dock = DockStyle.Fill;
@@ -60,11 +60,9 @@ namespace Quan_Li_Luan_Van.GUI
 
         private void GetData()
         {
-
-            string sqlStr = string.Format($"select TaiKhoan.MaTK, TaiKhoan.VaiTro, SinhVien.HoTen, SinhVien.MSSV from TaiKhoan inner join SinhVien on SinhVien.MaTK = TaiKhoan.MaTK where TaiKhoan.MaTK = '{this.maTK}'");
-            dt = DAOclass.Load(sqlStr);
-            this.lbl_ten.Text = dt.Rows[0]["HoTen"].ToString();
-            this.lbl_chucVu.Text = dt.Rows[0]["VaiTro"].ToString();
+            this.sinhVien = SinhVienDAO.GetDataByMaTK(taiKhoan.MaTK);
+            this.lbl_ten.Text = sinhVien.HoTen;
+            this.lbl_chucVu.Text = taiKhoan.VaiTro;
         }
 
         private void btnLogOut_Click(object sender, EventArgs e)

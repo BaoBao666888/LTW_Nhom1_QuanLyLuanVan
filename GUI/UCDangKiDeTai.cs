@@ -40,8 +40,8 @@ namespace Quan_Li_Luan_Van.GUI
 
         private void UCDangKiDeTai_DoubleClick(object sender, EventArgs e)
         {
-            FChiTiet fchiTiet = new FChiTiet(MaDeTai.Text);
-            fchiTiet.ShowDialog();
+            //FChiTiet fchiTiet = new FChiTiet(MaDeTai.Text);
+            //fchiTiet.ShowDialog();
         }
 
         private void btnDuyet_Click(object sender, EventArgs e)

@@ -15,16 +15,16 @@ namespace Quan_Li_Luan_Van.GUI
 {
     public partial class FThemLuanVan : Form
     {
-        private string mSGV;
-        public FThemLuanVan(string mSGV)
+        private GiangVien gv;
+        public FThemLuanVan(GiangVien gv)
         {
             InitializeComponent();
-            this.mSGV = mSGV;
+            this.gv = gv;
         }
 
         private void btnConfirm_Click(object sender, EventArgs e)
         {
-            LuanVan lv = new LuanVan(txtMaDeTai.Text, txtTenDeTai.Text, cbTheLoai.Text, txtMoTa.Text, txtCongNghe.Text, txtYeuCau.Text, txtChucNang.Text, this.mSGV);
+            LuanVan lv = new LuanVan(txtMaDeTai.Text, txtTenDeTai.Text, cbTheLoai.Text, txtMoTa.Text, txtCongNghe.Text, txtYeuCau.Text, txtChucNang.Text, gv.MSGV);
             LuanVanDAO.Them(lv);
         }
 

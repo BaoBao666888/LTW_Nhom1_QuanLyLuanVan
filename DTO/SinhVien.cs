@@ -6,19 +6,35 @@ using System.Threading.Tasks;
 
 namespace Quan_Li_Luan_Van.DTO
 {
-    public class SinhVien : Person
+    public class SinhVien
     {
         private string mSSV;
         private string lop;
+        private string hoTen;
+        private string email;
+        private string sdt;
+        private string maTK;
 
-        public SinhVien(string mSSV, string hoTen, string lop, string email, string soDienThoai, string maTK) : base(hoTen, email, soDienThoai, maTK)
+        public SinhVien() { }
+
+        public SinhVien(string mSSV, string lop, string hoTen, string email, string sdt, string maTK)
         {
             this.mSSV = mSSV;
             this.lop = lop;
+            this.hoTen = hoTen;
+            this.email = email;
+            this.sdt = sdt;
+            this.maTK = maTK;
         }
 
         public string MSSV { get => this.mSSV; set => this.mSSV = value; }
+
         public string Lop { get => this.lop; set => this.lop = value; }
+
+        public string HoTen { get => this.hoTen; set => this.hoTen = value; }
+        public string Email { get => this.email; set => this.email = value; }
+        public string Sdt { get => this.sdt; set => this.sdt = value; }
+        public string MaTK { get => this.maTK; set => this.maTK = value; }
     }
 
 }

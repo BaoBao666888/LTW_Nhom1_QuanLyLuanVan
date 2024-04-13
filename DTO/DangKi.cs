@@ -25,14 +25,14 @@ namespace Quan_Li_Luan_Van.DTO
             this.lyDoTuChoi = lyDoTuChoi;
         }
 
-        public int MaNhom { get =>  maNhom; set => maNhom = value; }
+        public int MaNhom { get => this.maNhom; set => this.maNhom = value; }
 
-        public string MaDT { get => maDT; set => maDT = value; }
+        public string MaDT { get => this.maDT; set => this.maDT = value; }
 
-        public DateTime ThoiGianYeuCau {  get => thoiGianYeuCau; set => thoiGianYeuCau= value; }
+        public DateTime ThoiGianYeuCau {  get => this.thoiGianYeuCau; set => this.thoiGianYeuCau = value; }
 
-        public string TrangThaiDK { get => trangThaiDK; set => trangThaiDK = value; }
+        public string TrangThaiDK { get => this.trangThaiDK; set => this.trangThaiDK = value; }
 
-        public string LyDoTuChoi {  get => lyDoTuChoi; set  => lyDoTuChoi = value;}
+        public string LyDoTuChoi {  get => this.lyDoTuChoi; set  => this.lyDoTuChoi = value;}
     }
 }
