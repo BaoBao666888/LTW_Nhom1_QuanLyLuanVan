@@ -36,6 +36,7 @@ namespace Quan_Li_Luan_Van.GUI
             txtYeuCau.Text = lv.YeuCau;
             txtChucNang.Text = lv.ChucNang;
             txtTenGV.Text = gv.HoTen;
+            txtSoLuongSV.Text = lv.SoLuongSV.ToString();
         }
     }
 }

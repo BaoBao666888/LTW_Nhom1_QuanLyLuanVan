@@ -131,7 +131,7 @@
             this.txt_timKiem.Animated = true;
             this.txt_timKiem.BorderThickness = 0;
             this.txt_timKiem.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_timKiem.DefaultText = "Tìm kiếm";
+            this.txt_timKiem.DefaultText = "";
             this.txt_timKiem.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.txt_timKiem.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txt_timKiem.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -148,6 +148,7 @@
             this.txt_timKiem.Size = new System.Drawing.Size(318, 32);
             this.txt_timKiem.TabIndex = 35;
             this.txt_timKiem.TextOffset = new System.Drawing.Point(-5, 0);
+            this.txt_timKiem.TextChanged += new System.EventHandler(this.txt_timKiem_TextChanged);
             // 
             // label3
             // 
@@ -186,9 +187,9 @@
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(900, 9);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(121, 20);
+            this.label7.Size = new System.Drawing.Size(80, 20);
             this.label7.TabIndex = 3;
-            this.label7.Text = "Số lượng còn lại";
+            this.label7.Text = "Tình trạng";
             // 
             // label6
             // 

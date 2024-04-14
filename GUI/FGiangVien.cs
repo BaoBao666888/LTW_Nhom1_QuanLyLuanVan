@@ -75,7 +75,7 @@ namespace Quan_Li_Luan_Van.GUI
         private void btnDangKi_Click(object sender, EventArgs e)
         {
             pnl_childForm.Controls.Clear();
-            FDSDangKiDeTai fDangKi = new FDSDangKiDeTai();
+            FDSDangKiDeTai fDangKi = new FDSDangKiDeTai(giangVien);
             fDangKi.TopLevel = false;
             pnl_childForm.Controls.Add(fDangKi);
             fDangKi.Dock = DockStyle.Fill;

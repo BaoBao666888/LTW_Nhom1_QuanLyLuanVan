@@ -91,15 +91,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DAO\DangKiDAO.cs" />
-    <Compile Include="DAO\DAO.cs" />
     <Compile Include="DAO\DbConnection.cs" />
-    <Compile Include="DAO\NhomDAO.cs" />
     <Compile Include="DAO\TaiKhoanDAO.cs" />
-    <Compile Include="DAO\ThanhVienDAO.cs" />
     <Compile Include="DTO\TaiKhoan.cs" />
-    <Compile Include="DTO\ThanhVien.cs" />
     <Compile Include="DTO\DangKi.cs" />
-    <Compile Include="DTO\Nhom.cs" />
     <Compile Include="GUI\FChiTiet.cs">
       <SubType>Form</SubType>
     </Compile>

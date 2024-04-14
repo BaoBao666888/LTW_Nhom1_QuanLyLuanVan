@@ -15,22 +15,30 @@ namespace Quan_Li_Luan_Van.GUI
 { 
     public partial class UCDangKiDeTai : UserControl
     {
-
-        public Guna2HtmlLabel MSSV { get => lblMSSV; set => lblMSSV = value; }
-
-        public Guna2HtmlLabel TenSV { get => lblHoTen; set => lblHoTen = value; }
-
-        public Guna2HtmlLabel MaDeTai { get => lblMaDeTai; set => lblMaDeTai = value; }
-        public Guna2HtmlLabel TrangThai { get => lblTrangThai; set => lblTrangThai = value; }
-
-        public Guna2HtmlLabel ThoiGianYeuCau { get => lblThoiGianYeuCau; set => lblThoiGianYeuCau = value; }
-
-        public Guna2Button NutDuyet { get => btnTuChoi; set => btnTuChoi = value; }
+        SinhVien sinhVien;
+        DangKi dangKi;
 
         public UCDangKiDeTai()
         {
             InitializeComponent();
 
+        }
+
+        public UCDangKiDeTai(SinhVien sinhVien, DangKi dangKi)
+        {
+            InitializeComponent();
+            this.dangKi = dangKi;
+            this.sinhVien = sinhVien;
+            this.loadData();
+        }
+
+        public void loadData()
+        {
+            lblMSSV.Text = sinhVien.MSSV;
+            lblHoTen.Text = sinhVien.HoTen;
+            lblMaDeTai.Text = dangKi.MaDT;
+            lblThoiGianYeuCau.Text = dangKi.ThoiGianYeuCau.ToString("yyyy-MM-dd HH:mm:ss");
+            lblTrangThai.Text = dangKi.TrangThai;
         }
 
         private void UCDangKiDeTai_Load(object sender, EventArgs e)
@@ -46,13 +54,10 @@ namespace Quan_Li_Luan_Van.GUI
 
         private void btnDuyet_Click(object sender, EventArgs e)
         {
-            string sqlStr = string.Format($"update DangKiDeTai set TrangThai = N'Đã duyệt' where MaDT = '{MaDeTai.Text}'");
             DialogResult res = MessageBox.Show("Bạn có chắc chắn muốn duyệt luận văn này?", "WARNING!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (res == DialogResult.Yes)
             {
-                DAOclass.Load(sqlStr);
-                string sqlStrUpdate = string.Format($"Update DeTai set SoLuongSV = SoLuongSV + 1 where MaDT = '{MaDeTai.Text}'");
-                DAOclass.ThucThi(sqlStr);
+                DangKiDAO.DuyetDeTai(dangKi.MaDT);
                 this.Visible = false;
             }
         }
@@ -62,15 +67,14 @@ namespace Quan_Li_Luan_Van.GUI
             FInputBox inputBox = new FInputBox();
             if (inputBox.ShowDialog() == DialogResult.OK)
             {
-                string sqlStr = string.Format($"update DangKiDeTai set TrangThai = N'Từ chối', LyDoTuChoi = N'{inputBox.inputBox.Text}' where MaDT = '{MaDeTai.Text}'");
-                DAOclass.Load(sqlStr);
+                DangKiDAO.TuChoiDeTai(dangKi.MaDT, inputBox.Text);
                 this.Visible = false;
             }
             else
             {
                 MessageBox.Show("Đã hủy tác vụ");
             }
-            
+
         }
     }
 }

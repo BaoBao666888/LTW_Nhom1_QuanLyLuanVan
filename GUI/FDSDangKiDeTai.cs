@@ -14,16 +14,20 @@ namespace Quan_Li_Luan_Van.GUI
 {
     public partial class FDSDangKiDeTai : Form
     {
+        GiangVien giangVien;
         public FDSDangKiDeTai()
         {
             InitializeComponent();
         }
+        public FDSDangKiDeTai(GiangVien giangVien)
+        {
+            InitializeComponent();
+            this.giangVien = giangVien;
+        }
 
         public void LoadData()
         {
-            DataTable dt = new DataTable();
-            string sqlStr = string.Format("select * from DangKiDeTai inner join SinhVien on Sinhvien.MSSV = DangKiDeTai.MSSV");
-            dt = DAOclass.Load(sqlStr);
+            DataTable dt = DangKiDAO.ThongTinDangKiTheoMSGV(giangVien.MSGV);
 
             flp_list.Controls.Clear();
 
@@ -31,12 +35,10 @@ namespace Quan_Li_Luan_Van.GUI
             {
                 if (dt.Rows[i]["TrangThai"].ToString() == "Chờ duyệt")
                 {
-                    UCDangKiDeTai ucdangki = new UCDangKiDeTai();
-                    ucdangki.MSSV.Text = dt.Rows[i]["MSSV"].ToString();
-                    ucdangki.TenSV.Text = dt.Rows[i]["HoTen"].ToString();
-                    ucdangki.MaDeTai.Text = dt.Rows[i]["MaDT"].ToString();
-                    ucdangki.ThoiGianYeuCau.Text = dt.Rows[i]["ThoiGianYeuCau"].ToString();
-                    ucdangki.TrangThai.Text = dt.Rows[i]["TrangThai"].ToString();
+                    //LuanVan lv = new LuanVan(dt.Rows[i]["MaDT"].ToString(), dt.Rows[i]["TenDeTai"].ToString(), dt.Rows[i]["TheLoai"].ToString(), dt.Rows[i]["MoTa"].ToString(), dt.Rows[i]["CongNghe"].ToString(), dt.Rows[i]["YeuCau"].ToString(), dt.Rows[i]["ChucNang"].ToString(), dt.Rows[i]["MSGV"].ToString(), int.Parse(dt.Rows[i]["SoLuongSV"].ToString()));
+                    DangKi dk = new DangKi(dt.Rows[i]["MSSV"].ToString(), dt.Rows[i]["MaDt"].ToString(), DateTime.Parse(dt.Rows[i]["ThoiGianYeuCau"].ToString()), dt.Rows[i]["TrangThai"].ToString(), dt.Rows[i]["LyDoTuChoi"].ToString());
+                    SinhVien sv = new SinhVien(dt.Rows[i]["MSSV"].ToString(), dt.Rows[i]["HoTen"].ToString(), dt.Rows[i]["Lop"].ToString(), dt.Rows[i]["Email"].ToString(), dt.Rows[i]["SDT"].ToString(), dt.Rows[i]["MaTK"].ToString());
+                    UCDangKiDeTai ucdangki = new UCDangKiDeTai(sv, dk);
                     flp_list.Controls.Add(ucdangki);
                 }
             }

@@ -41,6 +41,8 @@
             this.txtChucNang = new System.Windows.Forms.RichTextBox();
             this.txtTheLoai = new System.Windows.Forms.TextBox();
             this.txtTenGV = new System.Windows.Forms.TextBox();
+            this.txtSoLuongSV = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -179,8 +181,28 @@
             this.txtTenGV.Location = new System.Drawing.Point(530, 146);
             this.txtTenGV.Name = "txtTenGV";
             this.txtTenGV.ReadOnly = true;
-            this.txtTenGV.Size = new System.Drawing.Size(282, 31);
+            this.txtTenGV.Size = new System.Drawing.Size(239, 31);
             this.txtTenGV.TabIndex = 18;
+            // 
+            // txtSoLuongSV
+            // 
+            this.txtSoLuongSV.BackColor = System.Drawing.Color.FloralWhite;
+            this.txtSoLuongSV.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSoLuongSV.Location = new System.Drawing.Point(858, 146);
+            this.txtSoLuongSV.Name = "txtSoLuongSV";
+            this.txtSoLuongSV.ReadOnly = true;
+            this.txtSoLuongSV.Size = new System.Drawing.Size(37, 31);
+            this.txtSoLuongSV.TabIndex = 20;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(821, 118);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(115, 25);
+            this.label3.TabIndex = 19;
+            this.label3.Text = "Số lượng SV:";
             // 
             // FChiTiet
             // 
@@ -188,6 +210,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(966, 580);
+            this.Controls.Add(this.txtSoLuongSV);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.txtTenGV);
             this.Controls.Add(this.txtTheLoai);
             this.Controls.Add(this.txtChucNang);
@@ -225,5 +249,7 @@
         private System.Windows.Forms.RichTextBox txtChucNang;
         private System.Windows.Forms.TextBox txtTheLoai;
         private System.Windows.Forms.TextBox txtTenGV;
+        private System.Windows.Forms.TextBox txtSoLuongSV;
+        private System.Windows.Forms.Label label3;
     }
 }

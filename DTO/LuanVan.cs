@@ -17,8 +17,9 @@ namespace Quan_Li_Luan_Van.DTO
         private string yeuCau;
         private string chucNang;
         private string mSGV;
+        private int soLuongSV;
     
-        public LuanVan(string maDeTai, string tenDeTai, string theLoai, string moTa, string congNghe, string yeuCau, string chucNang, string MSGV)
+        public LuanVan(string maDeTai, string tenDeTai, string theLoai, string moTa, string congNghe, string yeuCau, string chucNang, string MSGV, int soLuongSV)
         {
             this.maDeTai = maDeTai;
             this.tenDeTai = tenDeTai;
@@ -28,6 +29,7 @@ namespace Quan_Li_Luan_Van.DTO
             this.yeuCau = yeuCau;
             this.chucNang = chucNang;
             this.mSGV = MSGV;
+            this.soLuongSV = soLuongSV;
         }
 
         public string MadeTai { get => this.maDeTai; set => this.maDeTai = value; }
@@ -38,5 +40,7 @@ namespace Quan_Li_Luan_Van.DTO
         public string YeuCau { get => this.yeuCau; set => this.yeuCau = value; }
         public string ChucNang { get => this.chucNang; set => this.chucNang = value; }
         public string MSGV { get => this.mSGV; set => this.mSGV = value; }
+
+        public int SoLuongSV { get => this.soLuongSV; set => this.soLuongSV = value; }
     }
 }

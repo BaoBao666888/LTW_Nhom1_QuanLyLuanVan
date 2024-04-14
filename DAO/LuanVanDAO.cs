@@ -10,7 +10,21 @@ namespace Quan_Li_Luan_Van.DAO
 {
     public class LuanVanDAO
     {
-        //lay du lieu
+
+        public static DataTable GetDataByMaDT(string MaDT)
+        {
+            string sqlStr = string.Format($"select * from DeTai where MSGV like '%{MaDT}%'");
+            return DbConnection.Load(sqlStr);
+        }
+
+        //Danh sach luan van theo ma giao vien
+        public static DataTable GetDataByMSGV(string MSGV)
+        {
+            string sqlStr = string.Format($"select * from DeTai where MSGV like '%{MSGV}%'");
+            return DbConnection.Load( sqlStr );
+        }
+
+        //Danh sach luan van
         public static DataTable GetData()
         {
             string sqlStr = string.Format("select * from DeTai");
@@ -20,7 +34,7 @@ namespace Quan_Li_Luan_Van.DAO
         //Them
         public static void Them(LuanVan luanVan)
         {
-            string sqlStr = string.Format("INSERT INTO DeTai(MaDT, TenDeTai, TheLoai, MoTa, CongNghe, YeuCau, ChucNang, MSGV) VALUES ('{0}', N'{1}', N'{2}', N'{3}', N'{4}', N'{5}', N'{6}','{7}')", luanVan.MadeTai, luanVan.TenDeTai, luanVan.TheLoai, luanVan.MoTa, luanVan.CongNghe, luanVan.YeuCau, luanVan.ChucNang, luanVan.MSGV);
+            string sqlStr = string.Format("INSERT INTO DeTai(MaDT, TenDeTai, TheLoai, MoTa, CongNghe, YeuCau, ChucNang, MSGV, SoLuongSV) VALUES ('{0}', N'{1}', N'{2}', N'{3}', N'{4}', N'{5}', N'{6}','{7}', '{8}')", luanVan.MadeTai, luanVan.TenDeTai, luanVan.TheLoai, luanVan.MoTa, luanVan.CongNghe, luanVan.YeuCau, luanVan.ChucNang, luanVan.MSGV, luanVan.SoLuongSV);
             DbConnection.ThucThi(sqlStr);
         }
 
@@ -33,5 +47,11 @@ namespace Quan_Li_Luan_Van.DAO
         }
 
         //TimKiem
+
+        public static DataTable TimKiem(string input)
+        {
+            string sqlStr = string.Format($"select * from DeTai where MSGV like '%{input}%' or MaDT like N'%{input}%' or TenDeTai like N'%{input}%' or  TheLoai like N'%{input}%' or YeuCau like N'%{input}%'");
+            return DbConnection.Load(sqlStr);
+        }
     }
 }

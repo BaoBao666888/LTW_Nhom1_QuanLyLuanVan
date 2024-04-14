@@ -45,6 +45,8 @@
             this.cbTheLoai = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnReset = new Guna.UI2.WinForms.Guna2Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtSoLuongSV = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // txtChucNang
@@ -182,7 +184,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(529, 114);
+            this.label4.Location = new System.Drawing.Point(519, 114);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(91, 25);
             this.label4.TabIndex = 43;
@@ -195,7 +197,7 @@
             this.txtTenDeTai.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTenDeTai.Location = new System.Drawing.Point(524, 142);
             this.txtTenDeTai.Name = "txtTenDeTai";
-            this.txtTenDeTai.Size = new System.Drawing.Size(374, 88);
+            this.txtTenDeTai.Size = new System.Drawing.Size(294, 88);
             this.txtTenDeTai.TabIndex = 44;
             this.txtTenDeTai.Text = "";
             // 
@@ -245,12 +247,31 @@
             this.btnReset.Text = "Reset";
             this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(865, 114);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(111, 25);
+            this.label3.TabIndex = 52;
+            this.label3.Text = "Số lượng SV";
+            // 
+            // txtSoLuongSV
+            // 
+            this.txtSoLuongSV.Location = new System.Drawing.Point(894, 142);
+            this.txtSoLuongSV.Name = "txtSoLuongSV";
+            this.txtSoLuongSV.Size = new System.Drawing.Size(45, 26);
+            this.txtSoLuongSV.TabIndex = 53;
+            // 
             // FThemLuanVan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(993, 642);
+            this.Controls.Add(this.txtSoLuongSV);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.btnReset);
             this.Controls.Add(this.cbTheLoai);
             this.Controls.Add(this.label1);
@@ -294,5 +315,7 @@
         private System.Windows.Forms.ComboBox cbTheLoai;
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2Button btnReset;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txtSoLuongSV;
     }
 }

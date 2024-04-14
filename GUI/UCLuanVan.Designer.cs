@@ -31,7 +31,7 @@
             this.lblTheLoai = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lblTenDeTai = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lblMaDeTai = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.lblNhomThucHien = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.lblTrangThai = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.btnDangKi = new Guna.UI2.WinForms.Guna2Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnXoa = new Guna.UI2.WinForms.Guna2CircleButton();
@@ -81,19 +81,19 @@
             this.lblMaDeTai.Text = "MaDT";
             this.lblMaDeTai.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // lblNhomThucHien
+            // lblTrangThai
             // 
-            this.lblNhomThucHien.BackColor = System.Drawing.Color.Transparent;
-            this.lblNhomThucHien.Enabled = false;
-            this.lblNhomThucHien.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNhomThucHien.Location = new System.Drawing.Point(892, 16);
-            this.lblNhomThucHien.MaximumSize = new System.Drawing.Size(120, 0);
-            this.lblNhomThucHien.MinimumSize = new System.Drawing.Size(120, 0);
-            this.lblNhomThucHien.Name = "lblNhomThucHien";
-            this.lblNhomThucHien.Size = new System.Drawing.Size(120, 27);
-            this.lblNhomThucHien.TabIndex = 15;
-            this.lblNhomThucHien.Text = "chưa có nhóm";
-            this.lblNhomThucHien.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblTrangThai.BackColor = System.Drawing.Color.Transparent;
+            this.lblTrangThai.Enabled = false;
+            this.lblTrangThai.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTrangThai.Location = new System.Drawing.Point(892, 16);
+            this.lblTrangThai.MaximumSize = new System.Drawing.Size(120, 0);
+            this.lblTrangThai.MinimumSize = new System.Drawing.Size(120, 0);
+            this.lblTrangThai.Name = "lblTrangThai";
+            this.lblTrangThai.Size = new System.Drawing.Size(120, 27);
+            this.lblTrangThai.TabIndex = 15;
+            this.lblTrangThai.Text = "chưa có nhóm";
+            this.lblTrangThai.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnDangKi
             // 
@@ -183,7 +183,7 @@
             this.Controls.Add(this.btnSua);
             this.Controls.Add(this.btnXoa);
             this.Controls.Add(this.btnDangKi);
-            this.Controls.Add(this.lblNhomThucHien);
+            this.Controls.Add(this.lblTrangThai);
             this.Controls.Add(this.lblMaDeTai);
             this.Controls.Add(this.lblTenDeTai);
             this.Controls.Add(this.lblTheLoai);
@@ -206,7 +206,7 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel lblTheLoai;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblTenDeTai;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblMaDeTai;
-        private Guna.UI2.WinForms.Guna2HtmlLabel lblNhomThucHien;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblTrangThai;
         private Guna.UI2.WinForms.Guna2Button btnDangKi;
         private Guna.UI2.WinForms.Guna2CircleButton btnXoa;
         private Guna.UI2.WinForms.Guna2CircleButton btnSua;

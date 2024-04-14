@@ -27,17 +27,31 @@ namespace Quan_Li_Luan_Van.GUI
             this.gv = gv;
             this.lv = lv;
             this.KiemTra();
+            this.LoadData();
+        }
+
+        public UCLuanVan(TaiKhoan tk, GiangVien gv, LuanVan lv)
+        {
+            InitializeComponent();
+            this.tk = tk;
+            this.gv = gv;
+            this.lv = lv;
+            this.KiemTra();
+            this.LoadData();
         }
        
-
-        public Guna2HtmlLabel MaDeTai { get => lblMaDeTai; set => lblMaDeTai = value; }
-
-        public Guna2HtmlLabel TenDeTai { get => lblTenDeTai; set => lblTenDeTai = value; }
-
-        public Guna2HtmlLabel TheLoai { get => lblTheLoai; set => lblTheLoai = value; }
-
-        public Guna2HtmlLabel NhomThucHien { get => lblNhomThucHien; set => lblNhomThucHien = value; }
-
+        private void LoadData()
+        {
+            lblMaDeTai.Text = lv.MadeTai;
+            lblTenDeTai.Text = lv.TenDeTai;
+            lblTheLoai.Text = lv.TheLoai;
+            if (DangKiDAO.KiemTraDangKi(lv.MadeTai).Rows.Count >= lv.SoLuongSV)
+            {
+                lblTrangThai.Text = "Hết";
+            }
+            else
+                lblTrangThai.Text = "Còn";
+        }
         private void KiemTra()
         {
             if (tk.VaiTro == "Giảng viên")
@@ -47,9 +61,11 @@ namespace Quan_Li_Luan_Van.GUI
             }
             else
             {
-                btnDangKi.Visible = true;
+                if (DangKiDAO.KiemTraSinhVienDangki(sv.MSSV) == 0 && DangKiDAO.KiemTraDangKi(lv.MadeTai).Rows.Count <= lv.SoLuongSV)
+                {
+                    btnDangKi.Visible = true;
+                }
             }
- 
         }    
 
         private void mouseLeave()
@@ -112,23 +128,21 @@ namespace Quan_Li_Luan_Van.GUI
 
         private void btnDangKi_Click(object sender, EventArgs e)
         {
-            FDangKiDeTai fDangKiDeTai = new FDangKiDeTai(sv, lv);
-            fDangKiDeTai.ShowDialog();
-            //if (NhomThucHien.Text.Trim() != "")
-            //{
-            //    MessageBox.Show("Đề tài đã đăng kí", "WARNING!", MessageBoxButtons.OKCancel);
-            //}
-            //else
-            //{
-            //    var dateTime = DateTime.Now;
-            //    var dateTimeString = dateTime.ToString("yyyy-MM-dd HH:mm:ss");
-            //    DialogResult res = MessageBox.Show("Bạn có chắc chắn muốn đăng kí đề tài này?", "Question?", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            //    if (res == DialogResult.Yes)
-            //    {
-            //        string sqlStr = string.Format($"INSERT INTO DangKiDeTai (MSSV, MaDT, ThoiGianYeuCau, TrangThai) VALUES ('{this.mSSV}', '{this.MaDeTai.Text}', '{dateTimeString}', N'Chờ duyệt')");
-            //        DAOclass.ThucThi(sqlStr);
-            //    }
-            //}
+            //FDangKiDeTai fDangKiDeTai = new FDangKiDeTai(sv, lv);
+            //fDangKiDeTai.ShowDialog();
+            if (DangKiDAO.SoLuongDangKi(lv.MadeTai) >= lv.SoLuongSV)
+            {
+                MessageBox.Show("Đề tài đã đủ lượng đăng kí", "WARNING!", MessageBoxButtons.OKCancel);
+            }
+            else
+            {
+                var dateTime = DateTime.Now;
+                DialogResult res = MessageBox.Show("Bạn có chắc chắn muốn đăng kí đề tài này?", "Question?", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (res == DialogResult.Yes)
+                {
+                    DangKiDAO.DangKiDeTai(new DangKi(sv.MSSV, lv.MadeTai, dateTime, "Chờ duyệt", ""));
+                }
+            }
         }
 
         private void UCLuanVan_Load(object sender, EventArgs e)

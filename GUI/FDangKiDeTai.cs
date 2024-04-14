@@ -25,6 +25,7 @@ namespace Quan_Li_Luan_Van.GUI
         public FDangKiDeTai(SinhVien sv, LuanVan lv)
         {
             InitializeComponent();
+            
             listLabel = new List<Guna2HtmlLabel>();
             listTextbox = new List<Guna2TextBox>();
             listError = new List<Guna2HtmlLabel>();
@@ -42,17 +43,6 @@ namespace Quan_Li_Luan_Van.GUI
 
         }
 
-        private void ThanhVienNhom()
-        {
-            DataTable dt = ThanhVienDAO.GetDataByMSSV(sv.MSSV);
-            List<ThanhVien> listThanhVien = new List<ThanhVien>();
-            foreach (DataRow i in dt.Rows)
-            {
-                ThanhVien thanhVien = new ThanhVien(i["MSSV"].ToString(), int.Parse(i["MaNhom"].ToString()), i["VaiTro"].ToString());
-                listThanhVien.Add(thanhVien);
-            }
-        }
-
         private void TaoPanelThongTin()
         {
             //Khởi tạo label thành viên
@@ -64,8 +54,8 @@ namespace Quan_Li_Luan_Van.GUI
             //Khởi tạo textbox thành viên
             Guna2TextBox txtThanhVien = new Guna2TextBox();
             txtThanhVien.Font = new Font("Segoe UI", 9);
-            txtThanhVien.Size = new Size(306, 42);
-            txtThanhVien.Location = new Point(100, 5);
+            txtThanhVien.Size = new Size(255, 42);
+            txtThanhVien.Location = new Point(85, 5);
 
             //Khởi tạo label lỗi
             Guna2HtmlLabel lblError = new Guna2HtmlLabel();
@@ -74,6 +64,12 @@ namespace Quan_Li_Luan_Van.GUI
             lblError.Font = new Font("Segoe UI", 8);
             lblError.ForeColor = Color.FromArgb(255, 128, 128);
             lblError.Visible = false;
+
+            ////Khởi tạo button check
+            //Guna2Button btnCheck = new Guna2Button();
+            //btnCheck.Text = "Check";
+            //btnCheck.Size = new Size(65, 20);
+            //btnCheck.Location = new Point(345, 15);
 
             //khởi tạo panel
             Panel pnl = new Panel();
@@ -111,7 +107,10 @@ namespace Quan_Li_Luan_Van.GUI
 
         private void btnGui_Click(object sender, EventArgs e)
         {
-
+            //Nhom nhom = new Nhom($"Nhóm {lv.TenDeTai}");
+            //NhomDAO.Them(nhom);
+            //DangKi dangKi = new DangKi(nhom.MaNhom);
+            //DangKiDAO.Them();
         }
     }
 }

@@ -24,7 +24,7 @@ namespace Quan_Li_Luan_Van.GUI
 
         private void btnConfirm_Click(object sender, EventArgs e)
         {
-            LuanVan lv = new LuanVan(txtMaDeTai.Text, txtTenDeTai.Text, cbTheLoai.Text, txtMoTa.Text, txtCongNghe.Text, txtYeuCau.Text, txtChucNang.Text, gv.MSGV);
+            LuanVan lv = new LuanVan(txtMaDeTai.Text, txtTenDeTai.Text, cbTheLoai.Text, txtMoTa.Text, txtCongNghe.Text, txtYeuCau.Text, txtChucNang.Text, gv.MSGV, int.Parse(txtSoLuongSV.Text));
             LuanVanDAO.Them(lv);
         }
 
@@ -36,6 +36,7 @@ namespace Quan_Li_Luan_Van.GUI
             txtMoTa.Clear();
             txtTenDeTai.Clear();
             txtYeuCau.Clear();
+            txtSoLuongSV.Clear();
             cbTheLoai.Text = "";
         }
 

@@ -51,7 +51,7 @@
             this.btnGui.FillColor = System.Drawing.Color.RoyalBlue;
             this.btnGui.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.btnGui.ForeColor = System.Drawing.Color.White;
-            this.btnGui.Location = new System.Drawing.Point(572, 475);
+            this.btnGui.Location = new System.Drawing.Point(551, 475);
             this.btnGui.Margin = new System.Windows.Forms.Padding(0);
             this.btnGui.Name = "btnGui";
             this.btnGui.Size = new System.Drawing.Size(156, 45);
@@ -72,7 +72,7 @@
             this.btnHuy.FillColor = System.Drawing.Color.Transparent;
             this.btnHuy.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.btnHuy.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.btnHuy.Location = new System.Drawing.Point(484, 475);
+            this.btnHuy.Location = new System.Drawing.Point(459, 475);
             this.btnHuy.Margin = new System.Windows.Forms.Padding(0);
             this.btnHuy.Name = "btnHuy";
             this.btnHuy.Size = new System.Drawing.Size(74, 45);
@@ -114,7 +114,7 @@
             this.btnThemTV.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.btnThemTV.ForeColor = System.Drawing.Color.RoyalBlue;
             this.btnThemTV.Image = global::Quan_Li_Luan_Van.Properties.Resources.plus;
-            this.btnThemTV.Location = new System.Drawing.Point(704, 174);
+            this.btnThemTV.Location = new System.Drawing.Point(618, 128);
             this.btnThemTV.Name = "btnThemTV";
             this.btnThemTV.Size = new System.Drawing.Size(44, 40);
             this.btnThemTV.TabIndex = 15;
@@ -134,7 +134,7 @@
             this.btnXoaTV.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.btnXoaTV.ForeColor = System.Drawing.Color.RoyalBlue;
             this.btnXoaTV.Image = global::Quan_Li_Luan_Van.Properties.Resources.minus_sign;
-            this.btnXoaTV.Location = new System.Drawing.Point(704, 220);
+            this.btnXoaTV.Location = new System.Drawing.Point(663, 128);
             this.btnXoaTV.Name = "btnXoaTV";
             this.btnXoaTV.Size = new System.Drawing.Size(44, 40);
             this.btnXoaTV.TabIndex = 16;
@@ -144,9 +144,10 @@
             // 
             this.flpThanhVien.AutoScroll = true;
             this.flpThanhVien.BackColor = System.Drawing.Color.Transparent;
+            this.flpThanhVien.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.flpThanhVien.Location = new System.Drawing.Point(12, 174);
             this.flpThanhVien.Name = "flpThanhVien";
-            this.flpThanhVien.Size = new System.Drawing.Size(672, 284);
+            this.flpThanhVien.Size = new System.Drawing.Size(695, 284);
             this.flpThanhVien.TabIndex = 17;
             // 
             // label1
@@ -195,7 +196,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(759, 529);
+            this.ClientSize = new System.Drawing.Size(724, 529);
             this.Controls.Add(this.lblDeTai);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
