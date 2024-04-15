@@ -160,11 +160,11 @@
       <DependentUpon>FTienDo.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\Program.cs" />
-    <Compile Include="GUI\UCTienDo.cs">
+    <Compile Include="GUI\UCTask.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="GUI\UCTienDo.Designer.cs">
-      <DependentUpon>UCTienDo.cs</DependentUpon>
+    <Compile Include="GUI\UCTask.Designer.cs">
+      <DependentUpon>UCTask.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="DTO\SinhVien.cs" />
@@ -211,8 +211,8 @@
     <EmbeddedResource Include="GUI\FTienDo.resx">
       <DependentUpon>FTienDo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\UCTienDo.resx">
-      <DependentUpon>UCTienDo.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\UCTask.resx">
+      <DependentUpon>UCTask.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
@@ -291,6 +291,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\minus-sign.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\heart.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

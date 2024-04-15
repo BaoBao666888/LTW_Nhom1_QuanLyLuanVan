@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace Quan_Li_Luan_Van.GUI
 {
-    public partial class UCTienDo : UserControl
+    public partial class UCTask : UserControl
     {
-        public UCTienDo()
+        public UCTask()
         {
             InitializeComponent();
+        }
+
+        private void guna2HtmlLabel5_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
