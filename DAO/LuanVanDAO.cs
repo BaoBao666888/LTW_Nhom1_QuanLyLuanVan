@@ -53,5 +53,11 @@ namespace Quan_Li_Luan_Van.DAO
             string sqlStr = string.Format($"select * from DeTai where MSGV like '%{input}%' or MaDT like N'%{input}%' or TenDeTai like N'%{input}%' or  TheLoai like N'%{input}%' or YeuCau like N'%{input}%'");
             return DbConnection.Load(sqlStr);
         }
+
+        public static DataTable TimKiem(string MSGV, string input)
+        {
+            string sqlStr = string.Format($"select * from DeTai where MSGV = '{MSGV}' and (MaDT like N'%{input}%' or TenDeTai like N'%{input}%' or  TheLoai like N'%{input}%' or YeuCau like N'%{input}%')");
+            return DbConnection.Load(sqlStr);
+        }
     }
 }

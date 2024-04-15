@@ -62,7 +62,7 @@ namespace Quan_Li_Luan_Van.GUI
         {
             timer = new Timer();
             timer.Interval = 350;
-            timer.Tick += DoTick;
+            timer.Tick += DataTimKiem;
         }
 
         public void LoadDataByGV() 
@@ -105,9 +105,13 @@ namespace Quan_Li_Luan_Van.GUI
             
         }
 
-        private void DoTick(object sender, EventArgs e)
+        private void DataTimKiem(object sender, EventArgs e)
         {
-            DataTable dt = LuanVanDAO.TimKiem(txt_timKiem.Text);
+            DataTable dt;
+            if (tk.VaiTro == "Sinh viên")
+                dt = LuanVanDAO.TimKiem(txt_timKiem.Text);
+            else
+                dt = LuanVanDAO.TimKiem(gv.MSGV, txt_timKiem.Text);
             flp_list.Controls.Clear();
 
             for (int i = 0; i < dt.Rows.Count; i++)
