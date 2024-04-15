@@ -146,7 +146,7 @@
             this.btnDangKi.Name = "btnDangKi";
             this.btnDangKi.Size = new System.Drawing.Size(350, 114);
             this.btnDangKi.TabIndex = 6;
-            this.btnDangKi.Text = "Đăng kí";
+            this.btnDangKi.Text = "Luận văn của tôi";
             // 
             // btnLuanVan
             // 
@@ -165,7 +165,7 @@
             this.btnLuanVan.Name = "btnLuanVan";
             this.btnLuanVan.Size = new System.Drawing.Size(350, 114);
             this.btnLuanVan.TabIndex = 5;
-            this.btnLuanVan.Text = "Luận văn";
+            this.btnLuanVan.Text = "Danh sách luận văn";
             this.btnLuanVan.Click += new System.EventHandler(this.btnLuanVan_Click);
             // 
             // label4
@@ -289,6 +289,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1628, 850);
             this.Controls.Add(this.pnl_childForm);
             this.Controls.Add(this.panel1);

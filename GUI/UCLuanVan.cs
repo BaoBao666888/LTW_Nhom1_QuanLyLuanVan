@@ -56,8 +56,7 @@ namespace Quan_Li_Luan_Van.GUI
         {
             if (tk.VaiTro == "Giảng viên")
             {
-                btnXoa.Visible = true;
-                btnSua.Visible = true;
+                btnXoa.Visible = true; 
             }
             else
             {

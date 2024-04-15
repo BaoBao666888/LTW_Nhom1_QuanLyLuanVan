@@ -96,9 +96,9 @@ namespace Quan_Li_Luan_Van.GUI
         {
             FThemLuanVan fThemLuanVan = new FThemLuanVan(gv);
             
-             DialogResult res = fThemLuanVan.ShowDialog();
-
-            if (res ==DialogResult.Cancel)
+            //sau khi tắt form thêm sẽ load lại d
+            DialogResult res = fThemLuanVan.ShowDialog();
+            if (res == DialogResult.Cancel)
             {
                 this.FLuanVan_Load(sender, e);
             }

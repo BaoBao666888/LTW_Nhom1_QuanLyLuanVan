@@ -48,8 +48,10 @@ namespace Quan_Li_Luan_Van.GUI
 
         private void UCDangKiDeTai_DoubleClick(object sender, EventArgs e)
         {
-            //FChiTiet fchiTiet = new FChiTiet(MaDeTai.Text);
-            //fchiTiet.ShowDialog();
+            DataTable dt = LuanVanDAO.GetDataByMaDT(dangKi.MaDT);
+            LuanVan lv = new LuanVan(dt.Rows[0]["MaDT"].ToString(), dt.Rows[0]["TenDeTai"].ToString(), dt.Rows[0]["TheLoai"].ToString(), dt.Rows[0]["MoTa"].ToString(), dt.Rows[0]["CongNghe"].ToString(), dt.Rows[0]["YeuCau"].ToString(), dt.Rows[0]["ChucNang"].ToString(), dt.Rows[0]["MSGV"].ToString(), int.Parse(dt.Rows[0]["SoLuongSV"].ToString()));
+            FChiTiet fchiTiet = new FChiTiet(lv);
+            fchiTiet.ShowDialog();
         }
 
         private void btnDuyet_Click(object sender, EventArgs e)

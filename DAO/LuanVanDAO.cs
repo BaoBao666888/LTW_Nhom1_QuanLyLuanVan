@@ -13,7 +13,7 @@ namespace Quan_Li_Luan_Van.DAO
 
         public static DataTable GetDataByMaDT(string MaDT)
         {
-            string sqlStr = string.Format($"select * from DeTai where MSGV like '%{MaDT}%'");
+            string sqlStr = string.Format($"select * from DeTai where MaDT like '%{MaDT}%'");
             return DbConnection.Load(sqlStr);
         }
 
@@ -39,6 +39,14 @@ namespace Quan_Li_Luan_Van.DAO
         }
 
         // Sua
+
+        public static void Sua(LuanVan luanVan)
+        {
+            string sqlStr = string.Format($"UPDATE DeTai set TenDeTai = N'{luanVan.TenDeTai}', TheLoai = N'{luanVan.TheLoai}', MoTa = N'{luanVan.MoTa}', CongNghe = N'{luanVan.CongNghe}', YeuCau = N'{luanVan.YeuCau}', ChucNang = N'{luanVan.ChucNang}', MSGV = N'{luanVan.MSGV}', SoLuongSV = N'{luanVan.SoLuongSV}'");
+            DbConnection.ThucThi(sqlStr);
+        }
+
+        //Xoa
 
         public static void Xoa(string maDeTai)
         {

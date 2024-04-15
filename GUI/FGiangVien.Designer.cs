@@ -35,10 +35,8 @@
             this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
             this.btnDangKi = new Guna.UI2.WinForms.Guna2Button();
             this.btnLuanVan = new Guna.UI2.WinForms.Guna2Button();
-            this.pnl_logo = new System.Windows.Forms.Panel();
             this.pnl_infor = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
-            this.btnLogOut = new Guna.UI2.WinForms.Guna2Button();
             this.lbl_ten = new System.Windows.Forms.Label();
             this.lbl_chucVu = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -46,6 +44,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.pnl_buttons = new Guna.UI2.WinForms.Guna2Panel();
             this.pnl_childForm = new System.Windows.Forms.Panel();
+            this.pnl_logo = new System.Windows.Forms.Panel();
+            this.btnLogOut = new Guna.UI2.WinForms.Guna2Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.pnl_infor.SuspendLayout();
@@ -174,16 +174,6 @@
             this.btnLuanVan.Text = "Luận văn";
             this.btnLuanVan.Click += new System.EventHandler(this.btnLuanVan_Click);
             // 
-            // pnl_logo
-            // 
-            this.pnl_logo.BackgroundImage = global::Quan_Li_Luan_Van.Properties.Resources.logo;
-            this.pnl_logo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pnl_logo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnl_logo.Location = new System.Drawing.Point(0, 0);
-            this.pnl_logo.Name = "pnl_logo";
-            this.pnl_logo.Size = new System.Drawing.Size(350, 177);
-            this.pnl_logo.TabIndex = 3;
-            // 
             // pnl_infor
             // 
             this.pnl_infor.Controls.Add(this.label4);
@@ -207,24 +197,6 @@
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(2, 25);
             this.label4.TabIndex = 10;
-            // 
-            // btnLogOut
-            // 
-            this.btnLogOut.Animated = true;
-            this.btnLogOut.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnLogOut.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnLogOut.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnLogOut.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnLogOut.FillColor = System.Drawing.SystemColors.ControlDark;
-            this.btnLogOut.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnLogOut.ForeColor = System.Drawing.Color.White;
-            this.btnLogOut.Image = global::Quan_Li_Luan_Van.Properties.Resources.power;
-            this.btnLogOut.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnLogOut.Location = new System.Drawing.Point(290, 45);
-            this.btnLogOut.Name = "btnLogOut";
-            this.btnLogOut.Size = new System.Drawing.Size(42, 36);
-            this.btnLogOut.TabIndex = 13;
-            this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
             // 
             // lbl_ten
             // 
@@ -286,10 +258,39 @@
             this.pnl_childForm.Size = new System.Drawing.Size(1278, 850);
             this.pnl_childForm.TabIndex = 4;
             // 
+            // pnl_logo
+            // 
+            this.pnl_logo.BackgroundImage = global::Quan_Li_Luan_Van.Properties.Resources.logo;
+            this.pnl_logo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pnl_logo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnl_logo.Location = new System.Drawing.Point(0, 0);
+            this.pnl_logo.Name = "pnl_logo";
+            this.pnl_logo.Size = new System.Drawing.Size(350, 177);
+            this.pnl_logo.TabIndex = 3;
+            // 
+            // btnLogOut
+            // 
+            this.btnLogOut.Animated = true;
+            this.btnLogOut.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnLogOut.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnLogOut.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnLogOut.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnLogOut.FillColor = System.Drawing.SystemColors.ControlDark;
+            this.btnLogOut.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnLogOut.ForeColor = System.Drawing.Color.White;
+            this.btnLogOut.Image = global::Quan_Li_Luan_Van.Properties.Resources.power;
+            this.btnLogOut.ImageSize = new System.Drawing.Size(25, 25);
+            this.btnLogOut.Location = new System.Drawing.Point(290, 45);
+            this.btnLogOut.Name = "btnLogOut";
+            this.btnLogOut.Size = new System.Drawing.Size(42, 36);
+            this.btnLogOut.TabIndex = 13;
+            this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
+            // 
             // FGiangVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1628, 850);
             this.Controls.Add(this.pnl_childForm);
             this.Controls.Add(this.panel1);

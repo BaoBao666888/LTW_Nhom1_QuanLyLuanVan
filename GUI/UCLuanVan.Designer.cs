@@ -35,7 +35,6 @@
             this.btnDangKi = new Guna.UI2.WinForms.Guna2Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnXoa = new Guna.UI2.WinForms.Guna2CircleButton();
-            this.btnSua = new Guna.UI2.WinForms.Guna2CircleButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -141,7 +140,7 @@
             this.btnXoa.HoverState.FillColor = System.Drawing.Color.Tomato;
             this.btnXoa.HoverState.ForeColor = System.Drawing.Color.Transparent;
             this.btnXoa.Image = global::Quan_Li_Luan_Van.Properties.Resources.delete1;
-            this.btnXoa.Location = new System.Drawing.Point(1135, 16);
+            this.btnXoa.Location = new System.Drawing.Point(1152, 16);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.PressedColor = System.Drawing.Color.OrangeRed;
             this.btnXoa.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
@@ -149,28 +148,6 @@
             this.btnXoa.TabIndex = 20;
             this.btnXoa.Visible = false;
             this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click_1);
-            // 
-            // btnSua
-            // 
-            this.btnSua.Animated = true;
-            this.btnSua.BorderColor = System.Drawing.Color.Chocolate;
-            this.btnSua.BorderThickness = 1;
-            this.btnSua.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnSua.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnSua.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnSua.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnSua.FillColor = System.Drawing.Color.Transparent;
-            this.btnSua.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnSua.ForeColor = System.Drawing.Color.White;
-            this.btnSua.HoverState.ForeColor = System.Drawing.Color.Transparent;
-            this.btnSua.Image = global::Quan_Li_Luan_Van.Properties.Resources.pen;
-            this.btnSua.Location = new System.Drawing.Point(1076, 16);
-            this.btnSua.Name = "btnSua";
-            this.btnSua.PressedColor = System.Drawing.Color.Orange;
-            this.btnSua.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.btnSua.Size = new System.Drawing.Size(53, 51);
-            this.btnSua.TabIndex = 21;
-            this.btnSua.Visible = false;
             // 
             // UCLuanVan
             // 
@@ -180,7 +157,6 @@
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Controls.Add(this.btnSua);
             this.Controls.Add(this.btnXoa);
             this.Controls.Add(this.btnDangKi);
             this.Controls.Add(this.lblTrangThai);
@@ -209,6 +185,5 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel lblTrangThai;
         private Guna.UI2.WinForms.Guna2Button btnDangKi;
         private Guna.UI2.WinForms.Guna2CircleButton btnXoa;
-        private Guna.UI2.WinForms.Guna2CircleButton btnSua;
     }
 }

@@ -50,7 +50,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.Control;
+            this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.Controls.Add(this.label2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -71,6 +71,7 @@
             // 
             // panel2
             // 
+            this.panel2.BackColor = System.Drawing.SystemColors.Control;
             this.panel2.Controls.Add(this.btnThem);
             this.panel2.Controls.Add(this.guna2Button1);
             this.panel2.Controls.Add(this.label1);
@@ -129,6 +130,7 @@
             // txt_timKiem
             // 
             this.txt_timKiem.Animated = true;
+            this.txt_timKiem.BackColor = System.Drawing.Color.White;
             this.txt_timKiem.BorderThickness = 0;
             this.txt_timKiem.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txt_timKiem.DefaultText = "";
@@ -233,7 +235,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1251, 850);
             this.Controls.Add(this.flp_list);
             this.Controls.Add(this.panel3);
