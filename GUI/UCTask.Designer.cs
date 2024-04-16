@@ -35,6 +35,8 @@
             this.guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2HtmlLabel6 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -50,8 +52,8 @@
             // 
             // progressBar1
             // 
-            this.progressBar1.Location = new System.Drawing.Point(0, 163);
-            this.progressBar1.Margin = new System.Windows.Forms.Padding(0, 0, 10, 5);
+            this.progressBar1.Location = new System.Drawing.Point(0, 162);
+            this.progressBar1.Margin = new System.Windows.Forms.Padding(0);
             this.progressBar1.Name = "progressBar1";
             this.progressBar1.Size = new System.Drawing.Size(227, 10);
             this.progressBar1.TabIndex = 2;
@@ -60,7 +62,8 @@
             // guna2HtmlLabel3
             // 
             this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel3.Location = new System.Drawing.Point(0, 138);
+            this.guna2HtmlLabel3.Location = new System.Drawing.Point(0, 139);
+            this.guna2HtmlLabel3.Margin = new System.Windows.Forms.Padding(1);
             this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
             this.guna2HtmlLabel3.Size = new System.Drawing.Size(66, 22);
             this.guna2HtmlLabel3.TabIndex = 3;
@@ -69,7 +72,8 @@
             // guna2HtmlLabel4
             // 
             this.guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel4.Location = new System.Drawing.Point(192, 138);
+            this.guna2HtmlLabel4.Location = new System.Drawing.Point(192, 139);
+            this.guna2HtmlLabel4.Margin = new System.Windows.Forms.Padding(1);
             this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
             this.guna2HtmlLabel4.Size = new System.Drawing.Size(35, 22);
             this.guna2HtmlLabel4.TabIndex = 4;
@@ -78,7 +82,7 @@
             // guna2HtmlLabel5
             // 
             this.guna2HtmlLabel5.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel5.Location = new System.Drawing.Point(60, 184);
+            this.guna2HtmlLabel5.Location = new System.Drawing.Point(60, 175);
             this.guna2HtmlLabel5.Name = "guna2HtmlLabel5";
             this.guna2HtmlLabel5.Size = new System.Drawing.Size(80, 22);
             this.guna2HtmlLabel5.TabIndex = 5;
@@ -103,24 +107,45 @@
             this.guna2TextBox1.PasswordChar = '\0';
             this.guna2TextBox1.PlaceholderText = "";
             this.guna2TextBox1.SelectedText = "";
-            this.guna2TextBox1.Size = new System.Drawing.Size(242, 89);
+            this.guna2TextBox1.Size = new System.Drawing.Size(242, 76);
             this.guna2TextBox1.TabIndex = 6;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Quan_Li_Luan_Van.Properties.Resources.heart;
-            this.pictureBox1.Location = new System.Drawing.Point(27, 185);
+            this.pictureBox1.Location = new System.Drawing.Point(27, 176);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(27, 21);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
             // 
+            // guna2HtmlLabel2
+            // 
+            this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel2.Location = new System.Drawing.Point(27, 120);
+            this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
+            this.guna2HtmlLabel2.Size = new System.Drawing.Size(70, 22);
+            this.guna2HtmlLabel2.TabIndex = 8;
+            this.guna2HtmlLabel2.Text = "Deadline:";
+            // 
+            // guna2HtmlLabel6
+            // 
+            this.guna2HtmlLabel6.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel6.ForeColor = System.Drawing.Color.Red;
+            this.guna2HtmlLabel6.Location = new System.Drawing.Point(103, 119);
+            this.guna2HtmlLabel6.Name = "guna2HtmlLabel6";
+            this.guna2HtmlLabel6.Size = new System.Drawing.Size(83, 22);
+            this.guna2HtmlLabel6.TabIndex = 9;
+            this.guna2HtmlLabel6.Text = "15/12/2024";
+            // 
             // UCTask
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.guna2HtmlLabel6);
+            this.Controls.Add(this.guna2HtmlLabel2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.guna2TextBox1);
             this.Controls.Add(this.guna2HtmlLabel5);
@@ -128,9 +153,9 @@
             this.Controls.Add(this.guna2HtmlLabel3);
             this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.guna2HtmlLabel1);
-            this.Margin = new System.Windows.Forms.Padding(0, 0, 10, 0);
+            this.Margin = new System.Windows.Forms.Padding(0, 0, 20, 10);
             this.Name = "UCTask";
-            this.Size = new System.Drawing.Size(250, 210);
+            this.Size = new System.Drawing.Size(250, 200);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -146,5 +171,7 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel5;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel6;
     }
 }
