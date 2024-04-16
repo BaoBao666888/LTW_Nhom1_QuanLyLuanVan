@@ -103,6 +103,7 @@
             this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBox1.Location = new System.Drawing.Point(4, 41);
             this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.guna2TextBox1.Multiline = true;
             this.guna2TextBox1.Name = "guna2TextBox1";
             this.guna2TextBox1.PasswordChar = '\0';
             this.guna2TextBox1.PlaceholderText = "";
@@ -153,7 +154,7 @@
             this.Controls.Add(this.guna2HtmlLabel3);
             this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.guna2HtmlLabel1);
-            this.Margin = new System.Windows.Forms.Padding(0, 0, 20, 10);
+            this.Margin = new System.Windows.Forms.Padding(0, 0, 40, 10);
             this.Name = "UCTask";
             this.Size = new System.Drawing.Size(250, 200);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

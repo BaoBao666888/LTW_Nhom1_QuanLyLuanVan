@@ -93,5 +93,15 @@ namespace Quan_Li_Luan_Van.GUI
                 this.Close();
             }
         }
+
+        private void btnTienDo_Click(object sender, EventArgs e)
+        {
+            pnl_childForm.Controls.Clear();
+            FTienDo fTienDo = new FTienDo();
+            fTienDo.TopLevel = false;
+            pnl_childForm.Controls.Add(fTienDo);
+            fTienDo.Dock = DockStyle.Fill;
+            fTienDo.Show();
+        }
     }
 }
