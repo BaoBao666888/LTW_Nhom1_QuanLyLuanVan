@@ -36,8 +36,8 @@ namespace Quan_Li_Luan_Van.DAO
         //Giảng viên từ chối đăng kí đề tài
         public static void TuChoiDeTai(string MaDT, string lyDoTuChoi)
         {
-            string sqlStr = string.Format($"update DangKiDeTai set TrangThai = N'Từ chối', LyDoTuChoi = N'{lyDoTuChoi}' where MaDT = '{MaDT}'");
-            
+            string sqlStr = string.Format($"update DangKi set TrangThai = N'Từ chối', LyDoTuChoi = N'{lyDoTuChoi}' where MaDT = '{MaDT}'");
+            DbConnection.Load(sqlStr);
         }
 
         //Giảng viên duyệt đề tài

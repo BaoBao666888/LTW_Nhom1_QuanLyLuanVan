@@ -16,10 +16,5 @@ namespace Quan_Li_Luan_Van.GUI
         {
             InitializeComponent();
         }
-
-        private void guna2HtmlLabel5_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

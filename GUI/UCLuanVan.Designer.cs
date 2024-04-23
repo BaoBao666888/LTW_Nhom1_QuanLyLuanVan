@@ -91,7 +91,7 @@
             this.lblTrangThai.Name = "lblTrangThai";
             this.lblTrangThai.Size = new System.Drawing.Size(120, 27);
             this.lblTrangThai.TabIndex = 15;
-            this.lblTrangThai.Text = "chưa có nhóm";
+            this.lblTrangThai.Text = "còn";
             this.lblTrangThai.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnDangKi

@@ -95,6 +95,7 @@
     <Compile Include="DAO\TaiKhoanDAO.cs" />
     <Compile Include="DTO\TaiKhoan.cs" />
     <Compile Include="DTO\DangKi.cs" />
+    <Compile Include="DTO\Task.cs" />
     <Compile Include="GUI\FChiTiet.cs">
       <SubType>Form</SubType>
     </Compile>

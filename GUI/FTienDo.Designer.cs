@@ -30,26 +30,26 @@
         {
             this.pnlTienDo = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
             this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.guna2TabControl1 = new Guna.UI2.WinForms.Guna2TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
+            this.guna2TabControl1 = new Guna.UI2.WinForms.Guna2TabControl();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.pnlTienDo.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.guna2TabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlTienDo
@@ -60,7 +60,7 @@
             this.pnlTienDo.Location = new System.Drawing.Point(0, 0);
             this.pnlTienDo.Margin = new System.Windows.Forms.Padding(0);
             this.pnlTienDo.Name = "pnlTienDo";
-            this.pnlTienDo.Size = new System.Drawing.Size(1256, 300);
+            this.pnlTienDo.Size = new System.Drawing.Size(1256, 329);
             this.pnlTienDo.TabIndex = 0;
             // 
             // panel3
@@ -70,8 +70,19 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(403, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(853, 300);
+            this.panel3.Size = new System.Drawing.Size(853, 329);
             this.panel3.TabIndex = 2;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.DeepSkyBlue;
+            this.label1.Location = new System.Drawing.Point(16, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(179, 38);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Today\'s Task";
             // 
             // flowLayoutPanel1
             // 
@@ -82,7 +93,7 @@
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 47);
             this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(853, 253);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(853, 282);
             this.flowLayoutPanel1.TabIndex = 0;
             this.flowLayoutPanel1.WrapContents = false;
             // 
@@ -95,15 +106,26 @@
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(403, 300);
+            this.panel2.Size = new System.Drawing.Size(403, 329);
             this.panel2.TabIndex = 1;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.DeepSkyBlue;
+            this.label2.Location = new System.Drawing.Point(135, 9);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(132, 38);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Calendar";
             // 
             // monthCalendar1
             // 
             this.monthCalendar1.BackColor = System.Drawing.Color.White;
             this.monthCalendar1.BoldedDates = new System.DateTime[] {
         new System.DateTime(2024, 4, 25, 0, 0, 0, 0)};
-            this.monthCalendar1.Location = new System.Drawing.Point(79, 47);
+            this.monthCalendar1.Location = new System.Drawing.Point(81, 66);
             this.monthCalendar1.Name = "monthCalendar1";
             this.monthCalendar1.TabIndex = 0;
             // 
@@ -112,33 +134,32 @@
             this.panel1.Controls.Add(this.panel4);
             this.panel1.Controls.Add(this.guna2TabControl1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 300);
+            this.panel1.Location = new System.Drawing.Point(0, 329);
             this.panel1.Margin = new System.Windows.Forms.Padding(0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1256, 494);
+            this.panel1.Size = new System.Drawing.Size(1256, 465);
             this.panel1.TabIndex = 1;
             // 
-            // label1
+            // panel4
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label1.Location = new System.Drawing.Point(16, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(179, 38);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Today\'s Task";
+            this.panel4.Controls.Add(this.label3);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel4.Location = new System.Drawing.Point(0, 0);
+            this.panel4.Margin = new System.Windows.Forms.Padding(1);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(1256, 63);
+            this.panel4.TabIndex = 1;
             // 
-            // label2
+            // label3
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label2.Location = new System.Drawing.Point(135, 9);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(132, 38);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Calendar";
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label3.Location = new System.Drawing.Point(37, 9);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(158, 48);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "My Task";
             // 
             // guna2TabControl1
             // 
@@ -147,11 +168,11 @@
             this.guna2TabControl1.Controls.Add(this.tabPage3);
             this.guna2TabControl1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.guna2TabControl1.ItemSize = new System.Drawing.Size(150, 30);
-            this.guna2TabControl1.Location = new System.Drawing.Point(0, 177);
+            this.guna2TabControl1.Location = new System.Drawing.Point(0, 25);
             this.guna2TabControl1.Margin = new System.Windows.Forms.Padding(1);
             this.guna2TabControl1.Name = "guna2TabControl1";
             this.guna2TabControl1.SelectedIndex = 0;
-            this.guna2TabControl1.Size = new System.Drawing.Size(1256, 317);
+            this.guna2TabControl1.Size = new System.Drawing.Size(1256, 440);
             this.guna2TabControl1.TabButtonHoverState.BorderColor = System.Drawing.Color.Empty;
             this.guna2TabControl1.TabButtonHoverState.FillColor = System.Drawing.Color.Transparent;
             this.guna2TabControl1.TabButtonHoverState.Font = new System.Drawing.Font("Segoe UI Semibold", 10F);
@@ -179,40 +200,9 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 34);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1248, 279);
+            this.tabPage1.Size = new System.Drawing.Size(1248, 402);
             this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "tabPage1";
-            // 
-            // tabPage2
-            // 
-            this.tabPage2.BackColor = System.Drawing.Color.Azure;
-            this.tabPage2.Location = new System.Drawing.Point(4, 34);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1248, 279);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "tabPage2";
-            // 
-            // panel4
-            // 
-            this.panel4.Controls.Add(this.label3);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel4.Location = new System.Drawing.Point(0, 0);
-            this.panel4.Margin = new System.Windows.Forms.Padding(1);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1256, 56);
-            this.panel4.TabIndex = 1;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label3.Location = new System.Drawing.Point(37, 9);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(158, 48);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "My Task";
+            this.tabPage1.Text = "Tất cả";
             // 
             // flowLayoutPanel2
             // 
@@ -223,8 +213,18 @@
             this.flowLayoutPanel2.Margin = new System.Windows.Forms.Padding(0);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
             this.flowLayoutPanel2.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(1242, 273);
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(1242, 396);
             this.flowLayoutPanel2.TabIndex = 1;
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.BackColor = System.Drawing.Color.Azure;
+            this.tabPage2.Location = new System.Drawing.Point(4, 34);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(1248, 418);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Đang làm";
             // 
             // tabPage3
             // 
@@ -232,9 +232,9 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 34);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(1248, 279);
+            this.tabPage3.Size = new System.Drawing.Size(1248, 418);
             this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "tabPage3";
+            this.tabPage3.Text = "Hết hạn";
             // 
             // FTienDo
             // 
@@ -253,10 +253,10 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
-            this.guna2TabControl1.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            this.guna2TabControl1.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
