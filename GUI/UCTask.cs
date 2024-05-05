@@ -15,11 +15,24 @@ namespace Quan_Li_Luan_Van.GUI
     public partial class UCTask : UserControl
     {
         DTO.Task task;
-        public UCTask(DTO.Task task)
+        public UCTask(DTO.Task task, string VaiTro)
         {
             InitializeComponent();
             this.task = task;
             this.LoadData();
+            this.PermissionControl(VaiTro);
+        }
+
+        private void PermissionControl(string VaiTro)
+        {
+            if(VaiTro == "Giảng viên")
+            {
+                btnTienDo.Hide();
+            }    
+            else
+            {
+                btnDanhGia.Hide();
+            }    
         }
 
         private void LoadData()

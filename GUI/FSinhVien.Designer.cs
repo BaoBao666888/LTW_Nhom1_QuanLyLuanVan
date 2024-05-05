@@ -128,6 +128,7 @@
             this.guna2Button3.Size = new System.Drawing.Size(350, 114);
             this.guna2Button3.TabIndex = 7;
             this.guna2Button3.Text = "Tiến độ";
+            this.guna2Button3.Click += new System.EventHandler(this.guna2Button3_Click);
             // 
             // btnDangKi
             // 

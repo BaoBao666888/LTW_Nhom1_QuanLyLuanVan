@@ -99,7 +99,7 @@
             this.txtTenDeTai.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtTenDeTai.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTenDeTai.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTenDeTai.Location = new System.Drawing.Point(4, 67);
+            this.txtTenDeTai.Location = new System.Drawing.Point(-1, 67);
             this.txtTenDeTai.Margin = new System.Windows.Forms.Padding(1);
             this.txtTenDeTai.Multiline = true;
             this.txtTenDeTai.Name = "txtTenDeTai";
@@ -107,7 +107,7 @@
             this.txtTenDeTai.PlaceholderText = "";
             this.txtTenDeTai.ReadOnly = true;
             this.txtTenDeTai.SelectedText = "";
-            this.txtTenDeTai.Size = new System.Drawing.Size(266, 72);
+            this.txtTenDeTai.Size = new System.Drawing.Size(271, 72);
             this.txtTenDeTai.TabIndex = 11;
             // 
             // btnTienDo

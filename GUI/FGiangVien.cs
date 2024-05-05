@@ -97,7 +97,7 @@ namespace Quan_Li_Luan_Van.GUI
         private void btnTienDo_Click(object sender, EventArgs e)
         {
             pnl_childForm.Controls.Clear();
-            FTienDo fTienDo = new FTienDo();
+            FTienDo fTienDo = new FTienDo(giangVien);
             fTienDo.TopLevel = false;
             pnl_childForm.Controls.Add(fTienDo);
             fTienDo.Dock = DockStyle.Fill;

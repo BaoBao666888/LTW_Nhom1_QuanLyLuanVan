@@ -43,6 +43,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.flp_list = new System.Windows.Forms.FlowLayoutPanel();
+            this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -164,6 +165,7 @@
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.guna2Separator1);
             this.panel3.Controls.Add(this.label8);
             this.panel3.Controls.Add(this.label7);
             this.panel3.Controls.Add(this.label6);
@@ -231,6 +233,14 @@
             this.flp_list.Size = new System.Drawing.Size(1251, 610);
             this.flp_list.TabIndex = 0;
             // 
+            // guna2Separator1
+            // 
+            this.guna2Separator1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.guna2Separator1.Location = new System.Drawing.Point(0, 38);
+            this.guna2Separator1.Name = "guna2Separator1";
+            this.guna2Separator1.Size = new System.Drawing.Size(1251, 10);
+            this.guna2Separator1.TabIndex = 5;
+            // 
             // FLuanVan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -272,5 +282,6 @@
         private System.Windows.Forms.FlowLayoutPanel flp_list;
         private System.Windows.Forms.Label label8;
         private Guna.UI2.WinForms.Guna2Button btnThem;
+        private Guna.UI2.WinForms.Guna2Separator guna2Separator1;
     }
 }

@@ -32,6 +32,7 @@ namespace Quan_Li_Luan_Van.GUI
             btnLuu.Hide();
             txtMaTask.ReadOnly = true;
             txtTenDT.ReadOnly = true;
+            txtTenTask.ReadOnly = true;
             txtMoTa.ReadOnly = true;
             txtTyLeHoanThanh.ReadOnly = true;
             cb_maDT.Items.Clear();
@@ -42,6 +43,7 @@ namespace Quan_Li_Luan_Van.GUI
             txtMaTask.Text = task.MaTask;
             cb_maDT.Text = task.MaDT;
             txtTenDT.Text = LuanVanDAO.GetLuanVanBYMaDT(task.MaDT).TenDeTai;
+            txtTenTask.Text = task.TenTask;
             txtMoTa.Text = task.MoTa;
             dt_deadline.Value = task.Deadline;
             txtTyLeHoanThanh.Text = task.TyLeHoanThanh.ToString();
@@ -65,9 +67,34 @@ namespace Quan_Li_Luan_Van.GUI
             txtTenDT.Text = lv.TenDeTai;
         }
 
-        private void guna2ImageButton1_Click(object sender, EventArgs e)
+        private void btn_exit_Click(object sender, EventArgs e)
         {
+            this.DialogResult = DialogResult.Cancel;
             this.Close();
+        }
+
+        private void btnLuu_Click(object sender, EventArgs e)
+        {
+            if (this.checkData())
+            {
+                DTO.Task task = new DTO.Task(txtMaTask.Text, cb_maDT.Text, txtTenTask.Text, txtMoTa.Text, 0, dt_deadline.Value);
+                TaskDAO.ThemTask(task);
+                this.DialogResult = DialogResult.OK;
+                this.Close();
+            }
+            else
+                MessageBox.Show("Vui lòng kiểm tra lại dữ liệu nhập vào!");
+
+        }
+
+        private bool checkData()
+        {
+            if (string.IsNullOrEmpty(txtMaTask.Text) || string.IsNullOrEmpty(txtMoTa.Text) || string.IsNullOrEmpty(cb_maDT.Text) || dt_deadline.Value < DateTime.Now)
+            {
+                return false;
+            }
+            else
+                return true;
         }
     }
 }
