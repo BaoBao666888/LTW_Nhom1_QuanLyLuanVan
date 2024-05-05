@@ -10,7 +10,12 @@ namespace Quan_Li_Luan_Van.DAO
 {
     public class LuanVanDAO
     {
-
+        public static LuanVan GetLuanVanBYMaDT(string MaDT)
+        {
+            string sqlStr = string.Format($"select * from DeTai where MaDT = '{MaDT}'");
+            DataTable dt = DbConnection.Load(sqlStr);
+            return new LuanVan(dt.Rows[0]["MaDT"].ToString(), dt.Rows[0]["TenDeTai"].ToString(), dt.Rows[0]["TheLoai"].ToString(), dt.Rows[0]["MoTa"].ToString(), dt.Rows[0]["CongNghe"].ToString(), dt.Rows[0]["YeuCau"].ToString(), dt.Rows[0]["ChucNang"].ToString(), dt.Rows[0]["MSGV"].ToString(), int.Parse(dt.Rows[0]["SoLuongSV"].ToString()));
+        }
         public static DataTable GetDataByMaDT(string MaDT)
         {
             string sqlStr = string.Format($"select * from DeTai where MaDT like '%{MaDT}%'");

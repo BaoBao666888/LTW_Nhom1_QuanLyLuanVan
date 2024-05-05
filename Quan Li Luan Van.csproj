@@ -93,6 +93,7 @@
     <Compile Include="DAO\DangKiDAO.cs" />
     <Compile Include="DAO\DbConnection.cs" />
     <Compile Include="DAO\TaiKhoanDAO.cs" />
+    <Compile Include="DAO\TaskDAO.cs" />
     <Compile Include="DTO\TaiKhoan.cs" />
     <Compile Include="DTO\DangKi.cs" />
     <Compile Include="DTO\Task.cs" />
@@ -154,6 +155,12 @@
     <Compile Include="DAO\GiangVienDAO.cs" />
     <Compile Include="DTO\LuanVan.cs" />
     <Compile Include="DAO\LuanVanDAO.cs" />
+    <Compile Include="GUI\FThemTask.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FThemTask.Designer.cs">
+      <DependentUpon>FThemTask.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\FTienDo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -208,6 +215,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\FThemLuanVan.resx">
       <DependentUpon>FThemLuanVan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FThemTask.resx">
+      <DependentUpon>FThemTask.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\FTienDo.resx">
       <DependentUpon>FTienDo.cs</DependentUpon>
@@ -295,6 +305,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\heart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\x-button.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
