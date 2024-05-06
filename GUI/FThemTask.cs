@@ -19,8 +19,9 @@ namespace Quan_Li_Luan_Van.GUI
         {
             InitializeComponent();
             this.LoadData();
+            btn_upload.Hide();
         }
-        public FThemTask(DTO.Task task)
+        public FThemTask(DTO.Task task, string VaiTro)
         {
             InitializeComponent();
             this.LoadData(task);

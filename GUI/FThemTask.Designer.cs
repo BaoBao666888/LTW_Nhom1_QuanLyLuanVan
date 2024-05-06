@@ -45,6 +45,7 @@
             this.btn_exit = new Guna.UI2.WinForms.Guna2Button();
             this.txtTenTask = new Guna.UI2.WinForms.Guna2TextBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.btn_upload = new Guna.UI2.WinForms.Guna2Button();
             this.SuspendLayout();
             // 
             // label1
@@ -268,11 +269,32 @@
             this.label6.TabIndex = 19;
             this.label6.Text = "Tên Task:";
             // 
+            // btn_upload
+            // 
+            this.btn_upload.Animated = true;
+            this.btn_upload.BorderColor = System.Drawing.Color.RoyalBlue;
+            this.btn_upload.BorderThickness = 2;
+            this.btn_upload.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_upload.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_upload.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_upload.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_upload.FillColor = System.Drawing.Color.Transparent;
+            this.btn_upload.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.btn_upload.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.btn_upload.HoverState.BorderColor = System.Drawing.Color.Teal;
+            this.btn_upload.Image = global::Quan_Li_Luan_Van.Properties.Resources.file;
+            this.btn_upload.Location = new System.Drawing.Point(13, 561);
+            this.btn_upload.Name = "btn_upload";
+            this.btn_upload.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_upload.Size = new System.Drawing.Size(100, 45);
+            this.btn_upload.TabIndex = 21;
+            // 
             // FThemTask
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(307, 608);
+            this.Controls.Add(this.btn_upload);
             this.Controls.Add(this.txtTenTask);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.btn_exit);
@@ -318,5 +340,6 @@
         private Guna.UI2.WinForms.Guna2Button btn_exit;
         private Guna.UI2.WinForms.Guna2TextBox txtTenTask;
         private System.Windows.Forms.Label label6;
+        private Guna.UI2.WinForms.Guna2Button btn_upload;
     }
 }

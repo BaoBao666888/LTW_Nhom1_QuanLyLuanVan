@@ -15,10 +15,12 @@ namespace Quan_Li_Luan_Van.GUI
     public partial class UCTask : UserControl
     {
         DTO.Task task;
+        string vaiTro;
         public UCTask(DTO.Task task, string VaiTro)
         {
             InitializeComponent();
             this.task = task;
+            this.vaiTro = VaiTro;
             this.LoadData();
             this.PermissionControl(VaiTro);
         }
@@ -47,7 +49,7 @@ namespace Quan_Li_Luan_Van.GUI
 
         private void UCTask_Click(object sender, EventArgs e)
         {
-            FThemTask fThemTask = new FThemTask(task);
+            FThemTask fThemTask = new FThemTask(task, vaiTro);
             fThemTask.ShowDialog();
         }
     }

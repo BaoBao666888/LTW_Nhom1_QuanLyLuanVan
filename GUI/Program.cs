@@ -16,7 +16,7 @@ namespace Quan_Li_Luan_Van.GUI
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FCapNhatTienDo());
+            Application.Run(new FLogin());
         }
     }
 }

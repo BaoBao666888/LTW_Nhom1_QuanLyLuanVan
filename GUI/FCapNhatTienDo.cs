@@ -38,7 +38,7 @@ namespace Quan_Li_Luan_Van.GUI
             {
                 document.IdFile = txt_idFile.Text;
                 document.MaTask = txt_maTask.Text;
-                document.MoTa = txtMoTa.Text;
+                document.MoTa = txt_moTa.Text;
                 document.ThoiGianUp = DateTime.Now;
                 document.Data = new Byte[stream.Length];
                 stream.Read(document.Data, 0, document.Data.Length);
