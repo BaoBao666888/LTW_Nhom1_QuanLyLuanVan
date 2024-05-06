@@ -30,7 +30,7 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.guna2Button5 = new Guna.UI2.WinForms.Guna2Button();
+            this.btnTraoDoi = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button4 = new Guna.UI2.WinForms.Guna2Button();
             this.btnTienDo = new Guna.UI2.WinForms.Guna2Button();
             this.btnDangKi = new Guna.UI2.WinForms.Guna2Button();
@@ -66,7 +66,7 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.guna2Button5);
+            this.panel2.Controls.Add(this.btnTraoDoi);
             this.panel2.Controls.Add(this.guna2Button4);
             this.panel2.Controls.Add(this.btnTienDo);
             this.panel2.Controls.Add(this.btnDangKi);
@@ -77,24 +77,25 @@
             this.panel2.Size = new System.Drawing.Size(350, 580);
             this.panel2.TabIndex = 6;
             // 
-            // guna2Button5
+            // btnTraoDoi
             // 
-            this.guna2Button5.Animated = true;
-            this.guna2Button5.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Button5.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button5.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button5.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button5.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2Button5.FillColor = System.Drawing.SystemColors.ControlDark;
-            this.guna2Button5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.guna2Button5.ForeColor = System.Drawing.Color.White;
-            this.guna2Button5.ImageOffset = new System.Drawing.Point(-3, 0);
-            this.guna2Button5.Location = new System.Drawing.Point(0, 456);
-            this.guna2Button5.Name = "guna2Button5";
-            this.guna2Button5.Size = new System.Drawing.Size(350, 114);
-            this.guna2Button5.TabIndex = 9;
-            this.guna2Button5.Text = "Trao đổi";
+            this.btnTraoDoi.Animated = true;
+            this.btnTraoDoi.BackColor = System.Drawing.Color.Transparent;
+            this.btnTraoDoi.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnTraoDoi.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnTraoDoi.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnTraoDoi.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnTraoDoi.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnTraoDoi.FillColor = System.Drawing.SystemColors.ControlDark;
+            this.btnTraoDoi.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.btnTraoDoi.ForeColor = System.Drawing.Color.White;
+            this.btnTraoDoi.ImageOffset = new System.Drawing.Point(-3, 0);
+            this.btnTraoDoi.Location = new System.Drawing.Point(0, 456);
+            this.btnTraoDoi.Name = "btnTraoDoi";
+            this.btnTraoDoi.Size = new System.Drawing.Size(350, 114);
+            this.btnTraoDoi.TabIndex = 9;
+            this.btnTraoDoi.Text = "Trao đổi";
+            this.btnTraoDoi.Click += new System.EventHandler(this.btnTraoDoi_Click);
             // 
             // guna2Button4
             // 
@@ -321,7 +322,7 @@
         private Guna.UI2.WinForms.Guna2Panel pnl_buttons;
         private Guna.UI2.WinForms.Guna2Button btnLogOut;
         private System.Windows.Forms.Panel panel2;
-        private Guna.UI2.WinForms.Guna2Button guna2Button5;
+        private Guna.UI2.WinForms.Guna2Button btnTraoDoi;
         private Guna.UI2.WinForms.Guna2Button guna2Button4;
         private Guna.UI2.WinForms.Guna2Button btnTienDo;
         private Guna.UI2.WinForms.Guna2Button btnDangKi;
