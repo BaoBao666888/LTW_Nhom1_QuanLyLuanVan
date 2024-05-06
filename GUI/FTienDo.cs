@@ -42,7 +42,15 @@ namespace Quan_Li_Luan_Van.GUI
                 dt = TaskDAO.GetDataByMSGV(gv.MSGV, cb_filter.Text);
             }
             else
+            {
                 dt = TaskDAO.GetDataByMSSV(sv.MSSV, cb_filter.Text);
+                if (DangKiDAO.GetObjLuanVan(sv.MSSV) != null)
+                {
+                    lbl_tenDT.Text = DangKiDAO.GetObjLuanVan(sv.MSSV).TenDeTai;
+                }
+                else
+                    lbl_tenDT.Text = "Vui lòng đăng kí đề tài";
+            }
             flp_danhSachTask.Controls.Clear();
 
             for (int i = 0; i < dt.Rows.Count; i++)
@@ -69,6 +77,11 @@ namespace Quan_Li_Luan_Van.GUI
         }
 
         private void cb_filter_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            this.LoadData();
+        }
+
+        private void btn_refresh_Click(object sender, EventArgs e)
         {
             this.LoadData();
         }

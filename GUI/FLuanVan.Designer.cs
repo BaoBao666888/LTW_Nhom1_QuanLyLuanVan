@@ -37,13 +37,13 @@
             this.txt_timKiem = new Guna.UI2.WinForms.Guna2TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.flp_list = new System.Windows.Forms.FlowLayoutPanel();
-            this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -72,7 +72,7 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.SystemColors.Control;
+            this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.Controls.Add(this.btnThem);
             this.panel2.Controls.Add(this.guna2Button1);
             this.panel2.Controls.Add(this.label1);
@@ -91,13 +91,15 @@
             this.btnThem.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnThem.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnThem.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnThem.FillColor = System.Drawing.Color.DarkGray;
+            this.btnThem.FillColor = System.Drawing.Color.White;
             this.btnThem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnThem.ForeColor = System.Drawing.Color.White;
+            this.btnThem.HoverState.FillColor = System.Drawing.Color.Transparent;
             this.btnThem.Image = global::Quan_Li_Luan_Van.Properties.Resources.plus__1_;
             this.btnThem.ImageSize = new System.Drawing.Size(30, 30);
             this.btnThem.Location = new System.Drawing.Point(1191, 48);
             this.btnThem.Name = "btnThem";
+            this.btnThem.PressedColor = System.Drawing.Color.Gray;
             this.btnThem.Size = new System.Drawing.Size(52, 50);
             this.btnThem.TabIndex = 38;
             this.btnThem.Click += new System.EventHandler(this.guna2Button2_Click);
@@ -132,6 +134,7 @@
             // 
             this.txt_timKiem.Animated = true;
             this.txt_timKiem.BackColor = System.Drawing.Color.White;
+            this.txt_timKiem.BorderColor = System.Drawing.Color.Black;
             this.txt_timKiem.BorderThickness = 0;
             this.txt_timKiem.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txt_timKiem.DefaultText = "";
@@ -156,10 +159,11 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(3, 23);
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.label3.Location = new System.Drawing.Point(12, 3);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(197, 28);
+            this.label3.Size = new System.Drawing.Size(236, 32);
             this.label3.TabIndex = 0;
             this.label3.Text = "Danh sách luận văn";
             // 
@@ -176,6 +180,14 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1251, 48);
             this.panel3.TabIndex = 10;
+            // 
+            // guna2Separator1
+            // 
+            this.guna2Separator1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.guna2Separator1.Location = new System.Drawing.Point(0, 38);
+            this.guna2Separator1.Name = "guna2Separator1";
+            this.guna2Separator1.Size = new System.Drawing.Size(1251, 10);
+            this.guna2Separator1.TabIndex = 5;
             // 
             // label8
             // 
@@ -232,14 +244,6 @@
             this.flp_list.Name = "flp_list";
             this.flp_list.Size = new System.Drawing.Size(1251, 610);
             this.flp_list.TabIndex = 0;
-            // 
-            // guna2Separator1
-            // 
-            this.guna2Separator1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.guna2Separator1.Location = new System.Drawing.Point(0, 38);
-            this.guna2Separator1.Name = "guna2Separator1";
-            this.guna2Separator1.Size = new System.Drawing.Size(1251, 10);
-            this.guna2Separator1.TabIndex = 5;
             // 
             // FLuanVan
             // 

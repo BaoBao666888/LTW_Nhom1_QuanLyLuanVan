@@ -62,6 +62,17 @@ namespace Quan_Li_Luan_Van.DAO
             return DbConnection.Load(sqlStr);
         }
 
+        //lấy thông tin đề tài theo mã sinh viên đã đăng kí thành công
+        public static LuanVan GetObjLuanVan(string MSSV)
+        {
+            string sqlStr = string.Format($"select * from DangKi inner join DeTai on DeTai.MaDT = DangKi.MaDT where DangKi.MSSV = '{MSSV}' and DangKi.TrangThai = N'Đã duyệt'");
+            DataTable dt = DbConnection.Load(sqlStr);
+            if (dt.Rows.Count > 0)
+                return new LuanVan(dt.Rows[0]["MaDT"].ToString(), dt.Rows[0]["TenDeTai"].ToString(), dt.Rows[0]["TheLoai"].ToString(), dt.Rows[0]["MoTa"].ToString(), dt.Rows[0]["CongNghe"].ToString(), dt.Rows[0]["YeuCau"].ToString(), dt.Rows[0]["ChucNang"].ToString(), dt.Rows[0]["MSGV"].ToString(), int.Parse(dt.Rows[0]["SoLuongSV"].ToString()));
+            else
+                return null;
+        }
+
         //thêm
         public static void DangKiDeTai(DangKi dangKi)
         {

@@ -329,5 +329,8 @@
   <ItemGroup>
     <None Include="Resources\downloads.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refresh-page-option.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

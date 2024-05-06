@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Quan_Li_Luan_Van.DTO;
 using Quan_Li_Luan_Van.DAO;
+using System.Diagnostics;
 
 namespace Quan_Li_Luan_Van.GUI
 {
@@ -50,7 +51,11 @@ namespace Quan_Li_Luan_Van.GUI
         private void UCTask_Click(object sender, EventArgs e)
         {
             FThemTask fThemTask = new FThemTask(task, vaiTro);
-            fThemTask.ShowDialog();
+            DialogResult res = fThemTask.ShowDialog();
+            if(res == DialogResult.OK)
+            {
+                this.LoadData();
+            }
         }
     }
 }

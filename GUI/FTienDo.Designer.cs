@@ -31,19 +31,21 @@
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.cb_filter = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.btn_them = new Guna.UI2.WinForms.Guna2ImageButton();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lbl_tenDT = new System.Windows.Forms.Label();
             this.flp_danhSachTask = new System.Windows.Forms.FlowLayoutPanel();
             this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
+            this.btn_refresh = new Guna.UI2.WinForms.Guna2Button();
+            this.btn_them = new Guna.UI2.WinForms.Guna2ImageButton();
             this.guna2Panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // guna2Panel1
             // 
+            this.guna2Panel1.Controls.Add(this.btn_refresh);
             this.guna2Panel1.Controls.Add(this.cb_filter);
             this.guna2Panel1.Controls.Add(this.label2);
             this.guna2Panel1.Controls.Add(this.btn_them);
-            this.guna2Panel1.Controls.Add(this.label1);
+            this.guna2Panel1.Controls.Add(this.lbl_tenDT);
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
             this.guna2Panel1.Name = "guna2Panel1";
@@ -74,32 +76,16 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "Filter:";
             // 
-            // btn_them
+            // lbl_tenDT
             // 
-            this.btn_them.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.btn_them.HoverState.ImageSize = new System.Drawing.Size(35, 35);
-            this.btn_them.Image = global::Quan_Li_Luan_Van.Properties.Resources.plus__1_;
-            this.btn_them.ImageOffset = new System.Drawing.Point(0, 0);
-            this.btn_them.ImageRotate = 0F;
-            this.btn_them.ImageSize = new System.Drawing.Size(35, 35);
-            this.btn_them.Location = new System.Drawing.Point(1180, 76);
-            this.btn_them.Name = "btn_them";
-            this.btn_them.PressedState.ImageRotate = 1F;
-            this.btn_them.PressedState.ImageSize = new System.Drawing.Size(28, 28);
-            this.btn_them.Size = new System.Drawing.Size(64, 54);
-            this.btn_them.TabIndex = 0;
-            this.btn_them.Click += new System.EventHandler(this.btn_them_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.DeepSkyBlue;
-            this.label1.Location = new System.Drawing.Point(12, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(376, 65);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Danh Sách Task";
+            this.lbl_tenDT.AutoSize = true;
+            this.lbl_tenDT.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_tenDT.ForeColor = System.Drawing.Color.DeepSkyBlue;
+            this.lbl_tenDT.Location = new System.Drawing.Point(12, 9);
+            this.lbl_tenDT.Name = "lbl_tenDT";
+            this.lbl_tenDT.Size = new System.Drawing.Size(376, 65);
+            this.lbl_tenDT.TabIndex = 1;
+            this.lbl_tenDT.Text = "Danh Sách Task";
             // 
             // flp_danhSachTask
             // 
@@ -118,6 +104,40 @@
             this.guna2Separator1.Name = "guna2Separator1";
             this.guna2Separator1.Size = new System.Drawing.Size(1256, 10);
             this.guna2Separator1.TabIndex = 0;
+            // 
+            // btn_refresh
+            // 
+            this.btn_refresh.Animated = true;
+            this.btn_refresh.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_refresh.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_refresh.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_refresh.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_refresh.FillColor = System.Drawing.Color.Transparent;
+            this.btn_refresh.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btn_refresh.ForeColor = System.Drawing.Color.White;
+            this.btn_refresh.Image = global::Quan_Li_Luan_Van.Properties.Resources.refresh_page_option;
+            this.btn_refresh.Location = new System.Drawing.Point(1104, 82);
+            this.btn_refresh.Name = "btn_refresh";
+            this.btn_refresh.PressedColor = System.Drawing.Color.Gray;
+            this.btn_refresh.Size = new System.Drawing.Size(70, 45);
+            this.btn_refresh.TabIndex = 5;
+            this.btn_refresh.Click += new System.EventHandler(this.btn_refresh_Click);
+            // 
+            // btn_them
+            // 
+            this.btn_them.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btn_them.HoverState.ImageSize = new System.Drawing.Size(35, 35);
+            this.btn_them.Image = global::Quan_Li_Luan_Van.Properties.Resources.plus__1_;
+            this.btn_them.ImageOffset = new System.Drawing.Point(0, 0);
+            this.btn_them.ImageRotate = 0F;
+            this.btn_them.ImageSize = new System.Drawing.Size(35, 35);
+            this.btn_them.Location = new System.Drawing.Point(1180, 76);
+            this.btn_them.Name = "btn_them";
+            this.btn_them.PressedState.ImageRotate = 1F;
+            this.btn_them.PressedState.ImageSize = new System.Drawing.Size(28, 28);
+            this.btn_them.Size = new System.Drawing.Size(64, 54);
+            this.btn_them.TabIndex = 0;
+            this.btn_them.Click += new System.EventHandler(this.btn_them_Click);
             // 
             // FTienDo
             // 
@@ -140,11 +160,12 @@
         #endregion
 
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lbl_tenDT;
         private System.Windows.Forms.FlowLayoutPanel flp_danhSachTask;
         private Guna.UI2.WinForms.Guna2Separator guna2Separator1;
         private Guna.UI2.WinForms.Guna2ImageButton btn_them;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox cb_filter;
+        private Guna.UI2.WinForms.Guna2Button btn_refresh;
     }
 }

@@ -15,27 +15,37 @@ namespace Quan_Li_Luan_Van.GUI
 {
     public partial class FThemTask : Form
     {
+        DTO.Task task;
+        string VaiTro;
         public FThemTask()
         {
             InitializeComponent();
             this.LoadData();
             btn_upload.Hide();
+            btnSua.Hide();
+            txtTyLeHoanThanh.Hide();
         }
         public FThemTask(DTO.Task task, string VaiTro)
         {
             InitializeComponent();
+            this.task = task;
+            this.VaiTro = VaiTro;
             this.LoadData(task);
             this.PermissionControlForShowDetail();
         }
 
         private void PermissionControlForShowDetail()
         {
+            if(VaiTro == "Giảng viên")
+            {
+                btnSua.Hide();
+                txtTyLeHoanThanh.ReadOnly = true;
+            }    
             btnLuu.Hide();
             txtMaTask.ReadOnly = true;
             txtTenDT.ReadOnly = true;
             txtTenTask.ReadOnly = true;
             txtMoTa.ReadOnly = true;
-            txtTyLeHoanThanh.ReadOnly = true;
             cb_maDT.Items.Clear();
         }
 
@@ -96,6 +106,38 @@ namespace Quan_Li_Luan_Van.GUI
             }
             else
                 return true;
+        }
+
+        private void btn_upload_Click(object sender, EventArgs e)
+        {
+            FCapNhatTienDo fCapNhatTienDo = new FCapNhatTienDo(task, VaiTro);
+            DialogResult res = fCapNhatTienDo.ShowDialog();
+            if (res == DialogResult.OK)
+            {
+                MessageBox.Show("Tác vụ thành công");
+            }
+            else
+                MessageBox.Show("Đã hủy");
+        }
+
+        private void btnSua_Click(object sender, EventArgs e)
+        {
+            if (txtTyLeHoanThanh.Value > 0)
+            {
+                DTO.Task task = new DTO.Task(txtMaTask.Text, cb_maDT.Text, txtTenTask.Text, txtMoTa.Text, int.Parse(txtTyLeHoanThanh.Value.ToString()), dt_deadline.Value);
+                TaskDAO.UpdateTask(task);
+                this.DialogResult = DialogResult.OK;
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("tỷ lệ hoàn thành chưa hợp lệ");
+            }
+        }
+
+        private void txtTyLeHoanThanh_ValueChanged(object sender, EventArgs e)
+        {
+            pgb_tyLeHoanThanh.Value = int.Parse(txtTyLeHoanThanh.Value.ToString());
         }
     }
 }

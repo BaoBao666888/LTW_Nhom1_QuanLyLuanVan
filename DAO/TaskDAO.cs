@@ -73,5 +73,11 @@ namespace Quan_Li_Luan_Van.DAO
             string sqlStr = string.Format($"insert into Task values ('{task.MaTask}', '{task.MaDT}', N'{task.TenTask}', N'{task.MoTa}', 0, '{task.Deadline.ToString("yyyy-MM-dd")}')");
             DbConnection.ThucThi(sqlStr);
         }
+
+        public static void UpdateTask(DTO.Task task)
+        {
+            string sqlStr = string.Format($"update Task set TyLeHoanThanh = {task.TyLeHoanThanh} where Task.MaTask = '{task.MaTask}'");
+            DbConnection.ThucThi(sqlStr);
+        }
     }
 }

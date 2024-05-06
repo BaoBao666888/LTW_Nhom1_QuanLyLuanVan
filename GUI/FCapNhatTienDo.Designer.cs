@@ -32,18 +32,16 @@
             this.txt_idFile = new System.Windows.Forms.TextBox();
             this.txtTimKiem = new System.Windows.Forms.TextBox();
             this.btn_timKiem = new System.Windows.Forms.Button();
-            this.dgv_documents = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.txt_moTa = new Guna.UI2.WinForms.Guna2TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.txt_thoiGianUp = new System.Windows.Forms.TextBox();
+            this.btnDownload = new Guna.UI2.WinForms.Guna2Button();
+            this.btnUpdate = new Guna.UI2.WinForms.Guna2Button();
             this.btnSave = new Guna.UI2.WinForms.Guna2Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_documents)).BeginInit();
             this.SuspendLayout();
             // 
             // txt_maTask
@@ -65,6 +63,7 @@
             // 
             this.txtTimKiem.Location = new System.Drawing.Point(37, 210);
             this.txtTimKiem.Name = "txtTimKiem";
+            this.txtTimKiem.ReadOnly = true;
             this.txtTimKiem.Size = new System.Drawing.Size(342, 26);
             this.txtTimKiem.TabIndex = 4;
             // 
@@ -77,17 +76,6 @@
             this.btn_timKiem.Text = "Tìm kiếm";
             this.btn_timKiem.UseVisualStyleBackColor = true;
             this.btn_timKiem.Click += new System.EventHandler(this.btn_timKiem_Click);
-            // 
-            // dgv_documents
-            // 
-            this.dgv_documents.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_documents.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dgv_documents.Location = new System.Drawing.Point(0, 242);
-            this.dgv_documents.Name = "dgv_documents";
-            this.dgv_documents.RowHeadersWidth = 62;
-            this.dgv_documents.RowTemplate.Height = 28;
-            this.dgv_documents.Size = new System.Drawing.Size(800, 245);
-            this.dgv_documents.TabIndex = 6;
             // 
             // label1
             // 
@@ -158,42 +146,45 @@
             this.label5.TabIndex = 14;
             this.label5.Text = "Thời gian upload:";
             // 
-            // textBox1
+            // txt_thoiGianUp
             // 
-            this.textBox1.Location = new System.Drawing.Point(432, 139);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(240, 26);
-            this.textBox1.TabIndex = 13;
+            this.txt_thoiGianUp.Location = new System.Drawing.Point(432, 139);
+            this.txt_thoiGianUp.Name = "txt_thoiGianUp";
+            this.txt_thoiGianUp.ReadOnly = true;
+            this.txt_thoiGianUp.Size = new System.Drawing.Size(240, 26);
+            this.txt_thoiGianUp.TabIndex = 13;
             // 
-            // guna2Button2
+            // btnDownload
             // 
-            this.guna2Button2.Animated = true;
-            this.guna2Button2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.guna2Button2.ForeColor = System.Drawing.Color.White;
-            this.guna2Button2.Image = global::Quan_Li_Luan_Van.Properties.Resources.downloads;
-            this.guna2Button2.Location = new System.Drawing.Point(577, 194);
-            this.guna2Button2.Name = "guna2Button2";
-            this.guna2Button2.Size = new System.Drawing.Size(72, 45);
-            this.guna2Button2.TabIndex = 16;
+            this.btnDownload.Animated = true;
+            this.btnDownload.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnDownload.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnDownload.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnDownload.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnDownload.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.btnDownload.ForeColor = System.Drawing.Color.White;
+            this.btnDownload.Location = new System.Drawing.Point(532, 194);
+            this.btnDownload.Name = "btnDownload";
+            this.btnDownload.Size = new System.Drawing.Size(92, 45);
+            this.btnDownload.TabIndex = 16;
+            this.btnDownload.Text = "Open";
+            this.btnDownload.Click += new System.EventHandler(this.btnDownload_Click);
             // 
-            // guna2Button1
+            // btnUpdate
             // 
-            this.guna2Button1.Animated = true;
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Image = global::Quan_Li_Luan_Van.Properties.Resources.pen;
-            this.guna2Button1.Location = new System.Drawing.Point(655, 194);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(61, 45);
-            this.guna2Button1.TabIndex = 15;
+            this.btnUpdate.Animated = true;
+            this.btnUpdate.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnUpdate.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnUpdate.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnUpdate.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnUpdate.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.btnUpdate.ForeColor = System.Drawing.Color.White;
+            this.btnUpdate.Image = global::Quan_Li_Luan_Van.Properties.Resources.pen;
+            this.btnUpdate.Location = new System.Drawing.Point(655, 194);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(61, 45);
+            this.btnUpdate.TabIndex = 15;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnSave
             // 
@@ -215,25 +206,23 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 487);
-            this.Controls.Add(this.guna2Button2);
-            this.Controls.Add(this.guna2Button1);
+            this.ClientSize = new System.Drawing.Size(800, 262);
+            this.Controls.Add(this.btnDownload);
+            this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txt_thoiGianUp);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txt_moTa);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.dgv_documents);
             this.Controls.Add(this.btn_timKiem);
             this.Controls.Add(this.txtTimKiem);
             this.Controls.Add(this.txt_idFile);
             this.Controls.Add(this.txt_maTask);
             this.Name = "FCapNhatTienDo";
             this.Text = "FCapNhatTienDo";
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_documents)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -244,7 +233,6 @@
         private System.Windows.Forms.TextBox txt_idFile;
         private System.Windows.Forms.TextBox txtTimKiem;
         private System.Windows.Forms.Button btn_timKiem;
-        private System.Windows.Forms.DataGridView dgv_documents;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
@@ -252,8 +240,8 @@
         private System.Windows.Forms.Label label4;
         private Guna.UI2.WinForms.Guna2Button btnSave;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox1;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
-        private Guna.UI2.WinForms.Guna2Button guna2Button2;
+        private System.Windows.Forms.TextBox txt_thoiGianUp;
+        private Guna.UI2.WinForms.Guna2Button btnUpdate;
+        private Guna.UI2.WinForms.Guna2Button btnDownload;
     }
 }

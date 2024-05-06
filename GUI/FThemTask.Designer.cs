@@ -40,12 +40,14 @@
             this.lbl_tyLeHoanThanh = new System.Windows.Forms.Label();
             this.btnLuu = new Guna.UI2.WinForms.Guna2Button();
             this.cb_maDT = new System.Windows.Forms.ComboBox();
-            this.txtTyLeHoanThanh = new System.Windows.Forms.TextBox();
             this.txtTenDT = new Guna.UI2.WinForms.Guna2TextBox();
             this.btn_exit = new Guna.UI2.WinForms.Guna2Button();
             this.txtTenTask = new Guna.UI2.WinForms.Guna2TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.btn_upload = new Guna.UI2.WinForms.Guna2Button();
+            this.txtTyLeHoanThanh = new System.Windows.Forms.NumericUpDown();
+            this.btnSua = new Guna.UI2.WinForms.Guna2Button();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTyLeHoanThanh)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -150,7 +152,7 @@
             // lbl_tyLeHoanThanh
             // 
             this.lbl_tyLeHoanThanh.AutoSize = true;
-            this.lbl_tyLeHoanThanh.Location = new System.Drawing.Point(263, 516);
+            this.lbl_tyLeHoanThanh.Location = new System.Drawing.Point(263, 514);
             this.lbl_tyLeHoanThanh.Name = "lbl_tyLeHoanThanh";
             this.lbl_tyLeHoanThanh.Size = new System.Drawing.Size(23, 20);
             this.lbl_tyLeHoanThanh.TabIndex = 11;
@@ -167,10 +169,10 @@
             this.btnLuu.FillColor = System.Drawing.Color.RoyalBlue;
             this.btnLuu.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.btnLuu.ForeColor = System.Drawing.Color.White;
-            this.btnLuu.Location = new System.Drawing.Point(162, 561);
+            this.btnLuu.Location = new System.Drawing.Point(211, 561);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.PressedColor = System.Drawing.Color.Navy;
-            this.btnLuu.Size = new System.Drawing.Size(124, 42);
+            this.btnLuu.Size = new System.Drawing.Size(91, 42);
             this.btnLuu.TabIndex = 12;
             this.btnLuu.Text = "Lưu";
             this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
@@ -183,16 +185,6 @@
             this.cb_maDT.Size = new System.Drawing.Size(282, 28);
             this.cb_maDT.TabIndex = 14;
             this.cb_maDT.SelectedIndexChanged += new System.EventHandler(this.cb_maDT_SelectedIndexChanged);
-            // 
-            // txtTyLeHoanThanh
-            // 
-            this.txtTyLeHoanThanh.BackColor = System.Drawing.SystemColors.Control;
-            this.txtTyLeHoanThanh.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtTyLeHoanThanh.Location = new System.Drawing.Point(237, 517);
-            this.txtTyLeHoanThanh.Name = "txtTyLeHoanThanh";
-            this.txtTyLeHoanThanh.Size = new System.Drawing.Size(30, 19);
-            this.txtTyLeHoanThanh.TabIndex = 15;
-            this.txtTyLeHoanThanh.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // txtTenDT
             // 
@@ -286,20 +278,59 @@
             this.btn_upload.Location = new System.Drawing.Point(13, 561);
             this.btn_upload.Name = "btn_upload";
             this.btn_upload.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btn_upload.Size = new System.Drawing.Size(100, 45);
+            this.btn_upload.Size = new System.Drawing.Size(87, 45);
             this.btn_upload.TabIndex = 21;
+            this.btn_upload.Click += new System.EventHandler(this.btn_upload_Click);
+            // 
+            // txtTyLeHoanThanh
+            // 
+            this.txtTyLeHoanThanh.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtTyLeHoanThanh.Increment = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.txtTyLeHoanThanh.Location = new System.Drawing.Point(207, 514);
+            this.txtTyLeHoanThanh.Name = "txtTyLeHoanThanh";
+            this.txtTyLeHoanThanh.Size = new System.Drawing.Size(58, 22);
+            this.txtTyLeHoanThanh.TabIndex = 22;
+            this.txtTyLeHoanThanh.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtTyLeHoanThanh.UpDownAlign = System.Windows.Forms.LeftRightAlignment.Left;
+            this.txtTyLeHoanThanh.ValueChanged += new System.EventHandler(this.txtTyLeHoanThanh_ValueChanged);
+            // 
+            // btnSua
+            // 
+            this.btnSua.Animated = true;
+            this.btnSua.BorderColor = System.Drawing.Color.RoyalBlue;
+            this.btnSua.BorderRadius = 3;
+            this.btnSua.BorderThickness = 2;
+            this.btnSua.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnSua.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnSua.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSua.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnSua.FillColor = System.Drawing.Color.White;
+            this.btnSua.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.btnSua.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.btnSua.Location = new System.Drawing.Point(106, 561);
+            this.btnSua.Name = "btnSua";
+            this.btnSua.PressedColor = System.Drawing.Color.Navy;
+            this.btnSua.Size = new System.Drawing.Size(99, 42);
+            this.btnSua.TabIndex = 23;
+            this.btnSua.Text = "update";
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // FThemTask
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(307, 608);
+            this.Controls.Add(this.btnSua);
+            this.Controls.Add(this.txtTyLeHoanThanh);
             this.Controls.Add(this.btn_upload);
             this.Controls.Add(this.txtTenTask);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.btn_exit);
             this.Controls.Add(this.txtTenDT);
-            this.Controls.Add(this.txtTyLeHoanThanh);
             this.Controls.Add(this.cb_maDT);
             this.Controls.Add(this.btnLuu);
             this.Controls.Add(this.lbl_tyLeHoanThanh);
@@ -316,6 +347,7 @@
             this.Name = "FThemTask";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "FThemTask";
+            ((System.ComponentModel.ISupportInitialize)(this.txtTyLeHoanThanh)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -335,11 +367,12 @@
         private System.Windows.Forms.Label lbl_tyLeHoanThanh;
         private Guna.UI2.WinForms.Guna2Button btnLuu;
         private System.Windows.Forms.ComboBox cb_maDT;
-        private System.Windows.Forms.TextBox txtTyLeHoanThanh;
         private Guna.UI2.WinForms.Guna2TextBox txtTenDT;
         private Guna.UI2.WinForms.Guna2Button btn_exit;
         private Guna.UI2.WinForms.Guna2TextBox txtTenTask;
         private System.Windows.Forms.Label label6;
         private Guna.UI2.WinForms.Guna2Button btn_upload;
+        private System.Windows.Forms.NumericUpDown txtTyLeHoanThanh;
+        private Guna.UI2.WinForms.Guna2Button btnSua;
     }
 }
