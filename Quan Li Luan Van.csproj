@@ -92,11 +92,19 @@
   <ItemGroup>
     <Compile Include="DAO\DangKiDAO.cs" />
     <Compile Include="DAO\DbConnection.cs" />
+    <Compile Include="DAO\DocumentDAO.cs" />
     <Compile Include="DAO\TaiKhoanDAO.cs" />
     <Compile Include="DAO\TaskDAO.cs" />
+    <Compile Include="DTO\Document.cs" />
     <Compile Include="DTO\TaiKhoan.cs" />
     <Compile Include="DTO\DangKi.cs" />
     <Compile Include="DTO\Task.cs" />
+    <Compile Include="GUI\FCapNhatTienDo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FCapNhatTienDo.Designer.cs">
+      <DependentUpon>FCapNhatTienDo.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\FChiTiet.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -189,6 +197,9 @@
     <Compile Include="GUI\UCLuanVan.Designer.cs">
       <DependentUpon>UCLuanVan.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="GUI\FCapNhatTienDo.resx">
+      <DependentUpon>FCapNhatTienDo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\FChiTiet.resx">
       <DependentUpon>FChiTiet.cs</DependentUpon>
     </EmbeddedResource>
