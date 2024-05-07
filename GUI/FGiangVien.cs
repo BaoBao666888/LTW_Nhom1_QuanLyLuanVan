@@ -113,5 +113,15 @@ namespace Quan_Li_Luan_Van.GUI
             fTraoDoiGV.Dock = DockStyle.Fill;
             fTraoDoiGV.Show();
         }
+
+        private void btnThongKe_Click(object sender, EventArgs e)
+        {
+            pnl_childForm.Controls.Clear();
+            FThongKe fTraoDoiGV = new FThongKe(giangVien, taiKhoan);
+            fTraoDoiGV.TopLevel = false;
+            pnl_childForm.Controls.Add(fTraoDoiGV);
+            fTraoDoiGV.Dock = DockStyle.Fill;
+            fTraoDoiGV.Show();
+        }
     }
 }

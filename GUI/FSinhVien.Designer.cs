@@ -31,9 +31,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnThongBao = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button4 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
-            this.btnDangKi = new Guna.UI2.WinForms.Guna2Button();
             this.btnLuanVan = new Guna.UI2.WinForms.Guna2Button();
             this.label4 = new System.Windows.Forms.Label();
             this.lbl_ten = new System.Windows.Forms.Label();
@@ -62,9 +60,7 @@
             // panel2
             // 
             this.panel2.Controls.Add(this.btnThongBao);
-            this.panel2.Controls.Add(this.guna2Button4);
             this.panel2.Controls.Add(this.guna2Button3);
-            this.panel2.Controls.Add(this.btnDangKi);
             this.panel2.Controls.Add(this.btnLuanVan);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 177);
@@ -85,31 +81,12 @@
             this.btnThongBao.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.btnThongBao.ForeColor = System.Drawing.Color.White;
             this.btnThongBao.ImageOffset = new System.Drawing.Point(-3, 0);
-            this.btnThongBao.Location = new System.Drawing.Point(0, 456);
+            this.btnThongBao.Location = new System.Drawing.Point(0, 228);
             this.btnThongBao.Name = "btnThongBao";
             this.btnThongBao.Size = new System.Drawing.Size(350, 114);
             this.btnThongBao.TabIndex = 9;
             this.btnThongBao.Text = "Thông báo";
             this.btnThongBao.Click += new System.EventHandler(this.btnThongBao_Click);
-            // 
-            // guna2Button4
-            // 
-            this.guna2Button4.Animated = true;
-            this.guna2Button4.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Button4.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button4.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button4.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button4.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2Button4.FillColor = System.Drawing.SystemColors.ControlDark;
-            this.guna2Button4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.guna2Button4.ForeColor = System.Drawing.Color.White;
-            this.guna2Button4.ImageOffset = new System.Drawing.Point(-3, 0);
-            this.guna2Button4.Location = new System.Drawing.Point(0, 342);
-            this.guna2Button4.Name = "guna2Button4";
-            this.guna2Button4.Size = new System.Drawing.Size(350, 114);
-            this.guna2Button4.TabIndex = 8;
-            this.guna2Button4.Text = "Đánh giá";
             // 
             // guna2Button3
             // 
@@ -124,31 +101,12 @@
             this.guna2Button3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.guna2Button3.ForeColor = System.Drawing.Color.White;
             this.guna2Button3.ImageOffset = new System.Drawing.Point(-3, 0);
-            this.guna2Button3.Location = new System.Drawing.Point(0, 228);
+            this.guna2Button3.Location = new System.Drawing.Point(0, 114);
             this.guna2Button3.Name = "guna2Button3";
             this.guna2Button3.Size = new System.Drawing.Size(350, 114);
             this.guna2Button3.TabIndex = 7;
             this.guna2Button3.Text = "Tiến độ";
             this.guna2Button3.Click += new System.EventHandler(this.guna2Button3_Click);
-            // 
-            // btnDangKi
-            // 
-            this.btnDangKi.Animated = true;
-            this.btnDangKi.BackColor = System.Drawing.Color.Transparent;
-            this.btnDangKi.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnDangKi.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnDangKi.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnDangKi.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnDangKi.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnDangKi.FillColor = System.Drawing.SystemColors.ControlDark;
-            this.btnDangKi.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.btnDangKi.ForeColor = System.Drawing.Color.White;
-            this.btnDangKi.ImageOffset = new System.Drawing.Point(-3, 0);
-            this.btnDangKi.Location = new System.Drawing.Point(0, 114);
-            this.btnDangKi.Name = "btnDangKi";
-            this.btnDangKi.Size = new System.Drawing.Size(350, 114);
-            this.btnDangKi.TabIndex = 6;
-            this.btnDangKi.Text = "Luận văn của tôi";
             // 
             // btnLuanVan
             // 
@@ -314,9 +272,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel2;
         private Guna.UI2.WinForms.Guna2Button btnThongBao;
-        private Guna.UI2.WinForms.Guna2Button guna2Button4;
         private Guna.UI2.WinForms.Guna2Button guna2Button3;
-        private Guna.UI2.WinForms.Guna2Button btnDangKi;
         private Guna.UI2.WinForms.Guna2Button btnLuanVan;
         private System.Windows.Forms.Label label4;
         private Guna.UI2.WinForms.Guna2Button btnLogOut;

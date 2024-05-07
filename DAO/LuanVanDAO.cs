@@ -4,12 +4,21 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web;
 using Quan_Li_Luan_Van.DTO;
+using Quan_Li_Luan_Van.GUI;
 
 namespace Quan_Li_Luan_Van.DAO
 {
     public class LuanVanDAO
     {
+        // lấy tất cả task theo mã đt
+        public static DataTable GetListTask(string MaDT)
+        {
+            string sqlStr = string.Format($"select * from DeTai inner join Task on DeTai.MaDT = Task.MaDT inner join DanhGia on DanhGia.MaTask = Task.MaTask where DeTai.MaDT ='{MaDT}'");
+            return DbConnection.Load(sqlStr);
+        }
+
         public static DataTable GetDataByMSSV(string MSSV)
         {
             string sqlStr = string.Format($"select * from DeTai inner join DangKi on DangKi.MaDT = DeTai.MaDT where DangKi.MSSV = '{MSSV}' and DangKi.TrangThai = N'Đã duyệt'");

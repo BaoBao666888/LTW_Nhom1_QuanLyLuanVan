@@ -49,6 +49,7 @@ namespace Quan_Li_Luan_Van.GUI
                 TraoDoi traoDoi = new TraoDoi(mssv,txtChuDe.Text,txtThongTin.Text,DateTime.Now,giangVien.MSGV);
                 TraoDoiDAO.Them(traoDoi);
             }
+            this.Close();
         }
     }
 }

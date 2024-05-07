@@ -186,6 +186,12 @@
     <Compile Include="GUI\FThongBao.Designer.cs">
       <DependentUpon>FThongBao.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\FThongKe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FThongKe.Designer.cs">
+      <DependentUpon>FThongKe.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\FTraoDoiSV.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -276,6 +282,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\FThongBao.resx">
       <DependentUpon>FThongBao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FThongKe.resx">
+      <DependentUpon>FThongKe.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\FTienDo.resx">
       <DependentUpon>FTienDo.cs</DependentUpon>

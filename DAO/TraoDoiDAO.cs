@@ -17,7 +17,7 @@ namespace Quan_Li_Luan_Van.DAO
         }
         public static void Them(TraoDoi traoDoi)
         {
-            string sqlStr = string.Format("EXEC PROC_InsertIntoTraoDoi @MSSV = '{0}', @ChuDe = N'{1}', @ThongTin = N'{2}', @ThoiGian = '{3}', @MSGV = '{4}'", traoDoi.MSSV, traoDoi.ChuDe, traoDoi.ThongTin, traoDoi.ThoiGian, traoDoi.MSGV);
+            string sqlStr = string.Format($"Insert into TraoDoi(MSSV, ChuDe, ThongTin, ThoiGian, MSGV, TTGV, TTSV) values ('{traoDoi.MSSV}', N'{traoDoi.ChuDe}', N'{traoDoi.ThongTin}', '{traoDoi.ThoiGian.ToString("yyyy-MM-dd HH:mm:ss")}', '{traoDoi.MSGV}', 0, 0)");
             DbConnection.ThucThi(sqlStr);
         }
         public static DataTable GetDataTraoDoi()

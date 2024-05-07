@@ -19,6 +19,7 @@ namespace Quan_Li_Luan_Van.GUI
         SinhVien sv;
         GiangVien gv;
         LuanVan lv;
+        float res;
         public UCLuanVan(TaiKhoan tk, SinhVien sv, GiangVien gv, LuanVan lv)
         {
             InitializeComponent();
@@ -30,6 +31,17 @@ namespace Quan_Li_Luan_Van.GUI
             this.LoadData();
         }
 
+        public UCLuanVan(TaiKhoan tk, GiangVien gv, LuanVan lv, float res)
+        {
+            InitializeComponent();
+            this.tk = tk;
+            this.gv = gv;
+            this.lv = lv;
+            this.res = res;
+            this.KiemTra();
+            this.LoadData(res);
+        }
+
         public UCLuanVan(TaiKhoan tk, GiangVien gv, LuanVan lv)
         {
             InitializeComponent();
@@ -39,7 +51,17 @@ namespace Quan_Li_Luan_Van.GUI
             this.KiemTra();
             this.LoadData();
         }
-       
+
+        private void LoadData(float res)
+        {
+            lblMaDeTai.Text = lv.MadeTai;
+            lblTenDeTai.Text = lv.TenDeTai;
+            lblTheLoai.Text = lv.TheLoai;
+            lblTrangThai.Text = res.ToString();
+            btnDangKi.Visible = false;
+            btnXoa.Visible = false;
+        }
+
         private void LoadData()
         {
             lblMaDeTai.Text = lv.MadeTai;

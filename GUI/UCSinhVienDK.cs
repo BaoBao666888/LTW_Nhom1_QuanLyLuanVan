@@ -38,5 +38,26 @@ namespace Quan_Li_Luan_Van.GUI
         {
 
         }
+        private void CheckBoxchanged()
+        {
+            if (cbxChon.Checked == true)
+                cbxChon.Checked = false;
+            else
+                cbxChon.Checked = true;
+        }
+        private void lblMSSV_Click(object sender, EventArgs e)
+        {
+            this.CheckBoxchanged();
+        }
+
+        private void lblHoTen_Click(object sender, EventArgs e)
+        {
+            this.CheckBoxchanged();
+        }
+
+        private void UCSinhVienDK_Click(object sender, EventArgs e)
+        {
+            this.CheckBoxchanged();
+        }
     }
 }

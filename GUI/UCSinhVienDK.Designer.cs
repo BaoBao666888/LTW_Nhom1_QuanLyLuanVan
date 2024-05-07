@@ -50,6 +50,7 @@
             this.lblMSSV.Size = new System.Drawing.Size(81, 20);
             this.lblMSSV.TabIndex = 18;
             this.lblMSSV.Text = "22110101";
+            this.lblMSSV.Click += new System.EventHandler(this.lblMSSV_Click);
             // 
             // lblHoTen
             // 
@@ -59,6 +60,7 @@
             this.lblHoTen.Size = new System.Drawing.Size(111, 20);
             this.lblHoTen.TabIndex = 19;
             this.lblHoTen.Text = "Nguyễn Văn A";
+            this.lblHoTen.Click += new System.EventHandler(this.lblHoTen_Click);
             // 
             // UCSinhVienDK
             // 
@@ -70,6 +72,7 @@
             this.Name = "UCSinhVienDK";
             this.Size = new System.Drawing.Size(1227, 64);
             this.Load += new System.EventHandler(this.UCSinhVienDK_Load);
+            this.Click += new System.EventHandler(this.UCSinhVienDK_Click);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -38,6 +38,7 @@
             this.btnGui = new Guna.UI2.WinForms.Guna2Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.flp_list = new System.Windows.Forms.FlowLayoutPanel();
+            this.guna2Separator2 = new Guna.UI2.WinForms.Guna2Separator();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -75,7 +76,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(265, 34);
+            this.label6.Location = new System.Drawing.Point(286, 34);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(77, 20);
             this.label6.TabIndex = 2;
@@ -102,6 +103,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Transparent;
+            this.panel1.Controls.Add(this.guna2Separator2);
             this.panel1.Controls.Add(this.btnGui);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label4);
@@ -148,10 +150,19 @@
             this.flp_list.Size = new System.Drawing.Size(1288, 637);
             this.flp_list.TabIndex = 2;
             // 
+            // guna2Separator2
+            // 
+            this.guna2Separator2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.guna2Separator2.Location = new System.Drawing.Point(0, 61);
+            this.guna2Separator2.Name = "guna2Separator2";
+            this.guna2Separator2.Size = new System.Drawing.Size(1288, 10);
+            this.guna2Separator2.TabIndex = 23;
+            // 
             // FTraoDoiGV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1288, 794);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -181,5 +192,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.FlowLayoutPanel flp_list;
         private Guna.UI2.WinForms.Guna2Button btnGui;
+        private Guna.UI2.WinForms.Guna2Separator guna2Separator2;
     }
 }
