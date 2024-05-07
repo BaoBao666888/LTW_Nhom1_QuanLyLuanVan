@@ -3,7 +3,7 @@
   <Profiles />
   <Settings>
     <Setting Name="conn" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">Data Source=DESKTOPPHAMCHIE;Initial Catalog=QLLuanVan;Integrated Security=True;Encrypt=False</Value>
+      <Value Profile="(Default)">Data Source=MT-QUOC-BAO\QUOCBAO;Initial Catalog=QLLuanVan;User ID=sa;Password=bao123456789</Value>
     </Setting>
   </Settings>
 </SettingsFile>
