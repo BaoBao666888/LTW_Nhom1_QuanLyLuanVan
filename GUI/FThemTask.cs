@@ -17,14 +17,24 @@ namespace Quan_Li_Luan_Van.GUI
     {
         DTO.Task task;
         string VaiTro;
-        public FThemTask()
+        public FThemTask(GiangVien gv)
         {
             InitializeComponent();
-            this.LoadData();
+            this.LoadData(gv);
             btn_upload.Hide();
             btnSua.Hide();
             txtTyLeHoanThanh.Hide();
         }
+
+        public FThemTask(SinhVien sv)
+        {
+            InitializeComponent();
+            this.LoadData(sv);
+            btn_upload.Hide();
+            btnSua.Hide();
+            txtTyLeHoanThanh.Hide();
+        }
+
         public FThemTask(DTO.Task task, string VaiTro)
         {
             InitializeComponent();
@@ -61,10 +71,20 @@ namespace Quan_Li_Luan_Van.GUI
             pgb_tyLeHoanThanh.Value = task.TyLeHoanThanh;
         }
 
-        private void LoadData()
+        private void LoadData(GiangVien gv)
         {
             DataTable dt = new DataTable();
-            dt = LuanVanDAO.GetData();
+            dt = LuanVanDAO.GetDataByMSGV(gv.MSGV);
+            for (int i = 0; i < dt.Rows.Count; i++)
+            {
+                cb_maDT.Items.Add(dt.Rows[i]["MaDT"]);
+            }
+        }
+
+        private void LoadData(SinhVien sv)
+        {
+            DataTable dt = new DataTable();
+            dt = LuanVanDAO.GetDataByMSSV(sv.MSSV);
             for (int i = 0; i < dt.Rows.Count; i++)
             {
                 cb_maDT.Items.Add(dt.Rows[i]["MaDT"]);

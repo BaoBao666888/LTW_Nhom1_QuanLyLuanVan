@@ -145,6 +145,7 @@
             this.btnDanhGia.Size = new System.Drawing.Size(136, 31);
             this.btnDanhGia.TabIndex = 13;
             this.btnDanhGia.Text = "Đánh giá";
+            this.btnDanhGia.Click += new System.EventHandler(this.btnDanhGia_Click);
             // 
             // label2
             // 

@@ -63,12 +63,20 @@ namespace Quan_Li_Luan_Van.GUI
 
         private void btn_them_Click(object sender, EventArgs e)
         {
-            FThemTask fThemTask = new FThemTask();
-            DialogResult res = fThemTask.ShowDialog();
+            DialogResult res = DialogResult.Cancel;
+            if (vaitro == "Giảng viên")
+            {
+                FThemTask fThemTask = new FThemTask(gv);
+                res = fThemTask.ShowDialog();
+            }
+            else
+            {
+                FThemTask fThemTask = new FThemTask(sv);
+                res = fThemTask.ShowDialog();
+            }    
 
             if (res == DialogResult.OK)
             {
-                MessageBox.Show("Thêm thành công!");
                 this.LoadData();
             }
             else

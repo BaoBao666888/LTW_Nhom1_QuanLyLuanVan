@@ -32,10 +32,6 @@ namespace Quan_Li_Luan_Van.GUI
             {
                 btnTienDo.Hide();
             }    
-            else
-            {
-                btnDanhGia.Hide();
-            }    
         }
 
         private void LoadData()
@@ -55,6 +51,28 @@ namespace Quan_Li_Luan_Van.GUI
             if(res == DialogResult.OK)
             {
                 this.LoadData();
+            }
+        }
+
+        private void btnDanhGia_Click(object sender, EventArgs e)
+        {
+            if (vaiTro == "Giảng viên")
+            {
+                DialogResult res = new DialogResult();
+                if (task.Deadline > DateTime.Now)
+                {
+                    res = MessageBox.Show("Task này chưa hết hạn, Bạn có chắc muốn cho điểm", "Warning!", MessageBoxButtons.YesNo, MessageBoxIcon.Error);
+                }
+                if (res == DialogResult.Yes)
+                {
+                    FDanhGiaTask fDanhGiaTask = new FDanhGiaTask(task, vaiTro);
+                    fDanhGiaTask.ShowDialog();
+                }
+            }
+            else
+            {
+                FDanhGiaTask fDanhGiaTask = new FDanhGiaTask(task, vaiTro);
+                fDanhGiaTask.ShowDialog();
             }
         }
     }

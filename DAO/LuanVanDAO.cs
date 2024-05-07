@@ -10,6 +10,12 @@ namespace Quan_Li_Luan_Van.DAO
 {
     public class LuanVanDAO
     {
+        public static DataTable GetDataByMSSV(string MSSV)
+        {
+            string sqlStr = string.Format($"select * from DeTai inner join DangKi on DangKi.MaDT = DeTai.MaDT where DangKi.MSSV = '{MSSV}' and DangKi.TrangThai = N'Đã duyệt'");
+            return DbConnection.Load(sqlStr);
+        }
+
         public static LuanVan GetLuanVanBYMaDT(string MaDT)
         {
             string sqlStr = string.Format($"select * from DeTai where MaDT = '{MaDT}'");
