@@ -30,6 +30,8 @@ namespace Quan_Li_Luan_Van.GUI
         {
             if(VaiTro == "Sinh viên")
             {
+                txtNhanXet.ReadOnly = true;
+                txtDiem.ReadOnly = true;
                 btnLuu.Visible = false;
             }    
 
