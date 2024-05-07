@@ -97,6 +97,7 @@
     <Compile Include="DAO\TaiKhoanDAO.cs" />
     <Compile Include="DAO\TaskDAO.cs" />
     <Compile Include="DAO\TraoDoiDAO.cs" />
+    <Compile Include="DTO\DanhGia.cs" />
     <Compile Include="DTO\Document.cs" />
     <Compile Include="DTO\SinhVienDK.cs" />
     <Compile Include="DTO\TaiKhoan.cs" />

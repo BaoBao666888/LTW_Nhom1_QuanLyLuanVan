@@ -16,11 +16,30 @@ namespace Quan_Li_Luan_Van.GUI
     {
         private GiangVien giangVien;
         List<string> mssvS = new List<string>();
+
+        private TraoDoi traoDoi;
         public FThongBao(List<string> mssvS, GiangVien giangVien)
         {
             InitializeComponent();
             this.mssvS = mssvS;
             this.giangVien = giangVien;
+            this.btnGui.Visible = true;
+        }
+
+        public FThongBao(TraoDoi traoDoi)
+        {
+            InitializeComponent();
+            this.traoDoi = traoDoi;
+            this.LoadDataTraoDoi();
+        }
+
+        private void LoadDataTraoDoi()
+        {
+            btnGui.Visible = false;
+            txtChuDe.ReadOnly = true;
+            txtThongTin.ReadOnly = true;
+            txtChuDe.Text = traoDoi.ChuDe;
+            txtThongTin.Text = traoDoi.ThongTin;
         }
 
         private void btnGui_Click(object sender, EventArgs e)

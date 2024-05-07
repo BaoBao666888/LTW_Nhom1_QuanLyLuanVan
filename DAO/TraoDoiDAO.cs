@@ -20,5 +20,10 @@ namespace Quan_Li_Luan_Van.DAO
             string sqlStr = string.Format("EXEC PROC_InsertIntoTraoDoi @MSSV = '{0}', @ChuDe = N'{1}', @ThongTin = N'{2}', @ThoiGian = '{3}', @MSGV = '{4}'", traoDoi.MSSV, traoDoi.ChuDe, traoDoi.ThongTin, traoDoi.ThoiGian, traoDoi.MSGV);
             DbConnection.ThucThi(sqlStr);
         }
+        public static DataTable GetDataTraoDoi()
+        {
+            string sqlStr = string.Format($"select* from TraoDoi");
+            return DbConnection.Load(sqlStr);
+        }
     }
 }

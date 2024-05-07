@@ -35,9 +35,9 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnGui = new Guna.UI2.WinForms.Guna2Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.flp_list = new System.Windows.Forms.FlowLayoutPanel();
-            this.btnGui = new Guna.UI2.WinForms.Guna2Button();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -109,27 +109,8 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 86);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1288, 74);
+            this.panel1.Size = new System.Drawing.Size(1288, 71);
             this.panel1.TabIndex = 12;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.Transparent;
-            this.panel2.Controls.Add(this.flp_list);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(0, 160);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1288, 634);
-            this.panel2.TabIndex = 15;
-            // 
-            // flp_list
-            // 
-            this.flp_list.AutoScroll = true;
-            this.flp_list.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flp_list.Location = new System.Drawing.Point(0, 0);
-            this.flp_list.Name = "flp_list";
-            this.flp_list.Size = new System.Drawing.Size(1288, 634);
-            this.flp_list.TabIndex = 2;
             // 
             // btnGui
             // 
@@ -147,6 +128,25 @@
             this.btnGui.TabIndex = 22;
             this.btnGui.Text = "Soạn";
             this.btnGui.Click += new System.EventHandler(this.btnGui_Click);
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.Transparent;
+            this.panel2.Controls.Add(this.flp_list);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(0, 157);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1288, 637);
+            this.panel2.TabIndex = 15;
+            // 
+            // flp_list
+            // 
+            this.flp_list.AutoScroll = true;
+            this.flp_list.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flp_list.Location = new System.Drawing.Point(0, 0);
+            this.flp_list.Name = "flp_list";
+            this.flp_list.Size = new System.Drawing.Size(1288, 637);
+            this.flp_list.TabIndex = 2;
             // 
             // FTraoDoiGV
             // 
