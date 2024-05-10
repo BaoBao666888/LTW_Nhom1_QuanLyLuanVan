@@ -44,9 +44,9 @@ namespace Quan_Li_Luan_Van.GUI
             else
             {
                 dt = TaskDAO.GetDataByMSSV(sv.MSSV, cb_filter.Text);
-                if (DangKiDAO.GetObjLuanVan(sv.MSSV) != null)
+                if (DangKiDAO.GetDeTaiByMSSV(sv.MSSV) != null)
                 {
-                    lbl_tenDT.Text = DangKiDAO.GetObjLuanVan(sv.MSSV).TenDeTai;
+                    lbl_tenDT.Text = DangKiDAO.GetDeTaiByMSSV(sv.MSSV).TenDeTai;
                 }
                 else
                     lbl_tenDT.Text = "Vui lòng đăng kí đề tài";

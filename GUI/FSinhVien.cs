@@ -60,7 +60,7 @@ namespace Quan_Li_Luan_Van.GUI
 
         private void GetData()
         {
-            this.sinhVien = SinhVienDAO.GetDataByMaTK(taiKhoan.MaTK);
+            this.sinhVien = SinhVienDAO.GetSVByMaTK(taiKhoan.MaTK);
             this.lbl_ten.Text = sinhVien.HoTen;
             this.lbl_chucVu.Text = taiKhoan.VaiTro;
         }

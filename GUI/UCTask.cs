@@ -37,7 +37,7 @@ namespace Quan_Li_Luan_Van.GUI
         private void LoadData()
         {
             lbl_tenTask.Text = task.TenTask;
-            LuanVan lv = LuanVanDAO.GetLuanVanBYMaDT(task.MaDT);
+            DeTai lv = LuanVanDAO.GetDeTaiBYMaDT(task.MaDT);
             txtTenDeTai.Text = lv.TenDeTai;
             lbl_deadline.Text = task.Deadline.ToString("dd/MM/yyyy");
             lbl_tyLeHoanThanh.Text = task.TyLeHoanThanh.ToString() + "%";

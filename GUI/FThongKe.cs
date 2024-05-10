@@ -26,27 +26,25 @@ namespace Quan_Li_Luan_Van.GUI
 
         public void LoadDataByGV()
         {
-            DataTable dt = LuanVanDAO.GetDataByMSGV(gv.MSGV);
+            List<DeTai> ListDT = LuanVanDAO.GetDSDeTaiByMSGV(gv.MSGV);
             flp_list.Controls.Clear();
-
-            for (int i = 0; i < dt.Rows.Count; i++)
+            foreach(var deTai in ListDT)
             {
-                LuanVan lv = new LuanVan(dt.Rows[i]["MaDT"].ToString(), dt.Rows[i]["TenDeTai"].ToString(), dt.Rows[i]["TheLoai"].ToString(), dt.Rows[i]["MoTa"].ToString(), dt.Rows[i]["CongNghe"].ToString(), dt.Rows[i]["YeuCau"].ToString(), dt.Rows[i]["ChucNang"].ToString(), dt.Rows[i]["MSGV"].ToString(), int.Parse(dt.Rows[i]["SoLuongSV"].ToString()));
-                DataTable dtDiem = LuanVanDAO.GetListTask(lv.MadeTai);
+                DataTable dtDiem = LuanVanDAO.GetListTask(deTai.MaDT);
                 float res;
                 int temp = 0;
                 if (dtDiem.Rows.Count > 0)
                 {
-                    for (int j = 0; j < dtDiem.Rows.Count;j++)
+                    for (int j = 0; j < dtDiem.Rows.Count; j++)
                         temp += int.Parse(dtDiem.Rows[j]["Diem"].ToString());
                 }
-                if(temp == 0)
+                if (temp == 0)
                 {
                     res = 0;
                 }
                 else
                     res = (float)temp / dtDiem.Rows.Count;
-                UCLuanVan ucLuanVan = new UCLuanVan(tk, gv, lv, res);
+                UCLuanVan ucLuanVan = new UCLuanVan(tk, gv, deTai, res);
                 flp_list.Controls.Add(ucLuanVan);
             }
         }

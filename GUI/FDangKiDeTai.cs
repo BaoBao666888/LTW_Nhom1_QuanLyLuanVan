@@ -21,8 +21,8 @@ namespace Quan_Li_Luan_Van.GUI
         List<Panel> listPanel;
 
         SinhVien sv;
-        LuanVan lv;
-        public FDangKiDeTai(SinhVien sv, LuanVan lv)
+        DTO.DeTai lv;
+        public FDangKiDeTai(SinhVien sv, DTO.DeTai lv)
         {
             InitializeComponent();
             

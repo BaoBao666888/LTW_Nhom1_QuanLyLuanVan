@@ -23,7 +23,7 @@ namespace Quan_Li_Luan_Van.GUI
         }
         private void LoadData()
         {
-            GiangVien giangVien = GiangVienDAO.GetDataByMSGV(traoDoi.MSGV);
+            GiangVien giangVien = GiangVienDAO.GetGVByMSGV(traoDoi.MSGV);
             lblChuDe.Text = traoDoi.ChuDe;
             lblThoiGian.Text = traoDoi.ThoiGian.ToString();
             lblHoTen.Text = giangVien.HoTen;

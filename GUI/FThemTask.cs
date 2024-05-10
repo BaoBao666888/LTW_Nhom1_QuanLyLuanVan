@@ -63,7 +63,7 @@ namespace Quan_Li_Luan_Van.GUI
         {
             txtMaTask.Text = task.MaTask;
             cb_maDT.Text = task.MaDT;
-            txtTenDT.Text = LuanVanDAO.GetLuanVanBYMaDT(task.MaDT).TenDeTai;
+            txtTenDT.Text = LuanVanDAO.GetDeTaiBYMaDT(task.MaDT).TenDeTai;
             txtTenTask.Text = task.TenTask;
             txtMoTa.Text = task.MoTa;
             dt_deadline.Value = task.Deadline;
@@ -73,28 +73,26 @@ namespace Quan_Li_Luan_Van.GUI
 
         private void LoadData(GiangVien gv)
         {
-            DataTable dt = new DataTable();
-            dt = LuanVanDAO.GetDataByMSGV(gv.MSGV);
-            for (int i = 0; i < dt.Rows.Count; i++)
+            List<DeTai> ListDT = LuanVanDAO.GetDSDeTaiByMSGV(gv.MSGV);
+            foreach(var deTai in ListDT)
             {
-                cb_maDT.Items.Add(dt.Rows[i]["MaDT"]);
+                cb_maDT.Items.Add(deTai.MaDT);
             }
         }
 
         private void LoadData(SinhVien sv)
         {
-            DataTable dt = new DataTable();
-            dt = LuanVanDAO.GetDataByMSSV(sv.MSSV);
-            for (int i = 0; i < dt.Rows.Count; i++)
+            List<DeTai> list = LuanVanDAO.GetListDeTaiByMSSV(sv.MSSV);
+            foreach (var item in list)
             {
-                cb_maDT.Items.Add(dt.Rows[i]["MaDT"]);
+                cb_maDT.Items.Add(item.MaDT);
             }
         }
 
         private void cb_maDT_SelectedIndexChanged(object sender, EventArgs e)
         {
-            LuanVan lv;
-            lv = LuanVanDAO.GetLuanVanBYMaDT(cb_maDT.Text);
+            DeTai lv;
+            lv = LuanVanDAO.GetDeTaiBYMaDT(cb_maDT.Text);
             txtTenDT.Text = lv.TenDeTai;
         }
 

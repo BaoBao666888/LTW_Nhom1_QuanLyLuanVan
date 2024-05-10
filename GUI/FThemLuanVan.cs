@@ -24,8 +24,19 @@ namespace Quan_Li_Luan_Van.GUI
 
         private void btnConfirm_Click(object sender, EventArgs e)
         {
-            LuanVan lv = new LuanVan(txtMaDeTai.Text, txtTenDeTai.Text, cbTheLoai.Text, txtMoTa.Text, txtCongNghe.Text, txtYeuCau.Text, txtChucNang.Text, gv.MSGV, int.Parse(txtSoLuongSV.Text));
-            LuanVanDAO.Them(lv);
+            DeTai dt = new DeTai
+            {
+                MaDT = txtMaDeTai.Text,
+                TenDeTai = txtTenDeTai.Text,
+                TheLoai = cbTheLoai.Text,
+                MoTa = txtMoTa.Text,
+                CongNghe = txtCongNghe.Text,
+                YeuCau = txtYeuCau.Text,
+                ChucNang = txtChucNang.Text,
+                MSGV = gv.MSGV,
+                SoLuongSV = int.Parse(txtSoLuongSV.Text)
+            };
+            LuanVanDAO.Them(dt);
         }
 
         private void btnReset_Click(object sender, EventArgs e)

@@ -1,5 +1,4 @@
 ﻿using Quan_Li_Luan_Van.DAO;
-using Quan_Li_Luan_Van.DTO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -19,14 +18,14 @@ namespace Quan_Li_Luan_Van.GUI
         {
             InitializeComponent();
         }
-        public FDanhGiaTask(DTO.Task task, string VaiTro)
+        public FDanhGiaTask(Task task, string VaiTro)
         {
             InitializeComponent();
             this.task = task;
             this.LoadData(task, VaiTro);   
         }
 
-        private void LoadData(DTO.Task task, string VaiTro)
+        private void LoadData(Task task, string VaiTro)
         {
             if(VaiTro == "Sinh viên")
             {
@@ -35,7 +34,7 @@ namespace Quan_Li_Luan_Van.GUI
 
 
             DanhGia obj = DanhGiaDAO.GetObj(task.MaTask);
-            lblDeTai.Text = LuanVanDAO.GetLuanVanBYMaDT(task.MaDT).TenDeTai;
+            lblDeTai.Text = LuanVanDAO.GetDeTaiBYMaDT(task.MaDT).TenDeTai;
             lblTenTask.Text = task.TenTask;
             if (!string.IsNullOrEmpty(obj.MaTask))
             {

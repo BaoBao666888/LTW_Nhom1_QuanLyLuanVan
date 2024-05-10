@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="2063a5ab1e444397a81a40321aa21cb6" Name="Diagram1">
+        <EntityTypeShape EntityType="QLLuanVanModel.DangKi" Width="1.5" PointX="7.5" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLLuanVanModel.DanhGia" Width="1.5" PointX="9.75" PointY="8.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLLuanVanModel.DeTai" Width="1.5" PointX="5.25" PointY="5.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLLuanVanModel.Document" Width="1.5" PointX="9.75" PointY="10.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLLuanVanModel.GiangVien" Width="1.5" PointX="3" PointY="6.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLLuanVanModel.SinhVien" Width="1.5" PointX="3" PointY="10.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLLuanVanModel.TaiKhoan" Width="1.5" PointX="0.75" PointY="8.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLLuanVanModel.Task" Width="1.5" PointX="7.5" PointY="9.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLLuanVanModel.TraoDoi" Width="1.5" PointX="5.25" PointY="10.5" IsExpanded="true" />
+        <AssociationConnector Association="QLLuanVanModel.FK__DangKi__MaDT__57DD0BE4" ManuallyRouted="false" />
+        <AssociationConnector Association="QLLuanVanModel.FK__DangKi__MSSV__56E8E7AB" ManuallyRouted="false" />
+        <AssociationConnector Association="QLLuanVanModel.FK__DanhGia__MaTask__0C50D423" ManuallyRouted="false" />
+        <AssociationConnector Association="QLLuanVanModel.FK__DeTai__MSGV__29221CFB" ManuallyRouted="false" />
+        <AssociationConnector Association="QLLuanVanModel.FK__Task__MaDT__5BAD9CC8" ManuallyRouted="false" />
+        <AssociationConnector Association="QLLuanVanModel.FK__Document__MaTask__756D6ECB" ManuallyRouted="false" />
+        <AssociationConnector Association="QLLuanVanModel.FK__GiangVien__MaTK__236943A5" ManuallyRouted="false" />
+        <AssociationConnector Association="QLLuanVanModel.FK_TraoDoi_MSGV" ManuallyRouted="false" />
+        <AssociationConnector Association="QLLuanVanModel.FK__SinhVien__MaTK__2645B050" ManuallyRouted="false" />
+        <AssociationConnector Association="QLLuanVanModel.FK_TraoDoi_MSSV" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

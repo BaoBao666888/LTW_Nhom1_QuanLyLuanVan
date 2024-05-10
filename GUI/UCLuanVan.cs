@@ -8,7 +8,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Quan_Li_Luan_Van.DTO;
 using Quan_Li_Luan_Van.DAO;
 
 namespace Quan_Li_Luan_Van.GUI
@@ -18,9 +17,9 @@ namespace Quan_Li_Luan_Van.GUI
         TaiKhoan tk;
         SinhVien sv;
         GiangVien gv;
-        LuanVan lv;
+        DeTai lv;
         float res;
-        public UCLuanVan(TaiKhoan tk, SinhVien sv, GiangVien gv, LuanVan lv)
+        public UCLuanVan(TaiKhoan tk, SinhVien sv, GiangVien gv, DeTai lv)
         {
             InitializeComponent();
             this.tk = tk;
@@ -31,7 +30,7 @@ namespace Quan_Li_Luan_Van.GUI
             this.LoadData();
         }
 
-        public UCLuanVan(TaiKhoan tk, GiangVien gv, LuanVan lv, float res)
+        public UCLuanVan(TaiKhoan tk, GiangVien gv, DeTai lv, float res)
         {
             InitializeComponent();
             this.tk = tk;
@@ -42,7 +41,7 @@ namespace Quan_Li_Luan_Van.GUI
             this.LoadData(res);
         }
 
-        public UCLuanVan(TaiKhoan tk, GiangVien gv, LuanVan lv)
+        public UCLuanVan(TaiKhoan tk, GiangVien gv, DeTai lv)
         {
             InitializeComponent();
             this.tk = tk;
@@ -54,7 +53,7 @@ namespace Quan_Li_Luan_Van.GUI
 
         private void LoadData(float res)
         {
-            lblMaDeTai.Text = lv.MadeTai;
+            lblMaDeTai.Text = lv.MaDT;
             lblTenDeTai.Text = lv.TenDeTai;
             lblTheLoai.Text = lv.TheLoai;
             lblTrangThai.Text = res.ToString();
@@ -82,7 +81,7 @@ namespace Quan_Li_Luan_Van.GUI
             }
             else
             {
-                if (DangKiDAO.KiemTraSinhVienDangki(sv.MSSV) == 0 && DangKiDAO.KiemTraDangKi(lv.MadeTai).Rows.Count <= lv.SoLuongSV)
+                if (DangKiDAO.KiemTraSinhVienDangki(sv.MSSV) == 0 && DangKiDAO.KiemTraDangKi(lv.MaDT).Rows.Count <= lv.SoLuongSV)
                 {
                     btnDangKi.Visible = true;
                 }
@@ -151,7 +150,7 @@ namespace Quan_Li_Luan_Van.GUI
         {
             //FDangKiDeTai fDangKiDeTai = new FDangKiDeTai(sv, lv);
             //fDangKiDeTai.ShowDialog();
-            if (DangKiDAO.SoLuongDangKi(lv.MadeTai) >= lv.SoLuongSV)
+            if (DangKiDAO.SoLuongDangKi(lv.MaDT) >= lv.SoLuongSV)
             {
                 MessageBox.Show("Đề tài đã đủ lượng đăng kí", "WARNING!", MessageBoxButtons.OKCancel);
             }
@@ -161,7 +160,14 @@ namespace Quan_Li_Luan_Van.GUI
                 DialogResult res = MessageBox.Show("Bạn có chắc chắn muốn đăng kí đề tài này?", "Question?", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (res == DialogResult.Yes)
                 {
-                    DangKiDAO.DangKiDeTai(new DangKi(sv.MSSV, lv.MadeTai, dateTime, "Chờ duyệt", ""));
+                    DangKi dk = new DangKi
+                    {
+                        MSSV = sv.MSSV,
+                        MaDT = lv.MaDT,
+                        ThoiGianYeuCau = dateTime,
+                        TrangThai = "Chờ duyệt"
+                    };
+                    DangKiDAO.DangKiDeTai(dk);  
                 }
             }
         }

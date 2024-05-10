@@ -14,8 +14,8 @@ namespace Quan_Li_Luan_Van.GUI
 {
     public partial class FChiTiet : Form
     {
-        private LuanVan lv;
-        public FChiTiet(LuanVan lv)
+        private DTO.DeTai lv;
+        public FChiTiet(DTO.DeTai lv)
         {
             InitializeComponent();
             this.lv = lv;
@@ -28,7 +28,7 @@ namespace Quan_Li_Luan_Van.GUI
 
         private void LoadData()
         {
-            GiangVien gv = GiangVienDAO.GetDataByMSGV(lv.MSGV);
+            GiangVien gv = GiangVienDAO.GetGVByMSGV(lv.MSGV);
             lblTenDeTai.Text = lv.TenDeTai;
             txtTheLoai.Text = lv.TheLoai;
             txtMoTa.Text = lv.MoTa;

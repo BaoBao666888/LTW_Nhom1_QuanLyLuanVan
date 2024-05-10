@@ -67,27 +67,24 @@ namespace Quan_Li_Luan_Van.GUI
 
         public void LoadDataByGV() 
         {
-            DataTable dt = LuanVanDAO.GetDataByMSGV(gv.MSGV);
+            List<DeTai> ListDT = LuanVanDAO.GetDSDeTaiByMSGV(gv.MSGV);
             flp_list.Controls.Clear();
 
-            for (int i = 0; i < dt.Rows.Count; i++)
+            foreach(var deTai in ListDT)
             {
-                LuanVan lv = new LuanVan(dt.Rows[i]["MaDT"].ToString(), dt.Rows[i]["TenDeTai"].ToString(), dt.Rows[i]["TheLoai"].ToString(), dt.Rows[i]["MoTa"].ToString(), dt.Rows[i]["CongNghe"].ToString(), dt.Rows[i]["YeuCau"].ToString(), dt.Rows[i]["ChucNang"].ToString(), dt.Rows[i]["MSGV"].ToString(), int.Parse(dt.Rows[i]["SoLuongSV"].ToString()));
-                UCLuanVan ucLuanVan = new UCLuanVan(tk, gv, lv);
+                UCLuanVan ucLuanVan = new UCLuanVan(tk, gv, deTai);
                 flp_list.Controls.Add(ucLuanVan);
             }
         }
 
         public void LoadDataBySV()
         {
-            DataTable dt = LuanVanDAO.GetData();
-
+            List<DeTai> ListDT = LuanVanDAO.GetListDeTai();
             flp_list.Controls.Clear();
 
-            for (int i = 0; i < dt.Rows.Count; i++)
+            foreach(var deTai in ListDT)
             {
-                LuanVan lv = new LuanVan(dt.Rows[i]["MaDT"].ToString(), dt.Rows[i]["TenDeTai"].ToString(), dt.Rows[i]["TheLoai"].ToString(), dt.Rows[i]["MoTa"].ToString(), dt.Rows[i]["CongNghe"].ToString(), dt.Rows[i]["YeuCau"].ToString(), dt.Rows[i]["ChucNang"].ToString(), dt.Rows[i]["MSGV"].ToString(), int.Parse(dt.Rows[i]["SoLuongSV"].ToString()));
-                UCLuanVan ucLuanVan = new UCLuanVan(tk, sv, gv, lv);
+                UCLuanVan ucLuanVan = new UCLuanVan(tk, sv, gv, deTai);
                 flp_list.Controls.Add(ucLuanVan);
             }
         }
@@ -107,20 +104,20 @@ namespace Quan_Li_Luan_Van.GUI
 
         private void DataTimKiem(object sender, EventArgs e)
         {
-            DataTable dt;
+
+            List<DeTai> ListDT;
             if (tk.VaiTro == "Sinh viên")
-                dt = LuanVanDAO.TimKiem(txt_timKiem.Text);
+                ListDT = LuanVanDAO.TimKiem(txt_timKiem.Text);
             else
-                dt = LuanVanDAO.TimKiem(gv.MSGV, txt_timKiem.Text);
+                ListDT = LuanVanDAO.TimKiem(gv.MSGV, txt_timKiem.Text);
             flp_list.Controls.Clear();
 
-            for (int i = 0; i < dt.Rows.Count; i++)
+            foreach(var deTai in ListDT)
             {
-                LuanVan lv = new LuanVan(dt.Rows[i]["MaDT"].ToString(), dt.Rows[i]["TenDeTai"].ToString(), dt.Rows[i]["TheLoai"].ToString(), dt.Rows[i]["MoTa"].ToString(), dt.Rows[i]["CongNghe"].ToString(), dt.Rows[i]["YeuCau"].ToString(), dt.Rows[i]["ChucNang"].ToString(), dt.Rows[i]["MSGV"].ToString(), int.Parse(dt.Rows[i]["SoLuongSV"].ToString()));
-                UCLuanVan ucLuanVan = new UCLuanVan(tk, sv, gv, lv);
+                UCLuanVan ucLuanVan = new UCLuanVan(tk, sv, gv, deTai);
                 flp_list.Controls.Add(ucLuanVan);
             }
-            timer.Stop();  
+            timer.Stop();
         }
 
         private void txt_timKiem_TextChanged(object sender, EventArgs e)

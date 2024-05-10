@@ -8,7 +8,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Quan_Li_Luan_Van.DTO;
 using Quan_Li_Luan_Van.DAO;
 
 namespace Quan_Li_Luan_Van.GUI
@@ -48,9 +47,8 @@ namespace Quan_Li_Luan_Van.GUI
 
         private void UCDangKiDeTai_DoubleClick(object sender, EventArgs e)
         {
-            DataTable dt = LuanVanDAO.GetDataByMaDT(dangKi.MaDT);
-            LuanVan lv = new LuanVan(dt.Rows[0]["MaDT"].ToString(), dt.Rows[0]["TenDeTai"].ToString(), dt.Rows[0]["TheLoai"].ToString(), dt.Rows[0]["MoTa"].ToString(), dt.Rows[0]["CongNghe"].ToString(), dt.Rows[0]["YeuCau"].ToString(), dt.Rows[0]["ChucNang"].ToString(), dt.Rows[0]["MSGV"].ToString(), int.Parse(dt.Rows[0]["SoLuongSV"].ToString()));
-            FChiTiet fchiTiet = new FChiTiet(lv);
+            DeTai dt = LuanVanDAO.GetDeTaiBYMaDT(dangKi.MaDT);
+            FChiTiet fchiTiet = new FChiTiet(dt);
             fchiTiet.ShowDialog();
         }
 

@@ -8,7 +8,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Web.UI.WebControls;
 using System.Windows.Forms;
-using Quan_Li_Luan_Van.DTO;
 using Quan_Li_Luan_Van.DAO;
 
 namespace Quan_Li_Luan_Van.GUI
@@ -62,7 +61,7 @@ namespace Quan_Li_Luan_Van.GUI
         private void GetData()
         {
 
-            this.giangVien = GiangVienDAO.GetDataByMaTK(taiKhoan.MaTK);
+            this.giangVien = GiangVienDAO.GetGVByMaTK(taiKhoan.MaTK);
             this.lbl_ten.Text = giangVien.HoTen;
             this.lbl_chucVu.Text = taiKhoan.VaiTro;
         }

@@ -1,0 +1,756 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="QLLuanVanModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="DangKi">
+          <Key>
+            <PropertyRef Name="MSSV" />
+            <PropertyRef Name="MaDT" />
+          </Key>
+          <Property Name="MSSV" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="MaDT" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="ThoiGianYeuCau" Type="datetime" Nullable="false" />
+          <Property Name="TrangThai" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="LyDoTuChoi" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="DanhGia">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="MaTask" Type="varchar" MaxLength="10" />
+          <Property Name="NhanXet" Type="nvarchar(max)" />
+          <Property Name="Diem" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="DeTai">
+          <Key>
+            <PropertyRef Name="MaDT" />
+          </Key>
+          <Property Name="MaDT" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="TenDeTai" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="TheLoai" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="MoTa" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="CongNghe" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="YeuCau" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="ChucNang" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="MSGV" Type="varchar" MaxLength="10" />
+          <Property Name="SoLuongSV" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Document">
+          <Key>
+            <PropertyRef Name="IDFile" />
+          </Key>
+          <Property Name="IDFile" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="MaTask" Type="varchar" MaxLength="10" />
+          <Property Name="MoTa" Type="nvarchar(max)" />
+          <Property Name="ThoiGianUp" Type="datetime" Nullable="false" />
+          <Property Name="Data" Type="varbinary(max)" Nullable="false" />
+          <Property Name="Extension" Type="varchar" MaxLength="5" />
+        </EntityType>
+        <EntityType Name="GiangVien">
+          <Key>
+            <PropertyRef Name="MSGV" />
+          </Key>
+          <Property Name="MSGV" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="HoTen" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Email" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="SDT" Type="varchar" MaxLength="15" Nullable="false" />
+          <Property Name="MaTK" Type="varchar" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="SinhVien">
+          <Key>
+            <PropertyRef Name="MSSV" />
+          </Key>
+          <Property Name="MSSV" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="HoTen" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Lop" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="Email" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="SDT" Type="varchar" MaxLength="15" Nullable="false" />
+          <Property Name="MaTK" Type="varchar" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="TaiKhoan">
+          <Key>
+            <PropertyRef Name="MaTK" />
+          </Key>
+          <Property Name="MaTK" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="TenDangNhap" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="MatKhau" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="VaiTro" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="TrangThai" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Task">
+          <Key>
+            <PropertyRef Name="MaTask" />
+          </Key>
+          <Property Name="MaTask" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="MaDT" Type="varchar" MaxLength="10" />
+          <Property Name="TenTask" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="MoTa" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="TyLeHoanThanh" Type="int" Nullable="false" />
+          <Property Name="Deadline" Type="date" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TraoDoi">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="MSSV" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="ChuDe" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="ThongTin" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="ThoiGian" Type="datetime" Nullable="false" />
+          <Property Name="MSGV" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="TTGV" Type="bit" Nullable="false" />
+          <Property Name="TTSV" Type="bit" Nullable="false" />
+        </EntityType>
+        <Association Name="FK__DangKi__MaDT__57DD0BE4">
+          <End Role="DeTai" Type="Self.DeTai" Multiplicity="1" />
+          <End Role="DangKi" Type="Self.DangKi" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DeTai">
+              <PropertyRef Name="MaDT" />
+            </Principal>
+            <Dependent Role="DangKi">
+              <PropertyRef Name="MaDT" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__DangKi__MSSV__56E8E7AB">
+          <End Role="SinhVien" Type="Self.SinhVien" Multiplicity="1" />
+          <End Role="DangKi" Type="Self.DangKi" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SinhVien">
+              <PropertyRef Name="MSSV" />
+            </Principal>
+            <Dependent Role="DangKi">
+              <PropertyRef Name="MSSV" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__DanhGia__MaTask__0C50D423">
+          <End Role="Task" Type="Self.Task" Multiplicity="0..1" />
+          <End Role="DanhGia" Type="Self.DanhGia" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Task">
+              <PropertyRef Name="MaTask" />
+            </Principal>
+            <Dependent Role="DanhGia">
+              <PropertyRef Name="MaTask" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__DeTai__MSGV__29221CFB">
+          <End Role="GiangVien" Type="Self.GiangVien" Multiplicity="0..1" />
+          <End Role="DeTai" Type="Self.DeTai" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GiangVien">
+              <PropertyRef Name="MSGV" />
+            </Principal>
+            <Dependent Role="DeTai">
+              <PropertyRef Name="MSGV" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Document__MaTask__756D6ECB">
+          <End Role="Task" Type="Self.Task" Multiplicity="0..1" />
+          <End Role="Document" Type="Self.Document" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Task">
+              <PropertyRef Name="MaTask" />
+            </Principal>
+            <Dependent Role="Document">
+              <PropertyRef Name="MaTask" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__GiangVien__MaTK__236943A5">
+          <End Role="TaiKhoan" Type="Self.TaiKhoan" Multiplicity="0..1" />
+          <End Role="GiangVien" Type="Self.GiangVien" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TaiKhoan">
+              <PropertyRef Name="MaTK" />
+            </Principal>
+            <Dependent Role="GiangVien">
+              <PropertyRef Name="MaTK" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__SinhVien__MaTK__2645B050">
+          <End Role="TaiKhoan" Type="Self.TaiKhoan" Multiplicity="0..1" />
+          <End Role="SinhVien" Type="Self.SinhVien" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TaiKhoan">
+              <PropertyRef Name="MaTK" />
+            </Principal>
+            <Dependent Role="SinhVien">
+              <PropertyRef Name="MaTK" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Task__MaDT__5BAD9CC8">
+          <End Role="DeTai" Type="Self.DeTai" Multiplicity="0..1" />
+          <End Role="Task" Type="Self.Task" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DeTai">
+              <PropertyRef Name="MaDT" />
+            </Principal>
+            <Dependent Role="Task">
+              <PropertyRef Name="MaDT" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TraoDoi_MSGV">
+          <End Role="GiangVien" Type="Self.GiangVien" Multiplicity="1" />
+          <End Role="TraoDoi" Type="Self.TraoDoi" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GiangVien">
+              <PropertyRef Name="MSGV" />
+            </Principal>
+            <Dependent Role="TraoDoi">
+              <PropertyRef Name="MSGV" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TraoDoi_MSSV">
+          <End Role="SinhVien" Type="Self.SinhVien" Multiplicity="1" />
+          <End Role="TraoDoi" Type="Self.TraoDoi" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SinhVien">
+              <PropertyRef Name="MSSV" />
+            </Principal>
+            <Dependent Role="TraoDoi">
+              <PropertyRef Name="MSSV" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Function Name="FUNC_GetSinhVien" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="MaTK" Type="varchar" Mode="In" />
+          <ReturnType>
+            <CollectionType>
+              <RowType>
+                <Property Name="MSSV" Type="varchar" MaxLength="10" Nullable="false" />
+                <Property Name="HoTen" Type="nvarchar" MaxLength="50" Nullable="false" />
+                <Property Name="MaDT" Type="varchar" MaxLength="10" Nullable="false" />
+              </RowType>
+            </CollectionType>
+          </ReturnType>
+        </Function>
+        <Function Name="PROC_InsertIntoTraoDoi" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="MSSV" Type="varchar" Mode="In" />
+          <Parameter Name="ChuDe" Type="nvarchar" Mode="In" />
+          <Parameter Name="ThongTin" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="ThoiGian" Type="datetime" Mode="In" />
+          <Parameter Name="MSGV" Type="varchar" Mode="In" />
+        </Function>
+        <EntityContainer Name="QLLuanVanModelStoreContainer">
+          <EntitySet Name="DangKi" EntityType="Self.DangKi" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="DanhGia" EntityType="Self.DanhGia" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="DeTai" EntityType="Self.DeTai" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Document" EntityType="Self.Document" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="GiangVien" EntityType="Self.GiangVien" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SinhVien" EntityType="Self.SinhVien" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TaiKhoan" EntityType="Self.TaiKhoan" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Task" EntityType="Self.Task" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TraoDoi" EntityType="Self.TraoDoi" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK__DangKi__MaDT__57DD0BE4" Association="Self.FK__DangKi__MaDT__57DD0BE4">
+            <End Role="DeTai" EntitySet="DeTai" />
+            <End Role="DangKi" EntitySet="DangKi" />
+          </AssociationSet>
+          <AssociationSet Name="FK__DangKi__MSSV__56E8E7AB" Association="Self.FK__DangKi__MSSV__56E8E7AB">
+            <End Role="SinhVien" EntitySet="SinhVien" />
+            <End Role="DangKi" EntitySet="DangKi" />
+          </AssociationSet>
+          <AssociationSet Name="FK__DanhGia__MaTask__0C50D423" Association="Self.FK__DanhGia__MaTask__0C50D423">
+            <End Role="Task" EntitySet="Task" />
+            <End Role="DanhGia" EntitySet="DanhGia" />
+          </AssociationSet>
+          <AssociationSet Name="FK__DeTai__MSGV__29221CFB" Association="Self.FK__DeTai__MSGV__29221CFB">
+            <End Role="GiangVien" EntitySet="GiangVien" />
+            <End Role="DeTai" EntitySet="DeTai" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Document__MaTask__756D6ECB" Association="Self.FK__Document__MaTask__756D6ECB">
+            <End Role="Task" EntitySet="Task" />
+            <End Role="Document" EntitySet="Document" />
+          </AssociationSet>
+          <AssociationSet Name="FK__GiangVien__MaTK__236943A5" Association="Self.FK__GiangVien__MaTK__236943A5">
+            <End Role="TaiKhoan" EntitySet="TaiKhoan" />
+            <End Role="GiangVien" EntitySet="GiangVien" />
+          </AssociationSet>
+          <AssociationSet Name="FK__SinhVien__MaTK__2645B050" Association="Self.FK__SinhVien__MaTK__2645B050">
+            <End Role="TaiKhoan" EntitySet="TaiKhoan" />
+            <End Role="SinhVien" EntitySet="SinhVien" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Task__MaDT__5BAD9CC8" Association="Self.FK__Task__MaDT__5BAD9CC8">
+            <End Role="DeTai" EntitySet="DeTai" />
+            <End Role="Task" EntitySet="Task" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TraoDoi_MSGV" Association="Self.FK_TraoDoi_MSGV">
+            <End Role="GiangVien" EntitySet="GiangVien" />
+            <End Role="TraoDoi" EntitySet="TraoDoi" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TraoDoi_MSSV" Association="Self.FK_TraoDoi_MSSV">
+            <End Role="SinhVien" EntitySet="SinhVien" />
+            <End Role="TraoDoi" EntitySet="TraoDoi" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="QLLuanVanModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <ComplexType Name="FUNC_GetSinhVien_Result">
+          <Property Name="MSSV" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="HoTen" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="MaDT" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+        </ComplexType>
+        <EntityType Name="DangKi">
+          <Key>
+            <PropertyRef Name="MSSV" />
+            <PropertyRef Name="MaDT" />
+          </Key>
+          <Property Name="MSSV" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="MaDT" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ThoiGianYeuCau" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="TrangThai" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="LyDoTuChoi" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="DeTai" Relationship="Self.FK__DangKi__MaDT__57DD0BE4" FromRole="DangKi" ToRole="DeTai" />
+          <NavigationProperty Name="SinhVien" Relationship="Self.FK__DangKi__MSSV__56E8E7AB" FromRole="DangKi" ToRole="SinhVien" />
+        </EntityType>
+        <EntityType Name="DanhGia">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="MaTask" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="NhanXet" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Diem" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Task" Relationship="Self.FK__DanhGia__MaTask__0C50D423" FromRole="DanhGia" ToRole="Task" />
+        </EntityType>
+        <EntityType Name="DeTai">
+          <Key>
+            <PropertyRef Name="MaDT" />
+          </Key>
+          <Property Name="MaDT" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="TenDeTai" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="TheLoai" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="MoTa" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="CongNghe" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="YeuCau" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ChucNang" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="MSGV" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="SoLuongSV" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="DangKis" Relationship="Self.FK__DangKi__MaDT__57DD0BE4" FromRole="DeTai" ToRole="DangKi" />
+          <NavigationProperty Name="GiangVien" Relationship="Self.FK__DeTai__MSGV__29221CFB" FromRole="DeTai" ToRole="GiangVien" />
+          <NavigationProperty Name="Tasks" Relationship="Self.FK__Task__MaDT__5BAD9CC8" FromRole="DeTai" ToRole="Task" />
+        </EntityType>
+        <EntityType Name="Document">
+          <Key>
+            <PropertyRef Name="IDFile" />
+          </Key>
+          <Property Name="IDFile" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="MaTask" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="MoTa" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ThoiGianUp" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Data" Type="Binary" MaxLength="Max" FixedLength="false" Nullable="false" />
+          <Property Name="Extension" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Task" Relationship="Self.FK__Document__MaTask__756D6ECB" FromRole="Document" ToRole="Task" />
+        </EntityType>
+        <EntityType Name="GiangVien">
+          <Key>
+            <PropertyRef Name="MSGV" />
+          </Key>
+          <Property Name="MSGV" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="HoTen" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="SDT" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="MaTK" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="DeTais" Relationship="Self.FK__DeTai__MSGV__29221CFB" FromRole="GiangVien" ToRole="DeTai" />
+          <NavigationProperty Name="TaiKhoan" Relationship="Self.FK__GiangVien__MaTK__236943A5" FromRole="GiangVien" ToRole="TaiKhoan" />
+          <NavigationProperty Name="TraoDois" Relationship="Self.FK_TraoDoi_MSGV" FromRole="GiangVien" ToRole="TraoDoi" />
+        </EntityType>
+        <EntityType Name="SinhVien">
+          <Key>
+            <PropertyRef Name="MSSV" />
+          </Key>
+          <Property Name="MSSV" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="HoTen" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Lop" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="SDT" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="MaTK" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="DangKis" Relationship="Self.FK__DangKi__MSSV__56E8E7AB" FromRole="SinhVien" ToRole="DangKi" />
+          <NavigationProperty Name="TaiKhoan" Relationship="Self.FK__SinhVien__MaTK__2645B050" FromRole="SinhVien" ToRole="TaiKhoan" />
+          <NavigationProperty Name="TraoDois" Relationship="Self.FK_TraoDoi_MSSV" FromRole="SinhVien" ToRole="TraoDoi" />
+        </EntityType>
+        <EntityType Name="TaiKhoan">
+          <Key>
+            <PropertyRef Name="MaTK" />
+          </Key>
+          <Property Name="MaTK" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="TenDangNhap" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="MatKhau" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="VaiTro" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="TrangThai" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="GiangViens" Relationship="Self.FK__GiangVien__MaTK__236943A5" FromRole="TaiKhoan" ToRole="GiangVien" />
+          <NavigationProperty Name="SinhViens" Relationship="Self.FK__SinhVien__MaTK__2645B050" FromRole="TaiKhoan" ToRole="SinhVien" />
+        </EntityType>
+        <EntityType Name="Task">
+          <Key>
+            <PropertyRef Name="MaTask" />
+          </Key>
+          <Property Name="MaTask" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="MaDT" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="TenTask" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="MoTa" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="TyLeHoanThanh" Type="Int32" Nullable="false" />
+          <Property Name="Deadline" Type="DateTime" Nullable="false" Precision="0" />
+          <NavigationProperty Name="DanhGias" Relationship="Self.FK__DanhGia__MaTask__0C50D423" FromRole="Task" ToRole="DanhGia" />
+          <NavigationProperty Name="DeTai" Relationship="Self.FK__Task__MaDT__5BAD9CC8" FromRole="Task" ToRole="DeTai" />
+          <NavigationProperty Name="Documents" Relationship="Self.FK__Document__MaTask__756D6ECB" FromRole="Task" ToRole="Document" />
+        </EntityType>
+        <EntityType Name="TraoDoi">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="MSSV" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ChuDe" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ThongTin" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ThoiGian" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="MSGV" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="TTGV" Type="Boolean" Nullable="false" />
+          <Property Name="TTSV" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="GiangVien" Relationship="Self.FK_TraoDoi_MSGV" FromRole="TraoDoi" ToRole="GiangVien" />
+          <NavigationProperty Name="SinhVien" Relationship="Self.FK_TraoDoi_MSSV" FromRole="TraoDoi" ToRole="SinhVien" />
+        </EntityType>
+        <Association Name="FK__DangKi__MaDT__57DD0BE4">
+          <End Role="DeTai" Type="Self.DeTai" Multiplicity="1" />
+          <End Role="DangKi" Type="Self.DangKi" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DeTai">
+              <PropertyRef Name="MaDT" />
+            </Principal>
+            <Dependent Role="DangKi">
+              <PropertyRef Name="MaDT" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__DangKi__MSSV__56E8E7AB">
+          <End Role="SinhVien" Type="Self.SinhVien" Multiplicity="1" />
+          <End Role="DangKi" Type="Self.DangKi" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SinhVien">
+              <PropertyRef Name="MSSV" />
+            </Principal>
+            <Dependent Role="DangKi">
+              <PropertyRef Name="MSSV" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__DanhGia__MaTask__0C50D423">
+          <End Role="Task" Type="Self.Task" Multiplicity="0..1" />
+          <End Role="DanhGia" Type="Self.DanhGia" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Task">
+              <PropertyRef Name="MaTask" />
+            </Principal>
+            <Dependent Role="DanhGia">
+              <PropertyRef Name="MaTask" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__DeTai__MSGV__29221CFB">
+          <End Role="GiangVien" Type="Self.GiangVien" Multiplicity="0..1" />
+          <End Role="DeTai" Type="Self.DeTai" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GiangVien">
+              <PropertyRef Name="MSGV" />
+            </Principal>
+            <Dependent Role="DeTai">
+              <PropertyRef Name="MSGV" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Task__MaDT__5BAD9CC8">
+          <End Role="DeTai" Type="Self.DeTai" Multiplicity="0..1" />
+          <End Role="Task" Type="Self.Task" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DeTai">
+              <PropertyRef Name="MaDT" />
+            </Principal>
+            <Dependent Role="Task">
+              <PropertyRef Name="MaDT" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Document__MaTask__756D6ECB">
+          <End Role="Task" Type="Self.Task" Multiplicity="0..1" />
+          <End Role="Document" Type="Self.Document" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Task">
+              <PropertyRef Name="MaTask" />
+            </Principal>
+            <Dependent Role="Document">
+              <PropertyRef Name="MaTask" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__GiangVien__MaTK__236943A5">
+          <End Role="TaiKhoan" Type="Self.TaiKhoan" Multiplicity="0..1" />
+          <End Role="GiangVien" Type="Self.GiangVien" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TaiKhoan">
+              <PropertyRef Name="MaTK" />
+            </Principal>
+            <Dependent Role="GiangVien">
+              <PropertyRef Name="MaTK" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TraoDoi_MSGV">
+          <End Role="GiangVien" Type="Self.GiangVien" Multiplicity="1" />
+          <End Role="TraoDoi" Type="Self.TraoDoi" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GiangVien">
+              <PropertyRef Name="MSGV" />
+            </Principal>
+            <Dependent Role="TraoDoi">
+              <PropertyRef Name="MSGV" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__SinhVien__MaTK__2645B050">
+          <End Role="TaiKhoan" Type="Self.TaiKhoan" Multiplicity="0..1" />
+          <End Role="SinhVien" Type="Self.SinhVien" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TaiKhoan">
+              <PropertyRef Name="MaTK" />
+            </Principal>
+            <Dependent Role="SinhVien">
+              <PropertyRef Name="MaTK" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TraoDoi_MSSV">
+          <End Role="SinhVien" Type="Self.SinhVien" Multiplicity="1" />
+          <End Role="TraoDoi" Type="Self.TraoDoi" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SinhVien">
+              <PropertyRef Name="MSSV" />
+            </Principal>
+            <Dependent Role="TraoDoi">
+              <PropertyRef Name="MSSV" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="QLLuanVanEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="DangKis" EntityType="Self.DangKi" />
+          <EntitySet Name="DanhGias" EntityType="Self.DanhGia" />
+          <EntitySet Name="DeTais" EntityType="Self.DeTai" />
+          <EntitySet Name="Documents" EntityType="Self.Document" />
+          <EntitySet Name="GiangViens" EntityType="Self.GiangVien" />
+          <EntitySet Name="SinhViens" EntityType="Self.SinhVien" />
+          <EntitySet Name="TaiKhoans" EntityType="Self.TaiKhoan" />
+          <EntitySet Name="Tasks" EntityType="Self.Task" />
+          <EntitySet Name="TraoDois" EntityType="Self.TraoDoi" />
+          <AssociationSet Name="FK__DangKi__MaDT__57DD0BE4" Association="Self.FK__DangKi__MaDT__57DD0BE4">
+            <End Role="DeTai" EntitySet="DeTais" />
+            <End Role="DangKi" EntitySet="DangKis" />
+          </AssociationSet>
+          <AssociationSet Name="FK__DangKi__MSSV__56E8E7AB" Association="Self.FK__DangKi__MSSV__56E8E7AB">
+            <End Role="SinhVien" EntitySet="SinhViens" />
+            <End Role="DangKi" EntitySet="DangKis" />
+          </AssociationSet>
+          <AssociationSet Name="FK__DanhGia__MaTask__0C50D423" Association="Self.FK__DanhGia__MaTask__0C50D423">
+            <End Role="Task" EntitySet="Tasks" />
+            <End Role="DanhGia" EntitySet="DanhGias" />
+          </AssociationSet>
+          <AssociationSet Name="FK__DeTai__MSGV__29221CFB" Association="Self.FK__DeTai__MSGV__29221CFB">
+            <End Role="GiangVien" EntitySet="GiangViens" />
+            <End Role="DeTai" EntitySet="DeTais" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Task__MaDT__5BAD9CC8" Association="Self.FK__Task__MaDT__5BAD9CC8">
+            <End Role="DeTai" EntitySet="DeTais" />
+            <End Role="Task" EntitySet="Tasks" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Document__MaTask__756D6ECB" Association="Self.FK__Document__MaTask__756D6ECB">
+            <End Role="Task" EntitySet="Tasks" />
+            <End Role="Document" EntitySet="Documents" />
+          </AssociationSet>
+          <AssociationSet Name="FK__GiangVien__MaTK__236943A5" Association="Self.FK__GiangVien__MaTK__236943A5">
+            <End Role="TaiKhoan" EntitySet="TaiKhoans" />
+            <End Role="GiangVien" EntitySet="GiangViens" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TraoDoi_MSGV" Association="Self.FK_TraoDoi_MSGV">
+            <End Role="GiangVien" EntitySet="GiangViens" />
+            <End Role="TraoDoi" EntitySet="TraoDois" />
+          </AssociationSet>
+          <AssociationSet Name="FK__SinhVien__MaTK__2645B050" Association="Self.FK__SinhVien__MaTK__2645B050">
+            <End Role="TaiKhoan" EntitySet="TaiKhoans" />
+            <End Role="SinhVien" EntitySet="SinhViens" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TraoDoi_MSSV" Association="Self.FK_TraoDoi_MSSV">
+            <End Role="SinhVien" EntitySet="SinhViens" />
+            <End Role="TraoDoi" EntitySet="TraoDois" />
+          </AssociationSet>
+          <FunctionImport Name="FUNC_GetSinhVien" IsComposable="true" ReturnType="Collection(QLLuanVanModel.FUNC_GetSinhVien_Result)">
+            <Parameter Name="MaTK" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="PROC_InsertIntoTraoDoi">
+            <Parameter Name="MSSV" Mode="In" Type="String" />
+            <Parameter Name="ChuDe" Mode="In" Type="String" />
+            <Parameter Name="ThongTin" Mode="In" Type="String" />
+            <Parameter Name="ThoiGian" Mode="In" Type="DateTime" />
+            <Parameter Name="MSGV" Mode="In" Type="String" />
+          </FunctionImport>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="QLLuanVanModelStoreContainer" CdmEntityContainer="QLLuanVanEntities">
+          <EntitySetMapping Name="DangKis">
+            <EntityTypeMapping TypeName="QLLuanVanModel.DangKi">
+              <MappingFragment StoreEntitySet="DangKi">
+                <ScalarProperty Name="MSSV" ColumnName="MSSV" />
+                <ScalarProperty Name="MaDT" ColumnName="MaDT" />
+                <ScalarProperty Name="ThoiGianYeuCau" ColumnName="ThoiGianYeuCau" />
+                <ScalarProperty Name="TrangThai" ColumnName="TrangThai" />
+                <ScalarProperty Name="LyDoTuChoi" ColumnName="LyDoTuChoi" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DanhGias">
+            <EntityTypeMapping TypeName="QLLuanVanModel.DanhGia">
+              <MappingFragment StoreEntitySet="DanhGia">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="MaTask" ColumnName="MaTask" />
+                <ScalarProperty Name="NhanXet" ColumnName="NhanXet" />
+                <ScalarProperty Name="Diem" ColumnName="Diem" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DeTais">
+            <EntityTypeMapping TypeName="QLLuanVanModel.DeTai">
+              <MappingFragment StoreEntitySet="DeTai">
+                <ScalarProperty Name="MaDT" ColumnName="MaDT" />
+                <ScalarProperty Name="TenDeTai" ColumnName="TenDeTai" />
+                <ScalarProperty Name="TheLoai" ColumnName="TheLoai" />
+                <ScalarProperty Name="MoTa" ColumnName="MoTa" />
+                <ScalarProperty Name="CongNghe" ColumnName="CongNghe" />
+                <ScalarProperty Name="YeuCau" ColumnName="YeuCau" />
+                <ScalarProperty Name="ChucNang" ColumnName="ChucNang" />
+                <ScalarProperty Name="MSGV" ColumnName="MSGV" />
+                <ScalarProperty Name="SoLuongSV" ColumnName="SoLuongSV" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Documents">
+            <EntityTypeMapping TypeName="QLLuanVanModel.Document">
+              <MappingFragment StoreEntitySet="Document">
+                <ScalarProperty Name="IDFile" ColumnName="IDFile" />
+                <ScalarProperty Name="MaTask" ColumnName="MaTask" />
+                <ScalarProperty Name="MoTa" ColumnName="MoTa" />
+                <ScalarProperty Name="ThoiGianUp" ColumnName="ThoiGianUp" />
+                <ScalarProperty Name="Data" ColumnName="Data" />
+                <ScalarProperty Name="Extension" ColumnName="Extension" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="GiangViens">
+            <EntityTypeMapping TypeName="QLLuanVanModel.GiangVien">
+              <MappingFragment StoreEntitySet="GiangVien">
+                <ScalarProperty Name="MSGV" ColumnName="MSGV" />
+                <ScalarProperty Name="HoTen" ColumnName="HoTen" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="SDT" ColumnName="SDT" />
+                <ScalarProperty Name="MaTK" ColumnName="MaTK" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SinhViens">
+            <EntityTypeMapping TypeName="QLLuanVanModel.SinhVien">
+              <MappingFragment StoreEntitySet="SinhVien">
+                <ScalarProperty Name="MSSV" ColumnName="MSSV" />
+                <ScalarProperty Name="HoTen" ColumnName="HoTen" />
+                <ScalarProperty Name="Lop" ColumnName="Lop" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="SDT" ColumnName="SDT" />
+                <ScalarProperty Name="MaTK" ColumnName="MaTK" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TaiKhoans">
+            <EntityTypeMapping TypeName="QLLuanVanModel.TaiKhoan">
+              <MappingFragment StoreEntitySet="TaiKhoan">
+                <ScalarProperty Name="MaTK" ColumnName="MaTK" />
+                <ScalarProperty Name="TenDangNhap" ColumnName="TenDangNhap" />
+                <ScalarProperty Name="MatKhau" ColumnName="MatKhau" />
+                <ScalarProperty Name="VaiTro" ColumnName="VaiTro" />
+                <ScalarProperty Name="TrangThai" ColumnName="TrangThai" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tasks">
+            <EntityTypeMapping TypeName="QLLuanVanModel.Task">
+              <MappingFragment StoreEntitySet="Task">
+                <ScalarProperty Name="MaTask" ColumnName="MaTask" />
+                <ScalarProperty Name="MaDT" ColumnName="MaDT" />
+                <ScalarProperty Name="TenTask" ColumnName="TenTask" />
+                <ScalarProperty Name="MoTa" ColumnName="MoTa" />
+                <ScalarProperty Name="TyLeHoanThanh" ColumnName="TyLeHoanThanh" />
+                <ScalarProperty Name="Deadline" ColumnName="Deadline" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TraoDois">
+            <EntityTypeMapping TypeName="QLLuanVanModel.TraoDoi">
+              <MappingFragment StoreEntitySet="TraoDoi">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="MSSV" ColumnName="MSSV" />
+                <ScalarProperty Name="ChuDe" ColumnName="ChuDe" />
+                <ScalarProperty Name="ThongTin" ColumnName="ThongTin" />
+                <ScalarProperty Name="ThoiGian" ColumnName="ThoiGian" />
+                <ScalarProperty Name="MSGV" ColumnName="MSGV" />
+                <ScalarProperty Name="TTGV" ColumnName="TTGV" />
+                <ScalarProperty Name="TTSV" ColumnName="TTSV" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionName="QLLuanVanModel.Store.FUNC_GetSinhVien" FunctionImportName="FUNC_GetSinhVien">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="QLLuanVanModel.FUNC_GetSinhVien_Result">
+                <ScalarProperty Name="MSSV" ColumnName="MSSV" />
+                <ScalarProperty Name="HoTen" ColumnName="HoTen" />
+                <ScalarProperty Name="MaDT" ColumnName="MaDT" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="PROC_InsertIntoTraoDoi" FunctionName="QLLuanVanModel.Store.PROC_InsertIntoTraoDoi" />
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

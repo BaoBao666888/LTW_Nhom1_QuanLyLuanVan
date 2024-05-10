@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -50,25 +51,35 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="Guna.UI2, Version=2.0.4.6, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
       <HintPath>packages\Guna.UI2.WinForms.2.0.4.6\lib\net472\Guna.UI2.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.IdentityModel.Abstractions, Version=6.35.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>packages\Microsoft.IdentityModel.Abstractions.6.35.0\lib\net472\Microsoft.IdentityModel.Abstractions.dll</HintPath>
+    <Reference Include="Microsoft.Identity.Client, Version=4.60.3.0, Culture=neutral, PublicKeyToken=0a613f4dd989e8ae, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Identity.Client.4.60.3\lib\net462\Microsoft.Identity.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Abstractions, Version=7.5.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.IdentityModel.Abstractions.7.5.1\lib\net472\Microsoft.IdentityModel.Abstractions.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
     </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Design" />
-    <Reference Include="System.Diagnostics.DiagnosticSource, Version=6.0.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
-      <HintPath>packages\System.Diagnostics.DiagnosticSource.6.0.1\lib\net461\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    <Reference Include="System.Diagnostics.DiagnosticSource, Version=8.0.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Diagnostics.DiagnosticSource.8.0.1\lib\net462\System.Diagnostics.DiagnosticSource.dll</HintPath>
     </Reference>
     <Reference Include="System.IdentityModel" />
     <Reference Include="System.Management" />
-    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
-      <HintPath>packages\System.Memory.4.5.4\lib\net461\System.Memory.dll</HintPath>
+    <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
     </Reference>
     <Reference Include="System.Messaging" />
     <Reference Include="System.Numerics" />
@@ -78,6 +89,8 @@
     <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
     </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -90,6 +103,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DangKi.cs">
+      <DependentUpon>QLLuanVanModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DanhGia.cs">
+      <DependentUpon>QLLuanVanModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="DAO\DangKiDAO.cs" />
     <Compile Include="DAO\DanhGiaDAO.cs" />
     <Compile Include="DAO\DbConnection.cs" />
@@ -97,13 +116,15 @@
     <Compile Include="DAO\TaiKhoanDAO.cs" />
     <Compile Include="DAO\TaskDAO.cs" />
     <Compile Include="DAO\TraoDoiDAO.cs" />
-    <Compile Include="DTO\DanhGia.cs" />
-    <Compile Include="DTO\Document.cs" />
-    <Compile Include="DTO\SinhVienDK.cs" />
-    <Compile Include="DTO\TaiKhoan.cs" />
-    <Compile Include="DTO\DangKi.cs" />
-    <Compile Include="DTO\Task.cs" />
-    <Compile Include="DTO\TraoDoi.cs" />
+    <Compile Include="DeTai.cs">
+      <DependentUpon>QLLuanVanModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Document.cs">
+      <DependentUpon>QLLuanVanModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GiangVien.cs">
+      <DependentUpon>QLLuanVanModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="GUI\FCapNhatTienDo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -170,9 +191,7 @@
     <Compile Include="GUI\FThemLuanVan.Designer.cs">
       <DependentUpon>FThemLuanVan.cs</DependentUpon>
     </Compile>
-    <Compile Include="DTO\GiangVien.cs" />
     <Compile Include="DAO\GiangVienDAO.cs" />
-    <Compile Include="DTO\LuanVan.cs" />
     <Compile Include="DAO\LuanVanDAO.cs" />
     <Compile Include="GUI\FThemTask.cs">
       <SubType>Form</SubType>
@@ -230,7 +249,6 @@
       <DependentUpon>UCThongBao.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="DTO\SinhVien.cs" />
     <Compile Include="DAO\SinhVienDAO.cs" />
     <Compile Include="GUI\UCDangKiDeTai.cs">
       <SubType>UserControl</SubType>
@@ -243,6 +261,33 @@
     </Compile>
     <Compile Include="GUI\UCLuanVan.Designer.cs">
       <DependentUpon>UCLuanVan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QLLuanVanModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLLuanVanModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="QLLuanVanModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLLuanVanModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="QLLuanVanModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLLuanVanModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="SinhVien.cs">
+      <DependentUpon>QLLuanVanModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TaiKhoan.cs">
+      <DependentUpon>QLLuanVanModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Task.cs">
+      <DependentUpon>QLLuanVanModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TraoDoi.cs">
+      <DependentUpon>QLLuanVanModel.tt</DependentUpon>
     </Compile>
     <EmbeddedResource Include="GUI\FCapNhatTienDo.resx">
       <DependentUpon>FCapNhatTienDo.cs</DependentUpon>
@@ -347,6 +392,13 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <EntityDeploy Include="QLLuanVanModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>QLLuanVanModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="QLLuanVanModel.edmx.diagram">
+      <DependentUpon>QLLuanVanModel.edmx</DependentUpon>
+    </None>
     <None Include="Resources\logo-cntt2021.png" />
   </ItemGroup>
   <ItemGroup>
@@ -400,5 +452,28 @@
   <ItemGroup>
     <None Include="Resources\refresh-page-option.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="QLLuanVanModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>QLLuanVanModel.edmx</DependentUpon>
+      <LastGenOutput>QLLuanVanModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="QLLuanVanModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>QLLuanVanModel.edmx</DependentUpon>
+      <LastGenOutput>QLLuanVanModel.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
 </Project>
