@@ -37,7 +37,7 @@ namespace Quan_Li_Luan_Van.GUI
             else 
                 if(rdoSinhVien.Checked == true)
             {
-                TaiKhoan taiKhoan = TaiKhoanDAO.GetTaiKhoanSV(txtTaiKhoan.Text, txtTaiKhoan.Text);
+                TaiKhoan taiKhoan = TaiKhoanDAO.GetTaiKhoanSV(txtTaiKhoan.Text, txtMatKhau.Text);
                 FSinhVien fGV = new FSinhVien(taiKhoan);
                 this.Hide();
                 fGV.Show();

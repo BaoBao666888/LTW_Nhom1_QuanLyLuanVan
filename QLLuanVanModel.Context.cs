@@ -12,21 +12,19 @@ namespace Quan_Li_Luan_Van
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
-    using System.Data.Entity.Core.Objects;
-    using System.Linq;
-
-    public partial class QLLuanVanEntities : DbContext
+    
+    public partial class QLLuanVanContext : DbContext
     {
-        public QLLuanVanEntities()
-            : base("name=QLLuanVanEntities")
+        public QLLuanVanContext()
+            : base("name=QLLuanVanContext")
         {
         }
-
+    
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             throw new UnintentionalCodeFirstException();
         }
-
+    
         public virtual DbSet<DangKi> DangKis { get; set; }
         public virtual DbSet<DanhGia> DanhGias { get; set; }
         public virtual DbSet<DeTai> DeTais { get; set; }
@@ -37,5 +35,4 @@ namespace Quan_Li_Luan_Van
         public virtual DbSet<Task> Tasks { get; set; }
         public virtual DbSet<TraoDoi> TraoDois { get; set; }
     }
-   
 }

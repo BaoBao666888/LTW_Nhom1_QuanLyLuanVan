@@ -16,7 +16,7 @@ namespace Quan_Li_Luan_Van.DAO
 
             try
             {
-                using(var db = new QLLuanVanEntities())
+                using(var db = new QLLuanVanContext())
                 {
                     List<Task> newTask;
                     if (filter == "In progress")
@@ -69,7 +69,7 @@ namespace Quan_Li_Luan_Van.DAO
         {
             try
             {
-                using (var db = new QLLuanVanEntities())
+                using (var db = new QLLuanVanContext())
                 {
                     List<Task> newTask;
                     if (filter == "In progress")
@@ -119,7 +119,7 @@ namespace Quan_Li_Luan_Van.DAO
         {
             try
             {
-                using (var db = new QLLuanVanEntities())
+                using (var db = new QLLuanVanContext())
                 {
                     db.Tasks.Add(task);
                     db.SaveChanges();
@@ -136,7 +136,7 @@ namespace Quan_Li_Luan_Van.DAO
         {
             try
             {
-                using (var db = new QLLuanVanEntities())
+                using (var db = new QLLuanVanContext())
                 {
                     var newTask = db.Tasks.FirstOrDefault(x => x.MaTask == task.MaTask);
 

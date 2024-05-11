@@ -136,13 +136,7 @@ namespace Quan_Li_Luan_Van.GUI
         private void btn_upload_Click(object sender, EventArgs e)
         {
             FCapNhatTienDo fCapNhatTienDo = new FCapNhatTienDo(task, VaiTro);
-            DialogResult res = fCapNhatTienDo.ShowDialog();
-            if (res == DialogResult.OK)
-            {
-                MessageBox.Show("Tác vụ thành công");
-            }
-            else
-                MessageBox.Show("Đã hủy");
+            fCapNhatTienDo.ShowDialog();
         }
 
         private void btnSua_Click(object sender, EventArgs e)

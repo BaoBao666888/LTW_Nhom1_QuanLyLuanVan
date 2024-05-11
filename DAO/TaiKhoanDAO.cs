@@ -14,7 +14,7 @@ namespace Quan_Li_Luan_Van.DAO
         {
             try
             {
-                using(var db = new QLLuanVanEntities())
+                using(var db = new QLLuanVanContext())
                 {
                     var tk = (from s in db.TaiKhoans
                               where s.VaiTro == "Giảng viên"
@@ -25,21 +25,18 @@ namespace Quan_Li_Luan_Van.DAO
                     return tk;
                 }
             }
-            catch
+            catch (Exception e)
             {
-                MessageBox.Show("Sai tài khoản hoặc mật khẩu!");
+                MessageBox.Show(e.Message);
                 return null;
             }
-
-            //string sqlStr = string.Format("select * from TaiKhoan where VaiTro = N'Giảng viên'");
-            //return DbConnection.Load(sqlStr);
         }
 
         public static TaiKhoan GetTaiKhoanSV(string taiKhoan, string matKhau)
         {
             try
             {
-                using (var db = new QLLuanVanEntities())
+                using (var db = new QLLuanVanContext())
                 {
                     var tk = (from s in db.TaiKhoans
                               where s.VaiTro == "Sinh viên"
@@ -50,14 +47,11 @@ namespace Quan_Li_Luan_Van.DAO
                     return tk;
                 }
             }
-            catch
+            catch(Exception e)
             {
-                MessageBox.Show("Sai tài khoản hoặc mật khẩu!");
+                MessageBox.Show(e.Message);
                 return null;
             }
-
-            //string sqlStr = string.Format("select * from TaiKhoan where VaiTro = N'Sinh viên'");
-            //return DbConnection.Load(sqlStr);
         }
     }
 }

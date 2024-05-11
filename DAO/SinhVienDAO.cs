@@ -15,7 +15,7 @@ namespace Quan_Li_Luan_Van.DAO
         {
             try
             {
-                using(var db = new QLLuanVanEntities())
+                using(var db = new QLLuanVanContext())
                 {
                     var sv = (from s in db.SinhViens
                               where s.MaTK == maTK
@@ -35,7 +35,7 @@ namespace Quan_Li_Luan_Van.DAO
         {
             try
             {
-                using(var db = new QLLuanVanEntities())
+                using(var db = new QLLuanVanContext())
                 {
                     var sv = (from d in db.DangKis
                               join s in db.SinhViens
@@ -57,11 +57,12 @@ namespace Quan_Li_Luan_Van.DAO
         {
             try
             {
-                using (var db = new QLLuanVanEntities())
+                using (var db = new QLLuanVanContext())
                 {
-                    var sv = (from d in db.DangKis
-                              join s in db.SinhViens
-                              on d.MSSV equals s.MSSV
+                    var sv = (from s in db.SinhViens
+                              join d in db.DangKis
+                              on s.MSSV equals d.MSSV
+                              where d.MaDT == MaDT
                               select s).SingleOrDefault();
                               
                     return sv;

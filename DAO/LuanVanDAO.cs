@@ -24,7 +24,7 @@ namespace Quan_Li_Luan_Van.DAO
         {
             try
             {
-                using (var db = new QLLuanVanEntities())
+                using (var db = new QLLuanVanContext())
                 {
                     var list = (from s in db.DeTais
                                  join d in db.DangKis
@@ -41,16 +41,13 @@ namespace Quan_Li_Luan_Van.DAO
                 MessageBox.Show(ex.Message);
                 return null;
             }
-
-            //string sqlStr = string.Format($"select * from DeTai inner join DangKi on DangKi.MaDT = DeTai.MaDT where DangKi.MSSV = '{MSSV}' and DangKi.TrangThai = N'Đã duyệt'");
-            //return DbConnection.Load(sqlStr);
         }
 
         public static DeTai GetDeTaiBYMaDT(string MaDT)
         {
             try
             {
-                using(var db = new QLLuanVanEntities())
+                using(var db = new QLLuanVanContext())
                 {
                     var lv = (from s in db.DeTais
                               where s.MaDT == MaDT
@@ -68,7 +65,7 @@ namespace Quan_Li_Luan_Van.DAO
         {
             try
             {
-                using (var db = new QLLuanVanEntities())
+                using (var db = new QLLuanVanContext())
                 {
                     var list = (from s in db.DeTais
                               where s.MaDT == MaDT
@@ -81,9 +78,6 @@ namespace Quan_Li_Luan_Van.DAO
                 MessageBox.Show(e.Message);
                 return null;
             }
-
-            //string sqlStr = string.Format($"select * from DeTai where MaDT like '%{MaDT}%'");
-            //return DbConnection.Load(sqlStr);
         }
 
         //Danh sach luan van theo ma giao vien
@@ -91,7 +85,7 @@ namespace Quan_Li_Luan_Van.DAO
         {
             try
             {
-                using(var db = new QLLuanVanEntities())
+                using(var db = new QLLuanVanContext())
                 {
                     var list = (from s in db.DeTais
                                 where s.MSGV == MSGV
@@ -105,9 +99,6 @@ namespace Quan_Li_Luan_Van.DAO
                 MessageBox.Show(e.Message);
                 return null;
             }
-
-            //string sqlStr = string.Format($"select * from DeTai where MSGV like '%{MSGV}%'");
-            //return DbConnection.Load( sqlStr );
         }
 
         //Danh sach luan van
@@ -115,7 +106,7 @@ namespace Quan_Li_Luan_Van.DAO
         {
             try
             {
-                using (var db = new QLLuanVanEntities())
+                using (var db = new QLLuanVanContext())
                 {
                     var list = (from s in db.DeTais
                                 select s
@@ -128,14 +119,12 @@ namespace Quan_Li_Luan_Van.DAO
                 MessageBox.Show(e.Message);
                 return null;
             }
-            //string sqlStr = string.Format("select * from DeTai");
-            //return DbConnection.Load(sqlStr);
         }
 
         //Them
         public static void Them(DeTai luanVan)
         {
-            using(var Context = new QLLuanVanEntities())
+            using(var Context = new QLLuanVanContext())
             {
                 Context.DeTais.Add(luanVan);
                 Context.SaveChanges();
@@ -150,7 +139,7 @@ namespace Quan_Li_Luan_Van.DAO
         {
             try
             {
-                using (var Context = new QLLuanVanEntities())
+                using (var Context = new QLLuanVanContext())
                 {
                     var lv = (from s in Context.DeTais
                               where s.MaDT == maDeTai
@@ -173,7 +162,7 @@ namespace Quan_Li_Luan_Van.DAO
         {
             try
             {
-                using (var db = new QLLuanVanEntities())
+                using (var db = new QLLuanVanContext())
                 {
                     var list = (from s in db.DeTais
                                 where s.MSGV == input
@@ -191,16 +180,13 @@ namespace Quan_Li_Luan_Van.DAO
                 MessageBox.Show(e.Message);
                 return null;
             }
-
-            //string sqlStr = string.Format($"select * from DeTai where MSGV like '%{input}%' or MaDT like N'%{input}%' or TenDeTai like N'%{input}%' or  TheLoai like N'%{input}%' or YeuCau like N'%{input}%'");
-            //return DbConnection.Load(sqlStr);
         }
 
         public static List<DeTai> TimKiem(string MSGV, string input)
         {
             try
             {
-                using (var db = new QLLuanVanEntities())
+                using (var db = new QLLuanVanContext())
                 {
                     var list = (from s in db.DeTais
                                 where s.MSGV ==MSGV
@@ -218,9 +204,6 @@ namespace Quan_Li_Luan_Van.DAO
                 MessageBox.Show(e.Message);
                 return null;
             }
-
-            //string sqlStr = string.Format($"select * from DeTai where MSGV = '{MSGV}' and (MaDT like N'%{input}%' or TenDeTai like N'%{input}%' or  TheLoai like N'%{input}%' or YeuCau like N'%{input}%')");
-            //return DbConnection.Load(sqlStr);
         }
     }
 }

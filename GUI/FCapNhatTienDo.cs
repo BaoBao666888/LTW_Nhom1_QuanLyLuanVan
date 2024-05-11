@@ -32,19 +32,22 @@ namespace Quan_Li_Luan_Van.GUI
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            Document document = new Document();
             if (!string.IsNullOrEmpty(txtTimKiem.Text))
             {
                 using (Stream stream = File.OpenRead(txtTimKiem.Text))
                 {
-                    document.IDFile = txt_idFile.Text;
-                    document.MaTask = txt_maTask.Text;
-                    document.MoTa = txt_moTa.Text;
-                    document.ThoiGianUp = DateTime.Now;
-                    document.Data = new Byte[stream.Length];
-                    stream.Read(document.Data, 0, document.Data.Length);
-                    document.Extension = new FileInfo(txtTimKiem.Text).Extension;
-                    DocumentDAO.SaveFile(document);
+                    var Data = new Byte[stream.Length];
+                    stream.Read(Data, 0, Data.Length);
+                    Document doc = new Document()
+                    {
+                        IDFile = txt_idFile.Text,
+                        MaTask = txt_maTask.Text,
+                        MoTa = txt_moTa.Text,
+                        ThoiGianUp = DateTime.Now,
+                        Data = Data,
+                        Extension = new FileInfo(txtTimKiem.Text).Extension,
+                    };
+                    DocumentDAO.SaveFile(doc);
                 }
                 this.DialogResult = DialogResult.OK;
                 this.Close();
@@ -64,7 +67,9 @@ namespace Quan_Li_Luan_Van.GUI
             else
                 btnDownload.Hide();
             Document doc = DocumentDAO.GetObjectByMaTask(task.MaTask);
-            if (doc.IDFile != null)
+            if (doc is null)
+                btnUpdate.Hide();
+            else
             {
                 btnSave.Hide();
 
@@ -72,8 +77,7 @@ namespace Quan_Li_Luan_Van.GUI
                 txt_moTa.Text = doc.MoTa;
                 txt_thoiGianUp.Text = doc.ThoiGianUp.ToString("dd-MM-yyyy HH-mm-ss");
             }
-            else
-                btnUpdate.Hide();
+
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)

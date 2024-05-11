@@ -184,6 +184,7 @@
             this.Margin = new System.Windows.Forms.Padding(15);
             this.Name = "UCTask";
             this.Size = new System.Drawing.Size(271, 249);
+            this.Load += new System.EventHandler(this.UCTask_Load);
             this.Click += new System.EventHandler(this.UCTask_Click);
             this.ResumeLayout(false);
             this.PerformLayout();

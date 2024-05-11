@@ -14,7 +14,7 @@ namespace Quan_Li_Luan_Van.DAO
         {
             try
             {
-                using (var db = new QLLuanVanEntities())
+                using (var db = new QLLuanVanContext())
                 {
                     db.DanhGias.Add(danhGia);
                     db.SaveChanges();
@@ -31,7 +31,7 @@ namespace Quan_Li_Luan_Van.DAO
         {
             try
             {
-                using(var db = new QLLuanVanEntities())
+                using(var db = new QLLuanVanContext())
                 {
                     var danhGia = db.DanhGias.FirstOrDefault(x => x.MaTask == maTask);
                     return danhGia;

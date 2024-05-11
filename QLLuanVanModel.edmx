@@ -102,8 +102,6 @@
           <Property Name="ThongTin" Type="nvarchar(max)" Nullable="false" />
           <Property Name="ThoiGian" Type="datetime" Nullable="false" />
           <Property Name="MSGV" Type="varchar" MaxLength="10" Nullable="false" />
-          <Property Name="TTGV" Type="bit" Nullable="false" />
-          <Property Name="TTSV" Type="bit" Nullable="false" />
         </EntityType>
         <Association Name="FK__DangKi__MaDT__57DD0BE4">
           <End Role="DeTai" Type="Self.DeTai" Multiplicity="1" />
@@ -201,7 +199,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_TraoDoi_MSGV">
+        <Association Name="FK__TraoDoi__MSGV__2F9A1060">
           <End Role="GiangVien" Type="Self.GiangVien" Multiplicity="1" />
           <End Role="TraoDoi" Type="Self.TraoDoi" Multiplicity="*" />
           <ReferentialConstraint>
@@ -213,7 +211,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_TraoDoi_MSSV">
+        <Association Name="FK__TraoDoi__MSSV__2EA5EC27">
           <End Role="SinhVien" Type="Self.SinhVien" Multiplicity="1" />
           <End Role="TraoDoi" Type="Self.TraoDoi" Multiplicity="*" />
           <ReferentialConstraint>
@@ -225,25 +223,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Function Name="FUNC_GetSinhVien" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-          <Parameter Name="MaTK" Type="varchar" Mode="In" />
-          <ReturnType>
-            <CollectionType>
-              <RowType>
-                <Property Name="MSSV" Type="varchar" MaxLength="10" Nullable="false" />
-                <Property Name="HoTen" Type="nvarchar" MaxLength="50" Nullable="false" />
-                <Property Name="MaDT" Type="varchar" MaxLength="10" Nullable="false" />
-              </RowType>
-            </CollectionType>
-          </ReturnType>
-        </Function>
-        <Function Name="PROC_InsertIntoTraoDoi" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-          <Parameter Name="MSSV" Type="varchar" Mode="In" />
-          <Parameter Name="ChuDe" Type="nvarchar" Mode="In" />
-          <Parameter Name="ThongTin" Type="nvarchar(max)" Mode="In" />
-          <Parameter Name="ThoiGian" Type="datetime" Mode="In" />
-          <Parameter Name="MSGV" Type="varchar" Mode="In" />
-        </Function>
         <EntityContainer Name="QLLuanVanModelStoreContainer">
           <EntitySet Name="DangKi" EntityType="Self.DangKi" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="DanhGia" EntityType="Self.DanhGia" Schema="dbo" store:Type="Tables" />
@@ -286,11 +265,11 @@
             <End Role="DeTai" EntitySet="DeTai" />
             <End Role="Task" EntitySet="Task" />
           </AssociationSet>
-          <AssociationSet Name="FK_TraoDoi_MSGV" Association="Self.FK_TraoDoi_MSGV">
+          <AssociationSet Name="FK__TraoDoi__MSGV__2F9A1060" Association="Self.FK__TraoDoi__MSGV__2F9A1060">
             <End Role="GiangVien" EntitySet="GiangVien" />
             <End Role="TraoDoi" EntitySet="TraoDoi" />
           </AssociationSet>
-          <AssociationSet Name="FK_TraoDoi_MSSV" Association="Self.FK_TraoDoi_MSSV">
+          <AssociationSet Name="FK__TraoDoi__MSSV__2EA5EC27" Association="Self.FK__TraoDoi__MSSV__2EA5EC27">
             <End Role="SinhVien" EntitySet="SinhVien" />
             <End Role="TraoDoi" EntitySet="TraoDoi" />
           </AssociationSet>
@@ -300,11 +279,6 @@
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="QLLuanVanModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-        <ComplexType Name="FUNC_GetSinhVien_Result">
-          <Property Name="MSSV" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="HoTen" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="MaDT" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
-        </ComplexType>
         <EntityType Name="DangKi">
           <Key>
             <PropertyRef Name="MSSV" />
@@ -368,7 +342,7 @@
           <Property Name="MaTK" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="DeTais" Relationship="Self.FK__DeTai__MSGV__29221CFB" FromRole="GiangVien" ToRole="DeTai" />
           <NavigationProperty Name="TaiKhoan" Relationship="Self.FK__GiangVien__MaTK__236943A5" FromRole="GiangVien" ToRole="TaiKhoan" />
-          <NavigationProperty Name="TraoDois" Relationship="Self.FK_TraoDoi_MSGV" FromRole="GiangVien" ToRole="TraoDoi" />
+          <NavigationProperty Name="TraoDois" Relationship="Self.FK__TraoDoi__MSGV__2F9A1060" FromRole="GiangVien" ToRole="TraoDoi" />
         </EntityType>
         <EntityType Name="SinhVien">
           <Key>
@@ -382,7 +356,7 @@
           <Property Name="MaTK" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="DangKis" Relationship="Self.FK__DangKi__MSSV__56E8E7AB" FromRole="SinhVien" ToRole="DangKi" />
           <NavigationProperty Name="TaiKhoan" Relationship="Self.FK__SinhVien__MaTK__2645B050" FromRole="SinhVien" ToRole="TaiKhoan" />
-          <NavigationProperty Name="TraoDois" Relationship="Self.FK_TraoDoi_MSSV" FromRole="SinhVien" ToRole="TraoDoi" />
+          <NavigationProperty Name="TraoDois" Relationship="Self.FK__TraoDoi__MSSV__2EA5EC27" FromRole="SinhVien" ToRole="TraoDoi" />
         </EntityType>
         <EntityType Name="TaiKhoan">
           <Key>
@@ -420,10 +394,8 @@
           <Property Name="ThongTin" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="ThoiGian" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="MSGV" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="TTGV" Type="Boolean" Nullable="false" />
-          <Property Name="TTSV" Type="Boolean" Nullable="false" />
-          <NavigationProperty Name="GiangVien" Relationship="Self.FK_TraoDoi_MSGV" FromRole="TraoDoi" ToRole="GiangVien" />
-          <NavigationProperty Name="SinhVien" Relationship="Self.FK_TraoDoi_MSSV" FromRole="TraoDoi" ToRole="SinhVien" />
+          <NavigationProperty Name="GiangVien" Relationship="Self.FK__TraoDoi__MSGV__2F9A1060" FromRole="TraoDoi" ToRole="GiangVien" />
+          <NavigationProperty Name="SinhVien" Relationship="Self.FK__TraoDoi__MSSV__2EA5EC27" FromRole="TraoDoi" ToRole="SinhVien" />
         </EntityType>
         <Association Name="FK__DangKi__MaDT__57DD0BE4">
           <End Role="DeTai" Type="Self.DeTai" Multiplicity="1" />
@@ -509,7 +481,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_TraoDoi_MSGV">
+        <Association Name="FK__TraoDoi__MSGV__2F9A1060">
           <End Role="GiangVien" Type="Self.GiangVien" Multiplicity="1" />
           <End Role="TraoDoi" Type="Self.TraoDoi" Multiplicity="*" />
           <ReferentialConstraint>
@@ -533,7 +505,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_TraoDoi_MSSV">
+        <Association Name="FK__TraoDoi__MSSV__2EA5EC27">
           <End Role="SinhVien" Type="Self.SinhVien" Multiplicity="1" />
           <End Role="TraoDoi" Type="Self.TraoDoi" Multiplicity="*" />
           <ReferentialConstraint>
@@ -545,7 +517,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="QLLuanVanEntities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="QLLuanVanContext" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="DangKis" EntityType="Self.DangKi" />
           <EntitySet Name="DanhGias" EntityType="Self.DanhGia" />
           <EntitySet Name="DeTais" EntityType="Self.DeTai" />
@@ -583,7 +555,7 @@
             <End Role="TaiKhoan" EntitySet="TaiKhoans" />
             <End Role="GiangVien" EntitySet="GiangViens" />
           </AssociationSet>
-          <AssociationSet Name="FK_TraoDoi_MSGV" Association="Self.FK_TraoDoi_MSGV">
+          <AssociationSet Name="FK__TraoDoi__MSGV__2F9A1060" Association="Self.FK__TraoDoi__MSGV__2F9A1060">
             <End Role="GiangVien" EntitySet="GiangViens" />
             <End Role="TraoDoi" EntitySet="TraoDois" />
           </AssociationSet>
@@ -591,27 +563,17 @@
             <End Role="TaiKhoan" EntitySet="TaiKhoans" />
             <End Role="SinhVien" EntitySet="SinhViens" />
           </AssociationSet>
-          <AssociationSet Name="FK_TraoDoi_MSSV" Association="Self.FK_TraoDoi_MSSV">
+          <AssociationSet Name="FK__TraoDoi__MSSV__2EA5EC27" Association="Self.FK__TraoDoi__MSSV__2EA5EC27">
             <End Role="SinhVien" EntitySet="SinhViens" />
             <End Role="TraoDoi" EntitySet="TraoDois" />
           </AssociationSet>
-          <FunctionImport Name="FUNC_GetSinhVien" IsComposable="true" ReturnType="Collection(QLLuanVanModel.FUNC_GetSinhVien_Result)">
-            <Parameter Name="MaTK" Mode="In" Type="String" />
-          </FunctionImport>
-          <FunctionImport Name="PROC_InsertIntoTraoDoi">
-            <Parameter Name="MSSV" Mode="In" Type="String" />
-            <Parameter Name="ChuDe" Mode="In" Type="String" />
-            <Parameter Name="ThongTin" Mode="In" Type="String" />
-            <Parameter Name="ThoiGian" Mode="In" Type="DateTime" />
-            <Parameter Name="MSGV" Mode="In" Type="String" />
-          </FunctionImport>
         </EntityContainer>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="QLLuanVanModelStoreContainer" CdmEntityContainer="QLLuanVanEntities">
+        <EntityContainerMapping StorageEntityContainer="QLLuanVanModelStoreContainer" CdmEntityContainer="QLLuanVanContext">
           <EntitySetMapping Name="DangKis">
             <EntityTypeMapping TypeName="QLLuanVanModel.DangKi">
               <MappingFragment StoreEntitySet="DangKi">
@@ -715,21 +677,9 @@
                 <ScalarProperty Name="ThongTin" ColumnName="ThongTin" />
                 <ScalarProperty Name="ThoiGian" ColumnName="ThoiGian" />
                 <ScalarProperty Name="MSGV" ColumnName="MSGV" />
-                <ScalarProperty Name="TTGV" ColumnName="TTGV" />
-                <ScalarProperty Name="TTSV" ColumnName="TTSV" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <FunctionImportMapping FunctionName="QLLuanVanModel.Store.FUNC_GetSinhVien" FunctionImportName="FUNC_GetSinhVien">
-            <ResultMapping>
-              <ComplexTypeMapping TypeName="QLLuanVanModel.FUNC_GetSinhVien_Result">
-                <ScalarProperty Name="MSSV" ColumnName="MSSV" />
-                <ScalarProperty Name="HoTen" ColumnName="HoTen" />
-                <ScalarProperty Name="MaDT" ColumnName="MaDT" />
-              </ComplexTypeMapping>
-            </ResultMapping>
-          </FunctionImportMapping>
-          <FunctionImportMapping FunctionImportName="PROC_InsertIntoTraoDoi" FunctionName="QLLuanVanModel.Store.PROC_InsertIntoTraoDoi" />
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

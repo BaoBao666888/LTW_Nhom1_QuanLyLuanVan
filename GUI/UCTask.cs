@@ -74,5 +74,10 @@ namespace Quan_Li_Luan_Van.GUI
                 fDanhGiaTask.ShowDialog();
             }
         }
+
+        private void UCTask_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

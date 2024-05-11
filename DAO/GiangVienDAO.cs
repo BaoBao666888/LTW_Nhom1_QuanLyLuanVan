@@ -15,7 +15,7 @@ namespace Quan_Li_Luan_Van.DAO
         {
             try
             {
-                using(var db = new QLLuanVanEntities())
+                using (var db = new QLLuanVanContext())
                 {
                     var gv = (from s in db.GiangViens
                               where s.MaTK == maTK
@@ -24,23 +24,18 @@ namespace Quan_Li_Luan_Van.DAO
                     return gv;
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
                 return null;
             }
-
-            //string sqlStr = string.Format($"select * from GiangVien where MaTK = '{maTK}'");
-            //DataTable dt = DbConnection.Load(sqlStr);
-            //GiangVien gv = new GiangVien(dt.Rows[0]["MSGV"].ToString(), dt.Rows[0]["HoTen"].ToString(), dt.Rows[0]["Email"].ToString(), dt.Rows[0]["SDT"].ToString(), dt.Rows[0]["MaTK"].ToString());
-            //return gv;
         }
 
         public static GiangVien GetGVByMSGV(string mSGV)
         {
             try
             {
-                using (var db = new QLLuanVanEntities())
+                using (var db = new QLLuanVanContext())
                 {
                     var gv = (from s in db.GiangViens
                               where s.MSGV == mSGV
@@ -54,11 +49,6 @@ namespace Quan_Li_Luan_Van.DAO
                 MessageBox.Show(ex.Message);
                 return null;
             }
-
-            //string sqlStr = string.Format($"select * from GiangVien where MaTK = '{mSGV}'");
-            //DataTable dt = DbConnection.Load(sqlStr);
-            //GiangVien gv = new GiangVien(dt.Rows[0]["MSGV"].ToString(), dt.Rows[0]["HoTen"].ToString(), dt.Rows[0]["Email"].ToString(), dt.Rows[0]["SDT"].ToString(), dt.Rows[0]["MaTK"].ToString());
-            //return gv;
         }
     }
 }

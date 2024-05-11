@@ -16,7 +16,7 @@ namespace Quan_Li_Luan_Van.DAO
         {
             try
             {
-                using(var db = new QLLuanVanEntities())
+                using(var db = new QLLuanVanContext())
                 {
                     var count = (from s in db.DangKis
                                  where s.MSSV == MSSV
@@ -29,9 +29,6 @@ namespace Quan_Li_Luan_Van.DAO
                 MessageBox.Show(ex.Message);
                 return false;
             }
-
-            //string sqlStr = string.Format($"select * from DangKi where MSSV = '{MSSV}' and (TrangThai = N'Đã duyệt' or TrangThai = N'Chờ duyệt')");
-            //return DbConnection.Load(sqlStr).Rows.Count;
         }
 
         //lấy thông tin sinh viên đăng kí theo MSGV
@@ -39,7 +36,7 @@ namespace Quan_Li_Luan_Van.DAO
         {
             try
             {
-                using (var db = new QLLuanVanEntities())
+                using (var db = new QLLuanVanContext())
                 {
                     var dt = (from s in db.DangKis
                                  join d in db.DeTais
@@ -55,9 +52,6 @@ namespace Quan_Li_Luan_Van.DAO
                 MessageBox.Show(ex.Message);
                 return null;
             }
-
-            //string sqlStr = string.Format($"select * from DangKi inner join SinhVien on Sinhvien.MSSV = DangKi.MSSV inner join DeTai on DeTai.MaDT = DangKi.MaDT where MSGV ='{MSGV}'");
-            //return DbConnection.Load(sqlStr);
         }
 
         //Giảng viên từ chối đăng kí đề tài
@@ -65,7 +59,7 @@ namespace Quan_Li_Luan_Van.DAO
         {
             try
             {
-                using (var db = new QLLuanVanEntities())
+                using (var db = new QLLuanVanContext())
                 {
                     var deTai = db.DangKis.FirstOrDefault(x => x.MaDT == MaDT);
                     if (deTai != null)
@@ -85,9 +79,6 @@ namespace Quan_Li_Luan_Van.DAO
             {
                 MessageBox.Show(ex.Message);
             }
-
-            //string sqlStr = string.Format($"update DangKi set TrangThai = N'Từ chối', LyDoTuChoi = N'{lyDoTuChoi}' where MaDT = '{MaDT}'");
-            //DbConnection.Load(sqlStr);
         }
 
         //Giảng viên duyệt đề tài
@@ -95,7 +86,7 @@ namespace Quan_Li_Luan_Van.DAO
         {
             try
             {
-                using (var db = new QLLuanVanEntities())
+                using (var db = new QLLuanVanContext())
                 {
                     var deTai = db.DangKis.FirstOrDefault(x => x.MaDT == MaDT);
                     if (deTai != null)
@@ -114,9 +105,6 @@ namespace Quan_Li_Luan_Van.DAO
             {
                 MessageBox.Show(ex.Message);
             }
-
-            //string sqlStr = string.Format($"update DangKi set TrangThai = N'Đã duyệt' where MaDT = '{MaDT}'");
-            //DbConnection.Load(sqlStr);
         }
 
 
@@ -125,7 +113,7 @@ namespace Quan_Li_Luan_Van.DAO
         {
             try
             {
-                using (var db = new QLLuanVanEntities())
+                using (var db = new QLLuanVanContext())
                 {
                     var count = (from s in db.DangKis
                                  where s.MaDT == MaDT
@@ -139,9 +127,6 @@ namespace Quan_Li_Luan_Van.DAO
                 MessageBox.Show(e.Message);
                 return false;
             }
-
-            //string sqlStr = string.Format($"select * from DangKi where MaDT = '{MaDT}'");
-            //return DbConnection.Load(sqlStr);
         }
 
         //lấy thông tin đề tài theo mã sinh viên đã đăng kí thành công
@@ -149,7 +134,7 @@ namespace Quan_Li_Luan_Van.DAO
         {
             try
             {
-                using(var db = new QLLuanVanEntities())
+                using(var db = new QLLuanVanContext())
                 {
                     var deTai = (from s in db.DangKis
                                  join d in db.DeTais
@@ -166,13 +151,6 @@ namespace Quan_Li_Luan_Van.DAO
                 MessageBox.Show(ex.Message);
                 return null;
             }
-
-            //string sqlStr = string.Format($"select * from DangKi inner join DeTai on DeTai.MaDT = DangKi.MaDT where DangKi.MSSV = '{MSSV}' and DangKi.TrangThai = N'Đã duyệt'");
-            //DataTable dt = DbConnection.Load(sqlStr);
-            //if (dt.Rows.Count > 0)
-            //    return new DTO.DeTai(dt.Rows[0]["MaDT"].ToString(), dt.Rows[0]["TenDeTai"].ToString(), dt.Rows[0]["TheLoai"].ToString(), dt.Rows[0]["MoTa"].ToString(), dt.Rows[0]["CongNghe"].ToString(), dt.Rows[0]["YeuCau"].ToString(), dt.Rows[0]["ChucNang"].ToString(), dt.Rows[0]["MSGV"].ToString(), int.Parse(dt.Rows[0]["SoLuongSV"].ToString()));
-            //else
-            //    return null;
         }
 
         //Đăng kí đề tài
@@ -180,7 +158,7 @@ namespace Quan_Li_Luan_Van.DAO
         {
             try
             {
-                using(var db = new QLLuanVanEntities())
+                using(var db = new QLLuanVanContext())
                 {
                     db.DangKis.Add(dangKi);
                     db.SaveChanges();
@@ -191,9 +169,6 @@ namespace Quan_Li_Luan_Van.DAO
             {
                 MessageBox.Show(ex.Message);
             }
-
-            //string sqlStr = string.Format("INSERT INTO DangKi(MSSV, MaDT, ThoiGianYeuCau, TrangThai) VALUES ('{0}', '{1}', '{2}', N'{3}')", dangKi.MSSV, dangKi.MaDT, dangKi.ThoiGianYeuCau.ToString("yyyy-MM-dd HH:mm:ss"), dangKi.TrangThai);
-            //DbConnection.ThucThi(sqlStr);
         }
     }
 }
