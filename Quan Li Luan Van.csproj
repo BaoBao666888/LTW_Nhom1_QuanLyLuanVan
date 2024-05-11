@@ -137,12 +137,6 @@
     <Compile Include="GUI\FChiTiet.Designer.cs">
       <DependentUpon>FChiTiet.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\FDangKiDeTai.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\FDangKiDeTai.Designer.cs">
-      <DependentUpon>FDangKiDeTai.cs</DependentUpon>
-    </Compile>
     <Compile Include="GUI\FDanhGiaTask.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -294,9 +288,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\FChiTiet.resx">
       <DependentUpon>FChiTiet.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\FDangKiDeTai.resx">
-      <DependentUpon>FDangKiDeTai.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\FDanhGiaTask.resx">
       <DependentUpon>FDanhGiaTask.cs</DependentUpon>

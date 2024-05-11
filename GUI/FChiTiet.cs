@@ -7,15 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Quan_Li_Luan_Van.DTO;
 using Quan_Li_Luan_Van.DAO;
 
 namespace Quan_Li_Luan_Van.GUI
 {
     public partial class FChiTiet : Form
     {
-        private DTO.DeTai lv;
-        public FChiTiet(DTO.DeTai lv)
+        private DeTai lv;
+        public FChiTiet(DeTai lv)
         {
             InitializeComponent();
             this.lv = lv;

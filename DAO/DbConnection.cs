@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Data;
 using System.Windows.Forms;
-using Quan_Li_Luan_Van.DTO;
 
 namespace Quan_Li_Luan_Van.DAO
 {

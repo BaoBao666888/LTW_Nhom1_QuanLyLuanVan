@@ -1,5 +1,4 @@
 ﻿using Quan_Li_Luan_Van.DAO;
-using Quan_Li_Luan_Van.DTO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -27,15 +26,13 @@ namespace Quan_Li_Luan_Van.GUI
         }
         private void LoadData()
         {
-            DataTable dt = TraoDoiDAO.GetDanhSachDK(giangVien.MSGV);
 
             flp_list.Controls.Clear();
-
-            for (int i = 0; i < dt.Rows.Count; i++)
+            List<SinhVien> ListSV = SinhVienDAO.DSThongTinSVDangKiThanhCong();
+            foreach(var sv in ListSV)
             {
-                SinhVienDK svdk = new SinhVienDK(dt.Rows[i]["MSSV"].ToString(), dt.Rows[i]["HoTen"].ToString());
-                UCSinhVienDK uc = new UCSinhVienDK(svdk);
-                flp_list.Controls.Add(uc);
+                UCSinhVienDK ucSinhVienDK = new UCSinhVienDK(sv);
+                flp_list.Controls.Add(ucSinhVienDK);
             }
         }
 

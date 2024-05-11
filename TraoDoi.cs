@@ -20,8 +20,6 @@ namespace Quan_Li_Luan_Van
         public string ThongTin { get; set; }
         public System.DateTime ThoiGian { get; set; }
         public string MSGV { get; set; }
-        public bool TTGV { get; set; }
-        public bool TTSV { get; set; }
     
         public virtual GiangVien GiangVien { get; set; }
         public virtual SinhVien SinhVien { get; set; }

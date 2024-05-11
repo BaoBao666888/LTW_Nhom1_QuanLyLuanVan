@@ -1,5 +1,4 @@
 ﻿using Quan_Li_Luan_Van.DAO;
-using Quan_Li_Luan_Van.DTO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -27,17 +26,15 @@ namespace Quan_Li_Luan_Van.GUI
         }
         private void LoadData()
         {
-            DataTable dt = TraoDoiDAO.GetDataTraoDoi();
+            List<TraoDoi> listTD = TraoDoiDAO.GetDataTraoDoi();
 
             flp_list.Controls.Clear();
 
-            for (int i = 0; i < dt.Rows.Count; i++)
+            foreach(var item in  listTD)
             {
-                DateTime thoiGian = dt.Rows[i].Field<DateTime>("ThoiGian");
-                TraoDoi traoDoi = new TraoDoi(dt.Rows[i]["MSSV"].ToString(), dt.Rows[i]["ChuDe"].ToString(), dt.Rows[i]["ThongTin"].ToString(), thoiGian, dt.Rows[i]["MSGV"].ToString());
-                if (sinhVien.MSSV == traoDoi.MSSV)
+                if (item.MSSV == sinhVien.MSSV)
                 {
-                    UCThongBao ucThongBao = new UCThongBao(traoDoi);
+                    UCThongBao ucThongBao = new UCThongBao(item);
                     flp_list.Controls.Add(ucThongBao);
                 }
             }

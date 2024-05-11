@@ -13,7 +13,7 @@ namespace Quan_Li_Luan_Van.GUI
 {
     public partial class FDanhGiaTask : Form
     {
-        DTO.Task task;
+        Task task;
         public FDanhGiaTask()
         {
             InitializeComponent();
@@ -49,9 +49,14 @@ namespace Quan_Li_Luan_Van.GUI
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
-                DanhGia obj = new DanhGia(task.MaTask, txtNhanXet.Text, int.Parse(txtDiem.Text));
-                DanhGiaDAO.DanhGia(obj);
-                this.Close();
+            DanhGia obj = new DanhGia()
+            {
+                MaTask = task.MaTask,
+                NhanXet = txtNhanXet.Text,
+                Diem = int.Parse(txtDiem.Text)
+            };
+            DanhGiaDAO.DanhGia(obj);
+            this.Close();
         }
     }
 }

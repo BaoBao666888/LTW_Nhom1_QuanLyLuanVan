@@ -14,7 +14,6 @@ namespace Quan_Li_Luan_Van.GUI
 { 
     public partial class UCDangKiDeTai : UserControl
     {
-        SinhVien sinhVien;
         DangKi dangKi;
 
         public UCDangKiDeTai()
@@ -23,16 +22,16 @@ namespace Quan_Li_Luan_Van.GUI
 
         }
 
-        public UCDangKiDeTai(SinhVien sinhVien, DangKi dangKi)
+        public UCDangKiDeTai(DangKi dangKi)
         {
             InitializeComponent();
             this.dangKi = dangKi;
-            this.sinhVien = sinhVien;
             this.loadData();
         }
 
         public void loadData()
         {
+            SinhVien sinhVien = SinhVienDAO.ThongTinSVDangKiDeTai(dangKi.MaDT);
             lblMSSV.Text = sinhVien.MSSV;
             lblHoTen.Text = sinhVien.HoTen;
             lblMaDeTai.Text = dangKi.MaDT;

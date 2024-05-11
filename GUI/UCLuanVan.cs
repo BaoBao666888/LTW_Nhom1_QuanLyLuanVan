@@ -63,10 +63,10 @@ namespace Quan_Li_Luan_Van.GUI
 
         private void LoadData()
         {
-            lblMaDeTai.Text = lv.MadeTai;
+            lblMaDeTai.Text = lv.MaDT;
             lblTenDeTai.Text = lv.TenDeTai;
             lblTheLoai.Text = lv.TheLoai;
-            if (DangKiDAO.KiemTraDangKi(lv.MadeTai).Rows.Count >= lv.SoLuongSV)
+            if (!DangKiDAO.ConDangKi(lv.MaDT, lv.SoLuongSV))
             {
                 lblTrangThai.Text = "Hết";
             }
@@ -81,7 +81,7 @@ namespace Quan_Li_Luan_Van.GUI
             }
             else
             {
-                if (DangKiDAO.KiemTraSinhVienDangki(sv.MSSV) == 0 && DangKiDAO.KiemTraDangKi(lv.MaDT).Rows.Count <= lv.SoLuongSV)
+                if (DangKiDAO.SVChuaDangKi(sv.MSSV) && DangKiDAO.ConDangKi(lv.MaDT, lv.SoLuongSV))
                 {
                     btnDangKi.Visible = true;
                 }
@@ -150,25 +150,18 @@ namespace Quan_Li_Luan_Van.GUI
         {
             //FDangKiDeTai fDangKiDeTai = new FDangKiDeTai(sv, lv);
             //fDangKiDeTai.ShowDialog();
-            if (DangKiDAO.SoLuongDangKi(lv.MaDT) >= lv.SoLuongSV)
+            var dateTime = DateTime.Now;
+            DialogResult res = MessageBox.Show("Bạn có chắc chắn muốn đăng kí đề tài này?", "Question?", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (res == DialogResult.Yes)
             {
-                MessageBox.Show("Đề tài đã đủ lượng đăng kí", "WARNING!", MessageBoxButtons.OKCancel);
-            }
-            else
-            {
-                var dateTime = DateTime.Now;
-                DialogResult res = MessageBox.Show("Bạn có chắc chắn muốn đăng kí đề tài này?", "Question?", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                if (res == DialogResult.Yes)
+                DangKi dk = new DangKi
                 {
-                    DangKi dk = new DangKi
-                    {
-                        MSSV = sv.MSSV,
-                        MaDT = lv.MaDT,
-                        ThoiGianYeuCau = dateTime,
-                        TrangThai = "Chờ duyệt"
-                    };
-                    DangKiDAO.DangKiDeTai(dk);  
-                }
+                    MSSV = sv.MSSV,
+                    MaDT = lv.MaDT,
+                    ThoiGianYeuCau = dateTime,
+                    TrangThai = "Chờ duyệt"
+                };
+                DangKiDAO.DangKiDeTai(dk);
             }
         }
 

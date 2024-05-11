@@ -1,5 +1,4 @@
-﻿using Quan_Li_Luan_Van.DTO;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,11 +12,11 @@ namespace Quan_Li_Luan_Van.GUI
 {
     public partial class UCSinhVienDK : UserControl
     {
-        private SinhVienDK sinhVienDK;
-        public UCSinhVienDK(SinhVienDK sinhVienDK)
+        SinhVien sv;
+        public UCSinhVienDK(SinhVien sv)
         {
             InitializeComponent();
-            this.sinhVienDK = sinhVienDK;
+            this.sv = sv;
             this.LoadData();
         }
         public bool IsChecked()
@@ -30,8 +29,8 @@ namespace Quan_Li_Luan_Van.GUI
         }
         private void LoadData()
         {
-            lblHoTen.Text = sinhVienDK.Hoten;
-            lblMSSV.Text = sinhVienDK.MSSV;
+            lblHoTen.Text = sv.HoTen;
+            lblMSSV.Text = sv.MSSV;
         }
 
         private void UCSinhVienDK_Load(object sender, EventArgs e)

@@ -25,13 +25,10 @@ namespace Quan_Li_Luan_Van.GUI
         }
 
         private void btnDangNhap_Click(object sender, EventArgs e)
-        {
-            DataTable dt = new DataTable();
-            
-
+        {            
             if (rdoGiangVien.Checked == true)
             {
-                TaiKhoan tk = TaiKhoanDAO.GetTaiKhoanGV(txtTaiKhoan.Text.Trim(), txtMatKhau.Text.Trim());
+                TaiKhoan tk = TaiKhoanDAO.GetTaiKhoanGV(txtTaiKhoan.Text, txtMatKhau.Text);
                 FGiangVien fGV = new FGiangVien(tk);
                 this.Hide();
                 fGV.Show();
@@ -40,7 +37,7 @@ namespace Quan_Li_Luan_Van.GUI
             else 
                 if(rdoSinhVien.Checked == true)
             {
-                TaiKhoan taiKhoan = TaiKhoanDAO.GetTaiKhoanSV(txtTaiKhoan.Text.Trim(), txtTaiKhoan.Text.Trim());
+                TaiKhoan taiKhoan = TaiKhoanDAO.GetTaiKhoanSV(txtTaiKhoan.Text, txtTaiKhoan.Text);
                 FSinhVien fGV = new FSinhVien(taiKhoan);
                 this.Hide();
                 fGV.Show();

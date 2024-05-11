@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Quan_Li_Luan_Van.DTO;
 using Quan_Li_Luan_Van.DAO;
 
 namespace Quan_Li_Luan_Van.GUI

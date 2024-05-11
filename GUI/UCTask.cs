@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Quan_Li_Luan_Van.DTO;
 using Quan_Li_Luan_Van.DAO;
 using System.Diagnostics;
 
@@ -15,9 +14,9 @@ namespace Quan_Li_Luan_Van.GUI
 {
     public partial class UCTask : UserControl
     {
-        DTO.Task task;
+        Task task;
         string vaiTro;
-        public UCTask(DTO.Task task, string VaiTro)
+        public UCTask(Task task, string VaiTro)
         {
             InitializeComponent();
             this.task = task;

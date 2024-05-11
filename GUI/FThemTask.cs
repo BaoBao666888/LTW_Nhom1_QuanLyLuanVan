@@ -1,5 +1,4 @@
 ﻿using Quan_Li_Luan_Van.DAO;
-using Quan_Li_Luan_Van.DTO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,7 +14,7 @@ namespace Quan_Li_Luan_Van.GUI
 {
     public partial class FThemTask : Form
     {
-        DTO.Task task;
+        Task task;
         string VaiTro;
         public FThemTask(GiangVien gv)
         {
@@ -35,7 +34,7 @@ namespace Quan_Li_Luan_Van.GUI
             txtTyLeHoanThanh.Hide();
         }
 
-        public FThemTask(DTO.Task task, string VaiTro)
+        public FThemTask(Task task, string VaiTro)
         {
             InitializeComponent();
             this.task = task;
@@ -59,7 +58,7 @@ namespace Quan_Li_Luan_Van.GUI
             cb_maDT.Items.Clear();
         }
 
-        private void LoadData(DTO.Task task) 
+        private void LoadData(Task task) 
         {
             txtMaTask.Text = task.MaTask;
             cb_maDT.Text = task.MaDT;
@@ -106,7 +105,15 @@ namespace Quan_Li_Luan_Van.GUI
         {
             if (this.checkData())
             {
-                DTO.Task task = new DTO.Task(txtMaTask.Text, cb_maDT.Text, txtTenTask.Text, txtMoTa.Text, 0, dt_deadline.Value);
+                Task task = new Task()
+                {
+                    MaTask = txtMaTask.Text,
+                    MaDT = cb_maDT.Text,
+                    TenTask = txtTenTask.Text,
+                    MoTa = txtMoTa.Text,
+                    TyLeHoanThanh = 0,
+                    Deadline = dt_deadline.Value
+                };
                 TaskDAO.ThemTask(task);
                 this.DialogResult = DialogResult.OK;
                 this.Close();
@@ -142,7 +149,15 @@ namespace Quan_Li_Luan_Van.GUI
         {
             if (txtTyLeHoanThanh.Value > 0)
             {
-                DTO.Task task = new DTO.Task(txtMaTask.Text, cb_maDT.Text, txtTenTask.Text, txtMoTa.Text, int.Parse(txtTyLeHoanThanh.Value.ToString()), dt_deadline.Value);
+                Task task = new Task()
+                {
+                    MaTask = txtMaTask.Text,
+                    MaDT = cb_maDT.Text,
+                    TenTask = txtTenTask.Text,
+                    MoTa = txtMoTa.Text,
+                    TyLeHoanThanh = int.Parse(txtTyLeHoanThanh.Value.ToString()),
+                    Deadline = dt_deadline.Value
+                };
                 TaskDAO.UpdateTask(task);
                 this.DialogResult = DialogResult.OK;
                 this.Close();

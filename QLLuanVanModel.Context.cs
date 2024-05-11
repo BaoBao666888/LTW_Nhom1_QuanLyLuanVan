@@ -14,19 +14,19 @@ namespace Quan_Li_Luan_Van
     using System.Data.Entity.Infrastructure;
     using System.Data.Entity.Core.Objects;
     using System.Linq;
-    
+
     public partial class QLLuanVanEntities : DbContext
     {
         public QLLuanVanEntities()
             : base("name=QLLuanVanEntities")
         {
         }
-    
+
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             throw new UnintentionalCodeFirstException();
         }
-    
+
         public virtual DbSet<DangKi> DangKis { get; set; }
         public virtual DbSet<DanhGia> DanhGias { get; set; }
         public virtual DbSet<DeTai> DeTais { get; set; }
@@ -36,40 +36,6 @@ namespace Quan_Li_Luan_Van
         public virtual DbSet<TaiKhoan> TaiKhoans { get; set; }
         public virtual DbSet<Task> Tasks { get; set; }
         public virtual DbSet<TraoDoi> TraoDois { get; set; }
-    
-        [DbFunction("QLLuanVanEntities", "FUNC_GetSinhVien")]
-        public virtual IQueryable<FUNC_GetSinhVien_Result> FUNC_GetSinhVien(string maTK)
-        {
-            var maTKParameter = maTK != null ?
-                new ObjectParameter("MaTK", maTK) :
-                new ObjectParameter("MaTK", typeof(string));
-    
-            return ((IObjectContextAdapter)this).ObjectContext.CreateQuery<FUNC_GetSinhVien_Result>("[QLLuanVanEntities].[FUNC_GetSinhVien](@MaTK)", maTKParameter);
-        }
-    
-        public virtual int PROC_InsertIntoTraoDoi(string mSSV, string chuDe, string thongTin, Nullable<System.DateTime> thoiGian, string mSGV)
-        {
-            var mSSVParameter = mSSV != null ?
-                new ObjectParameter("MSSV", mSSV) :
-                new ObjectParameter("MSSV", typeof(string));
-    
-            var chuDeParameter = chuDe != null ?
-                new ObjectParameter("ChuDe", chuDe) :
-                new ObjectParameter("ChuDe", typeof(string));
-    
-            var thongTinParameter = thongTin != null ?
-                new ObjectParameter("ThongTin", thongTin) :
-                new ObjectParameter("ThongTin", typeof(string));
-    
-            var thoiGianParameter = thoiGian.HasValue ?
-                new ObjectParameter("ThoiGian", thoiGian) :
-                new ObjectParameter("ThoiGian", typeof(System.DateTime));
-    
-            var mSGVParameter = mSGV != null ?
-                new ObjectParameter("MSGV", mSGV) :
-                new ObjectParameter("MSGV", typeof(string));
-    
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("PROC_InsertIntoTraoDoi", mSSVParameter, chuDeParameter, thongTinParameter, thoiGianParameter, mSGVParameter);
-        }
     }
+   
 }

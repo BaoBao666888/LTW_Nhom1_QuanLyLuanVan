@@ -1,5 +1,4 @@
 ﻿using Quan_Li_Luan_Van.DAO;
-using Quan_Li_Luan_Van.DTO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,7 +17,7 @@ namespace Quan_Li_Luan_Van.GUI
 {
     public partial class FCapNhatTienDo : Form
     {
-        public FCapNhatTienDo(DTO.Task task, string VaiTro)
+        public FCapNhatTienDo(Task task, string VaiTro)
         {
             InitializeComponent();
             this.LoadData(task,VaiTro); 
@@ -38,7 +37,7 @@ namespace Quan_Li_Luan_Van.GUI
             {
                 using (Stream stream = File.OpenRead(txtTimKiem.Text))
                 {
-                    document.IdFile = txt_idFile.Text;
+                    document.IDFile = txt_idFile.Text;
                     document.MaTask = txt_maTask.Text;
                     document.MoTa = txt_moTa.Text;
                     document.ThoiGianUp = DateTime.Now;
@@ -54,7 +53,7 @@ namespace Quan_Li_Luan_Van.GUI
                 MessageBox.Show("Vui lòng tìm kiếm đường dẫn file!");
         }
 
-        private void LoadData(DTO.Task task, string VaiTro)
+        private void LoadData(Task task, string VaiTro)
         {
             txt_maTask.Text = task.MaTask;
             if (VaiTro == "Giảng viên")
@@ -65,11 +64,11 @@ namespace Quan_Li_Luan_Van.GUI
             else
                 btnDownload.Hide();
             Document doc = DocumentDAO.GetObjectByMaTask(task.MaTask);
-            if (doc.IdFile != null)
+            if (doc.IDFile != null)
             {
                 btnSave.Hide();
 
-                txt_idFile.Text = doc.IdFile;
+                txt_idFile.Text = doc.IDFile;
                 txt_moTa.Text = doc.MoTa;
                 txt_thoiGianUp.Text = doc.ThoiGianUp.ToString("dd-MM-yyyy HH-mm-ss");
             }
@@ -84,7 +83,7 @@ namespace Quan_Li_Luan_Van.GUI
             {
                 using (Stream stream = File.OpenRead(txtTimKiem.Text))
                 {
-                    document.IdFile = txt_idFile.Text;
+                    document.IDFile = txt_idFile.Text;
                     document.MaTask = txt_maTask.Text;
                     document.MoTa = txt_moTa.Text;
                     document.ThoiGianUp = DateTime.Now;

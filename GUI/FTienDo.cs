@@ -1,5 +1,4 @@
 ﻿using Quan_Li_Luan_Van.DAO;
-using Quan_Li_Luan_Van.DTO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -36,14 +35,14 @@ namespace Quan_Li_Luan_Van.GUI
 
         private void LoadData()
         {
-            DataTable dt = new DataTable();
+            List<Task> ListTask = new List<Task>();
             if (vaitro == "Giảng viên")
             {
-                dt = TaskDAO.GetDataByMSGV(gv.MSGV, cb_filter.Text);
+                ListTask = TaskDAO.GetDataByMSGV(gv.MSGV, cb_filter.Text);
             }
             else
             {
-                dt = TaskDAO.GetDataByMSSV(sv.MSSV, cb_filter.Text);
+                ListTask = TaskDAO.GetDataByMSSV(sv.MSSV, cb_filter.Text);
                 if (DangKiDAO.GetDeTaiByMSSV(sv.MSSV) != null)
                 {
                     lbl_tenDT.Text = DangKiDAO.GetDeTaiByMSSV(sv.MSSV).TenDeTai;
@@ -53,10 +52,10 @@ namespace Quan_Li_Luan_Van.GUI
             }
             flp_danhSachTask.Controls.Clear();
 
-            for (int i = 0; i < dt.Rows.Count; i++)
+
+            foreach (var item in ListTask)
             {
-                DTO.Task task = new DTO.Task(dt.Rows[i]["MaTask"].ToString() , dt.Rows[i]["MaDT"].ToString(), dt.Rows[i]["TenTask"].ToString(), dt.Rows[i]["MoTa"].ToString(), int.Parse(dt.Rows[i]["TyLeHoanThanh"].ToString()), DateTime.Parse(dt.Rows[i]["Deadline"].ToString()));
-                UCTask ucTask = new UCTask(task, vaitro);
+                UCTask ucTask = new UCTask(item, vaitro);
                 flp_danhSachTask.Controls.Add(ucTask);
             }
         }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.Design;
 using System.Data;
 using System.Linq;
 using System.Text;
@@ -10,74 +11,152 @@ namespace Quan_Li_Luan_Van.DAO
 {
     public class TaskDAO
     {
-        public static DataTable GetDataByMSSV(string MSSV, string filter)
+        public static List<Task> GetDataByMSSV(string MSSV, string filter)
         {
-            string sqlStr = null;
-            if (filter == "In progress")
+
+            try
             {
-                sqlStr = string.Format($"select * from Task inner join DangKi on DangKi.MaDT = Task.MaDT where DangKi.MSSV = '{MSSV}' and DangKi.TrangThai = N'Đã duyệt' and Task.TyLeHoanThanh != 100 and Task.Deadline >= GETDATE()");
+                using(var db = new QLLuanVanEntities())
+                {
+                    List<Task> newTask;
+                    if (filter == "In progress")
+                        newTask = (from t in db.Tasks
+                                   join d in db.DangKis
+                                   on t.MaDT equals d.MaDT
+                                   where d.MSSV == MSSV
+                                   && d.TrangThai == "Đã duyệt"
+                                   && t.TyLeHoanThanh != 100
+                                   && t.Deadline >= DateTime.Now
+                                   select t).ToList();
+                    else
+                        if (filter == "Overdue")
+                            newTask = (from t in db.Tasks
+                                       join d in db.DangKis
+                                       on t.MaDT equals d.MaDT
+                                       where d.MSSV == MSSV
+                                       && d.TrangThai == "Đã duyệt"
+                                       && t.TyLeHoanThanh != 100
+                                       && t.Deadline < DateTime.Now
+                                       select t).ToList();
+                        else
+                            if (filter == "Completed")
+                                newTask = (from t in db.Tasks
+                                           join d in db.DangKis
+                                           on t.MaDT equals d.MaDT
+                                           where d.MSSV == MSSV
+                                           && d.TrangThai == "Đã duyệt"
+                                           && t.TyLeHoanThanh == 100
+                                           select t).ToList();
+                            else
+                                newTask = (from t in db.Tasks
+                                           join d in db.DangKis
+                                           on t.MaDT equals d.MaDT
+                                           where d.MSSV == MSSV
+                                           && d.TrangThai == "Đã duyệt"
+                                           select t).ToList();
+
+                    return newTask;
+                }
             }
-            else
-                if (filter == "Overdue")
+            catch(Exception e)
             {
-                sqlStr = string.Format($"select * from Task inner join DangKi on DangKi.MaDT = Task.MaDT where DangKi.MSSV = '{MSSV}' and DangKi.TrangThai = N'Đã duyệt' and Task.Deadline < GETDATE()");
+                MessageBox.Show(e.Message);
+                return null;
             }
-            else
-                if (filter == "Completed")
-            {
-                sqlStr = string.Format($"select * from Task inner join DangKi on DangKi.MaDT = Task.MaDT where DangKi.MSSV = '{MSSV}' and DangKi.TrangThai = N'Đã duyệt' and Task.TyLeHoanThanh = 100");
-            }
-            else
-                sqlStr = string.Format($"select * from Task inner join DangKi on DangKi.MaDT = Task.MaDT where DangKi.MSSV = '{MSSV}' and DangKi.TrangThai = N'Đã duyệt'");
-            return DbConnection.Load(sqlStr);
         }
 
-        public static DataTable GetDataByMSGV(string MSGV, string filter)
+        public static List<Task> GetDataByMSGV(string MSGV, string filter)
         {
-            string sqlStr = null;
-            if (filter == "In progress")
+            try
             {
-                sqlStr = string.Format($"select * from Task inner join DeTai on DeTai.MaDT = Task.MaDT where DeTai.MSGV = '{MSGV}' and Task.TyLeHoanThanh != 100 and Task.Deadline >= GETDATE()");
+                using (var db = new QLLuanVanEntities())
+                {
+                    List<Task> newTask;
+                    if (filter == "In progress")
+                        newTask = (from t in db.Tasks
+                                   join d in db.DeTais
+                                   on t.MaDT equals d.MaDT
+                                   where d.MSGV == MSGV
+                                   && t.TyLeHoanThanh != 100
+                                   && t.Deadline >= DateTime.Now
+                                   select t).ToList();
+                    else
+                        if (filter == "Overdue")
+                        newTask = (from t in db.Tasks
+                                   join d in db.DeTais
+                                   on t.MaDT equals d.MaDT
+                                   where d.MSGV == MSGV
+                                   && t.TyLeHoanThanh != 100
+                                   && t.Deadline < DateTime.Now
+                                   select t).ToList();
+                    else
+                            if (filter == "Completed")
+                        newTask = (from t in db.Tasks
+                                   join d in db.DeTais
+                                   on t.MaDT equals d.MaDT
+                                   where d.MSGV == MSGV
+                                   && t.TyLeHoanThanh == 100
+                                   select t).ToList();
+                    else
+                        newTask = (from t in db.Tasks
+                                   join d in db.DeTais
+                                   on t.MaDT equals d.MaDT
+                                   where d.MSGV == MSGV
+                                   select t).ToList();
+
+                    return newTask;
+                }
             }
-            else
-                if (filter == "Overdue")
+            catch (Exception e)
             {
-                sqlStr = string.Format($"select * from Task inner join DeTai on DeTai.MaDT = Task.MaDT where DeTai.MSGV = '{MSGV}' and Task.Deadline < GETDATE()");
+                MessageBox.Show(e.Message);
+                return null;
             }
-            else 
-                if (filter == "Completed")
+        }
+
+
+        public static void ThemTask(Task task)
+        {
+            try
             {
-                sqlStr = string.Format($"select * from Task inner join DeTai on DeTai.MaDT = Task.MaDT where DeTai.MSGV = '{MSGV}' and Task.TyLeHoanThanh = 100");
+                using (var db = new QLLuanVanEntities())
+                {
+                    db.Tasks.Add(task);
+                    db.SaveChanges();
+                    MessageBox.Show("Thêm thành công");
+                }
             }
-            else
-                sqlStr = string.Format($"select * from Task inner join DeTai on DeTai.MaDT = Task.MaDT where DeTai.MSGV = '{MSGV}'");
-            return DbConnection.Load(sqlStr);
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
-
-        public static DataTable GetData()
+        public static void UpdateTask(Task task)
         {
-            string sqlStr = string.Format("select * from Task");
-            return DbConnection.Load(sqlStr);
-        }
+            try
+            {
+                using (var db = new QLLuanVanEntities())
+                {
+                    var newTask = db.Tasks.FirstOrDefault(x => x.MaTask == task.MaTask);
 
-        public static DTO.Task getDataByMaTask(string MaTask)
-        {   
-            string sqlStr = string.Format($"select * from Task where Task.MaTask = '{MaTask}'");
-            DataTable dt = DbConnection.Load(sqlStr);
-            return new DTO.Task(MaTask, dt.Rows[0]["MaDT"].ToString(), dt.Rows[0]["TenTask"].ToString(), dt.Rows[0]["MoTa"].ToString(), int.Parse(dt.Rows[0]["TyLeHoanThanh"].ToString()), DateTime.Parse(dt.Rows[0]["Deadline"].ToString()));   
-        }
+                    if (newTask != null)
+                    {
+                        newTask.TyLeHoanThanh = task.TyLeHoanThanh;
+                        db.SaveChanges();
+                        MessageBox.Show("Update task thành công");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Thất bại, vui lòng kiểm tra lại!");
+                    }    
 
-        public static void ThemTask(DTO.Task task)
-        {
-            string sqlStr = string.Format($"insert into Task values ('{task.MaTask}', '{task.MaDT}', N'{task.TenTask}', N'{task.MoTa}', 0, '{task.Deadline.ToString("yyyy-MM-dd")}')");
-            DbConnection.ThucThi(sqlStr);
-        }
-
-        public static void UpdateTask(DTO.Task task)
-        {
-            string sqlStr = string.Format($"update Task set TyLeHoanThanh = {task.TyLeHoanThanh} where Task.MaTask = '{task.MaTask}'");
-            DbConnection.ThucThi(sqlStr);
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

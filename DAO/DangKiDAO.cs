@@ -12,54 +12,136 @@ namespace Quan_Li_Luan_Van.DAO
     public class DangKiDAO
     {
         //kiểm tra sinh viên đã đăng kí đề tài chưa
-        public static int KiemTraSinhVienDangki(string MSSV)
+        public static bool SVChuaDangKi(string MSSV)
         {
-            string sqlStr = string.Format($"select * from DangKi where MSSV = '{MSSV}' and (TrangThai = N'Đã duyệt' or TrangThai = N'Chờ duyệt')");
-            return DbConnection.Load(sqlStr).Rows.Count;
+            try
+            {
+                using(var db = new QLLuanVanEntities())
+                {
+                    var count = (from s in db.DangKis
+                                 where s.MSSV == MSSV
+                                 select s).Count();
+                    return count == 0 ;
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return false;
+            }
 
+            //string sqlStr = string.Format($"select * from DangKi where MSSV = '{MSSV}' and (TrangThai = N'Đã duyệt' or TrangThai = N'Chờ duyệt')");
+            //return DbConnection.Load(sqlStr).Rows.Count;
         }
 
         //lấy thông tin sinh viên đăng kí theo MSGV
-        public static DataTable ThongTinDangKiTheoMSGV(string MSGV)
+        public static List<DangKi> ThongTinDangKiTheoMSGV(string MSGV)
         {
-            string sqlStr = string.Format($"select * from DangKi inner join SinhVien on Sinhvien.MSSV = DangKi.MSSV inner join DeTai on DeTai.MaDT = DangKi.MaDT where MSGV ='{MSGV}'");
-            return DbConnection.Load(sqlStr);
-        }
+            try
+            {
+                using (var db = new QLLuanVanEntities())
+                {
+                    var dt = (from s in db.DangKis
+                                 join d in db.DeTais
+                                 on s.DeTai.MaDT equals d.MaDT
+                                 where d.MSGV == MSGV
+                                 && s.TrangThai == "Chờ duyệt"
+                                 select s).ToList();
+                    return dt;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return null;
+            }
 
-        //lấy thông tin sinh viên đăng kí 
-        public static DataTable ThongTinDangKi()
-        {
-            string sqlStr = string.Format("select * from DangKi inner join SinhVien on Sinhvien.MSSV = DangKi.MSSV");
-            return DbConnection.Load(sqlStr);
+            //string sqlStr = string.Format($"select * from DangKi inner join SinhVien on Sinhvien.MSSV = DangKi.MSSV inner join DeTai on DeTai.MaDT = DangKi.MaDT where MSGV ='{MSGV}'");
+            //return DbConnection.Load(sqlStr);
         }
 
         //Giảng viên từ chối đăng kí đề tài
         public static void TuChoiDeTai(string MaDT, string lyDoTuChoi)
         {
-            string sqlStr = string.Format($"update DangKi set TrangThai = N'Từ chối', LyDoTuChoi = N'{lyDoTuChoi}' where MaDT = '{MaDT}'");
-            DbConnection.Load(sqlStr);
+            try
+            {
+                using (var db = new QLLuanVanEntities())
+                {
+                    var deTai = db.DangKis.FirstOrDefault(x => x.MaDT == MaDT);
+                    if (deTai != null)
+                    {
+                        deTai.TrangThai = "Từ chối";
+                        deTai.LyDoTuChoi = lyDoTuChoi;
+                        db.SaveChanges();
+                        MessageBox.Show("Đã từ chối đăng kí này");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Fail! Vui lòng kiếm tra lại");
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+            //string sqlStr = string.Format($"update DangKi set TrangThai = N'Từ chối', LyDoTuChoi = N'{lyDoTuChoi}' where MaDT = '{MaDT}'");
+            //DbConnection.Load(sqlStr);
         }
 
         //Giảng viên duyệt đề tài
         public static void DuyetDeTai(string MaDT)
         {
-            string sqlStr = string.Format($"update DangKi set TrangThai = N'Đã duyệt' where MaDT = '{MaDT}'");
-            DbConnection.Load(sqlStr);
+            try
+            {
+                using (var db = new QLLuanVanEntities())
+                {
+                    var deTai = db.DangKis.FirstOrDefault(x => x.MaDT == MaDT);
+                    if (deTai != null)
+                    {
+                        deTai.TrangThai = "Đã duyệt";
+                        db.SaveChanges();
+                        MessageBox.Show("Duyệt thành công");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Fail! Vui lòng kiếm tra lại");
+                    }    
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+            //string sqlStr = string.Format($"update DangKi set TrangThai = N'Đã duyệt' where MaDT = '{MaDT}'");
+            //DbConnection.Load(sqlStr);
         }
 
 
-        //Kiểm tra số lượng đăng kí
-        public static int SoLuongDangKi(string MaDT)
+        //kiểm tra đề tài được đăng kí còn số lượng đki ko?
+        public static bool ConDangKi(string MaDT, int soLuongToiDa)
         {
-            string sqlStr = string.Format($"select * from DangKi where MaDT = '{MaDT}' and (TrangThai = N'Đã duyệt' or TrangThai = N'Chờ duyệt')");
-            return DbConnection.Load(sqlStr).Rows.Count;
-       }
+            try
+            {
+                using (var db = new QLLuanVanEntities())
+                {
+                    var count = (from s in db.DangKis
+                                 where s.MaDT == MaDT
+                                 select s).Count();
+                    return count < soLuongToiDa;
 
-        //kiểm tra đề tài được đăng kí hay chưa
-        public static DataTable KiemTraDangKi(string MaDT)
-        {
-            string sqlStr = string.Format($"select * from DangKi where MaDT = '{MaDT}'");
-            return DbConnection.Load(sqlStr);
+                }
+            }
+            catch(Exception e)
+            {
+                MessageBox.Show(e.Message);
+                return false;
+            }
+
+            //string sqlStr = string.Format($"select * from DangKi where MaDT = '{MaDT}'");
+            //return DbConnection.Load(sqlStr);
         }
 
         //lấy thông tin đề tài theo mã sinh viên đã đăng kí thành công

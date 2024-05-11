@@ -29,11 +29,49 @@ namespace Quan_Li_Luan_Van.DAO
                 MessageBox.Show(ex.Message);
                 return null;
             }
+        }
 
-            //string sqlStr = string.Format($"select * from SinhVien where MaTK = '{maTK}'");
-            //DataTable dt = DbConnection.Load(sqlStr);
-            //SinhVien sv = new SinhVien(dt.Rows[0]["MSSV"].ToString(), dt.Rows[0]["HoTen"].ToString(), dt.Rows[0]["Lop"].ToString(), dt.Rows[0]["Email"].ToString(), dt.Rows[0]["SDT"].ToString(), dt.Rows[0]["MaTK"].ToString());
-            //return sv;
+        public static List<SinhVien> DSThongTinSVDangKiThanhCong()
+        {
+            try
+            {
+                using(var db = new QLLuanVanEntities())
+                {
+                    var sv = (from d in db.DangKis
+                              join s in db.SinhViens
+                              on d.MSSV equals s.MSSV
+                              where d.TrangThai == "Đã duyệt"
+                              select s).ToList();
+
+                    return sv;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return null;
+            }
+        }
+
+        public static SinhVien ThongTinSVDangKiDeTai(string MaDT)
+        {
+            try
+            {
+                using (var db = new QLLuanVanEntities())
+                {
+                    var sv = (from d in db.DangKis
+                              join s in db.SinhViens
+                              on d.MSSV equals s.MSSV
+                              select s).SingleOrDefault();
+                              
+                    return sv;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return null;
+            }
         }
     }
 }

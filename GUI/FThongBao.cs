@@ -1,5 +1,4 @@
 ﻿using Quan_Li_Luan_Van.DAO;
-using Quan_Li_Luan_Van.DTO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -46,7 +45,14 @@ namespace Quan_Li_Luan_Van.GUI
         {
             foreach (string mssv in mssvS)
             {
-                TraoDoi traoDoi = new TraoDoi(mssv,txtChuDe.Text,txtThongTin.Text,DateTime.Now,giangVien.MSGV);
+                TraoDoi traoDoi = new TraoDoi()
+                {
+                    MSSV = mssv,
+                    ChuDe = txtChuDe.Text,
+                    ThongTin = txtThongTin.Text,
+                    ThoiGian = DateTime.Now,
+                    MSGV = giangVien.MSGV
+                };
                 TraoDoiDAO.Them(traoDoi);
             }
             this.Close();
