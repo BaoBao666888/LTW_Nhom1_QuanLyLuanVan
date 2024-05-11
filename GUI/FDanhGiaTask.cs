@@ -36,7 +36,7 @@ namespace Quan_Li_Luan_Van.GUI
             DanhGia obj = DanhGiaDAO.GetObj(task.MaTask);
             lblDeTai.Text = LuanVanDAO.GetDeTaiBYMaDT(task.MaDT).TenDeTai;
             lblTenTask.Text = task.TenTask;
-            if (!string.IsNullOrEmpty(obj.MaTask))
+            if (obj != null)
             {
                 btnLuu.Visible = false;
                 txtNhanXet.Text = obj.NhanXet;

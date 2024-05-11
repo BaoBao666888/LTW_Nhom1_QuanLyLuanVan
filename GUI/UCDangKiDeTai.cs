@@ -31,7 +31,7 @@ namespace Quan_Li_Luan_Van.GUI
 
         public void loadData()
         {
-            SinhVien sinhVien = SinhVienDAO.ThongTinSVDangKiDeTai(dangKi.MaDT);
+            SinhVien sinhVien = SinhVienDAO.ThongTinSVDangKiDeTai(dangKi.MSSV);
             lblMSSV.Text = sinhVien.MSSV;
             lblHoTen.Text = sinhVien.HoTen;
             lblMaDeTai.Text = dangKi.MaDT;
@@ -56,7 +56,7 @@ namespace Quan_Li_Luan_Van.GUI
             DialogResult res = MessageBox.Show("Bạn có chắc chắn muốn duyệt luận văn này?", "WARNING!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (res == DialogResult.Yes)
             {
-                DangKiDAO.DuyetDeTai(dangKi.MaDT);
+                DangKiDAO.DuyetDeTai(dangKi);
                 this.Visible = false;
             }
         }
@@ -66,7 +66,7 @@ namespace Quan_Li_Luan_Van.GUI
             FInputBox inputBox = new FInputBox();
             if (inputBox.ShowDialog() == DialogResult.OK)
             {
-                DangKiDAO.TuChoiDeTai(dangKi.MaDT, inputBox.Text);
+                DangKiDAO.TuChoiDeTai(dangKi, inputBox.Text);
                 this.Visible = false;
             }
             else

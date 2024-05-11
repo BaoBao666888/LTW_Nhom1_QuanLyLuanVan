@@ -53,16 +53,14 @@ namespace Quan_Li_Luan_Van.DAO
             }
         }
 
-        public static SinhVien ThongTinSVDangKiDeTai(string MaDT)
+        public static SinhVien ThongTinSVDangKiDeTai(string MSSV)
         {
             try
             {
                 using (var db = new QLLuanVanContext())
                 {
                     var sv = (from s in db.SinhViens
-                              join d in db.DangKis
-                              on s.MSSV equals d.MSSV
-                              where d.MaDT == MaDT
+                              where s.MSSV == MSSV
                               select s).SingleOrDefault();
                               
                     return sv;

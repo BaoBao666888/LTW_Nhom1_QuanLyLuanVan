@@ -40,7 +40,7 @@ namespace Quan_Li_Luan_Van.DAO
                 {
                     var dt = (from s in db.DangKis
                                  join d in db.DeTais
-                                 on s.DeTai.MaDT equals d.MaDT
+                                 on s.MaDT equals d.MaDT
                                  where d.MSGV == MSGV
                                  && s.TrangThai == "Chờ duyệt"
                                  select s).ToList();
@@ -55,13 +55,16 @@ namespace Quan_Li_Luan_Van.DAO
         }
 
         //Giảng viên từ chối đăng kí đề tài
-        public static void TuChoiDeTai(string MaDT, string lyDoTuChoi)
+        public static void TuChoiDeTai(DangKi dangKi, string lyDoTuChoi)
         {
             try
             {
                 using (var db = new QLLuanVanContext())
                 {
-                    var deTai = db.DangKis.FirstOrDefault(x => x.MaDT == MaDT);
+                    var deTai = (from s in db.DangKis
+                                 where s.MaDT == dangKi.MaDT
+                                 && s.MSSV == dangKi.MSSV
+                                 select s).SingleOrDefault();
                     if (deTai != null)
                     {
                         deTai.TrangThai = "Từ chối";
@@ -82,13 +85,16 @@ namespace Quan_Li_Luan_Van.DAO
         }
 
         //Giảng viên duyệt đề tài
-        public static void DuyetDeTai(string MaDT)
+        public static void DuyetDeTai(DangKi dangKi)
         {
             try
             {
                 using (var db = new QLLuanVanContext())
                 {
-                    var deTai = db.DangKis.FirstOrDefault(x => x.MaDT == MaDT);
+                    var deTai = (from s in db.DangKis
+                                 where s.MaDT == dangKi.MaDT
+                                 && s.MSSV == dangKi.MSSV
+                                 select s).SingleOrDefault();
                     if (deTai != null)
                     {
                         deTai.TrangThai = "Đã duyệt";

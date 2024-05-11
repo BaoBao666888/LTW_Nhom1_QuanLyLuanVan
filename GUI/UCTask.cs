@@ -61,17 +61,17 @@ namespace Quan_Li_Luan_Van.GUI
                 if (task.Deadline > DateTime.Now)
                 {
                     res = MessageBox.Show("Task này chưa hết hạn, Bạn có chắc muốn cho điểm", "Warning!", MessageBoxButtons.YesNo, MessageBoxIcon.Error);
+                    if (res == DialogResult.Yes)
+                    {
+                        FDanhGiaTask fDanhGiaTask = new FDanhGiaTask(task, vaiTro);
+                        fDanhGiaTask.ShowDialog();
+                    }
                 }
-                if (res == DialogResult.Yes)
+                else
                 {
                     FDanhGiaTask fDanhGiaTask = new FDanhGiaTask(task, vaiTro);
                     fDanhGiaTask.ShowDialog();
                 }
-            }
-            else
-            {
-                FDanhGiaTask fDanhGiaTask = new FDanhGiaTask(task, vaiTro);
-                fDanhGiaTask.ShowDialog();
             }
         }
 
