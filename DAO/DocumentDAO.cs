@@ -30,10 +30,6 @@ namespace Quan_Li_Luan_Van.DAO
             {
                 MessageBox.Show(ex.Message);
             }
-            finally
-            {
-                DbConnection.conn.Close();
-            }
         }
 
         public static void ReadFile(Document doc)
@@ -53,10 +49,6 @@ namespace Quan_Li_Luan_Van.DAO
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
-            }
-            finally
-            {
-                DbConnection.conn.Close();
             }
         }
 

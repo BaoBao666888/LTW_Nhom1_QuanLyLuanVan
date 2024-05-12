@@ -29,20 +29,22 @@ namespace Quan_Li_Luan_Van.GUI
             flp_list.Controls.Clear();
             foreach(var deTai in ListDT)
             {
-                DataTable dtDiem = LuanVanDAO.GetListTask(deTai.MaDT);
+                List<DanhGia> dtDiem = LuanVanDAO.GetListTask(deTai.MaDT);
                 float res;
                 int temp = 0;
-                if (dtDiem.Rows.Count > 0)
+                if (dtDiem.Count > 0)
                 {
-                    for (int j = 0; j < dtDiem.Rows.Count; j++)
-                        temp += int.Parse(dtDiem.Rows[j]["Diem"].ToString());
+                    foreach (var item in dtDiem)
+                    {
+                        temp += item.Diem;
+                    }
                 }
                 if (temp == 0)
                 {
                     res = 0;
                 }
                 else
-                    res = (float)temp / dtDiem.Rows.Count;
+                    res = (float)temp / dtDiem.Count;
                 UCLuanVan ucLuanVan = new UCLuanVan(tk, gv, deTai, res);
                 flp_list.Controls.Add(ucLuanVan);
             }

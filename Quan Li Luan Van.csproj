@@ -111,7 +111,6 @@
     </Compile>
     <Compile Include="DAO\DangKiDAO.cs" />
     <Compile Include="DAO\DanhGiaDAO.cs" />
-    <Compile Include="DAO\DbConnection.cs" />
     <Compile Include="DAO\DocumentDAO.cs" />
     <Compile Include="DAO\TaiKhoanDAO.cs" />
     <Compile Include="DAO\TaskDAO.cs" />

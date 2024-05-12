@@ -14,10 +14,31 @@ namespace Quan_Li_Luan_Van.DAO
     public class LuanVanDAO
     {
         // lấy tất cả task theo mã đt
-        public static DataTable GetListTask(string MaDT)
+        public static List<DanhGia> GetListTask(string MaDT)
         {
-            string sqlStr = string.Format($"select * from DeTai inner join Task on DeTai.MaDT = Task.MaDT inner join DanhGia on DanhGia.MaTask = Task.MaTask where DeTai.MaDT ='{MaDT}'");
-            return DbConnection.Load(sqlStr);
+            try
+            {
+                using (var db = new QLLuanVanContext())
+                {
+                    var list = (from s in db.DeTais
+                                join d in db.Tasks
+                                on s.MaDT equals d.MaDT
+                                join t in db.DanhGias
+                                on d.MaTask equals t.MaTask
+                                where s.MaDT == MaDT
+                                select t
+                                 ).ToList();
+                    return list;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return null;
+            }
+
+            //string sqlStr = string.Format($"select * from DeTai inner join Task on DeTai.MaDT = Task.MaDT inner join DanhGia on DanhGia.MaTask = Task.MaTask where DeTai.MaDT ='{MaDT}'");
+            //return DbConnection.Load(sqlStr);
         }
 
         public static List<DeTai> GetListDeTaiByMSSV(string MSSV)
